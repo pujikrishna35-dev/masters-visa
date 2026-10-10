@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-[#122644] bg-[#FFFFFF];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Hide scrollbar for tabs/carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Flight Path dashed animation */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.animate-flight-dash {
+  stroke-dasharray: 6 6;
+  animation: dash 20s linear infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+.animate-float-slow {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hero particle drift */
+@keyframes particle-drift {
+  0%   { transform: translateY(0px) translateX(0px) scale(1);   opacity: 0.6; }
+  33%  { transform: translateY(-18px) translateX(8px) scale(1.1); opacity: 1; }
+  66%  { transform: translateY(-8px) translateX(-6px) scale(0.9); opacity: 0.7; }
+  100% { transform: translateY(0px) translateX(0px) scale(1);   opacity: 0.6; }
+}
+.animate-particle { animation: particle-drift var(--dur, 6s) ease-in-out infinite; }
+
+/* Glow orb pulse */
+@keyframes orb-pulse {
+  0%, 100% { transform: scale(1);   opacity: 0.35; }
+  50%       { transform: scale(1.15); opacity: 0.55; }
+}
+.animate-orb { animation: orb-pulse var(--dur, 8s) ease-in-out infinite; }
+
+/* Shimmer sweep on hero badge */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, #F05838 0%, #ff8f70 40%, #F05838 60%, #d43d20 100%);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient text pan */
+@keyframes grad-pan {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-grad-pan {
+  background-size: 200% 200%;
+  animation: grad-pan 6s ease infinite;
+}
+
+/* Fade in up for hero elements */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease forwards;
+}
+.delay-100 { animation-delay: 0.1s; opacity: 0; }
+.delay-200 { animation-delay: 0.2s; opacity: 0; }
+.delay-300 { animation-delay: 0.3s; opacity: 0; }
+.delay-400 { animation-delay: 0.4s; opacity: 0; }
+.delay-500 { animation-delay: 0.5s; opacity: 0; }
+.delay-600 { animation-delay: 0.6s; opacity: 0; }
+.delay-700 { animation-delay: 0.7s; opacity: 0; }
+
+/* Card float for floating stat badges */
+@keyframes card-float {
+  0%, 100% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
+  50%       { transform: translateY(-10px) rotate(var(--rot, 0deg)); }
+}
+.animate-card-float {
+  animation: card-float var(--dur, 5s) ease-in-out infinite;
+}
+
+/* Plane fly animation matching user's marked path (strictly constant linear speed) */
+@keyframes airplane-flight {
+  0% {
+    left: -15%;
+    top: 66%;
+    transform: rotate(-16deg) scale(0.8);
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 1;
+  }
+  100% {
+    left: 60%;
+    top: -14%;
+    transform: rotate(-16deg) scale(1.0);
+    opacity: 0;
+  }
+}
+
+.animate-airplane-flight {
+  animation: airplane-flight 14s linear infinite;
+  will-change: left, top, transform, opacity;
+}
+
+/* Aerodynamic floating bob while cruising */
+@keyframes airplane-bob {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  35% {
+    transform: translateY(-4px) rotate(-0.8deg);
+  }
+  70% {
+    transform: translateY(3px) rotate(0.8deg);
+  }
+}
+
+.animate-airplane-bob {
+  animation: airplane-bob 3s ease-in-out infinite;
+}
+
+/* Continuous Right-to-Left Infinite Destination Marquee */
+@keyframes continuous-marquee-rtl {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.333333%, 0, 0);
+  }
+}
+
+.animate-marquee-rtl {
+  animation: continuous-marquee-rtl 90s linear infinite;
+  will-change: transform;
+}
