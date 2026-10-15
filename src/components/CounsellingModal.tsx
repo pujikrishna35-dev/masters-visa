@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2, ShieldCheck, Sparkles, ArrowRight, Phone, Mail, User, Globe, Calendar, GraduationCap } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -20,8 +20,25 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
     notes: ''
   });
 
+  useEffect(() => {
+    if (defaultDestination) {
+      setFormData(prev => ({ ...prev, destination: defaultDestination }));
+    }
+  }, [defaultDestination]);
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -50,20 +67,26 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-navy/60 backdrop-blur-sm animate-fadeIn">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-navy/60 backdrop-blur-sm animate-fadeIn"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="counselling-modal-title"
+    >
       <div 
         className="relative w-full max-w-lg bg-white rounded-3xl shadow-floating border border-slate-100 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Ribbon */}
-        <div className="bg-gradient-to-r from-brand-navy via-brand-navy-light to-brand-navy px-6 py-5 text-white flex items-center justify-between">
+        <div className="bg-gradient-to-r from-[#10243F] via-[#1C385C] to-[#10243F] px-6 py-5 text-white flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1 text-[11px] font-semibold tracking-wider uppercase bg-brand-coral/20 text-brand-coral px-2.5 py-0.5 rounded-full border border-brand-coral/30">
-                <Sparkles className="w-3 h-3 text-brand-coral" /> Free 1-on-1 Session
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold tracking-wider uppercase bg-[#FDF7EC] text-[#D99A35] px-2.5 py-0.5 rounded-full border border-[#D99A35]/30">
+                <Sparkles className="w-3 h-3 text-[#D99A35]" /> Free 1-on-1 Session
               </span>
             </div>
-            <h3 className="text-xl font-bold mt-1 text-white">Book Free Counselling</h3>
+            <h3 id="counselling-modal-title" className="text-xl font-bold mt-1 text-white font-serif">Book Free Counselling</h3>
             <p className="text-xs text-slate-300 mt-0.5">Take the first confident step towards your global career.</p>
           </div>
           <button
@@ -251,7 +274,7 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3.5 bg-brand-coral hover:bg-brand-coral-hover text-white font-bold rounded-2xl transition-all shadow-md shadow-brand-coral/25 flex items-center justify-center gap-2 group mt-2"
+              className="w-full py-3.5 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 text-white font-bold rounded-2xl transition-all shadow-md shadow-[#D99A35]/25 flex items-center justify-center gap-2 group mt-2"
             >
               {isLoading ? (
                 <span>Securing Your Slot...</span>

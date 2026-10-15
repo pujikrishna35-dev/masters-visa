@@ -99,16 +99,116 @@ export const DESTINATIONS: Destination[] = [
   }
 ];
 
-export const SERVICES: Service[] = [
+export const CORE_SERVICES: Service[] = [
   {
-    id: 'career-counselling',
-    title: 'Career Counselling',
-    description: 'Expert guidance to choose the right course and university.',
+    id: 'admissions',
+    title: 'University Admissions',
+    description: 'Get guidance on university selection, course applications, admission requirements, and offer letters.',
     iconName: 'GraduationCap',
-    badgeBg: 'bg-rose-50',
-    badgeColor: 'text-rose-500',
-    features: ['1-on-1 Profile Mapping', 'Aptitude & Career Alignment', 'Long-term ROI Analysis']
+    badgeBg: 'bg-blue-50',
+    badgeColor: 'text-[#1E40AF]',
+    features: ['Direct University Applications', 'Offer Letter Expedited Follow-up', 'Application Fee Waivers'],
+    includes: [
+      'Comprehensive profile evaluation & strategic university shortlisting',
+      'Assistance with university application portals and required documentation',
+      'Eligibility verification, prerequisite mapping, and deadline calendars',
+      'Tracking and securing conditional and unconditional offer letters'
+    ],
+    steps: [
+      { step: '01', title: 'Profile Assessment', desc: 'Evaluating academic background, GPA, and test scores to establish target parameters.' },
+      { step: '02', title: 'University Shortlisting', desc: 'Curating Dream, Target, and Safe institutions across top global destinations.' },
+      { step: '03', title: 'Application Dispatch', desc: 'Preparing and dispatching verified applications with institutional fee-waiver representation.' },
+      { step: '04', title: 'Offer Letter Acceptance', desc: 'Guiding through admission acceptance, tuition deposits, and I-20 / CAS issuance.' }
+    ]
   },
+  {
+    id: 'visa',
+    title: 'Student Visa Assistance',
+    description: 'Get guidance on visa applications, required documents, financial evidence, and interview preparation.',
+    iconName: 'FileText',
+    badgeBg: 'bg-rose-50',
+    badgeColor: 'text-[#BE123C]',
+    features: ['Complete Documentation Checklists', 'Financial Evidence Audits', '1-on-1 Mock Consular Interviews'],
+    includes: [
+      'End-to-end guidance for US (F-1), UK, Canada, Australia, and European student visas',
+      'Financial evidence structuring, sponsor affidavits & proof of funds checklists',
+      'Official form assistance (DS-160, VFS, ImmiAccount) and appointment booking',
+      'Intensive 1-on-1 consular interview preparation and behavioral mock drills'
+    ],
+    steps: [
+      { step: '01', title: 'Document Checklist', desc: 'Receiving a tailored document checklist aligned with current embassy requirements.' },
+      { step: '02', title: 'Financial Audit', desc: 'Detailed review of bank statements, loan sanction letters, and sponsorship proof.' },
+      { step: '03', title: 'Filing & Biometrics', desc: 'Completing official visa application forms and booking consular appointment slots.' },
+      { step: '04', title: 'Mock Interview Prep', desc: 'Practicing simulated embassy interview drills to build confidence and readiness.' }
+    ]
+  },
+  {
+    id: 'document',
+    title: 'Documentation & SOP Guidance',
+    description: 'Assistance with SOPs, LORs, CVs, document checklists, and application paperwork.',
+    iconName: 'FolderCheck',
+    badgeBg: 'bg-emerald-50',
+    badgeColor: 'text-[#047857]',
+    features: ['SOP Brainstorming & Polishing', 'LOR Structural Frameworks', 'Plagiarism & Quality Checks'],
+    includes: [
+      'Statement of Purpose (SOP) brainstorming, narrative structuring, and editorial polishing',
+      'Letters of Recommendation (LOR) formatting and academic alignment',
+      'International standard CV / Resume restructuring tailored to university guidelines',
+      'Transcripts, notarizations, and official document compliance checklists'
+    ],
+    steps: [
+      { step: '01', title: 'Brainstorming Session', desc: 'Uncovering your individual milestones, motivations, and unique story.' },
+      { step: '02', title: 'Narrative Framing', desc: 'Drafting structured outlines that directly address university-specific prompts.' },
+      { step: '03', title: 'Editorial Review', desc: 'Line-by-line editorial feedback focusing on flow, academic tone, and impact.' },
+      { step: '04', title: 'Plagiarism-Free Polish', desc: 'Thorough grammar review and final compliance check for portal upload.' }
+    ]
+  },
+  {
+    id: 'counselling',
+    title: 'Career & Course Counselling',
+    description: 'Find suitable courses and universities aligned with your academic background and career goals.',
+    iconName: 'BarChart2',
+    badgeBg: 'bg-purple-50',
+    badgeColor: 'text-[#5B21B6]',
+    features: ['1-on-1 Profile Mapping', 'STEM vs. Non-STEM Evaluation', 'Career ROI & Salary Benchmarking'],
+    includes: [
+      'Personalized one-on-one session with senior international education counselors',
+      'In-demand STEM vs. Non-STEM course pathway evaluation and curriculum comparison',
+      'Global employment trend analysis, starting salary benchmarks, and ROI calculations',
+      'Post-study work permit (OPT, Graduate Route, PGWP) long-term planning'
+    ],
+    steps: [
+      { step: '01', title: 'Profile Discovery', desc: 'Understanding your academic background, passions, and career vision.' },
+      { step: '02', title: 'Industry Mapping', desc: 'Evaluating fast-growing global industries and employment sectors.' },
+      { step: '03', title: 'Course Specialization', desc: 'Selecting specific academic specializations with proven industry demand.' },
+      { step: '04', title: 'Career Roadmap', desc: 'Establishing actionable milestones for admission, internships, and graduation.' }
+    ]
+  },
+  {
+    id: 'predeparture',
+    title: 'Pre-Departure Support',
+    description: 'Prepare for your international journey with travel checklists, accommodation guidance, and practical advice.',
+    iconName: 'PlaneTakeoff',
+    badgeBg: 'bg-cyan-50',
+    badgeColor: 'text-[#0E7490]',
+    features: ['Accommodation Sourcing', 'Forex & Banking Advice', 'Pre-Flight Document Briefs'],
+    includes: [
+      'Verified student accommodation guidance (on-campus dorms & verified off-campus housing)',
+      'Student forex cards, international bank accounts, and health insurance guidance',
+      'Student baggage allowances, transit rules, and discounted flight booking advice',
+      'Comprehensive pre-flight packing checklist, arrival customs, and emergency networks'
+    ],
+    steps: [
+      { step: '01', title: 'Orientation Briefing', desc: 'Essential briefing covering local laws, culture, climate, and currency.' },
+      { step: '02', title: 'Housing Guidance', desc: 'Assistance in reviewing vetted student residences close to university campuses.' },
+      { step: '03', title: 'Forex & Travel Setup', desc: 'Setting up zero-markup student forex cards and student travel discounts.' },
+      { step: '04', title: 'Pre-Flight Folder Check', desc: 'Final audit of travel documents, immunization records, and arrival logistics.' }
+    ]
+  }
+];
+
+export const SERVICES: Service[] = [
+  ...CORE_SERVICES,
   {
     id: 'test-prep',
     title: 'Test Preparation',
@@ -119,15 +219,6 @@ export const SERVICES: Service[] = [
     features: ['Certified Master Trainers', 'Mock Diagnostic Exams', 'Personalized Doubt Clearing']
   },
   {
-    id: 'application-process',
-    title: 'Application Process',
-    description: 'University selection, applications & documentation.',
-    iconName: 'FileCheck',
-    badgeBg: 'bg-blue-50',
-    badgeColor: 'text-blue-500',
-    features: ['SOP & LOR Polishing', 'Application Fee Waivers', 'Timely Portal Submissions']
-  },
-  {
     id: 'loan-assistance',
     title: 'Loan Assistance',
     description: 'Education loan guidance and financial support.',
@@ -135,33 +226,6 @@ export const SERVICES: Service[] = [
     badgeBg: 'bg-amber-50',
     badgeColor: 'text-amber-500',
     features: ['Collateral & Non-Collateral', 'Lowest Interest Rate Ties', 'Fast-Track Sanctions']
-  },
-  {
-    id: 'mock-interviews',
-    title: 'Mock Interviews',
-    description: 'Preparation for university and visa interviews.',
-    iconName: 'Users',
-    badgeBg: 'bg-red-50',
-    badgeColor: 'text-red-500',
-    features: ['Consular Style Mock Drills', 'University Committee Prep', 'Confidence & Body Language']
-  },
-  {
-    id: 'visa-guidance',
-    title: 'Visa Guidance',
-    description: 'Complete documentation and interview guidance.',
-    iconName: 'Stamp',
-    badgeBg: 'bg-cyan-50',
-    badgeColor: 'text-cyan-500',
-    features: ['Proof of Funds Structuring', 'DS-160 & CAS Checklist', '95%+ Success Rate Track Record']
-  },
-  {
-    id: 'pre-departure',
-    title: 'Pre-Departure Orientation',
-    description: 'Insights about travel, living and studying abroad.',
-    iconName: 'Compass',
-    badgeBg: 'bg-teal-50',
-    badgeColor: 'text-teal-500',
-    features: ['Accommodation Booking', 'SIM Card & Forex Cards', 'Airport Pickup Assistance']
   },
   {
     id: 'part-time-job',

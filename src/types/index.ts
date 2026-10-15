@@ -11,6 +11,12 @@ export interface Destination {
   topCourses: string[];
 }
 
+export interface ServiceStep {
+  step: string;
+  title: string;
+  desc: string;
+}
+
 export interface Service {
   id: string;
   title: string;
@@ -19,6 +25,8 @@ export interface Service {
   badgeBg: string;
   badgeColor: string;
   features?: string[];
+  includes?: string[];
+  steps?: ServiceStep[];
 }
 
 export interface Testimonial {

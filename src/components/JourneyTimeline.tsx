@@ -1,122 +1,140 @@
 import React from 'react';
 import { 
-  Compass, 
-  UserCheck, 
-  BookMarked, 
-  Building2, 
-  Send, 
-  MailCheck, 
-  Stamp, 
-  Plane, 
-  Award, 
-  PlaneTakeoff 
+  MessageSquare, 
+  Landmark, 
+  FileCheck2, 
+  PlaneTakeoff,
+  Plane
 } from 'lucide-react';
-import { JOURNEY_STEPS } from '../data/content';
 
-export const JourneyTimeline: React.FC = () => {
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Compass': return Compass;
-      case 'UserCheck': return UserCheck;
-      case 'BookMarked': return BookMarked;
-      case 'Building2': return Building2;
-      case 'Send': return Send;
-      case 'MailCheck': return MailCheck;
-      case 'Stamp': return Stamp;
-      case 'Plane': return Plane;
-      case 'Award': return Award;
-      default: return Compass;
-    }
-  };
+interface Props {
+  onOpenCounselling?: () => void;
+}
+
+export const JourneyTimeline: React.FC<Props> = ({ onOpenCounselling }) => {
+  const steps = [
+    {
+      step: '01',
+      title: 'Free Consultation',
+      desc: 'Discuss your goals with our experts',
+      icon: MessageSquare,
+      color: 'text-blue-500',
+      bg: 'bg-blue-50',
+    },
+    {
+      step: '02',
+      title: 'University Shortlisting',
+      desc: 'Get the best matching universities',
+      icon: Landmark,
+      color: 'text-cyan-600',
+      bg: 'bg-cyan-50',
+    },
+    {
+      step: '03',
+      title: 'Application & Visa',
+      desc: 'Complete guidance and support',
+      icon: FileCheck2,
+      color: 'text-teal-600',
+      bg: 'bg-teal-50',
+    },
+    {
+      step: '04',
+      title: 'Fly to Your Dream',
+      desc: 'Begin your global journey with confidence',
+      icon: PlaneTakeoff,
+      color: 'text-[#FF783E]',
+      bg: 'bg-orange-50',
+    },
+  ];
 
   return (
-    <section className="py-16 bg-white relative overflow-hidden border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1 block">
-            YOUR JOURNEY WITH US
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-            From <span className="text-blue-600 font-serif italic">Dream</span> to Destination
-          </h2>
-          <p className="text-sm sm:text-base text-slate-500 mt-2">
-            A simple and guided process to help you study abroad.
-          </p>
-        </div>
-
-        {/* Desktop / Tablet Timeline (Horizontal with curved flight path line) */}
-        <div className="relative hidden md:block">
-          {/* Subtle curved dotted flight trail SVG connecting all 9 points */}
-          <div className="absolute top-9 left-6 right-6 h-10 pointer-events-none">
-            <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1000 40" fill="none">
-              <path
-                d="M 20 20 Q 250 5 500 20 T 980 20"
-                stroke="#E2E8F0"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-              />
-            </svg>
-            {/* Mini airplane sitting on the path near step 7 */}
-            <div className="absolute top-2 right-1/4 transform translate-x-4 -rotate-12 text-brand-coral">
-              <PlaneTakeoff className="w-5 h-5 fill-brand-coral" />
+    <section id="journey" className="py-16 sm:py-20 bg-[#FAF7F1] relative overflow-hidden">
+      <span id="process" className="sr-only" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          {/* Left Header */}
+          <div className="lg:col-span-4 text-left">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#64748B]">
+                HOW IT WORKS
+              </span>
+              <span className="w-8 h-[2px] bg-[#D99A35] rounded-full inline-block" />
             </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#10243F] tracking-tight font-serif leading-tight">
+              Your Global Journey<br />
+              <span className="text-[#D99A35] font-serif">in 4 Simple Steps</span>
+            </h2>
+            <p className="text-sm text-[#64748B] mt-3 leading-relaxed max-w-sm">
+              Our structured 4-step framework takes you smoothly from initial consultation to campus arrival.
+            </p>
           </div>
 
-          <div className="grid grid-cols-9 gap-2 relative z-10">
-            {JOURNEY_STEPS.map((item, idx) => {
-              const Icon = getIcon(item.icon);
-              return (
-                <div key={idx} className="flex flex-col items-center text-center group cursor-default">
-                  {/* Circle Numbered Node */}
-                  <div className="relative mb-3">
-                    <div className="w-14 h-14 rounded-full bg-white border-2 border-slate-200 group-hover:border-brand-coral shadow-sm group-hover:shadow-md flex items-center justify-center transition-all duration-300">
-                      <Icon className="w-6 h-6 text-brand-coral group-hover:scale-110 transition-transform" />
+          {/* Right 4 Steps with connecting dashed flight trail */}
+          <div className="lg:col-span-8 relative">
+            {/* Curved Dotted Flight Trail SVG */}
+            <div className="hidden sm:block absolute top-10 left-8 right-8 h-8 pointer-events-none z-0">
+              <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 600 30" fill="none">
+                <path
+                  d="M 10 15 Q 150 5 300 15 T 590 15"
+                  stroke="#CBD5E1"
+                  strokeWidth="1.5"
+                  strokeDasharray="5 5"
+                />
+              </svg>
+              {/* Mini Airplane sitting on the path */}
+              <div className="absolute -top-3 right-20 transform -rotate-12 text-[#D99A35]">
+                <Plane className="w-5 h-5 fill-[#D99A35]" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-4 relative z-10">
+              {steps.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.step}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => onOpenCounselling && onOpenCounselling()}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        onOpenCounselling && onOpenCounselling();
+                      }
+                    }}
+                    className="flex flex-col items-center sm:items-start text-center sm:text-left group cursor-pointer"
+                  >
+                    {/* Circle Node */}
+                    <div className="relative mb-4">
+                      <div className="w-16 h-16 rounded-2xl bg-white shadow-soft border border-slate-200/80 flex items-center justify-center group-hover:scale-110 group-hover:border-[#D99A35] group-hover:shadow-card transition-all duration-200">
+                        <Icon className="w-7 h-7 text-[#1769AA] group-hover:text-[#D99A35] transition-colors stroke-[1.8]" />
+                      </div>
                     </div>
-                    {/* Small Step Badge */}
-                    <div className="absolute -bottom-2 inset-x-0 flex justify-center">
-                      <span className="bg-slate-100 group-hover:bg-brand-coral text-slate-600 group-hover:text-white text-[10px] font-bold px-2 py-0.5 rounded-full transition-colors border border-slate-200 group-hover:border-brand-coral">
+
+                    {/* Step badge + Title */}
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <span className="w-4 h-4 rounded-full bg-[#D99A35] text-white text-[9px] font-extrabold flex items-center justify-center shrink-0">
+                        &gt;
+                      </span>
+                      <span className="text-xs font-black text-[#10243F] tracking-wide">
                         {item.step}
                       </span>
                     </div>
-                  </div>
 
-                  {/* Title & Desc */}
-                  <h3 className="text-xs font-bold text-brand-navy group-hover:text-brand-coral transition-colors mt-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-[10px] text-slate-400 mt-1 line-clamp-2 px-1">
-                    {item.desc}
-                  </p>
-                </div>
-              );
-            })}
+                    <h3 className="text-sm font-bold text-[#10243F] group-hover:text-[#D99A35] transition-colors leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-[#64748B] mt-1 leading-relaxed max-w-[160px]">
+                      {item.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
 
-        {/* Mobile Vertical Timeline */}
-        <div className="md:hidden space-y-4 relative pl-6 before:absolute before:top-4 before:bottom-4 before:left-8 before:w-0.5 before:bg-slate-200 before:border-dashed">
-          {JOURNEY_STEPS.map((item, idx) => {
-            const Icon = getIcon(item.icon);
-            return (
-              <div key={idx} className="relative flex items-start gap-4 bg-slate-50/80 p-3.5 rounded-2xl border border-slate-100">
-                <div className="w-10 h-10 rounded-full bg-white border border-brand-coral/40 flex items-center justify-center shrink-0 shadow-sm z-10">
-                  <Icon className="w-5 h-5 text-brand-coral" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-bold bg-brand-coral text-white px-1.5 py-0.5 rounded-md">
-                      {item.step}
-                    </span>
-                    <h3 className="text-xs font-bold text-brand-navy">{item.title}</h3>
-                  </div>
-                  <p className="text-xs text-slate-500 mt-1">{item.desc}</p>
-                </div>
-              </div>
-            );
-          })}
         </div>
-
       </div>
     </section>
   );

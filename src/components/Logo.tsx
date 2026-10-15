@@ -4,40 +4,47 @@ interface Props {
   className?: string;
   variant?: 'dark' | 'light';
   size?: 'sm' | 'md' | 'lg';
+  onClick?: (e: React.MouseEvent) => void;
 }
 
-export const Logo: React.FC<Props> = ({ variant = 'dark', size = 'md' }) => {
+export const Logo: React.FC<Props> = ({ variant = 'dark', size = 'md', onClick }) => {
   const isLight = variant === 'light';
 
   return (
-    <a href="#" className="flex items-center gap-2.5 group focus:outline-none select-none">
-      {/* 3D Angled Graduation Cap Icon without dark box */}
+    <a href="#home" onClick={onClick} className="flex items-center gap-2.5 group focus:outline-none select-none">
+      {/* Geometric Ribbon / Folded M Emblem */}
       <div className="relative flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 duration-200">
         <svg
-          viewBox="0 0 48 48"
-          className={size === 'sm' ? 'w-8 h-8' : size === 'lg' ? 'w-12 h-12' : 'w-10 h-10'}
+          viewBox="0 0 36 36"
+          className={size === 'sm' ? 'w-8 h-8' : size === 'lg' ? 'w-11 h-11' : 'w-9 h-9'}
           fill="none"
         >
-          {/* Cap Lower base */}
+          {/* Left orange wing */}
           <path
-            d="M13 23V31.5C13 31.5 17 36.5 24 36.5C31 36.5 35 31.5 35 31.5V23"
-            fill={isLight ? '#FFFFFF' : '#0F233E'}
+            d="M6 28L14 8L18 18L10 32L6 28Z"
+            fill="url(#logo-grad-orange)"
           />
-          {/* Mortarboard Diamond Top */}
+          {/* Right coral wing */}
           <path
-            d="M24 9L44 19L24 29L4 19L24 9Z"
-            fill={isLight ? '#FFFFFF' : '#122644'}
+            d="M30 28L22 8L18 18L26 32L30 28Z"
+            fill="url(#logo-grad-coral)"
           />
-          {/* Tassel Button */}
-          <circle cx="24" cy="19" r="2" fill="#F05838" />
-          {/* Tassel hanging down on left */}
+          {/* Center inner fold */}
           <path
-            d="M24 19C17 21 11.5 25.5 10 28"
-            stroke="#F05838"
-            strokeWidth="2.5"
-            strokeLinecap="round"
+            d="M18 18L14 8H22L18 18Z"
+            fill="#FF783E"
+            fillOpacity="0.85"
           />
-          <rect x="8.5" y="27.5" width="3" height="7.5" rx="1.5" fill="#F05838" />
+          <defs>
+            <linearGradient id="logo-grad-orange" x1="6" y1="8" x2="18" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FF9B66" />
+              <stop offset="1" stopColor="#FF783E" />
+            </linearGradient>
+            <linearGradient id="logo-grad-coral" x1="22" y1="8" x2="30" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FF783E" />
+              <stop offset="1" stopColor="#FF6685" />
+            </linearGradient>
+          </defs>
         </svg>
       </div>
 
@@ -46,25 +53,25 @@ export const Logo: React.FC<Props> = ({ variant = 'dark', size = 'md' }) => {
         <div className="flex items-center leading-none">
           <span
             className={`font-black tracking-tight ${
-              size === 'sm' ? 'text-lg' : size === 'lg' ? 'text-3xl' : 'text-2xl'
+              size === 'sm' ? 'text-lg' : size === 'lg' ? 'text-2xl' : 'text-xl'
             } ${isLight ? 'text-white' : 'text-brand-navy'}`}
           >
-            Masters
+            Master
           </span>
           <span
             className={`font-black tracking-tight ${
-              size === 'sm' ? 'text-lg' : size === 'lg' ? 'text-3xl' : 'text-2xl'
-            } text-brand-coral ml-1`}
+              size === 'sm' ? 'text-lg' : size === 'lg' ? 'text-2xl' : 'text-xl'
+            } text-brand-coral`}
           >
             Visa
           </span>
         </div>
         <span
-          className={`font-bold tracking-[0.18em] ${
-            size === 'sm' ? 'text-[8.5px]' : size === 'lg' ? 'text-[11px]' : 'text-[9.5px]'
-          } ${isLight ? 'text-slate-300' : 'text-slate-500'} mt-1 uppercase`}
+          className={`font-semibold tracking-[0.18em] ${
+            size === 'sm' ? 'text-[8.5px]' : size === 'lg' ? 'text-[10px]' : 'text-[9px]'
+          } ${isLight ? 'text-slate-300/90' : 'text-slate-500'} mt-0.5 uppercase`}
         >
-          Your Global Education Partner
+          Study &bull; Dream &bull; Settle
         </span>
       </div>
     </a>

@@ -15,8 +15,8 @@ export const FloatingWhatsApp: React.FC = () => {
           >
             <X className="w-3.5 h-3.5" />
           </button>
-          <p className="text-xs font-bold text-brand-navy">Chat with our Visa Expert</p>
-          <p className="text-[11px] text-slate-500 mt-0.5">We typically reply in 5 minutes on WhatsApp.</p>
+          <p className="text-xs font-bold text-[#10243F]">Chat with our Visa Expert</p>
+          <p className="text-[11px] text-[#64748B] mt-0.5">We typically reply in 5 minutes on WhatsApp.</p>
         </div>
       )}
 
@@ -30,7 +30,7 @@ export const FloatingWhatsApp: React.FC = () => {
         aria-label="Chat with Masters Visa on WhatsApp"
       >
         <MessageCircle className="w-7 h-7 fill-white" />
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand-coral rounded-full border-2 border-white flex items-center justify-center text-[9px] font-bold text-white">
+        <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#F16B55] rounded-full border-2 border-white flex items-center justify-center text-[9px] font-bold text-white">
           1
         </span>
       </a>

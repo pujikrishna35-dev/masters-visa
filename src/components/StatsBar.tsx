@@ -44,14 +44,15 @@ export const StatsBar: React.FC = () => {
     <section className="relative z-20 -mt-2 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl shadow-card border border-slate-100 p-4 sm:p-6 lg:p-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 divide-y sm:divide-y-0 lg:divide-x divide-slate-100">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-6 gap-x-4 sm:gap-6 lg:gap-0 lg:divide-x lg:divide-slate-100">
             {stats.map((item, idx) => {
               const Icon = item.icon;
+              const isLastOdd = idx === 4;
               return (
                 <div
                   key={idx}
-                  className={`flex items-center gap-3.5 sm:gap-4 ${
-                    idx !== 0 ? 'pt-4 sm:pt-0 lg:pl-6' : ''
+                  className={`flex items-center gap-3.5 sm:gap-4 lg:px-5 ${
+                    isLastOdd ? 'col-span-2 sm:col-span-1 justify-center sm:justify-start' : ''
                   }`}
                 >
                   <div className={`w-12 h-12 rounded-2xl ${item.bg} flex items-center justify-center shrink-0`}>

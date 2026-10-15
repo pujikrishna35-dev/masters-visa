@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, PhoneCall, PlaneTakeoff } from 'lucide-react';
+import { ArrowRight, Plane, Compass, CheckCircle2, UserCheck } from 'lucide-react';
 
 interface Props {
   onOpenCounselling: () => void;
@@ -7,63 +7,65 @@ interface Props {
 
 export const FinalCta: React.FC<Props> = ({ onOpenCounselling }) => {
   return (
-    <section className="relative py-16 sm:py-20 overflow-hidden bg-brand-navy">
-      {/* Background Landmarks Collage with Deep Blue Overlay (NO leaves/foliage) */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1800&q=80"
-          alt="International landmarks panorama"
-          className="w-full h-full object-cover opacity-20 mix-blend-luminosity scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy-light/80" />
-      </div>
-
-      {/* Dotted Flight Path Graphic */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <svg className="w-full h-full" viewBox="0 0 1200 300" fill="none">
-          <path
-            d="M 50 250 Q 600 50 1150 150"
-            stroke="#F05838"
-            strokeWidth="2"
-            strokeDasharray="6 6"
-            className="animate-flight-dash opacity-30"
-          />
-        </svg>
-      </div>
+    <section className="relative py-16 sm:py-24 overflow-hidden bg-[#10243F] text-white">
+      {/* ── SUNSET MEDITERRANEAN BACKGROUND IMAGE ── */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{
+          backgroundImage: "url('/final-cta-sunset.jpg')",
+        }}
+      />
+      {/* Dark Twilight Gradient Overlay */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#10243F] via-[#10243F]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#10243F] via-transparent to-black/30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 text-center lg:text-left">
           
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-brand-coral border border-white/15 text-xs font-bold uppercase tracking-wider mb-4">
-              <PlaneTakeoff className="w-3.5 h-3.5" />
-              <span>Admissions Open for 2026 - 2027</span>
+          {/* Left Text */}
+          <div className="max-w-xl">
+            <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
+              <Plane className="w-4 h-4 text-[#D99A35] fill-[#D99A35] transform -rotate-45" />
+              <span className="text-xs font-bold uppercase tracking-widest text-[#D99A35]">
+                YOUR GLOBAL FUTURE AWAITS
+              </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-              Let's Build Your <br className="hidden sm:inline" />
-              <span className="text-brand-coral font-serif italic">Global Future Together</span>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-serif leading-tight">
+              Ready to Start<br />
+              <span className="text-[#D99A35] font-serif">Your Journey?</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
-              Talk to our experts and get personalised guidance for your study-abroad journey — from profile shortlisting to visa approval.
+
+            <p className="text-xs sm:text-sm text-slate-300 mt-4 leading-relaxed max-w-md">
+              Book a free consultation with our expert counsellors and take the first step towards your dream.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center lg:justify-end gap-4 shrink-0">
+          {/* Right Action & Trust Badges */}
+          <div className="flex flex-col items-center lg:items-end gap-5 shrink-0">
             <button
               onClick={onOpenCounselling}
-              className="px-8 py-4 bg-brand-coral hover:bg-brand-coral-hover text-white font-bold text-sm sm:text-base rounded-full shadow-lg shadow-brand-coral/30 hover:shadow-brand-coral/40 hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-2.5 group"
+              className="px-8 py-4 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 active:scale-[0.98] text-white font-bold text-sm sm:text-base rounded-full shadow-xl shadow-[#D99A35]/30 hover:-translate-y-0.5 transition-all flex items-center gap-2.5 group"
             >
-              <span>Book Free Counselling</span>
+              <span>Book a Free Consultation</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
 
-            <a
-              href="tel:+918185883705"
-              className="px-7 py-4 bg-white/10 hover:bg-white/20 text-white font-bold text-sm sm:text-base rounded-full border border-white/20 backdrop-blur-md transition-all flex items-center gap-2"
-            >
-              <PhoneCall className="w-4 h-4 text-emerald-400" />
-              <span>Talk to Us</span>
-            </a>
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-end gap-4 text-xs font-medium text-slate-300">
+              <div className="flex items-center gap-1.5">
+                <Compass className="w-3.5 h-3.5 text-[#D99A35]" />
+                <span>Expert Guidance</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <span>No Hidden Charges</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <UserCheck className="w-3.5 h-3.5 text-sky-400" />
+                <span>Personalised Support</span>
+              </div>
+            </div>
           </div>
 
         </div>
