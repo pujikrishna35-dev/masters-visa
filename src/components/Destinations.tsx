@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { DESTINATIONS } from '../data/content';
 import type { Destination } from '../types';
 
 interface Props {
   onSelectDestination: (dest: Destination) => void;
+  hideBottomWave?: boolean;
 }
 
 // Crisp circular vector flags matching reference screenshot badges
@@ -73,7 +75,7 @@ const FlagAustralia = () => (
   </svg>
 );
 
-export const Destinations: React.FC<Props> = ({ onSelectDestination }) => {
+export const Destinations: React.FC<Props> = ({ onSelectDestination, hideBottomWave = false }) => {
   const cardsData = [
     {
       id: 'usa',
@@ -129,13 +131,13 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination }) => {
             Discover world-class education, diverse cultures and limitless opportunities.
           </p>
 
-          <button
-            onClick={() => handleCardClick('usa')}
+          <Link
+            to="/destinations"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-slate-300 hover:border-[#D99A35] bg-white hover:bg-[#FDF7EC] text-[#10243F] text-xs sm:text-sm font-semibold transition-all shadow-sm group mt-4 active:scale-95 cursor-pointer"
           >
             <span>View All Countries</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </div>
 
         {/* 4 Destination Photographic Cards Grid */}
@@ -193,19 +195,21 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination }) => {
       </div>
 
       {/* ── CURVED TRANSITION INTO DARK SERVICES SECTION (MATCHING IMAGE 2) ── */}
-      <div className="relative w-full overflow-hidden leading-none z-10 -mt-1 pointer-events-none">
-        <svg
-          viewBox="0 0 1440 90"
-          fill="none"
-          className="w-full h-12 sm:h-16 lg:h-20 block"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,45 C360,95 1080,5 1440,35 L1440,90 L0,90 Z"
-            fill="#10243F"
-          />
-        </svg>
-      </div>
+      {!hideBottomWave && (
+        <div className="relative w-full overflow-hidden leading-none z-10 -mt-1 pointer-events-none">
+          <svg
+            viewBox="0 0 1440 90"
+            fill="none"
+            className="w-full h-12 sm:h-16 lg:h-20 block"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,45 C360,95 1080,5 1440,35 L1440,90 L0,90 Z"
+              fill="#10243F"
+            />
+          </svg>
+        </div>
+      )}
     </section>
   );
 };

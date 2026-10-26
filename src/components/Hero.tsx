@@ -1,127 +1,18 @@
 import React from 'react';
-import { ArrowRight, Play, GraduationCap, BarChart2, Building2, Globe2 } from 'lucide-react';
+import { ArrowRight, Play, GraduationCap, BarChart2, Building2, Globe2, Car, Home, Sparkles, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 interface Props {
   onOpenCounselling: (destination?: string) => void;
   onSelectDestination?: (destId: string) => void;
 }
 
-// Crisp circular vector flags matching reference screenshot badges
-const FlagUSA = () => (
-  <svg viewBox="0 0 32 32" className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
-    <clipPath id="usa-clip"><circle cx="16" cy="16" r="16" /></clipPath>
-    <g clipPath="url(#usa-clip)">
-      <rect width="32" height="32" fill="#B22234" />
-      <path d="M0 2.46h32M0 7.38h32M0 12.3h32M0 17.23h32M0 22.15h32M0 27.07h32" stroke="#FFFFFF" strokeWidth="2.46" />
-      <rect width="14" height="17.23" fill="#3C3B6E" />
-      <circle cx="3.5" cy="4" r="0.9" fill="#FFF" />
-      <circle cx="7" cy="4" r="0.9" fill="#FFF" />
-      <circle cx="10.5" cy="4" r="0.9" fill="#FFF" />
-      <circle cx="5.25" cy="8.5" r="0.9" fill="#FFF" />
-      <circle cx="8.75" cy="8.5" r="0.9" fill="#FFF" />
-      <circle cx="3.5" cy="13" r="0.9" fill="#FFF" />
-      <circle cx="7" cy="13" r="0.9" fill="#FFF" />
-      <circle cx="10.5" cy="13" r="0.9" fill="#FFF" />
-    </g>
-  </svg>
-);
-
-const FlagUK = () => (
-  <svg viewBox="0 0 32 32" className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
-    <clipPath id="uk-clip"><circle cx="16" cy="16" r="16" /></clipPath>
-    <g clipPath="url(#uk-clip)">
-      <rect width="32" height="32" fill="#012169" />
-      <path d="M0 0 L32 32 M32 0 L0 32" stroke="#FFF" strokeWidth="5.5" />
-      <path d="M0 0 L32 32 M32 0 L0 32" stroke="#C8102E" strokeWidth="2" />
-      <path d="M16 0 V32 M0 16 H32" stroke="#FFF" strokeWidth="8" />
-      <path d="M16 0 V32 M0 16 H32" stroke="#C8102E" strokeWidth="4.8" />
-    </g>
-  </svg>
-);
-
-const FlagCanada = () => (
-  <svg viewBox="0 0 32 32" className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
-    <clipPath id="can-clip"><circle cx="16" cy="16" r="16" /></clipPath>
-    <g clipPath="url(#can-clip)">
-      <rect width="32" height="32" fill="#FF0000" />
-      <rect x="8" width="16" height="32" fill="#FFFFFF" />
-      <path d="M16 8l1.5 3.5 2.5-.8-1.2 3.2 2.8 1.4-2.8 1.4.6 3.5-3.4-1.8V23h-1v-4.6L11.6 20.2l.6-3.5-2.8-1.4 2.8-1.4-1.2-3.2 2.5.8z" fill="#FF0000" />
-    </g>
-  </svg>
-);
-
-const FlagAustralia = () => (
-  <svg viewBox="0 0 32 32" className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
-    <clipPath id="aus-clip"><circle cx="16" cy="16" r="16" /></clipPath>
-    <g clipPath="url(#aus-clip)">
-      <rect width="32" height="32" fill="#00008B" />
-      <g transform="scale(0.5)">
-        <rect width="32" height="32" fill="#012169" />
-        <path d="M0 0 L32 32 M32 0 L0 32" stroke="#FFF" strokeWidth="5" />
-        <path d="M0 0 L32 32 M32 0 L0 32" stroke="#C8102E" strokeWidth="2" />
-        <path d="M16 0 V32 M0 16 H32" stroke="#FFF" strokeWidth="7" />
-        <path d="M16 0 V32 M0 16 H32" stroke="#C8102E" strokeWidth="4.5" />
-      </g>
-      <circle cx="8" cy="22" r="2.5" fill="#FFF" />
-      <circle cx="24" cy="9" r="1" fill="#FFF" />
-      <circle cx="21" cy="14" r="1" fill="#FFF" />
-      <circle cx="26" cy="17" r="1" fill="#FFF" />
-      <circle cx="23" cy="24" r="1" fill="#FFF" />
-      <circle cx="27" cy="21" r="0.7" fill="#FFF" />
-    </g>
-  </svg>
-);
-
-export const Hero: React.FC<Props> = ({ onOpenCounselling, onSelectDestination }) => {
-  const destinations = [
-    {
-      id: 'usa',
-      name: 'USA',
-      subtitle: 'Top Universities',
-      Flag: FlagUSA,
-      // Positioned to the upper-left of the central Earth globe
-      className: 'top-[15%] left-[45%] lg:left-[47%]',
-    },
-    {
-      id: 'uk',
-      name: 'UK',
-      subtitle: 'World-Class Education',
-      Flag: FlagUK,
-      // Positioned to the upper-right of the Earth globe
-      className: 'top-[19%] right-[22%] lg:right-[24%]',
-    },
-    {
-      id: 'canada',
-      name: 'Canada',
-      subtitle: 'Bright Opportunities',
-      Flag: FlagCanada,
-      // Positioned mid-right of the Earth globe
-      className: 'top-[37%] right-[15%] lg:right-[17%]',
-    },
-    {
-      id: 'australia',
-      name: 'Australia',
-      subtitle: 'Global Careers',
-      Flag: FlagAustralia,
-      // Positioned lower-right of the Earth globe
-      className: 'top-[54%] right-[20%] lg:right-[22%]',
-    },
-  ];
-
-  const handleDestinationClick = (id: string, name: string) => {
-    if (onSelectDestination) {
-      onSelectDestination(id);
-    } else {
-      onOpenCounselling(name);
-    }
-  };
-
+export const Hero: React.FC<Props> = ({ onOpenCounselling, onSelectDestination: _onSelectDestination }) => {
   return (
     <section
       id="home"
       className="relative w-full overflow-hidden bg-[#FAF7F1]"
     >
-      {/* ── FULL-BLEED PANORAMIC CINEMATIC SCENE BACKGROUND WITH ROTATING GLOBE ── */}
+      {/* ── FULL-BLEED PANORAMIC CINEMATIC SCENE BACKGROUND ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <svg
           viewBox="0 0 1376 768"
@@ -129,22 +20,12 @@ export const Hero: React.FC<Props> = ({ onOpenCounselling, onSelectDestination }
           className="w-full h-full pointer-events-none select-none block"
           aria-hidden="true"
         >
-          {/* Panoramic sky, sunlight, landmarks, airliner and contrail */}
+          {/* Panoramic clean sky, sunlight, and landmarks */}
           <image
             href="/hero-sky-clean.jpg"
             width="1376"
             height="768"
             preserveAspectRatio="none"
-          />
-
-          {/* Earth Globe: Rotating Clockwise and Anticlockwise */}
-          <image
-            href="/earth-isolated.png"
-            x="591"
-            y="39"
-            width="538"
-            height="538"
-            className="animate-globe-oscillate"
           />
         </svg>
 
@@ -154,15 +35,19 @@ export const Hero: React.FC<Props> = ({ onOpenCounselling, onSelectDestination }
       </div>
 
       {/* ── MAIN HERO VIEWPORT CONTENT ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 lg:pt-20 pb-16 sm:pb-24 lg:pb-36 min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-14 lg:pt-20 pb-20 sm:pb-24 lg:pb-36 min-h-[560px] sm:min-h-[620px] lg:min-h-[700px] flex items-center">
         
-        {/* Left Column: Editorial Headline & Actions (occupying ~42% width) */}
-        <div className="w-full lg:w-[46%] text-left relative z-20">
+        {/* Left Column: Editorial Headline & Actions */}
+        <div className="w-full max-w-xl lg:max-w-2xl text-left relative z-20">
           
-          {/* Eyebrow Label */}
-          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
+          {/* Eyebrow Label with Special Focus on Pickup & Accommodation */}
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 flex-wrap">
             <span className="text-[11px] sm:text-xs font-bold tracking-[0.24em] text-[#10243F] uppercase">
               GLOBAL EDUCATION CONSULTANCY
+            </span>
+            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-[#D99A35]" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FDF7EC] border border-[#D99A35]/35 text-[10px] font-bold text-[#D99A35] uppercase tracking-wide">
+              <Sparkles className="w-3 h-3 text-[#D99A35]" /> Free Airport Pickup & Accommodation
             </span>
           </div>
 
@@ -173,15 +58,15 @@ export const Hero: React.FC<Props> = ({ onOpenCounselling, onSelectDestination }
           </h1>
 
           {/* Supporting Description */}
-          <p className="text-sm sm:text-base lg:text-[17px] text-[#475569] leading-relaxed max-w-lg mb-8 font-normal drop-shadow-sm">
-            Expert guidance for university admissions, visa assistance and a brighter future in top countries.
+          <p className="text-sm sm:text-base lg:text-[17px] text-[#475569] leading-relaxed max-w-lg mb-6 sm:mb-7 font-normal drop-shadow-sm">
+            Expert guidance for university admissions, visa assistance, and guaranteed airport pickup & verified student accommodation for a smooth, stress-free arrival abroad.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+          <div className="flex flex-wrap items-center gap-3.5 sm:gap-5">
             <button
               onClick={() => onOpenCounselling()}
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 active:scale-[0.98] text-white text-sm sm:text-[15px] font-bold rounded-full shadow-lg shadow-[#D99A35]/35 hover:-translate-y-0.5 transition-all duration-200 group cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 active:scale-[0.98] text-white text-sm sm:text-[15px] font-bold rounded-full shadow-lg shadow-[#D99A35]/35 hover:-translate-y-0.5 transition-all duration-200 group cursor-pointer"
             >
               <span>Start Your Journey</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -195,46 +80,94 @@ export const Hero: React.FC<Props> = ({ onOpenCounselling, onSelectDestination }
                   el.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="inline-flex items-center gap-3 text-[#10243F] hover:text-[#D99A35] transition-colors text-sm font-semibold group cursor-pointer"
+              className="inline-flex items-center gap-2.5 sm:gap-3 text-[#10243F] hover:text-[#D99A35] transition-colors text-sm font-semibold group cursor-pointer shrink-0"
               aria-label="Watch our student success stories"
             >
-              <div className="w-10 h-10 rounded-full bg-white/95 border border-slate-200/90 shadow-md flex items-center justify-center group-hover:scale-105 group-hover:border-[#D99A35] transition-all">
-                <Play className="w-4 h-4 fill-[#10243F] text-[#10243F] ml-0.5 group-hover:fill-[#D99A35] group-hover:text-[#D99A35]" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 border border-slate-200/90 shadow-md flex items-center justify-center group-hover:scale-105 group-hover:border-[#D99A35] transition-all shrink-0">
+                <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#10243F] text-[#10243F] ml-0.5 group-hover:fill-[#D99A35] group-hover:text-[#D99A35]" />
               </div>
               <span className="font-semibold text-slate-800">Watch Our Story</span>
             </button>
           </div>
+
+          {/* ── SPECIAL FOCUS SPOTLIGHT: AIRPORT PICKUP & ACCOMMODATION ── */}
+          <div className="mt-7 pt-5 border-t border-slate-300/60 max-w-lg">
+            {/* Header / Accent Label */}
+            <div className="flex items-center justify-between gap-2 mb-2.5">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#10243F] flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#D99A35] animate-ping inline-block" />
+                <span className="w-2 h-2 rounded-full bg-[#D99A35] -ml-3.5 inline-block" />
+                Special Master Visa Benefit
+              </span>
+              <span className="text-[10px] font-extrabold text-[#D99A35] bg-[#FDF7EC] px-2.5 py-0.5 rounded-full border border-[#D99A35]/35 shadow-2xs uppercase tracking-wide">
+                Airport to Dorm
+              </span>
+            </div>
+
+            {/* Premium Highlight Card */}
+            <div 
+              role="button"
+              tabIndex={0}
+              onClick={() => onOpenCounselling('Airport Pickup & Accommodation')}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onOpenCounselling('Airport Pickup & Accommodation');
+                }
+              }}
+              className="group relative bg-gradient-to-br from-white/95 via-[#FFFDF8] to-[#FDF7EC]/90 hover:from-white hover:to-white border-2 border-[#D99A35]/40 hover:border-[#D99A35] rounded-2xl p-4 sm:p-4.5 shadow-md shadow-[#D99A35]/12 hover:shadow-xl hover:shadow-[#D99A35]/22 backdrop-blur-md transition-all duration-300 cursor-pointer text-left overflow-hidden"
+            >
+              {/* Subtle decorative glow in top-right */}
+              <div className="absolute -top-10 -right-10 w-28 h-28 bg-[#D99A35]/15 rounded-full blur-2xl pointer-events-none group-hover:bg-[#D99A35]/25 transition-colors" />
+
+              <div className="relative z-10 flex items-start gap-3.5 sm:gap-4">
+                {/* Glowing Icon Badge with Car */}
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D99A35] via-[#E28330] to-[#F16B55] text-white shadow-md shadow-[#D99A35]/35 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:rotate-1 transition-all">
+                  <Car className="w-6 h-6 stroke-[2.2]" />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="text-sm sm:text-[15px] font-extrabold text-[#10243F] group-hover:text-[#D99A35] transition-colors leading-snug">
+                      Airport Pickup & Accommodation
+                    </h3>
+                    <div className="w-6 h-6 rounded-full bg-[#FAF7F1] border border-slate-200/80 group-hover:bg-[#D99A35] group-hover:text-white flex items-center justify-center text-slate-500 transition-all shrink-0">
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed font-medium">
+                    Guaranteed on-ground airport greeting, luggage transfer & verified student accommodation before you take off.
+                  </p>
+
+                  {/* 3 Value Pillars */}
+                  <div className="mt-3 pt-2.5 border-t border-slate-200/60 grid grid-cols-2 sm:grid-cols-3 gap-2 text-[11px] font-semibold text-slate-700">
+                    <div className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <span>Airport Meet & Greet</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <span>Verified Student Stay</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 col-span-2 sm:col-span-1">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <span>Local SIM & Transit</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* ── HANDWRITTEN SCRIPT OVERLAY IN TOP-RIGHT SKY ── */}
-        <div className="hidden lg:block absolute top-8 sm:top-12 right-6 sm:right-10 text-right pointer-events-none select-none z-20">
-          <span className="font-handwriting text-2xl lg:text-[27px] text-slate-700/80 rotate-[-5deg] block leading-tight font-semibold">
+        <div className="hidden sm:block absolute top-5 sm:top-6 lg:top-7 xl:top-8 right-6 sm:right-10 lg:right-14 xl:right-18 text-right pointer-events-none select-none z-20">
+          <span className="font-handwriting text-xl sm:text-2xl lg:text-[26px] text-slate-700/85 rotate-[-4deg] block leading-tight font-semibold drop-shadow-xs">
             Different Countries<br />New Stories<br />Same You!
           </span>
         </div>
-
-        {/* ── FLOATING DESTINATION BADGES ANCHORED OVER THE GLOBE IN SCENE ── */}
-        {destinations.map((dest) => {
-          const FlagComponent = dest.Flag;
-          return (
-            <button
-              key={dest.id}
-              onClick={() => handleDestinationClick(dest.id, dest.name)}
-              className={`hidden sm:flex absolute ${dest.className} z-20 items-center gap-2.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full bg-white/95 hover:bg-white text-[#10243F] shadow-lg shadow-[#10243F]/12 border border-slate-200/90 backdrop-blur-md transition-all duration-200 hover:scale-105 hover:border-[#D99A35] active:scale-95 group text-left cursor-pointer`}
-              aria-label={`Explore ${dest.name}`}
-            >
-              <FlagComponent />
-              <div className="flex flex-col leading-none">
-                <span className="text-xs font-bold text-[#10243F] group-hover:text-[#D99A35] transition-colors">
-                  {dest.name}
-                </span>
-                <span className="text-[10px] text-[#64748B] mt-0.5 font-medium">
-                  {dest.subtitle}
-                </span>
-              </div>
-            </button>
-          );
-        })}
       </div>
 
       {/* ── BOTTOM SEAMLESS WHITE CURVE & DOCKED TRUST STATISTICS SHELF (EXACTLY MATCHING IMAGE 2) ── */}
@@ -319,6 +252,42 @@ export const Hero: React.FC<Props> = ({ onOpenCounselling, onSelectDestination }
                 </div>
               </div>
 
+            </div>
+
+            {/* Seamless Service Availability Bar */}
+            <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                <span className="font-semibold text-slate-700">Master Visa Full Support:</span>
+              </div>
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4 font-medium text-slate-600">
+                <button
+                  type="button"
+                  onClick={() => onOpenCounselling('Airport Pickup & Accommodation')}
+                  className="inline-flex items-center gap-1.5 hover:text-[#D99A35] transition-colors cursor-pointer"
+                >
+                  <Car className="w-3.5 h-3.5 text-[#D99A35]" />
+                  <span>Airport Pickup & Transfer</span>
+                </button>
+                <span className="text-slate-300">•</span>
+                <button
+                  type="button"
+                  onClick={() => onOpenCounselling('Airport Pickup & Accommodation')}
+                  className="inline-flex items-center gap-1.5 hover:text-[#D99A35] transition-colors cursor-pointer"
+                >
+                  <Home className="w-3.5 h-3.5 text-[#D99A35]" />
+                  <span>Verified Student Accommodation</span>
+                </button>
+                <span className="text-slate-300">•</span>
+                <button
+                  type="button"
+                  onClick={() => onOpenCounselling('Student Visa Assistance')}
+                  className="inline-flex items-center gap-1.5 hover:text-emerald-600 transition-colors cursor-pointer"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
+                  <span>100% Visa Guidance</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

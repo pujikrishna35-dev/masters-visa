@@ -1,8 +1,46 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Study Abroad', path: '/destinations' },
+    { name: 'Our Services', path: '/services' },
+    { name: 'Visa Information', path: '/visa-information' },
+    { name: 'Process & Timeline', path: '/process' },
+    { name: 'Success Stories', path: '/testimonials' },
+    { name: 'News & Insights', path: '/blog' },
+    { name: 'FAQs', path: '/contact#faq' },
+    { name: 'Contact Us', path: '/contact' },
+  ];
+
+  const destinations = [
+    { name: 'Study in USA', id: 'usa' },
+    { name: 'Study in UK', id: 'uk' },
+    { name: 'Study in Canada', id: 'canada' },
+    { name: 'Study in Australia', id: 'australia' },
+    { name: 'Study in Germany', id: 'germany' },
+    { name: 'Study in France', id: 'france' },
+    { name: 'Study in New Zealand', id: 'new-zealand' },
+    { name: 'Study in Ireland', id: 'ireland' },
+  ];
+
+  const services = [
+    { name: 'Career Counselling', id: 'career-counselling' },
+    { name: 'University Shortlisting', id: 'university-shortlisting' },
+    { name: 'Test Preparation', id: 'test-preparation' },
+    { name: 'Application Process', id: 'application-process' },
+    { name: 'Loan Assistance', id: 'loan-assistance' },
+    { name: 'Visa Guidance', id: 'visa-guidance' },
+    { name: 'Pre-Departure Briefing', id: 'pre-departure-briefing' },
+    { name: 'Airport Pickup & Stay', id: 'pickup-accommodation' },
+    { name: 'Corporate Internships & Co-op', id: 'corporate-internships' },
+    { name: 'Part-Time Jobs & Work Rights', id: 'part-time-jobs' },
+  ];
+
   return (
     <footer className="bg-[#FAF7F1] border-t border-slate-200/80 pt-16 pb-8 text-[#10243F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,14 +110,14 @@ export const Footer: React.FC = () => {
               Quick Links
             </h4>
             <ul className="space-y-2 text-xs text-[#64748B]">
-              {['Home', 'About Us', 'Study Abroad', 'Our Services', 'News', 'FAQs', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
                     className="hover:text-[#D99A35] transition-colors flex items-center gap-1 group"
                   >
-                    <span>{link}</span>
-                  </a>
+                    <span>{link.name}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -91,11 +129,14 @@ export const Footer: React.FC = () => {
               Study Destinations
             </h4>
             <ul className="space-y-2 text-xs text-[#64748B]">
-              {['USA', 'UK', 'Canada', 'Australia', 'Germany', 'France', 'New Zealand', 'Ireland'].map((country) => (
-                <li key={country}>
-                  <a href="#destinations" className="hover:text-[#D99A35] transition-colors">
-                    Study in {country}
-                  </a>
+              {destinations.map((d) => (
+                <li key={d.id}>
+                  <Link
+                    to={`/destinations?country=${d.id}`}
+                    className="hover:text-[#D99A35] transition-colors"
+                  >
+                    {d.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -107,20 +148,14 @@ export const Footer: React.FC = () => {
               Our Services
             </h4>
             <ul className="space-y-2 text-xs text-[#64748B]">
-              {[
-                'Career Counselling',
-                'Test Preparation',
-                'Application Process',
-                'Loan Assistance',
-                'Mock Interviews',
-                'Visa Guidance',
-                'Pre-Departure',
-                'Part-Time Job Assistance'
-              ].map((srv) => (
-                <li key={srv}>
-                  <a href="#services" className="hover:text-[#D99A35] transition-colors">
-                    {srv}
-                  </a>
+              {services.map((srv) => (
+                <li key={srv.id}>
+                  <Link
+                    to={`/services?service=${srv.id}`}
+                    className="hover:text-[#D99A35] transition-colors"
+                  >
+                    {srv.name}
+                  </Link>
                 </li>
               ))}
             </ul>

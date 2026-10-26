@@ -1,5 +1,22 @@
 import React, { useEffect } from 'react';
-import { X, CheckCircle2, ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { 
+  X, 
+  CheckCircle2, 
+  ArrowRight, 
+  Sparkles, 
+  ShieldCheck,
+  Briefcase,
+  Clock,
+  GraduationCap,
+  FileText,
+  FolderCheck,
+  BarChart2,
+  PlaneTakeoff,
+  Car,
+  BookOpen,
+  BadgePercent,
+  UserCheck
+} from 'lucide-react';
 import type { Service } from '../types';
 
 interface Props {
@@ -7,6 +24,22 @@ interface Props {
   onClose: () => void;
   onBookCounselling: (serviceTitle: string) => void;
 }
+
+const SERVICE_ICONS: Record<string, React.ElementType> = {
+  Briefcase,
+  Clock,
+  GraduationCap,
+  FileText,
+  FolderCheck,
+  BarChart2,
+  PlaneTakeoff,
+  Car,
+  Home: Car,
+  BookOpen,
+  BadgePercent,
+  UserCheck,
+  Sparkles,
+};
 
 export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCounselling }) => {
   useEffect(() => {
@@ -22,6 +55,34 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
 
   if (!service) return null;
 
+  const IconComponent = service.iconName ? SERVICE_ICONS[service.iconName] : null;
+  const isCorporateInternships = service.id === 'corporate-internships';
+  const isPartTimeJobs = service.id === 'part-time-jobs';
+
+  const headerGradient = isCorporateInternships
+    ? 'bg-gradient-to-r from-[#0F2D3D] via-[#0D9488]/30 to-[#10243F]'
+    : isPartTimeJobs
+    ? 'bg-gradient-to-r from-[#0F2D4A] via-[#0284C7]/30 to-[#10243F]'
+    : 'bg-gradient-to-r from-[#10243F] via-[#163053] to-[#10243F]';
+
+  const badgeStyle = isCorporateInternships
+    ? 'bg-teal-500/20 text-teal-200 border-teal-400/30'
+    : isPartTimeJobs
+    ? 'bg-sky-500/20 text-sky-200 border-sky-400/30'
+    : 'bg-[#FDF7EC] text-[#D99A35] border-[#D99A35]/30';
+
+  const checkColor = isCorporateInternships
+    ? 'text-teal-600'
+    : isPartTimeJobs
+    ? 'text-sky-600'
+    : 'text-emerald-500';
+
+  const stepBadgeStyle = isCorporateInternships
+    ? 'bg-teal-50 text-teal-700 border-teal-200'
+    : isPartTimeJobs
+    ? 'bg-sky-50 text-sky-700 border-sky-200'
+    : 'bg-[#FDF7EC] text-[#D99A35] border-[#D99A35]/30';
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-navy/60 backdrop-blur-sm animate-fadeIn"
@@ -35,17 +96,28 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Ribbon */}
-        <div className="bg-gradient-to-r from-[#10243F] via-[#163053] to-[#10243F] p-6 text-white relative">
+        <div className={`${headerGradient} p-6 text-white relative transition-colors`}>
           <div className="flex items-center justify-between">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-[#FDF7EC] text-[#D99A35] border border-[#D99A35]/30 uppercase tracking-wider mb-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#D99A35]" /> MasterVisa Core Service
+            <div className="flex items-center gap-2 mb-2">
+              {IconComponent && (
+                <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${badgeStyle} shrink-0`}>
+                  <IconComponent className="w-3.5 h-3.5" />
+                </div>
+              )}
+              <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold border uppercase tracking-wider ${badgeStyle}`}>
+                <Sparkles className="w-3.5 h-3.5" /> MasterVisa Core Service
+              </div>
             </div>
             <button
-              onClick={onClose}
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onClose();
+              }}
               aria-label="Close service details"
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center backdrop-blur-md transition-colors cursor-pointer"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 pointer-events-none" />
             </button>
           </div>
 
@@ -71,7 +143,7 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
                     key={idx}
                     className="flex items-start gap-2.5 p-3 bg-[#FAF7F1] rounded-2xl border border-slate-200/60 text-xs font-semibold text-[#10243F]"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    <CheckCircle2 className={`w-4 h-4 ${checkColor} shrink-0 mt-0.5`} />
                     <span className="leading-snug">{item}</span>
                   </div>
                 ))}
@@ -91,7 +163,7 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
                     key={st.step}
                     className="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start gap-3"
                   >
-                    <span className="w-7 h-7 rounded-full bg-[#FDF7EC] text-[#D99A35] font-bold text-xs flex items-center justify-center shrink-0 border border-[#D99A35]/30">
+                    <span className={`w-7 h-7 rounded-full font-bold text-xs flex items-center justify-center shrink-0 border ${stepBadgeStyle}`}>
                       {st.step}
                     </span>
                     <div>

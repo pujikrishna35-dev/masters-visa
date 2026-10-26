@@ -22,7 +22,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
       {/* Floating Button */}
       <a
-        href="https://wa.me/918185883705?text=Hi%20Masters%20Visa%2C%20I%20am%20interested%20in%20study%20abroad%20counselling."
+        href="https://wa.me/919490021500?text=Hi%20Masters%20Visa%2C%20I%20am%20interested%20in%20study%20abroad%20counselling."
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() => setShowTooltip(true)}

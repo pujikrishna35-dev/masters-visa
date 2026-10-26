@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Search, 
   X, 
@@ -138,16 +139,32 @@ const DESTINATION_RESULTS: SearchResultItem[] = DESTINATIONS.map(d => ({
   keywords: [d.name, 'visa', d.avgTuition, d.workPermit, ...d.topCourses, ...d.popularUniversities]
 }));
 
-const SERVICE_RESULTS: SearchResultItem[] = CORE_SERVICES.map(s => ({
-  id: `svc-${s.id}`,
-  title: s.title,
-  subtitle: s.description,
-  category: 'Service',
-  targetSection: 'services',
-  serviceId: s.id,
-  iconType: 'service',
-  keywords: [s.title, s.description, ...(s.features || []), ...(s.includes || [])]
-}));
+const SERVICE_RESULTS: SearchResultItem[] = CORE_SERVICES.map(s => {
+  const extraKeywords: string[] = [];
+  if (s.id === 'corporate-internships') {
+    extraKeywords.push(
+      'internship', 'internships', 'corporate', 'co-op', 'coop', 'cpt',
+      'ats resume', 'fortune 500', 'tech jobs', 'portfolio', 'mock interview',
+      'technical mock', 'mock interviews'
+    );
+  } else if (s.id === 'part-time-jobs') {
+    extraKeywords.push(
+      'part-time', 'part time', 'parttime', 'campus jobs', 'campus job',
+      'student work rights', 'work rights', 'work authorization', 'ta', 'ra',
+      'teaching assistant', 'research assistant', 'ssn', 'nin', 'tfn', 'hourly wage'
+    );
+  }
+  return {
+    id: `svc-${s.id}`,
+    title: s.title,
+    subtitle: s.description,
+    category: 'Service',
+    targetSection: 'services',
+    serviceId: s.id,
+    iconType: 'service',
+    keywords: [s.title, s.description, ...(s.features || []), ...(s.includes || []), ...extraKeywords]
+  };
+});
 
 const UNIVERSITY_RESULTS: SearchResultItem[] = UNIVERSITIES.map(u => ({
   id: `uni-${u.id}`,
@@ -179,11 +196,11 @@ const ALL_SEARCH_ITEMS: SearchResultItem[] = [
 
 const POPULAR_SEARCHES = [
   { label: 'Study in USA', query: 'USA' },
+  { label: 'Corporate Internships', query: 'Internships' },
+  { label: 'Part-Time Jobs', query: 'Part-Time' },
   { label: 'Student Visa', query: 'Student Visa' },
   { label: 'Universities', query: 'Universities' },
-  { label: 'Documentation & SOP', query: 'SOP' },
-  { label: 'Study in UK', query: 'UK' },
-  { label: 'Contact Branches', query: 'Contact' }
+  { label: 'Documentation & SOP', query: 'SOP' }
 ];
 
 export const SearchModal: React.FC<Props> = ({ 
@@ -192,6 +209,7 @@ export const SearchModal: React.FC<Props> = ({
   onSelectDestination, 
   onSelectService 
 }) => {
+  const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -257,38 +275,57 @@ export const SearchModal: React.FC<Props> = ({
   const handleSelectResult = (item: SearchResultItem) => {
     onClose();
 
-    // If destination item, open its destination modal
+    // If destination item, navigate to /destinations and open its modal
     if (item.destId) {
+      navigate(`/destinations?country=${item.destId}`);
       onSelectDestination(item.destId);
+      return;
     }
 
-    // If service item, open its service detail modal
-    if (item.serviceId && onSelectService) {
-      onSelectService(item.serviceId);
+    // If service item, navigate to /services and open its modal
+    if (item.serviceId) {
+      navigate(`/services?service=${item.serviceId}`);
+      if (onSelectService) {
+        onSelectService(item.serviceId);
+      }
+      return;
     }
 
-    // Update URL hash cleanly
-    const hashTarget = item.destId ? 'destinations' : (item.serviceId ? 'services' : item.targetSection);
-    if (window.location.hash !== `#${hashTarget}`) {
-      window.history.pushState(null, '', `#${hashTarget}`);
-    }
-
-    // Smooth scroll to target section with sticky header offset
-    const targetElement = 
-      hashTarget === 'process' ? (document.getElementById('process') || document.getElementById('journey')) :
-      hashTarget === 'blog' ? (document.getElementById('blog') || document.getElementById('news')) :
-      hashTarget === 'about' ? (document.getElementById('about') || document.getElementById('why-us')) :
-      hashTarget === 'contact' ? (document.getElementById('contact') || document.getElementById('branches')) :
-      document.getElementById(hashTarget);
-
-    if (targetElement) {
-      const headerOffset = 76;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+    // Navigate to respective page
+    switch (item.targetSection) {
+      case 'home':
+        navigate('/');
+        break;
+      case 'about':
+        navigate('/about');
+        break;
+      case 'destinations':
+        navigate('/destinations');
+        break;
+      case 'services':
+        navigate('/services');
+        break;
+      case 'process':
+        navigate('/process');
+        break;
+      case 'testimonials':
+        navigate('/testimonials');
+        break;
+      case 'blog':
+        navigate('/blog');
+        break;
+      case 'contact':
+        navigate('/contact');
+        break;
+      case 'faq':
+        navigate('/contact#faq');
+        break;
+      case 'universities':
+        navigate('/destinations');
+        break;
+      default:
+        navigate(`/${item.targetSection}`);
+        break;
     }
   };
 

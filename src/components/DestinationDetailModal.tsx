@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { X, CheckCircle2, GraduationCap, DollarSign, Clock, ArrowRight, ShieldCheck } from 'lucide-react';
+import { FlagIcon } from './FlagIcon';
 import type { Destination } from '../types';
 
 interface Props {
@@ -53,8 +54,8 @@ export const DestinationDetailModal: React.FC<Props> = ({ destination, onClose, 
 
           <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between">
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-3xl">{destination.flag}</span>
+              <div className="flex items-center gap-2 mb-1.5">
+                <FlagIcon country={destination.name} className="w-7 h-5 rounded shadow-sm inline-block" />
                 <span className="text-xs uppercase font-bold tracking-widest text-[#D99A35] bg-white/95 px-2.5 py-0.5 rounded-full">
                   Study Guide
                 </span>

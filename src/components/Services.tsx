@@ -5,6 +5,9 @@ import {
   FolderCheck, 
   BarChart2, 
   PlaneTakeoff, 
+  Car,
+  Briefcase,
+  Clock,
   ArrowRight 
 } from 'lucide-react';
 
@@ -55,6 +58,30 @@ export const Services: React.FC<Props> = ({ onOpenCounselling, onSelectService }
       tileGradient: 'bg-gradient-to-br from-[#0E7490] to-[#0284C7]',
       tileShadow: 'shadow-cyan-900/30',
     },
+    {
+      id: 'pickup-accommodation',
+      title: 'Airport Pickup & Accommodation',
+      description: 'Guaranteed safe airport reception, verified student housing, and complete relocation settlement.',
+      icon: Car,
+      tileGradient: 'bg-gradient-to-br from-[#D97706] to-[#F59E0B]',
+      tileShadow: 'shadow-amber-900/30',
+    },
+    {
+      id: 'corporate-internships',
+      title: 'Corporate Internships & Co-op',
+      description: 'Vetted global corporate internships, CPT/co-op guidance, ATS resume optimization, portfolio improvement, and technical mock interviews.',
+      icon: Briefcase,
+      tileGradient: 'bg-gradient-to-br from-[#0D9488] to-[#14B8A6]',
+      tileShadow: 'shadow-teal-900/30',
+    },
+    {
+      id: 'part-time-jobs',
+      title: 'Part-Time Jobs & Student Work Rights',
+      description: 'Student work authorization guidance, on-campus jobs, TA/RA opportunities, SSN/NIN/TFN setup guidance, and local job search strategies.',
+      icon: Clock,
+      tileGradient: 'bg-gradient-to-br from-[#0284C7] to-[#38BDF8]',
+      tileShadow: 'shadow-sky-900/30',
+    },
   ];
 
   return (
@@ -98,8 +125,8 @@ export const Services: React.FC<Props> = ({ onOpenCounselling, onSelectService }
           </div>
         </div>
 
-        {/* 5 Glassmorphic Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
+        {/* Core & Comprehensive Glassmorphic Service Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
           {serviceCards.map((service) => {
             const Icon = service.icon;
             return (

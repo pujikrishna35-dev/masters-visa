@@ -1,17 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   className?: string;
   variant?: 'dark' | 'light';
   size?: 'sm' | 'md' | 'lg';
+  to?: string;
   onClick?: (e: React.MouseEvent) => void;
 }
 
-export const Logo: React.FC<Props> = ({ variant = 'dark', size = 'md', onClick }) => {
+export const Logo: React.FC<Props> = ({ variant = 'dark', size = 'md', to = '/', onClick }) => {
   const isLight = variant === 'light';
 
   return (
-    <a href="#home" onClick={onClick} className="flex items-center gap-2.5 group focus:outline-none select-none">
+    <Link to={to} onClick={onClick} className="flex items-center gap-2.5 group focus:outline-none select-none">
       {/* Geometric Ribbon / Folded M Emblem */}
       <div className="relative flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 duration-200">
         <svg
@@ -74,6 +76,6 @@ export const Logo: React.FC<Props> = ({ variant = 'dark', size = 'md', onClick }
           Study &bull; Dream &bull; Settle
         </span>
       </div>
-    </a>
+    </Link>
   );
 };

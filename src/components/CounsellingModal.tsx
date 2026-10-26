@@ -22,7 +22,16 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
 
   useEffect(() => {
     if (defaultDestination) {
-      setFormData(prev => ({ ...prev, destination: defaultDestination }));
+      let mapped = defaultDestination;
+      const lower = defaultDestination.toLowerCase().trim();
+      if (['corporate-internships', 'corporate internships & co-op', 'internships', 'internship', 'co-op', 'coop', 'corporate'].includes(lower)) {
+        mapped = 'Corporate Internships & Co-op';
+      } else if (['part-time-jobs', 'part-time jobs & student work rights', 'part-time', 'parttime', 'campus-jobs', 'campus-job', 'student-work-rights', 'work-rights'].includes(lower)) {
+        mapped = 'Part-Time Jobs & Student Work Rights';
+      } else if (lower === 'internship & part-time jobs' || lower === 'internship-parttime') {
+        mapped = 'Corporate Internships & Co-op';
+      }
+      setFormData(prev => ({ ...prev, destination: mapped }));
     }
   }, [defaultDestination]);
 
@@ -224,6 +233,17 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
                     <option value="France">🇫🇷 France</option>
                     <option value="New Zealand">🇳🇿 New Zealand</option>
                     <option value="Ireland">🇮🇪 Ireland</option>
+                    <option value="Airport Pickup & Accommodation">✈️ Airport Pickup & Accommodation</option>
+                    <option value="Corporate Internships & Co-op">💼 Corporate Internships & Co-op</option>
+                    <option value="Part-Time Jobs & Student Work Rights">🕒 Part-Time Jobs & Student Work Rights</option>
+                    {formData.destination && ![
+                      'USA', 'UK', 'Canada', 'Australia', 'Germany', 'France', 'New Zealand', 'Ireland',
+                      'Airport Pickup & Accommodation',
+                      'Corporate Internships & Co-op',
+                      'Part-Time Jobs & Student Work Rights'
+                    ].includes(formData.destination) && (
+                      <option value={formData.destination}>{formData.destination}</option>
+                    )}
                   </select>
                 </div>
               </div>
