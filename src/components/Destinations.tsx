@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { DESTINATIONS } from '../data/content';
+import { getCountryRoute } from './DestinationNavBar';
 import type { Destination } from '../types';
 
 interface Props {
-  onSelectDestination: (dest: Destination) => void;
+  onSelectDestination?: (dest: Destination) => void;
   hideBottomWave?: boolean;
 }
 
@@ -75,7 +75,7 @@ const FlagAustralia = () => (
   </svg>
 );
 
-export const Destinations: React.FC<Props> = ({ onSelectDestination, hideBottomWave = false }) => {
+export const Destinations: React.FC<Props> = ({ onSelectDestination: _onSelectDestination }) => {
   const cardsData = [
     {
       id: 'usa',
@@ -107,33 +107,30 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination, hideBottomW
     },
   ];
 
-  const handleCardClick = (id: string) => {
-    const found = DESTINATIONS.find((d) => d.id === id) || DESTINATIONS[0];
-    onSelectDestination(found);
-  };
-
   return (
     <section id="destinations" className="pt-8 sm:pt-12 pb-0 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-12 sm:pb-16">
         {/* Section Header */}
         <div className="max-w-2xl mb-10 text-left">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#64748B]">
+            <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E]">
               EXPLORE THE WORLD
             </span>
-            <span className="w-8 h-[2px] bg-[#D99A35] rounded-full inline-block" />
+            <span className="w-8 h-[2px] bg-[#0755F5] rounded-full inline-block" />
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10243F] tracking-tight font-serif">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#101E49] tracking-tight">
             Choose Your<br />
-            <span className="text-[#D99A35] font-serif">Dream Destination</span>
+            <span className="text-gradient-blue bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent">
+              Dream Destination
+            </span>
           </h2>
-          <p className="text-sm sm:text-base text-[#64748B] mt-3 leading-relaxed max-w-lg">
+          <p className="text-sm sm:text-base text-[#63718E] mt-3 leading-relaxed max-w-lg">
             Discover world-class education, diverse cultures and limitless opportunities.
           </p>
 
           <Link
             to="/destinations"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-slate-300 hover:border-[#D99A35] bg-white hover:bg-[#FDF7EC] text-[#10243F] text-xs sm:text-sm font-semibold transition-all shadow-sm group mt-4 active:scale-95 cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#DCE7FA] hover:border-[#0755F5] bg-white hover:bg-[#EDF4FF] text-[#101E49] hover:text-[#0755F5] text-xs sm:text-sm font-bold transition-all shadow-xs group mt-4 active:scale-95 cursor-pointer"
           >
             <span>View All Countries</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -145,18 +142,10 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination, hideBottomW
           {cardsData.map((dest) => {
             const FlagComponent = dest.Flag;
             return (
-              <div
+              <Link
                 key={dest.id}
-                role="button"
-                tabIndex={0}
-                onClick={() => handleCardClick(dest.id)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    handleCardClick(dest.id);
-                  }
-                }}
-                className="group bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card-hover border border-slate-200/80 transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1.5 active:scale-[0.99] select-none text-left"
+                to={getCountryRoute(dest.id)}
+                className="group bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card-hover border border-[#DCE7FA] hover:border-[#0755F5]/40 transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1.5 active:scale-[0.99] select-none text-left"
               >
                 {/* Card Photo */}
                 <div className="relative h-56 w-full overflow-hidden bg-slate-100">
@@ -166,7 +155,7 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination, hideBottomW
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60" />
                 </div>
 
                 {/* Card Bottom Meta */}
@@ -174,42 +163,25 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination, hideBottomW
                   <div className="flex items-center gap-3">
                     <FlagComponent />
                     <div>
-                      <h3 className="text-base font-bold text-[#10243F] group-hover:text-[#D99A35] transition-colors leading-tight">
+                      <h3 className="text-base font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors leading-tight">
                         {dest.name}
                       </h3>
-                      <p className="text-xs text-[#64748B] font-medium mt-0.5 leading-snug">
+                      <p className="text-xs text-[#63718E] font-medium mt-0.5 leading-snug">
                         {dest.subtitle}
                       </p>
                     </div>
                   </div>
 
                   {/* Circular Arrow Button */}
-                  <div className="w-8 h-8 rounded-full border border-slate-200 text-slate-500 flex items-center justify-center shrink-0 group-hover:bg-[#D99A35] group-hover:text-white group-hover:border-[#D99A35] group-hover:scale-105 transition-all">
+                  <div className="w-8 h-8 rounded-full border border-[#DCE7FA] text-slate-500 flex items-center justify-center shrink-0 group-hover:bg-gradient-to-r group-hover:from-[#0755F5] group-hover:to-[#0877FF] group-hover:text-white group-hover:border-transparent group-hover:scale-105 transition-all">
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
       </div>
-
-      {/* ── CURVED TRANSITION INTO DARK SERVICES SECTION (MATCHING IMAGE 2) ── */}
-      {!hideBottomWave && (
-        <div className="relative w-full overflow-hidden leading-none z-10 -mt-1 pointer-events-none">
-          <svg
-            viewBox="0 0 1440 90"
-            fill="none"
-            className="w-full h-12 sm:h-16 lg:h-20 block"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,45 C360,95 1080,5 1440,35 L1440,90 L0,90 Z"
-              fill="#10243F"
-            />
-          </svg>
-        </div>
-      )}
     </section>
   );
 };

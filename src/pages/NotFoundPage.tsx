@@ -25,7 +25,7 @@ export const NotFoundPage: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#D99A35] to-[#F16B55] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-full shadow-md transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#0755F5] to-[#0877FF] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg shadow-[#0755F5]/25 transition-all cursor-pointer"
           >
             <Home className="w-4 h-4" />
             <span>Return to Home</span>
@@ -33,10 +33,10 @@ export const NotFoundPage: React.FC = () => {
 
           <Link
             to="/destinations"
-            className="inline-flex items-center gap-1.5 px-5 py-3 bg-white hover:bg-slate-50 text-[#10243F] border border-slate-200 text-xs sm:text-sm font-bold rounded-full transition-all cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-5 py-3 bg-white hover:bg-[#EDF4FF] text-[#101E49] border border-[#DCE7FA] text-xs sm:text-sm font-bold rounded-full transition-all cursor-pointer"
           >
             <span>Explore Destinations</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#D99A35]" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#0755F5]" />
           </Link>
         </div>
 

@@ -19,12 +19,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenCounselling }) => {
     : NEWS_ITEMS.filter(n => n.category.toLowerCase().includes(selectedCategory.toLowerCase()));
 
   return (
-    <div className="bg-[#FAF7F1]">
+    <div className="bg-[#EDF4FF]">
       {/* Page Header Banner */}
       <PageBanner
         breadcrumbs={[{ label: 'Blog & Insights' }]}
         badge="LATEST POLICIES & UPDATES"
-        badgeIcon={<Newspaper className="w-3.5 h-3.5 text-[#D99A35]" />}
+        badgeIcon={<Newspaper className="w-3.5 h-3.5 text-[#0755F5]" />}
         title="Global Education News & Visa Insights"
         highlightWord="Visa Insights"
         description="Stay informed with expert analysis on student visa reforms, embassy processing timelines, scholarship deadlines, and country-specific immigration regulations."
@@ -34,15 +34,15 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenCounselling }) => {
       <NewsSection onOpenCounselling={onOpenCounselling} />
 
       {/* Categories & Full Archive Grid */}
-      <section className="py-16 sm:py-20 bg-white border-y border-slate-200/70">
+      <section className="py-16 sm:py-20 bg-white border-y border-[#DCE7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#64748B] block mb-2">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E] block mb-2">
                 ARTICLE ARCHIVE
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#10243F] font-serif tracking-tight">
-                Browse Articles by <span className="text-[#D99A35] font-serif">Category</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#101E49] tracking-tight">
+                Browse Articles by <span className="bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent font-extrabold">Category</span>
               </h2>
             </div>
 
@@ -54,8 +54,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenCounselling }) => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                     selectedCategory === cat
-                      ? 'bg-[#10243F] text-white shadow-sm'
-                      : 'bg-[#FAF7F1] text-slate-600 hover:text-[#10243F] hover:bg-slate-100'
+                      ? 'bg-gradient-to-r from-[#0755F5] to-[#0877FF] text-white shadow-sm shadow-[#0755F5]/25'
+                      : 'bg-[#EDF4FF] text-[#172344] hover:bg-blue-100/70 border border-[#DCE7FA]'
                   }`}
                 >
                   {cat}
@@ -69,7 +69,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenCounselling }) => {
             {filteredArticles.map((article) => (
               <article
                 key={article.id}
-                className="bg-[#FAF7F1] rounded-3xl overflow-hidden border border-slate-200/80 hover:border-[#D99A35]/50 hover:shadow-card transition-all duration-300 flex flex-col group"
+                className="bg-[#EDF4FF]/50 rounded-3xl overflow-hidden border border-[#DCE7FA] hover:border-[#0755F5]/60 hover:shadow-card transition-all duration-300 flex flex-col group"
               >
                 <div className="relative h-48 w-full overflow-hidden bg-slate-900">
                   <img
@@ -78,7 +78,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenCounselling }) => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/95 text-xs font-bold text-[#10243F] shadow-sm">
+                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/95 text-xs font-bold text-[#101E49] shadow-sm">
                     {article.category}
                   </span>
                 </div>
@@ -97,18 +97,18 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenCounselling }) => {
                       </span>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-bold text-[#10243F] group-hover:text-[#D99A35] transition-colors leading-snug mb-2 font-serif">
+                    <h3 className="text-base sm:text-lg font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors leading-snug mb-2">
                       {article.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#64748B] line-clamp-3 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#63718E] line-clamp-3 leading-relaxed">
                       {article.summary}
                     </p>
                   </div>
 
                   <button
                     onClick={onOpenCounselling}
-                    className="pt-2 text-xs font-bold text-[#D99A35] hover:text-[#B87A1E] flex items-center gap-1 transition-colors self-start cursor-pointer"
+                    className="pt-2 text-xs font-bold text-[#0755F5] hover:text-[#0877FF] flex items-center gap-1 transition-colors self-start cursor-pointer"
                   >
                     <span>Read Full Guide & Apply</span>
                     <ArrowRight className="w-3.5 h-3.5" />

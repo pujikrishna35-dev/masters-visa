@@ -136,7 +136,7 @@ export const ProcessPage: React.FC<ProcessPageProps> = ({ onOpenCounselling }) =
           <div className="mt-12 text-center">
             <button
               onClick={onOpenCounselling}
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 text-white font-bold text-sm rounded-full shadow-lg shadow-[#D99A35]/25 hover:-translate-y-0.5 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#0755F5] via-[#2563EB] to-[#0877FF] hover:opacity-95 text-white font-bold text-sm rounded-full shadow-lg shadow-[#0755F5]/25 hover:-translate-y-0.5 transition-all cursor-pointer"
             >
               <span>Begin Step 1: Free Consultation</span>
               <ArrowRight className="w-4 h-4" />

@@ -56,43 +56,23 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
   if (!service) return null;
 
   const IconComponent = service.iconName ? SERVICE_ICONS[service.iconName] : null;
-  const isCorporateInternships = service.id === 'corporate-internships';
-  const isPartTimeJobs = service.id === 'part-time-jobs';
 
-  const headerGradient = isCorporateInternships
-    ? 'bg-gradient-to-r from-[#0F2D3D] via-[#0D9488]/30 to-[#10243F]'
-    : isPartTimeJobs
-    ? 'bg-gradient-to-r from-[#0F2D4A] via-[#0284C7]/30 to-[#10243F]'
-    : 'bg-gradient-to-r from-[#10243F] via-[#163053] to-[#10243F]';
+  const headerGradient = 'bg-gradient-to-r from-[#101E49] via-[#1E3A8A] to-[#101E49]';
 
-  const badgeStyle = isCorporateInternships
-    ? 'bg-teal-500/20 text-teal-200 border-teal-400/30'
-    : isPartTimeJobs
-    ? 'bg-sky-500/20 text-sky-200 border-sky-400/30'
-    : 'bg-[#FDF7EC] text-[#D99A35] border-[#D99A35]/30';
-
-  const checkColor = isCorporateInternships
-    ? 'text-teal-600'
-    : isPartTimeJobs
-    ? 'text-sky-600'
-    : 'text-emerald-500';
-
-  const stepBadgeStyle = isCorporateInternships
-    ? 'bg-teal-50 text-teal-700 border-teal-200'
-    : isPartTimeJobs
-    ? 'bg-sky-50 text-sky-700 border-sky-200'
-    : 'bg-[#FDF7EC] text-[#D99A35] border-[#D99A35]/30';
+  const badgeStyle = 'bg-[#EDF4FF] text-[#0755F5] border-[#DCE7FA]';
+  const checkColor = 'text-[#0755F5]';
+  const stepBadgeStyle = 'bg-[#EDF4FF] text-[#0755F5] border-[#DCE7FA]';
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-navy/60 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#101E49]/60 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-label={`${service.title} Details`}
     >
       <div 
-        className="w-full max-w-2xl bg-white rounded-3xl shadow-floating border border-slate-100 overflow-hidden flex flex-col max-h-[90vh]"
+        className="w-full max-w-2xl bg-white rounded-3xl shadow-floating border border-[#DCE7FA] overflow-hidden flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Ribbon */}
@@ -121,10 +101,10 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
             </button>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-bold font-serif text-white mt-1">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
             {service.title}
           </h3>
-          <p className="text-xs sm:text-sm text-slate-300 mt-1.5 max-w-xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-blue-200 mt-1.5 max-w-xl leading-relaxed">
             {service.description}
           </p>
         </div>
@@ -134,14 +114,14 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
           {/* Section 1: What this service includes */}
           {service.includes && service.includes.length > 0 && (
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#10243F] mb-3 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#D99A35]" /> What This Service Includes
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#101E49] mb-3 flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#0755F5]" /> What This Service Includes
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {service.includes.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-2.5 p-3 bg-[#FAF7F1] rounded-2xl border border-slate-200/60 text-xs font-semibold text-[#10243F]"
+                    className="flex items-start gap-2.5 p-3 bg-[#EDF4FF]/50 rounded-2xl border border-[#DCE7FA] text-xs font-semibold text-[#172344]"
                   >
                     <CheckCircle2 className={`w-4 h-4 ${checkColor} shrink-0 mt-0.5`} />
                     <span className="leading-snug">{item}</span>
@@ -154,21 +134,21 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
           {/* Section 2: Step-by-Step Process */}
           {service.steps && service.steps.length > 0 && (
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#10243F] mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#101E49] mb-3">
                 Simple Step-by-Step Process
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {service.steps.map((st) => (
                   <div
                     key={st.step}
-                    className="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start gap-3"
+                    className="p-3.5 bg-slate-50 rounded-2xl border border-[#DCE7FA] flex items-start gap-3"
                   >
                     <span className={`w-7 h-7 rounded-full font-bold text-xs flex items-center justify-center shrink-0 border ${stepBadgeStyle}`}>
                       {st.step}
                     </span>
                     <div>
-                      <h5 className="text-xs font-bold text-[#10243F] mb-0.5">{st.title}</h5>
-                      <p className="text-[11px] text-slate-600 leading-relaxed">{st.desc}</p>
+                      <h5 className="text-xs font-bold text-[#101E49] mb-0.5">{st.title}</h5>
+                      <p className="text-[11px] text-[#63718E] leading-relaxed">{st.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -177,19 +157,19 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
           )}
 
           {/* Section 3: MasterVisa Guidance Reassurance */}
-          <div className="p-4 bg-[#FDF7EC] rounded-2xl border border-[#D99A35]/30">
-            <h5 className="text-xs font-bold uppercase tracking-wider text-[#D99A35] mb-1">
+          <div className="p-4 bg-[#EDF4FF] rounded-2xl border border-[#DCE7FA]">
+            <h5 className="text-xs font-bold uppercase tracking-wider text-[#0755F5] mb-1">
               Personalized 1-on-1 Mentorship
             </h5>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs text-[#63718E] leading-relaxed">
               Every applicant is paired with an experienced overseas education advisor to review your profile, avoid common pitfalls, and guide you through each stage with transparent support.
             </p>
           </div>
         </div>
 
         {/* Footer Action */}
-        <div className="p-4 sm:p-6 border-t border-slate-100 bg-[#FAF7F1] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="text-xs text-slate-500 text-center sm:text-left">
+        <div className="p-4 sm:p-6 border-t border-[#DCE7FA] bg-white flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="text-xs text-[#63718E] text-center sm:text-left">
             Have questions about this service? Speak with our senior counselor.
           </div>
           <button
@@ -198,7 +178,7 @@ export const ServiceDetailModal: React.FC<Props> = ({ service, onClose, onBookCo
               onClose();
               onBookCounselling(service.title);
             }}
-            className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 text-white font-bold text-sm rounded-xl transition-all shadow-md shadow-[#D99A35]/25 flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#0755F5] via-[#2563EB] to-[#0877FF] hover:opacity-95 text-white font-bold text-sm rounded-xl transition-all shadow-md shadow-[#0755F5]/25 flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>Book a Consultation</span>
             <ArrowRight className="w-4 h-4" />

@@ -24,7 +24,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
   description,
   breadcrumbs,
 }) => {
-  // Render title with highlighted word in champagne gold font-serif
+  // Render title with highlighted word in electric blue gradient
   const renderTitle = () => {
     if (!highlightWord || !title.includes(highlightWord)) {
       return title;
@@ -34,24 +34,24 @@ export const PageBanner: React.FC<PageBannerProps> = ({
     return (
       <>
         {parts[0]}
-        <span className="text-[#D99A35] font-serif">{highlightWord}</span>
+        <span className="bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent font-extrabold">{highlightWord}</span>
         {parts[1]}
       </>
     );
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FAF7F1] to-[#FAF7F1] border-b border-slate-200/70 pt-8 pb-12 sm:pt-12 sm:pb-16">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#EDF4FF] via-[#EDF4FF]/60 to-white border-b border-[#DCE7FA] pt-10 pb-12 sm:pt-14 sm:pb-16">
       {/* Decorative background glow matching the brand palette */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D99A35]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-10 w-72 h-72 bg-[#1769AA]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0755F5]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-10 w-72 h-72 bg-[#493DFF]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-[#64748B] mb-4 sm:mb-6 font-medium">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-[#63718E] mb-4 sm:mb-6 font-medium">
           <Link
             to="/"
-            className="flex items-center gap-1 hover:text-[#D99A35] transition-colors"
+            className="flex items-center gap-1 hover:text-[#0755F5] transition-colors"
           >
             <Home className="w-3.5 h-3.5" />
             <span>Home</span>
@@ -63,13 +63,13 @@ export const PageBanner: React.FC<PageBannerProps> = ({
               <React.Fragment key={idx}>
                 <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 {isLast || !crumb.href ? (
-                  <span className="text-[#10243F] font-semibold">
+                  <span className="text-[#101E49] font-semibold">
                     {crumb.label}
                   </span>
                 ) : (
                   <Link
                     to={crumb.href}
-                    className="hover:text-[#D99A35] transition-colors"
+                    className="hover:text-[#0755F5] transition-colors"
                   >
                     {crumb.label}
                   </Link>
@@ -82,7 +82,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
         {/* Badge Eyebrow */}
         {badge && (
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FDF7EC] border border-[#D99A35]/35 text-[11px] font-bold text-[#D99A35] uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#DCE7FA] text-[11px] font-bold text-[#0755F5] uppercase tracking-wider shadow-sm">
               {badgeIcon}
               <span>{badge}</span>
             </span>
@@ -90,12 +90,12 @@ export const PageBanner: React.FC<PageBannerProps> = ({
         )}
 
         {/* Big Editorial Headline */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10243F] font-serif tracking-tight leading-[1.15] max-w-4xl mb-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#101E49] tracking-tight leading-[1.15] max-w-4xl mb-4">
           {renderTitle()}
         </h1>
 
         {/* Subtitle Description */}
-        <p className="text-sm sm:text-base lg:text-lg text-[#64748B] max-w-2xl leading-relaxed">
+        <p className="text-sm sm:text-base lg:text-lg text-[#63718E] max-w-2xl leading-relaxed">
           {description}
         </p>
       </div>

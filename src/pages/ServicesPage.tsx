@@ -84,7 +84,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 <div className="pt-4 flex flex-wrap gap-4">
                   <button
                     onClick={() => onOpenCounselling('Airport Pickup & Accommodation')}
-                    className="px-6 py-3 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg shadow-[#D99A35]/30 flex items-center gap-2 cursor-pointer transition-all"
+                    className="px-6 py-3 bg-gradient-to-r from-[#0755F5] via-[#2563EB] to-[#0877FF] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg shadow-[#0755F5]/30 flex items-center gap-2 cursor-pointer transition-all"
                   >
                     <span>Claim Free Airport Pickup</span>
                     <ArrowRight className="w-4 h-4" />
@@ -101,8 +101,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               {/* Right Side Visual Cards */}
               <div className="lg:col-span-5 space-y-4">
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 space-y-3">
-                  <div className="flex items-center gap-2 text-xs font-bold text-[#D99A35] uppercase">
-                    <ShieldCheck className="w-4 h-4" />
+                  <div className="flex items-center gap-2 text-xs font-bold text-sky-300 uppercase">
+                    <ShieldCheck className="w-4 h-4 text-sky-400" />
                     <span>Post-Arrival Checklist</span>
                   </div>
                   <ul className="space-y-2 text-xs text-slate-200">

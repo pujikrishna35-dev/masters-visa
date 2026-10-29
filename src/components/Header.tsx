@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Menu, X, ArrowRight, ChevronDown, ChevronRight, PhoneCall, Globe } from 'lucide-react';
+import { Search, Menu, X, ArrowRight, ChevronDown, ChevronRight, PhoneCall } from 'lucide-react';
 import { Logo } from './Logo';
 
 interface Props {
@@ -32,14 +32,15 @@ interface ServiceItem {
 }
 
 const DESTINATION_ITEMS: DestinationItem[] = [
-  { id: 'usa', name: 'Study in USA', country: 'USA', flag: '🇺🇸', sub: 'STEM OPT & Ivy League', path: '/destinations/usa' },
-  { id: 'united-kingdom', name: 'Study in United Kingdom', country: 'United Kingdom', flag: '🇬🇧', sub: '1-Yr Master’s & 2-Yr PSW', path: '/destinations/united-kingdom' },
-  { id: 'canada', name: 'Study in Canada', country: 'Canada', flag: '🇨🇦', sub: 'Paid Co-op & Up to 3-Yr PGWP', path: '/destinations/canada' },
-  { id: 'australia', name: 'Study in Australia', country: 'Australia', flag: '🇦🇺', sub: 'Go8 Unis & Stay-Back Visa', path: '/destinations/australia' },
-  { id: 'europe', name: 'Study in Europe', country: 'Europe', flag: '🇪🇺', sub: 'Schengen Mobility & Low Tuition', path: '/destinations/europe' },
-  { id: 'new-zealand', name: 'Study in New Zealand', country: 'New Zealand', flag: '🇳🇿', sub: 'Safe Living & 3-Yr Work Visa', path: '/destinations/new-zealand' },
-  { id: 'france', name: 'Study in France', country: 'France', flag: '🇫🇷', sub: 'Top Business & 2-Yr APS Visa', path: '/destinations/france' },
-  { id: 'ireland', name: 'Study in Ireland', country: 'Ireland', flag: '🇮🇪', sub: 'EU Tech Hub & 2-Yr Stay-Back', path: '/destinations/ireland' },
+  { id: 'usa', name: 'Study in USA', country: 'USA', flag: '🇺🇸', sub: 'STEM OPT & Ivy League', path: '/study-in-usa' },
+  { id: 'united-kingdom', name: 'Study in United Kingdom', country: 'United Kingdom', flag: '🇬🇧', sub: '1-Yr Master’s & 2-Yr PSW', path: '/study-in-uk' },
+  { id: 'canada', name: 'Study in Canada', country: 'Canada', flag: '🇨🇦', sub: 'Paid Co-op & Up to 3-Yr PGWP', path: '/study-in-canada' },
+  { id: 'australia', name: 'Study in Australia', country: 'Australia', flag: '🇦🇺', sub: 'Go8 Unis & Stay-Back Visa', path: '/study-in-australia' },
+  { id: 'germany', name: 'Study in Germany', country: 'Germany', flag: '🇩🇪', sub: 'Tuition-Free & 18-Mo Visa', path: '/study-in-germany' },
+  { id: 'france', name: 'Study in France', country: 'France', flag: '🇫🇷', sub: 'Top Business & 2-Yr APS Visa', path: '/study-in-france' },
+  { id: 'new-zealand', name: 'Study in New Zealand', country: 'New Zealand', flag: '🇳🇿', sub: 'Safe Living & 3-Yr Work Visa', path: '/study-in-new-zealand' },
+  { id: 'ireland', name: 'Study in Ireland', country: 'Ireland', flag: '🇮🇪', sub: 'EU Tech Hub & 2-Yr Stay-Back', path: '/study-in-ireland' },
+  { id: 'europe', name: 'Study in Europe', country: 'Europe', flag: '🇪🇺', sub: 'Schengen Mobility & Low Tuition', path: '/study-in-europe' },
 ];
 
 const SERVICE_ITEMS: ServiceItem[] = [
@@ -63,12 +64,6 @@ const SERVICE_ITEMS: ServiceItem[] = [
   },
 ];
 
-const LANGUAGES = [
-  { code: 'EN', name: 'English (US)' },
-  { code: 'HI', name: 'Hindi (हिंदी)' },
-  { code: 'TE', name: 'Telugu (తెలుగు)' },
-];
-
 export const Header: React.FC<Props> = ({
   onOpenCounselling,
   onOpenSearch,
@@ -80,26 +75,9 @@ export const Header: React.FC<Props> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [destDropdownOpen, setDestDropdownOpen] = useState(false);
   const [mobileDestOpen, setMobileDestOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [freeTrainingHover, setFreeTrainingHover] = useState(false);
-  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState('EN');
 
   const destTimerRef = useRef<number | null>(null);
-  const servicesTimerRef = useRef<number | null>(null);
-  const langDropdownRef = useRef<HTMLDivElement>(null);
-
-  // Close language dropdown on outside click
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (langDropdownRef.current && !langDropdownRef.current.contains(e.target as Node)) {
-        setLangDropdownOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   // Scroll listener for header elevation
   useEffect(() => {
@@ -144,24 +122,12 @@ export const Header: React.FC<Props> = ({
     }, 150);
   };
 
-  const handleServicesMouseEnter = () => {
-    if (servicesTimerRef.current) clearTimeout(servicesTimerRef.current);
-    setServicesDropdownOpen(true);
-  };
-
-  const handleServicesMouseLeave = () => {
-    servicesTimerRef.current = window.setTimeout(() => {
-      setServicesDropdownOpen(false);
-    }, 150);
-  };
-
   const handleDestinationSelect = () => {
     setDestDropdownOpen(false);
     setMobileMenuOpen(false);
   };
 
   const handleServiceSelect = (serviceId: string, serviceTitle: string) => {
-    setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
 
     if (onSelectService) {
@@ -174,10 +140,10 @@ export const Header: React.FC<Props> = ({
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full bg-white transition-all duration-300 ${
+        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
-            ? 'shadow-[0_4px_20px_-2px_rgba(16,36,63,0.08)] border-b border-slate-100 py-2 sm:py-2.5'
-            : 'border-b border-slate-100/90 py-2.5 sm:py-3'
+            ? 'bg-white/95 backdrop-blur-md shadow-[0_4px_20px_-2px_rgba(7,85,245,0.06)] border-b border-[#DCE7FA] py-2.5 sm:py-3'
+            : 'bg-white/90 backdrop-blur-sm border-b border-[#DCE7FA]/80 py-3 sm:py-3.5'
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,57 +151,16 @@ export const Header: React.FC<Props> = ({
             {/* 1. Left Logo */}
             <div className="flex-shrink-0">
               <Logo
-                size="sm"
+                size="md"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
                 }}
               />
             </div>
 
-            {/* 2. Desktop Navigation Menu */}
-            <nav className="hidden lg:flex items-center space-x-5 xl:space-x-7">
-              {/* Home */}
-              <Link
-                to="/"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
-                }}
-                className={`text-[14px] transition-colors relative pb-1 cursor-pointer ${
-                  activeSection === 'home'
-                    ? 'font-bold text-[#10243F]'
-                    : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
-                }`}
-              >
-                Home
-                {activeSection === 'home' && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
-                )}
-              </Link>
-
-              {/* About */}
-              <Link
-                to="/about"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
-                }}
-                className={`text-[14px] transition-colors relative pb-1 cursor-pointer ${
-                  activeSection === 'about'
-                    ? 'font-bold text-[#10243F]'
-                    : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
-                }`}
-              >
-                About
-                {activeSection === 'about' && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
-                )}
-              </Link>
-
+            {/* 2. Desktop Navigation Menu matching reference screenshot */}
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {/* Destinations Dropdown */}
               <div
                 className="relative"
@@ -248,28 +173,28 @@ export const Header: React.FC<Props> = ({
                     setDestDropdownOpen(false);
                     setMobileMenuOpen(false);
                   }}
-                  className={`text-[14px] transition-colors flex items-center gap-1.5 relative pb-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D99A35] rounded-sm ${
+                  className={`text-[14.5px] transition-colors flex items-center gap-1.5 relative py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0755F5] rounded-sm ${
                     activeSection === 'destinations'
-                      ? 'font-bold text-[#10243F]'
-                      : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
+                      ? 'font-bold text-[#0755F5]'
+                      : 'font-medium text-[#172344] hover:text-[#0755F5]'
                   }`}
                   aria-expanded={destDropdownOpen}
                   aria-haspopup="true"
                 >
                   <span>Destinations</span>
                   <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 text-slate-400 group-hover:text-[#D99A35] ${
-                      destDropdownOpen ? 'rotate-180 text-[#D99A35]' : ''
+                    className={`w-3.5 h-3.5 transition-transform duration-200 text-slate-400 group-hover:text-[#0755F5] ${
+                      destDropdownOpen ? 'rotate-180 text-[#0755F5]' : ''
                     }`}
                   />
                   {activeSection === 'destinations' && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#0755F5] rounded-full" />
                   )}
                 </Link>
 
                 {destDropdownOpen && (
                   <div className="absolute top-full left-0 w-80 pt-2 animate-fadeIn z-50">
-                    <div className="bg-white rounded-2xl shadow-xl shadow-[#10243F]/12 border border-slate-100 p-2 space-y-1">
+                    <div className="bg-white rounded-2xl shadow-xl shadow-[#0755F5]/10 border border-[#DCE7FA] p-2 space-y-1">
                       <div className="px-3 pt-2 pb-1.5 border-b border-slate-100 flex items-center justify-between">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                           Study Abroad Destinations
@@ -277,7 +202,7 @@ export const Header: React.FC<Props> = ({
                         <Link
                           to="/destinations"
                           onClick={handleDestinationSelect}
-                          className="text-[11px] font-bold text-[#D99A35] hover:underline"
+                          className="text-[11px] font-bold text-[#0755F5] hover:underline"
                         >
                           View All ({DESTINATION_ITEMS.length}) →
                         </Link>
@@ -289,20 +214,20 @@ export const Header: React.FC<Props> = ({
                             key={item.id}
                             to={item.path}
                             onClick={handleDestinationSelect}
-                            className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#FAF7F1] transition-all group cursor-pointer focus-visible:outline-none focus-visible:bg-[#FAF7F1]"
+                            className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#EDF4FF] transition-all group cursor-pointer focus-visible:outline-none focus-visible:bg-[#EDF4FF]"
                           >
-                            <span className="text-xl shrink-0 w-8 h-8 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:scale-105 group-hover:border-[#D99A35]/30 transition-transform">
+                            <span className="text-xl shrink-0 w-8 h-8 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:scale-105 group-hover:border-[#0755F5]/30 transition-transform">
                               {item.flag}
                             </span>
                             <div className="flex-1 min-w-0">
-                              <p className="text-xs font-bold text-[#10243F] group-hover:text-[#D99A35] transition-colors leading-tight truncate">
+                              <p className="text-xs font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors leading-tight truncate">
                                 {item.name}
                               </p>
-                              <p className="text-[10.5px] text-slate-400 group-hover:text-slate-500 transition-colors truncate">
+                              <p className="text-[10.5px] text-[#63718E] transition-colors truncate">
                                 {item.sub}
                               </p>
                             </div>
-                            <ArrowRight className="w-3.5 h-3.5 text-slate-300 opacity-0 group-hover:opacity-100 group-hover:text-[#D99A35] group-hover:translate-x-0.5 transition-all shrink-0" />
+                            <ArrowRight className="w-3.5 h-3.5 text-slate-300 opacity-0 group-hover:opacity-100 group-hover:text-[#0755F5] group-hover:translate-x-0.5 transition-all shrink-0" />
                           </Link>
                         ))}
                       </div>
@@ -311,143 +236,65 @@ export const Header: React.FC<Props> = ({
                 )}
               </div>
 
-              {/* Services Dropdown */}
-              {/* Our Services Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={handleServicesMouseEnter}
-                onMouseLeave={handleServicesMouseLeave}
+              {/* Courses */}
+              <Link
+                to="/services?service=test-preparation"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setDestDropdownOpen(false);
+                }}
+                className={`text-[14.5px] transition-colors relative py-1 cursor-pointer ${
+                  activeSection === 'services' && location.search.includes('test-preparation')
+                    ? 'font-bold text-[#0755F5]'
+                    : 'font-medium text-[#172344] hover:text-[#0755F5]'
+                }`}
               >
-                <Link
-                  to="/services"
-                  onClick={() => {
-                    setServicesDropdownOpen(false);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`text-[14px] transition-colors flex items-center gap-1.5 relative pb-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D99A35] rounded-sm ${
-                    activeSection === 'services'
-                      ? 'font-bold text-[#10243F]'
-                      : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
-                  }`}
-                  aria-expanded={servicesDropdownOpen}
-                  aria-haspopup="true"
-                >
-                  <span>Our Services</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 text-slate-400 group-hover:text-[#D99A35] ${
-                      servicesDropdownOpen ? 'rotate-180 text-[#D99A35]' : ''
-                    }`}
-                  />
-                  {activeSection === 'services' && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
-                  )}
-                </Link>
+                Courses
+              </Link>
 
-                {servicesDropdownOpen && (
-                  <div className="absolute top-full left-0 w-64 pt-2 animate-fadeIn z-50">
-                    <div className="bg-white rounded-xl shadow-xl shadow-[#10243F]/15 border border-slate-200/90 divide-y divide-slate-100 overflow-visible">
-                      {SERVICE_ITEMS.map((item) => (
-                        <div
-                          key={item.id}
-                          className="relative"
-                          onMouseEnter={() => {
-                            if (item.hasSubmenu) setFreeTrainingHover(true);
-                          }}
-                          onMouseLeave={() => {
-                            if (item.hasSubmenu) setFreeTrainingHover(false);
-                          }}
-                        >
-                          <Link
-                            to={`/services?service=${item.id}`}
-                            onClick={() => handleServiceSelect(item.id, item.title)}
-                            className="flex items-center justify-between px-4 py-2.5 text-[14px] font-medium text-[#10243F] hover:text-[#D99A35] hover:bg-[#FAF7F1] transition-colors group cursor-pointer"
-                          >
-                            <span>{item.title}</span>
-                            {item.hasSubmenu ? (
-                              <ChevronRight className="w-4 h-4 text-slate-800 font-bold stroke-[2.5] group-hover:text-[#D99A35] group-hover:translate-x-0.5 transition-all" />
-                            ) : null}
-                          </Link>
-
-                          {/* Flyout Submenu for Free Training */}
-                          {item.hasSubmenu && freeTrainingHover && (
-                            <div className="absolute top-0 left-full pl-1.5 w-60 z-50 animate-fadeIn">
-                              <div className="bg-white rounded-xl shadow-xl shadow-[#10243F]/15 border border-slate-200/90 divide-y divide-slate-100 overflow-hidden">
-                                {item.subItems?.map((sub) => (
-                                  <Link
-                                    key={sub.id}
-                                    to={`/services?service=${sub.id}`}
-                                    onClick={() => handleServiceSelect(sub.id, sub.title)}
-                                    className="block px-4 py-2 text-[13px] font-medium text-[#10243F] hover:text-[#D99A35] hover:bg-[#FAF7F1] transition-colors cursor-pointer"
-                                  >
-                                    {sub.title}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* FAQ's Link matching screenshot */}
+              {/* Universities */}
               <a
-                href="#faqs"
+                href="#universities"
                 onClick={(e) => {
                   setMobileMenuOpen(false);
                   setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
-                  const el = document.getElementById('faqs');
+                  const el = document.getElementById('universities');
                   if (el) {
                     e.preventDefault();
                     el.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="text-[14px] transition-colors relative pb-1 cursor-pointer font-medium text-[#10243F]/80 hover:text-[#D99A35]"
+                className="text-[14.5px] transition-colors relative py-1 cursor-pointer font-medium text-[#172344] hover:text-[#0755F5]"
               >
-                FAQ&apos;s
+                Universities
               </a>
 
-              {/* Process */}
-              <Link
-                to="/process"
+              {/* Scholarships */}
+              <button
+                type="button"
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
+                  onOpenCounselling('Scholarships & Financial Aid');
                 }}
-                className={`text-[14px] transition-colors relative pb-1 cursor-pointer ${
-                  activeSection === 'process'
-                    ? 'font-bold text-[#10243F]'
-                    : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
-                }`}
+                className="text-[14.5px] transition-colors relative py-1 cursor-pointer font-medium text-[#172344] hover:text-[#0755F5]"
               >
-                Process
-                {activeSection === 'process' && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
-                )}
-              </Link>
+                Scholarships
+              </button>
 
-              {/* Success Stories */}
+              {/* Visa Guide */}
               <Link
-                to="/testimonials"
+                to="/visa"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
                 }}
-                className={`text-[14px] transition-colors relative pb-1 cursor-pointer ${
-                  activeSection === 'testimonials'
-                    ? 'font-bold text-[#10243F]'
-                    : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
+                className={`text-[14.5px] transition-colors relative py-1 cursor-pointer ${
+                  activeSection === 'services' && (location.pathname === '/visa' || location.pathname === '/visa-information')
+                    ? 'font-bold text-[#0755F5]'
+                    : 'font-medium text-[#172344] hover:text-[#0755F5]'
                 }`}
               >
-                Success Stories
-                {activeSection === 'testimonials' && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
-                )}
+                Visa Guide
               </Link>
 
               {/* Blog */}
@@ -456,107 +303,45 @@ export const Header: React.FC<Props> = ({
                 onClick={() => {
                   setMobileMenuOpen(false);
                   setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
                 }}
-                className={`text-[14px] transition-colors relative pb-1 cursor-pointer ${
+                className={`text-[14.5px] transition-colors relative py-1 cursor-pointer ${
                   activeSection === 'blog'
-                    ? 'font-bold text-[#10243F]'
-                    : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
+                    ? 'font-bold text-[#0755F5]'
+                    : 'font-medium text-[#172344] hover:text-[#0755F5]'
                 }`}
               >
                 Blog
                 {activeSection === 'blog' && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
-                )}
-              </Link>
-
-              {/* Contact */}
-              <Link
-                to="/contact"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setDestDropdownOpen(false);
-                  setServicesDropdownOpen(false);
-                }}
-                className={`text-[14px] transition-colors relative pb-1 cursor-pointer ${
-                  activeSection === 'contact'
-                    ? 'font-bold text-[#10243F]'
-                    : 'font-medium text-[#10243F]/80 hover:text-[#D99A35]'
-                }`}
-              >
-                Contact
-                {activeSection === 'contact' && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#D99A35] rounded-full" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#0755F5] rounded-full" />
                 )}
               </Link>
             </nav>
 
-            {/* 3. Right Side: Search, Language Selector & Consultation CTA */}
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              {/* Circular Search Button */}
+            {/* 3. Right Side: Circular Search & Electric Blue "Book a Free Consultation" CTA */}
+            <div className="flex items-center gap-3">
+              {/* Circular Search Button matching screenshot */}
               <button
                 onClick={onOpenSearch}
                 aria-label="Search site"
-                className="w-9 h-9 rounded-full border border-slate-200 text-slate-600 hover:text-[#D99A35] hover:border-[#D99A35]/50 hover:bg-slate-50 flex items-center justify-center transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full border border-[#DCE7FA] bg-white text-[#172344] hover:text-[#0755F5] hover:border-[#0755F5]/40 hover:bg-[#EDF4FF]/50 flex items-center justify-center transition-all cursor-pointer shadow-xs"
               >
                 <Search className="w-4 h-4" />
               </button>
 
-              {/* Language Selector Pill */}
-              <div className="relative" ref={langDropdownRef}>
-                <button
-                  onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                  aria-label="Select language"
-                  className="h-9 px-3 rounded-full border border-slate-200 hover:border-slate-300 bg-white text-slate-700 hover:text-[#10243F] flex items-center gap-1.5 transition-colors text-xs sm:text-[13px] font-semibold cursor-pointer"
-                >
-                  <Globe className="w-3.5 h-3.5 text-slate-500" />
-                  <span>{selectedLang}</span>
-                  <ChevronDown
-                    className={`w-3 h-3 text-slate-400 transition-transform duration-200 ${
-                      langDropdownOpen ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-
-                {langDropdownOpen && (
-                  <div className="absolute top-full right-0 mt-1.5 w-40 bg-white rounded-xl shadow-card border border-slate-100 p-1.5 animate-fadeIn z-50">
-                    {LANGUAGES.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => {
-                          setSelectedLang(lang.code);
-                          setLangDropdownOpen(false);
-                        }}
-                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center justify-between ${
-                          selectedLang === lang.code
-                            ? 'bg-[#FAF7F1] text-[#D99A35] font-bold'
-                            : 'text-slate-700 hover:bg-slate-50'
-                        }`}
-                      >
-                        <span>{lang.name}</span>
-                        <span className="text-[10px] uppercase text-slate-400 font-mono">
-                          {lang.code}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Book a Consultation Button */}
+              {/* Bright Electric Blue Gradient Button: Book a Free Consultation → */}
               <button
                 onClick={() => onOpenCounselling()}
-                className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 active:scale-[0.98] text-white text-xs sm:text-[13.5px] font-bold rounded-full shadow-md shadow-[#D99A35]/25 hover:shadow-lg hover:shadow-[#D99A35]/35 hover:-translate-y-0.5 transition-all group cursor-pointer"
+                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#0755F5] to-[#0877FF] hover:from-[#0544C7] hover:to-[#0766E6] text-white text-xs sm:text-[13.5px] font-bold rounded-full shadow-md shadow-[#0755F5]/25 hover:shadow-lg hover:shadow-[#0755F5]/35 hover:-translate-y-0.5 active:translate-y-0 transition-all group cursor-pointer"
               >
-                <span>Book a Consultation</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                <span>Book a Free Consultation</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </button>
 
               {/* Mobile Menu Toggle Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle Navigation Menu"
-                className="lg:hidden p-1.5 text-slate-700 hover:text-[#D99A35] transition-colors cursor-pointer"
+                className="lg:hidden p-2 rounded-xl text-[#172344] hover:text-[#0755F5] hover:bg-[#EDF4FF] transition-colors cursor-pointer"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -566,30 +351,9 @@ export const Header: React.FC<Props> = ({
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 shadow-xl animate-fadeIn">
+          <div className="lg:hidden border-t border-[#DCE7FA] bg-white px-4 pt-3 pb-6 shadow-xl animate-fadeIn">
             <div className="flex flex-col space-y-1">
-              <Link
-                to="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                  activeSection === 'home'
-                    ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                    : 'text-slate-700 hover:text-[#D99A35]'
-                }`}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                  activeSection === 'about'
-                    ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                    : 'text-slate-700 hover:text-[#D99A35]'
-                }`}
-              >
-                About
-              </Link>
+              {/* Destinations with expandable accordion for mobile */}
               <div>
                 <div className="flex items-center justify-between rounded-lg">
                   <Link
@@ -600,8 +364,8 @@ export const Header: React.FC<Props> = ({
                     }}
                     className={`flex-1 px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
                       activeSection === 'destinations'
-                        ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                        : 'text-slate-700 hover:text-[#D99A35]'
+                        ? 'font-bold text-[#0755F5] bg-[#EDF4FF]'
+                        : 'text-[#172344] hover:text-[#0755F5]'
                     }`}
                   >
                     Destinations
@@ -610,11 +374,11 @@ export const Header: React.FC<Props> = ({
                     type="button"
                     onClick={() => setMobileDestOpen(!mobileDestOpen)}
                     aria-label="Toggle Destinations submenu"
-                    className="p-2 text-slate-400 hover:text-[#D99A35] transition-colors cursor-pointer"
+                    className="p-2 text-slate-400 hover:text-[#0755F5] transition-colors cursor-pointer"
                   >
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        mobileDestOpen ? 'rotate-180 text-[#D99A35]' : ''
+                        mobileDestOpen ? 'rotate-180 text-[#0755F5]' : ''
                       }`}
                     />
                   </button>
@@ -622,7 +386,7 @@ export const Header: React.FC<Props> = ({
 
                 {/* Mobile Expandable Destinations Submenu */}
                 {mobileDestOpen && (
-                  <div className="pl-3 pr-1 py-1.5 space-y-1 bg-[#FAF7F1]/80 rounded-xl mt-1 mb-2 border border-slate-200/60 animate-fadeIn">
+                  <div className="pl-3 pr-1 py-1.5 space-y-1 bg-[#EDF4FF]/70 rounded-xl mt-1 mb-2 border border-[#DCE7FA] animate-fadeIn">
                     <div className="px-3 py-1 flex items-center justify-between text-[11px] text-slate-400 font-bold uppercase tracking-wider">
                       <span>Study Abroad Options</span>
                       <Link
@@ -631,7 +395,7 @@ export const Header: React.FC<Props> = ({
                           setMobileMenuOpen(false);
                           setMobileDestOpen(false);
                         }}
-                        className="text-[#D99A35] hover:underline"
+                        className="text-[#0755F5] hover:underline"
                       >
                         All Countries
                       </Link>
@@ -644,7 +408,7 @@ export const Header: React.FC<Props> = ({
                           setMobileMenuOpen(false);
                           setMobileDestOpen(false);
                         }}
-                        className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-white/70 hover:bg-white text-xs font-semibold text-[#10243F] hover:text-[#D99A35] transition-colors"
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-white hover:bg-white text-xs font-semibold text-[#101E49] hover:text-[#0755F5] transition-colors"
                       >
                         <span className="text-base shrink-0">{item.flag}</span>
                         <div className="flex-1 min-w-0">
@@ -657,6 +421,70 @@ export const Header: React.FC<Props> = ({
                   </div>
                 )}
               </div>
+
+              {/* Courses */}
+              <Link
+                to="/services?service=test-preparation"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 text-sm font-semibold rounded-lg text-[#172344] hover:text-[#0755F5] transition-colors"
+              >
+                Courses
+              </Link>
+
+              {/* Universities */}
+              <a
+                href="#universities"
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  const el = document.getElementById('universities');
+                  if (el) {
+                    e.preventDefault();
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="px-3 py-2 text-sm font-semibold rounded-lg text-[#172344] hover:text-[#0755F5] transition-colors"
+              >
+                Universities
+              </a>
+
+              {/* Scholarships */}
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenCounselling('Scholarships & Financial Aid');
+                }}
+                className="text-left px-3 py-2 text-sm font-semibold rounded-lg text-[#172344] hover:text-[#0755F5] transition-colors cursor-pointer"
+              >
+                Scholarships
+              </button>
+
+              {/* Visa Guide */}
+              <Link
+                to="/visa"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
+                  activeSection === 'services' && (location.pathname === '/visa' || location.pathname === '/visa-information')
+                    ? 'font-bold text-[#0755F5] bg-[#EDF4FF]'
+                    : 'text-[#172344] hover:text-[#0755F5]'
+                }`}
+              >
+                Visa Guide
+              </Link>
+
+              {/* Blog */}
+              <Link
+                to="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
+                  activeSection === 'blog'
+                    ? 'font-bold text-[#0755F5] bg-[#EDF4FF]'
+                    : 'text-[#172344] hover:text-[#0755F5]'
+                }`}
+              >
+                Blog
+              </Link>
+
               {/* Our Services with expandable accordion for mobile */}
               <div>
                 <div className="flex items-center justify-between">
@@ -667,9 +495,9 @@ export const Header: React.FC<Props> = ({
                       setMobileServicesOpen(false);
                     }}
                     className={`flex-1 px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                      activeSection === 'services'
-                        ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                        : 'text-slate-700 hover:text-[#D99A35]'
+                      activeSection === 'services' && !location.pathname.startsWith('/visa')
+                        ? 'font-bold text-[#0755F5] bg-[#EDF4FF]'
+                        : 'text-[#172344] hover:text-[#0755F5]'
                     }`}
                   >
                     Our Services
@@ -678,11 +506,11 @@ export const Header: React.FC<Props> = ({
                     type="button"
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                     aria-label="Toggle Services submenu"
-                    className="p-2 text-slate-400 hover:text-[#D99A35] transition-colors cursor-pointer"
+                    className="p-2 text-slate-400 hover:text-[#0755F5] transition-colors cursor-pointer"
                   >
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        mobileServicesOpen ? 'rotate-180 text-[#D99A35]' : ''
+                        mobileServicesOpen ? 'rotate-180 text-[#0755F5]' : ''
                       }`}
                     />
                   </button>
@@ -690,7 +518,7 @@ export const Header: React.FC<Props> = ({
 
                 {/* Mobile Expandable Services Submenu */}
                 {mobileServicesOpen && (
-                  <div className="pl-3 pr-1 py-1.5 space-y-1 bg-[#FAF7F1]/80 rounded-xl mt-1 mb-2 border border-slate-200/60 animate-fadeIn">
+                  <div className="pl-3 pr-1 py-1.5 space-y-1 bg-[#EDF4FF]/70 rounded-xl mt-1 mb-2 border border-[#DCE7FA] animate-fadeIn">
                     <div className="px-3 py-1 flex items-center justify-between text-[11px] text-slate-400 font-bold uppercase tracking-wider">
                       <span>Our Services</span>
                       <Link
@@ -699,7 +527,7 @@ export const Header: React.FC<Props> = ({
                           setMobileMenuOpen(false);
                           setMobileServicesOpen(false);
                         }}
-                        className="text-[#D99A35] hover:underline"
+                        className="text-[#0755F5] hover:underline"
                       >
                         All Services
                       </Link>
@@ -713,7 +541,7 @@ export const Header: React.FC<Props> = ({
                             setMobileServicesOpen(false);
                             handleServiceSelect(item.id, item.title);
                           }}
-                          className="flex items-center justify-between px-3 py-2 rounded-lg bg-white/70 hover:bg-white text-xs font-semibold text-[#10243F] hover:text-[#D99A35] transition-colors"
+                          className="flex items-center justify-between px-3 py-2 rounded-lg bg-white hover:bg-white text-xs font-semibold text-[#101E49] hover:text-[#0755F5] transition-colors"
                         >
                           <span>{item.title}</span>
                           {item.hasSubmenu ? (
@@ -733,7 +561,7 @@ export const Header: React.FC<Props> = ({
                                   setMobileServicesOpen(false);
                                   handleServiceSelect(sub.id, sub.title);
                                 }}
-                                className="block px-2.5 py-1.5 rounded-md text-[11px] text-slate-600 hover:text-[#D99A35] hover:bg-white/90 transition-colors"
+                                className="block px-2.5 py-1.5 rounded-md text-[11px] text-slate-600 hover:text-[#0755F5] hover:bg-white transition-colors"
                               >
                                 • {sub.title}
                               </Link>
@@ -757,69 +585,38 @@ export const Header: React.FC<Props> = ({
                     el.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="px-3 py-2 text-sm font-semibold rounded-lg text-slate-700 hover:text-[#D99A35] transition-colors"
+                className="px-3 py-2 text-sm font-semibold rounded-lg text-[#172344] hover:text-[#0755F5] transition-colors"
               >
                 FAQ&apos;s
               </a>
-              <Link
-                to="/process"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                  activeSection === 'process'
-                    ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                    : 'text-slate-700 hover:text-[#D99A35]'
-                }`}
-              >
-                Process
-              </Link>
-              <Link
-                to="/testimonials"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                  activeSection === 'testimonials'
-                    ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                    : 'text-slate-700 hover:text-[#D99A35]'
-                }`}
-              >
-                Success Stories
-              </Link>
-              <Link
-                to="/blog"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                  activeSection === 'blog'
-                    ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                    : 'text-slate-700 hover:text-[#D99A35]'
-                }`}
-              >
-                Blog
-              </Link>
+
+              {/* Contact */}
               <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
                   activeSection === 'contact'
-                    ? 'font-bold text-[#10243F] bg-[#FAF7F1]'
-                    : 'text-slate-700 hover:text-[#D99A35]'
+                    ? 'font-bold text-[#0755F5] bg-[#EDF4FF]'
+                    : 'text-[#172344] hover:text-[#0755F5]'
                 }`}
               >
                 Contact
               </Link>
 
-              <div className="pt-3 border-t border-slate-100 space-y-3">
+              <div className="pt-3 border-t border-[#DCE7FA] space-y-3">
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
                     onOpenCounselling();
                   }}
-                  className="w-full py-3 bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] text-white font-bold text-sm rounded-full shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3 bg-gradient-to-r from-[#0755F5] to-[#0877FF] text-white font-bold text-sm rounded-full shadow-md shadow-[#0755F5]/30 flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Book a Consultation</span>
+                  <span>Book a Free Consultation</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 <div className="flex items-center justify-center gap-2 text-xs text-slate-500">
-                  <PhoneCall className="w-3.5 h-3.5 text-[#D99A35]" />
-                  <a href="tel:+918185883705" className="hover:text-[#D99A35] transition-colors">
+                  <PhoneCall className="w-3.5 h-3.5 text-[#0755F5]" />
+                  <a href="tel:+918185883705" className="hover:text-[#0755F5] transition-colors font-medium">
                     Call Us: +91 81858 83705
                   </a>
                 </div>

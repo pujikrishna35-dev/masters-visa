@@ -13,6 +13,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import { DESTINATIONS, CORE_SERVICES, UNIVERSITIES, NEWS_ITEMS } from '../data/content';
+import { getCountryRoute } from './DestinationNavBar';
 
 interface Props {
   isOpen: boolean;
@@ -206,7 +207,7 @@ const POPULAR_SEARCHES = [
 export const SearchModal: React.FC<Props> = ({ 
   isOpen, 
   onClose, 
-  onSelectDestination, 
+  onSelectDestination: _onSelectDestination, 
   onSelectService 
 }) => {
   const navigate = useNavigate();
@@ -275,10 +276,9 @@ export const SearchModal: React.FC<Props> = ({
   const handleSelectResult = (item: SearchResultItem) => {
     onClose();
 
-    // If destination item, navigate to /destinations and open its modal
+    // If destination item, navigate directly to dedicated country page
     if (item.destId) {
-      navigate(`/destinations?country=${item.destId}`);
-      onSelectDestination(item.destId);
+      navigate(getCountryRoute(item.destId));
       return;
     }
 
@@ -363,26 +363,26 @@ export const SearchModal: React.FC<Props> = ({
         );
       case 'Service':
         return (
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#FDF7EC] text-[#D99A35] border border-[#D99A35]/30 flex-shrink-0">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EDF4FF] text-[#0755F5] border border-[#DCE7FA] flex-shrink-0">
             Service
           </span>
         );
       case 'University':
         return (
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-100 flex-shrink-0">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#0755F5] border border-blue-100 flex-shrink-0">
             University
           </span>
         );
       case 'Blog':
         return (
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-100 flex-shrink-0">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-[#0755F5] border border-sky-100 flex-shrink-0">
             Blog
           </span>
         );
       case 'Page':
       default:
         return (
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 flex-shrink-0">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-[#172344] border border-slate-200 flex-shrink-0">
             Page
           </span>
         );
@@ -392,13 +392,13 @@ export const SearchModal: React.FC<Props> = ({
   const renderItemIcon = (iconType: SearchResultItem['iconType']) => {
     switch (iconType) {
       case 'destination':
-        return <Globe className="w-4 h-4 text-[#1769AA]" />;
+        return <Globe className="w-4 h-4 text-[#0755F5]" />;
       case 'service':
-        return <FileText className="w-4 h-4 text-[#D99A35]" />;
+        return <FileText className="w-4 h-4 text-[#0755F5]" />;
       case 'university':
-        return <GraduationCap className="w-4 h-4 text-purple-600" />;
+        return <GraduationCap className="w-4 h-4 text-[#0755F5]" />;
       case 'blog':
-        return <Newspaper className="w-4 h-4 text-rose-600" />;
+        return <Newspaper className="w-4 h-4 text-[#0755F5]" />;
       case 'page':
       default:
         return <Compass className="w-4 h-4 text-slate-500" />;
@@ -420,8 +420,8 @@ export const SearchModal: React.FC<Props> = ({
         {/* Search Input Bar */}
         <div className="border-b border-slate-100 px-4 sm:px-6 py-3.5 sm:py-4 flex items-center gap-2.5 sm:gap-3 bg-white">
           {/* Rounded Search Input Container */}
-          <div className="relative flex-1 flex items-center bg-white rounded-xl border border-[#E2E8F0] shadow-2xs transition-all duration-200 hover:border-slate-300 focus-within:border-[#D99A35] focus-within:ring-2 focus-within:ring-[#D99A35]/20">
-            <Search className="w-4.5 h-4.5 text-[#94A3B8] ml-3.5 shrink-0 transition-colors pointer-events-none" />
+          <div className="relative flex-1 flex items-center bg-white rounded-xl border border-[#DCE7FA] shadow-2xs transition-all duration-200 hover:border-blue-300 focus-within:border-[#0755F5] focus-within:ring-2 focus-within:ring-[#0755F5]/20">
+            <Search className="w-4.5 h-4.5 text-[#63718E] ml-3.5 shrink-0 transition-colors pointer-events-none" />
             <input
               ref={inputRef}
               type="text"
@@ -429,7 +429,7 @@ export const SearchModal: React.FC<Props> = ({
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Search destinations, visas, universities..."
-              className="w-full py-2.5 sm:py-3 pl-3 pr-9 text-sm sm:text-base text-[#10243F] placeholder-[#94A3B8] bg-transparent outline-none border-none font-medium focus:outline-none focus:ring-0"
+              className="w-full py-2.5 sm:py-3 pl-3 pr-9 text-sm sm:text-base text-[#101E49] placeholder-[#63718E] bg-transparent outline-none border-none font-medium focus:outline-none focus:ring-0"
               aria-label="Search destinations, visas, universities"
             />
             {query && (
@@ -440,7 +440,7 @@ export const SearchModal: React.FC<Props> = ({
                   inputRef.current?.focus();
                 }}
                 aria-label="Clear search input"
-                className="absolute right-2.5 p-1 rounded-full text-slate-400 hover:text-[#10243F] hover:bg-slate-100 transition-colors cursor-pointer"
+                className="absolute right-2.5 p-1 rounded-full text-slate-400 hover:text-[#101E49] hover:bg-slate-100 transition-colors cursor-pointer"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -452,7 +452,7 @@ export const SearchModal: React.FC<Props> = ({
             type="button"
             onClick={onClose}
             aria-label="Close search overlay"
-            className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-slate-500 hover:text-[#10243F] hover:bg-slate-100 border border-slate-200/80 hover:border-slate-300 transition-all cursor-pointer flex-shrink-0 active:scale-95"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-[#63718E] hover:text-[#101E49] hover:bg-[#EDF4FF] border border-[#DCE7FA] transition-all cursor-pointer flex-shrink-0 active:scale-95"
           >
             <X className="w-5 h-5" />
           </button>
@@ -463,8 +463,8 @@ export const SearchModal: React.FC<Props> = ({
           {/* Popular searches when query is empty */}
           {!trimmedQuery && (
             <div className="py-2">
-              <div className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#64748B]">
-                <Sparkles className="w-3.5 h-3.5 text-[#D99A35]" />
+              <div className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#63718E]">
+                <Sparkles className="w-3.5 h-3.5 text-[#0755F5]" />
                 <span>Popular Searches</span>
               </div>
               <div className="flex flex-wrap gap-2 px-3 pt-1 pb-3">
@@ -476,7 +476,7 @@ export const SearchModal: React.FC<Props> = ({
                       setQuery(item.query);
                       inputRef.current?.focus();
                     }}
-                    className="px-3 py-1.5 bg-[#FAF7F1] hover:bg-[#FDF7EC] hover:text-[#D99A35] hover:border-[#D99A35]/40 text-xs font-semibold text-[#10243F] rounded-full border border-slate-200/80 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs"
+                    className="px-3 py-1.5 bg-[#EDF4FF] hover:bg-[#0755F5] hover:text-white text-xs font-semibold text-[#101E49] rounded-full border border-[#DCE7FA] transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs"
                   >
                     <span>{item.label}</span>
                   </button>
@@ -484,8 +484,8 @@ export const SearchModal: React.FC<Props> = ({
               </div>
 
               {/* Quick Navigation Links */}
-              <div className="mt-3 pt-3 border-t border-slate-100">
-                <p className="px-3 pb-2 text-[11px] font-bold uppercase tracking-wider text-[#64748B]">
+              <div className="mt-3 pt-3 border-t border-[#DCE7FA]">
+                <p className="px-3 pb-2 text-[11px] font-bold uppercase tracking-wider text-[#63718E]">
                   Quick Navigation
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 px-1">
@@ -494,22 +494,22 @@ export const SearchModal: React.FC<Props> = ({
                       key={p.id}
                       type="button"
                       onClick={() => handleSelectResult(p)}
-                      className="text-left px-3 py-2 rounded-xl hover:bg-[#FAF7F1] transition-colors flex items-center justify-between group cursor-pointer"
+                      className="text-left px-3 py-2 rounded-xl hover:bg-[#EDF4FF] transition-colors flex items-center justify-between group cursor-pointer"
                     >
                       <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0 group-hover:bg-[#FDF7EC] transition-colors">
+                        <div className="w-7 h-7 rounded-lg bg-[#EDF4FF] flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
                           {renderItemIcon(p.iconType)}
                         </div>
                         <div className="truncate">
-                          <p className="text-xs font-bold text-[#10243F] group-hover:text-[#D99A35] transition-colors truncate">
+                          <p className="text-xs font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors truncate">
                             {p.title}
                           </p>
-                          <p className="text-[10px] text-[#64748B] truncate">
+                          <p className="text-[10px] text-[#63718E] truncate">
                             {p.subtitle}
                           </p>
                         </div>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#D99A35] group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-2" />
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#0755F5] group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-2" />
                     </button>
                   ))}
                 </div>
@@ -520,7 +520,7 @@ export const SearchModal: React.FC<Props> = ({
           {/* Search results list */}
           {trimmedQuery && results.length > 0 && (
             <div className="py-2 space-y-1">
-              <div className="px-3 py-1 flex items-center justify-between text-[11px] font-semibold text-[#64748B]">
+              <div className="px-3 py-1 flex items-center justify-between text-[11px] font-semibold text-[#63718E]">
                 <span>Found {results.length} result{results.length > 1 ? 's' : ''}</span>
                 <span>Click to view</span>
               </div>
@@ -536,28 +536,28 @@ export const SearchModal: React.FC<Props> = ({
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`px-3 py-2.5 rounded-xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
                       isSelected 
-                        ? 'bg-[#FAF7F1] border-[#D99A35]/50 shadow-2xs' 
-                        : 'bg-white hover:bg-[#FAF7F1]/70 border-transparent hover:border-slate-200'
+                        ? 'bg-[#EDF4FF] border-[#0755F5]/40 shadow-2xs' 
+                        : 'bg-white hover:bg-[#EDF4FF]/60 border-transparent hover:border-[#DCE7FA]'
                     }`}
                   >
                     <div className="flex items-center gap-3 min-w-0 flex-1">
-                      <div className="w-8 h-8 rounded-lg bg-slate-100/90 flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 rounded-lg bg-[#EDF4FF] flex items-center justify-center flex-shrink-0">
                         {renderItemIcon(item.iconType)}
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2">
-                          <h4 className="text-xs sm:text-sm font-bold text-[#10243F] truncate">
+                          <h4 className="text-xs sm:text-sm font-bold text-[#101E49] truncate">
                             {item.title}
                           </h4>
                           {renderCategoryBadge(item.category)}
                         </div>
-                        <p className="text-[11px] text-[#64748B] truncate mt-0.5">
+                        <p className="text-[11px] text-[#63718E] truncate mt-0.5">
                           {item.subtitle}
                         </p>
                       </div>
                     </div>
                     <ArrowRight className={`w-4 h-4 text-slate-300 transition-all flex-shrink-0 ${
-                      isSelected ? 'text-[#D99A35] translate-x-0.5' : ''
+                      isSelected ? 'text-[#0755F5] translate-x-0.5' : ''
                     }`} />
                   </div>
                 );
@@ -586,7 +586,7 @@ export const SearchModal: React.FC<Props> = ({
                       setQuery(item.query);
                       inputRef.current?.focus();
                     }}
-                    className="px-2.5 py-1 bg-white hover:bg-[#FDF7EC] hover:text-[#D99A35] hover:border-[#D99A35]/30 text-[11px] font-semibold text-[#10243F] rounded-full border border-slate-200 transition-colors shadow-2xs cursor-pointer"
+                    className="px-2.5 py-1 bg-white hover:bg-[#EDF4FF] hover:text-[#0755F5] hover:border-[#0755F5]/30 text-[11px] font-semibold text-[#101E49] rounded-full border border-[#DCE7FA] transition-colors shadow-2xs cursor-pointer"
                   >
                     {item.label}
                   </button>

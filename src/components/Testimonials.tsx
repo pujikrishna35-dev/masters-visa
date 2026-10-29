@@ -42,25 +42,27 @@ export const Testimonials: React.FC<Props> = ({ onOpenCounselling }) => {
   };
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="testimonials" className="py-16 sm:py-24 bg-[#EDF4FF]/30 relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Header */}
           <div className="lg:col-span-4 text-left">
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#64748B]">
+              <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E]">
                 REAL STUDENT STORIES
               </span>
-              <span className="w-8 h-[2px] bg-[#D99A35] rounded-full inline-block" />
+              <span className="w-8 h-[2px] bg-[#0755F5] rounded-full inline-block" />
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#10243F] tracking-tight font-serif leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#101E49] tracking-tight leading-tight">
               Dreams Turned<br />
-              <span className="text-[#D99A35] font-serif">Into Global Journeys</span>
+              <span className="text-gradient-blue bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent">
+                Into Global Journeys
+              </span>
             </h2>
 
-            <p className="text-xs sm:text-sm text-[#64748B] mt-3 leading-relaxed max-w-sm">
+            <p className="text-sm text-[#63718E] mt-3 leading-relaxed max-w-sm">
               Hear from our students who are now studying and building successful careers around the world.
             </p>
 
@@ -70,14 +72,14 @@ export const Testimonials: React.FC<Props> = ({ onOpenCounselling }) => {
                 <button
                   onClick={handlePrev}
                   aria-label="Previous testimonial"
-                  className="w-9 h-9 rounded-full bg-white border border-slate-200 hover:border-[#D99A35] hover:text-[#D99A35] active:scale-95 text-slate-600 flex items-center justify-center transition-all shadow-sm"
+                  className="w-10 h-10 rounded-full bg-white border border-[#DCE7FA] hover:border-[#0755F5] hover:text-[#0755F5] hover:bg-[#EDF4FF] active:scale-95 text-[#172344] flex items-center justify-center transition-all shadow-xs cursor-pointer"
                 >
                   <ArrowLeft className="w-4 h-4" />
                 </button>
                 <button
                   onClick={handleNext}
                   aria-label="Next testimonial"
-                  className="w-9 h-9 rounded-full bg-white border border-slate-200 hover:border-[#D99A35] hover:text-[#D99A35] active:scale-95 text-slate-600 flex items-center justify-center transition-all shadow-sm"
+                  className="w-10 h-10 rounded-full bg-white border border-[#DCE7FA] hover:border-[#0755F5] hover:text-[#0755F5] hover:bg-[#EDF4FF] active:scale-95 text-[#172344] flex items-center justify-center transition-all shadow-xs cursor-pointer"
                 >
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -91,8 +93,8 @@ export const Testimonials: React.FC<Props> = ({ onOpenCounselling }) => {
                     type="button"
                     onClick={() => setCurrentIndex(idx)}
                     aria-label={`Go to slide ${idx + 1}`}
-                    className={`rounded-full transition-all ${
-                      currentIndex === idx ? 'w-3 h-2 bg-[#D99A35] rounded-full' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'
+                    className={`rounded-full transition-all cursor-pointer ${
+                      currentIndex === idx ? 'w-4 h-2 bg-[#0755F5] rounded-full' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'
                     }`}
                   />
                 ))}
@@ -115,7 +117,7 @@ export const Testimonials: React.FC<Props> = ({ onOpenCounselling }) => {
                       onOpenCounselling();
                     }
                   }}
-                  className="bg-white rounded-3xl p-5 border border-slate-100/90 shadow-soft hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left select-none"
+                  className="bg-white rounded-3xl p-5 border border-[#DCE7FA] shadow-soft hover:shadow-card-hover hover:border-[#0755F5]/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left select-none"
                 >
                   <div>
                     {/* Student Photo */}
@@ -129,22 +131,22 @@ export const Testimonials: React.FC<Props> = ({ onOpenCounselling }) => {
                     </div>
 
                     {/* Quote mark in blue */}
-                    <div className="text-blue-500 mb-1.5">
-                      <Quote className="w-5 h-5 fill-blue-500" />
+                    <div className="text-[#0755F5] mb-2">
+                      <Quote className="w-5 h-5 fill-[#0755F5]" />
                     </div>
 
                     {/* Quote Text */}
-                    <p className="text-xs text-slate-600 leading-relaxed font-normal mb-4">
+                    <p className="text-xs sm:text-[13px] text-[#63718E] leading-relaxed font-normal mb-4">
                       "{item.quote}"
                     </p>
                   </div>
 
                   {/* Student Name & Country Flag */}
                   <div className="pt-3 border-t border-slate-100 flex flex-col gap-1">
-                    <h3 className="text-xs font-bold text-[#10243F] group-hover:text-[#D99A35] transition-colors">
+                    <h3 className="text-sm font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors">
                       {item.name}
                     </h3>
-                    <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#64748B]">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#63718E]">
                       <FlagIcon country={item.country} className="w-3.5 h-2.5 rounded-xs" />
                       <span>{item.country}</span>
                     </div>

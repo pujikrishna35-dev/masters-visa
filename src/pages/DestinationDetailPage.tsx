@@ -3,6 +3,15 @@ import { useParams, Link } from 'react-router-dom';
 import { PageBanner } from '../components/PageBanner';
 import { FinalCta } from '../components/FinalCta';
 import { FlagIcon } from '../components/FlagIcon';
+import { DestinationNavBar } from '../components/DestinationNavBar';
+import { StudyInUsaPage } from './StudyInUsaPage';
+import { StudyInUkPage } from './StudyInUkPage';
+import { StudyInCanadaPage } from './StudyInCanadaPage';
+import { StudyInAustraliaPage } from './StudyInAustraliaPage';
+import { StudyInEuropePage } from './StudyInEuropePage';
+import { StudyInNewZealandPage } from './StudyInNewZealandPage';
+import { StudyInFrancePage } from './StudyInFrancePage';
+import { StudyInIrelandPage } from './StudyInIrelandPage';
 import { 
   GraduationCap, 
   DollarSign, 
@@ -680,6 +689,83 @@ const DESTINATION_PROFILES: Record<string, CountryDetails> = {
       { q: 'How long is the post-study work visa in Ireland?', a: 'Master’s degree graduates from accredited Irish institutions receive an automatic 2-year Stamp 1G work visa.' },
     ],
   },
+
+  germany: {
+    id: 'germany',
+    countryName: 'Germany',
+    pageTitle: 'Study in Germany',
+    tagline: 'Tuition-Free Public Universities, EU Innovation Hub & 18-Month Jobseeker Visa',
+    flagCode: 'GERMANY',
+    badge: 'EUROPE #1 ENGINEERING & AUTOMOTIVE POWERHOUSE',
+    heroImage: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=1200&q=80',
+    overview: 'Germany is Europe’s premier technological and industrial powerhouse, internationally acclaimed for tuition-free public universities (TU9), cutting-edge engineering and computer science programs, and the EU’s strongest national economy. International Master’s graduates benefit from an 18-month post-study jobseeker visa and accelerated pathways to an EU Blue Card and permanent residency.',
+    stats: {
+      avgTuition: '€0 – €3,000 / yr (Tuition-Free)',
+      workPermit: '18 Months (Jobseeker Visa § 20)',
+      visaRate: '97% Visa Success',
+      intakes: 'Winter (September/October) & Summer (March/April)',
+      avgLivingCost: '€11,208 / yr (€934 / month)',
+      minGpa: '65%+ in Bachelor’s (or 2.5 German scale)',
+    },
+    keyAdvantages: [
+      {
+        title: 'Tuition-Free World-Ranked Public Universities',
+        desc: 'Over 300 German state universities charge zero tuition fees for both EU and international students, requiring only a nominal semester administrative contribution (€150–€350).',
+        icon: 'dollar',
+      },
+      {
+        title: '18-Month Post-Study Jobseeker Work Visa',
+        desc: 'Graduates automatically qualify for an 18-month residence permit (§ 20 AufenthG) with unrestricted full-time work rights to secure high-paying engineering or corporate employment.',
+        icon: 'briefcase',
+      },
+      {
+        title: 'Europe’s #1 Industrial & Automotive Epicenter',
+        desc: 'Direct proximity and internship pipelines into global corporate giants: BMW, Mercedes-Benz, Siemens, Bosch, SAP, Volkswagen, BASF, and Bayer.',
+        icon: 'award',
+      },
+      {
+        title: 'Fast-Track EU Blue Card & Permanent Residency',
+        desc: 'Transition to an EU Blue Card allows permanent settlement (Niederlassungserlaubnis) in as little as 21 to 27 months with basic German language skills.',
+        icon: 'globe',
+      },
+    ],
+    universities: [
+      { name: 'Technical University of Munich (TUM)', location: 'Munich, Bavaria', qsRank: '#28 Global', established: '1868', popularFor: 'Informatics, AI, Mechanical & Robotics' },
+      { name: 'Heidelberg University', location: 'Heidelberg, Baden-Württemberg', qsRank: '#87 Global', established: '1386', popularFor: 'Life Sciences, Medicine & Physics' },
+      { name: 'RWTH Aachen University', location: 'Aachen, North Rhine-Westphalia', qsRank: '#99 Global', established: '1870', popularFor: 'Automotive Engineering, Materials & Metallurgy' },
+      { name: 'Technical University of Berlin (TU Berlin)', location: 'Berlin', qsRank: '#147 Global', established: '1879', popularFor: 'Computer Science, Energy Systems & Architecture' },
+      { name: 'Karlsruhe Institute of Technology (KIT)', location: 'Karlsruhe, Baden-Württemberg', qsRank: '#102 Global', established: '2009', popularFor: 'Electrical Engineering & Renewable Energy' },
+      { name: 'Ludwig Maximilian University of Munich (LMU)', location: 'Munich, Bavaria', qsRank: '#54 Global', established: '1472', popularFor: 'Economics, Data Science & Quantum Science' },
+    ],
+    programs: [
+      { name: 'M.Sc. Automotive & Autonomous Systems', duration: '2 Years', avgSalary: '€55,000 – €78,000', inDemand: 'Very High' },
+      { name: 'M.Sc. Computer Science & Artificial Intelligence', duration: '2 Years', avgSalary: '€58,000 – €82,000', inDemand: 'Very High' },
+      { name: 'M.Sc. Renewable Energy & Environmental Tech', duration: '2 Years', avgSalary: '€52,000 – €72,000', inDemand: 'High' },
+      { name: 'M.Sc. Data Engineering & Analytics', duration: '1.5 – 2 Years', avgSalary: '€56,000 – €76,000', inDemand: 'Very High' },
+    ],
+    visaInfo: {
+      visaType: 'German National Student Visa (Category D)',
+      workDuringStudy: '140 full days (or 280 half days) per calendar year during study semesters.',
+      postStudyDuration: '18 months under Section 20 AufenthG.',
+      prPathway: 'Transition from Jobseeker to EU Blue Card with permanent residency eligibility after 21 months.',
+      keyHighlights: [
+        'Mandatory APS Certificate verification for Indian applicants',
+        'Official blocked bank account (Sperrkonto €11,904) in Coracle / Expatrio',
+        'Direct admission or Uni-Assist preliminary documentation (VPD)',
+      ],
+    },
+    requirements: {
+      academic: 'Recognized 4-year Bachelor’s (or 3-year with bridge credits) with 65%+ aggregate (or 2.5 German grade).',
+      english: 'IELTS Academic 6.5+ or TOEFL iBT 90+ (Many programs offer English Medium of Instruction MOI waivers).',
+      tests: 'No GRE required for most universities (select TU9 schools recommend GRE for engineering).',
+      financials: 'Demonstration of €11,904 locked in an approved German blocked account (Sperrkonto) or official scholarship.',
+    },
+    faqs: [
+      { q: 'Is university education really free in Germany for international students?', a: 'Yes! Public universities across 15 of 16 German federal states charge zero tuition fees for all nationalities. Students pay only a nominal semester contribution (€150–€350) which includes a semester public transit ticket.' },
+      { q: 'What is the APS certificate required for Germany?', a: 'The Academic Evaluation Centre (APS) certificate is a mandatory document for Indian students verifying academic transcripts and degree genuineness before university application and visa appointment booking.' },
+      { q: 'Can I study in Germany completely in English?', a: 'Yes! There are more than 2,000 Master’s programs across Germany taught entirely in English, particularly in engineering, IT, management, and pure sciences.' },
+    ],
+  },
 };
 
 export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({
@@ -692,6 +778,46 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({
   // Normalize requested country ID from prop or route params
   const rawId = (propCountryId || params.countryId || 'usa').toLowerCase().trim();
   const normalizedId = rawId === 'uk' ? 'united-kingdom' : rawId;
+
+  // Render the dedicated world-class Study in the USA experience for USA
+  if (normalizedId === 'usa') {
+    return <StudyInUsaPage onOpenCounselling={onOpenCounselling} />;
+  }
+
+  // Render the dedicated world-class Study in the UK experience for United Kingdom
+  if (normalizedId === 'united-kingdom' || normalizedId === 'uk') {
+    return <StudyInUkPage onOpenCounselling={onOpenCounselling} />;
+  }
+
+  // Render the dedicated world-class Study in Canada experience for Canada
+  if (normalizedId === 'canada') {
+    return <StudyInCanadaPage onOpenCounselling={onOpenCounselling} />;
+  }
+
+  // Render the dedicated world-class Study in Australia experience for Australia
+  if (normalizedId === 'australia') {
+    return <StudyInAustraliaPage onOpenCounselling={onOpenCounselling} />;
+  }
+
+  // Render the dedicated world-class Study in Europe experience for Europe
+  if (normalizedId === 'europe') {
+    return <StudyInEuropePage onOpenCounselling={onOpenCounselling} />;
+  }
+
+  // Render the dedicated world-class Study in New Zealand experience for New Zealand
+  if (normalizedId === 'new-zealand') {
+    return <StudyInNewZealandPage onOpenCounselling={onOpenCounselling} />;
+  }
+
+  // Render the dedicated world-class Study in France experience for France
+  if (normalizedId === 'france') {
+    return <StudyInFrancePage onOpenCounselling={onOpenCounselling} />;
+  }
+
+  // Render the dedicated world-class Study in Ireland experience for Ireland
+  if (normalizedId === 'ireland') {
+    return <StudyInIrelandPage onOpenCounselling={onOpenCounselling} />;
+  }
 
   const country = DESTINATION_PROFILES[normalizedId] || DESTINATION_PROFILES.usa;
 
@@ -709,6 +835,9 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({
         highlightWord={country.countryName}
         description={country.tagline}
       />
+
+      {/* 2. Destination Navigation Bar */}
+      <DestinationNavBar activeCountry={normalizedId} />
 
       {/* 2. Key Metric Stat Ribbon */}
       <section className="relative z-20 -mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -757,17 +886,17 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({
 
       {/* 3. Master Visa Exclusive Benefit: Free Airport Pickup & Stay Guarantee */}
       <section className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-[#10243F] via-[#16355C] to-[#10243F] rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-card">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#D99A35]/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="bg-gradient-to-r from-[#101E49] via-[#1E3A8A] to-[#101E49] rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-card">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#0755F5]/20 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D99A35]/20 border border-[#D99A35]/40 text-[#D99A35] text-xs font-bold uppercase tracking-wider mb-3">
-                <Sparkles className="w-3.5 h-3.5 text-[#D99A35]" /> Free Master Visa On-Arrival Guarantee
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sky-200 text-xs font-bold uppercase tracking-wider mb-3">
+                <Sparkles className="w-3.5 h-3.5 text-sky-300" /> Free Master Visa On-Arrival Guarantee
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold font-serif mb-2">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-2 text-white">
                 Guaranteed Airport Pickup & Verified Student Stay in {country.countryName}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-blue-100 leading-relaxed">
                 Landing in {country.countryName} shouldn't be stressful. Every Master Visa student receives complimentary airport meet & greet, direct private transport to their student dorm or apartment, and a pre-activated local SIM card.
               </p>
             </div>
@@ -775,7 +904,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <button
                 onClick={() => onOpenCounselling(`Airport Pickup & Accommodation - ${country.countryName}`)}
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#D99A35] via-[#E28330] to-[#F16B55] hover:opacity-95 text-white font-bold text-xs sm:text-sm shadow-md transition-all cursor-pointer flex items-center gap-2"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#0755F5] via-[#2563EB] to-[#0877FF] hover:opacity-95 text-white font-bold text-xs sm:text-sm shadow-lg shadow-[#0755F5]/25 transition-all cursor-pointer flex items-center gap-2"
               >
                 <span>Claim Free Arrival Support</span>
                 <ArrowRight className="w-4 h-4" />

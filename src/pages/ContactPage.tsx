@@ -54,19 +54,19 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenCounselling }) =
   ];
 
   return (
-    <div className="bg-[#FAF7F1]">
+    <div className="bg-[#EDF4FF]">
       {/* Page Header Banner */}
       <PageBanner
         breadcrumbs={[{ label: 'Contact Us' }]}
         badge="GET IN TOUCH"
-        badgeIcon={<PhoneCall className="w-3.5 h-3.5 text-[#D99A35]" />}
+        badgeIcon={<PhoneCall className="w-3.5 h-3.5 text-[#0755F5]" />}
         title="Get in Touch with Our Expert Counsellors"
         highlightWord="Expert Counsellors"
         description="Connect with our global education specialists. Visit our branches across Andhra Pradesh, Telangana, Karnataka, and Tamil Nadu, or book a virtual session."
       />
 
       {/* Quick Contact Info Cards */}
-      <section className="py-12 bg-white border-b border-slate-200/70">
+      <section className="py-12 bg-white border-b border-[#DCE7FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactCards.map((card, idx) => {
@@ -74,26 +74,26 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenCounselling }) =
               return (
                 <div
                   key={idx}
-                  className="bg-[#FAF7F1] rounded-2xl p-6 border border-slate-200/80 hover:border-[#D99A35]/50 hover:shadow-card transition-all duration-300 flex flex-col justify-between group"
+                  className="bg-[#EDF4FF]/50 rounded-3xl p-6 border border-[#DCE7FA] hover:border-[#0755F5]/60 hover:shadow-card transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div>
-                    <div className={`w-12 h-12 rounded-xl ${card.bg} flex items-center justify-center mb-4 group-hover:scale-105 transition-transform`}>
+                    <div className={`w-12 h-12 rounded-2xl ${card.bg} flex items-center justify-center mb-4 group-hover:scale-105 transition-transform`}>
                       <Icon className={`w-6 h-6 ${card.color}`} />
                     </div>
-                    <h3 className="text-base font-bold text-[#10243F] mb-1">
+                    <h3 className="text-base font-bold text-[#101E49] mb-1">
                       {card.title}
                     </h3>
-                    <p className="text-xs text-[#64748B] mb-3">
+                    <p className="text-xs text-[#63718E] mb-3">
                       {card.desc}
                     </p>
-                    <p className="text-sm font-extrabold text-[#10243F]">
+                    <p className="text-sm font-extrabold text-[#101E49]">
                       {card.value}
                     </p>
                   </div>
 
                   <a
                     href={card.action}
-                    className="mt-4 pt-3 border-t border-slate-200/60 text-xs font-bold text-[#D99A35] hover:text-[#B87A1E] transition-colors inline-block"
+                    className="mt-4 pt-3 border-t border-[#DCE7FA] text-xs font-bold text-[#0755F5] hover:text-[#0877FF] transition-colors inline-block"
                   >
                     {card.actionLabel} &rarr;
                   </a>

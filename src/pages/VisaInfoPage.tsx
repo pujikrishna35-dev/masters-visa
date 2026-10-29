@@ -176,7 +176,7 @@ export const VisaInfoPage: React.FC<VisaInfoPageProps> = ({ onOpenCounselling })
 
             <button
               onClick={() => onOpenCounselling('Mock Visa Interview')}
-              className="px-6 py-3 bg-gradient-to-r from-[#D99A35] to-[#F16B55] hover:opacity-95 text-white font-bold text-xs sm:text-sm rounded-full shadow-md shrink-0 cursor-pointer"
+              className="px-6 py-3 bg-gradient-to-r from-[#0755F5] to-[#0877FF] hover:opacity-95 text-white font-bold text-xs sm:text-sm rounded-full shadow-lg shadow-[#0755F5]/25 shrink-0 cursor-pointer transition-all"
             >
               Book Mock Interview Session
             </button>

@@ -22,30 +22,30 @@ export const Branches: React.FC<Props> = ({ onOpenCounselling }) => {
   }, [selectedBranch]);
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-[#FAF7F1] relative scroll-mt-20">
+    <section id="contact" className="py-16 sm:py-24 bg-[#EDF4FF]/30 relative scroll-mt-20">
       <span id="branches" className="sr-only" />
       <span id="contact-us" className="sr-only" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#64748B]">
+              <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E]">
                 CONTACT US & OUR BRANCHES
               </span>
-              <span className="w-8 h-[2px] bg-[#D99A35] rounded-full inline-block" />
+              <span className="w-8 h-[2px] bg-[#0755F5] rounded-full inline-block" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#10243F] tracking-tight font-serif">
-              Contact <span className="text-[#D99A35] font-serif">Our Branches</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#101E49] tracking-tight">
+              Contact <span className="text-gradient-blue bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent">Our Branches</span>
             </h2>
-            <p className="text-sm sm:text-base text-[#64748B] mt-2">
+            <p className="text-sm sm:text-base text-[#63718E] mt-2">
               Find a Masters Visa centre near you across major education hubs.
             </p>
           </div>
 
           <button
             onClick={onOpenCounselling}
-            className="text-sm font-bold text-[#10243F] hover:text-[#D99A35] flex items-center gap-1.5 transition-colors group self-start md:self-auto"
+            className="text-sm font-bold text-[#101E49] hover:text-[#0755F5] flex items-center gap-1.5 transition-colors group self-start md:self-auto cursor-pointer"
           >
             <span>View All Branches</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -66,7 +66,7 @@ export const Branches: React.FC<Props> = ({ onOpenCounselling }) => {
                   setSelectedBranch(branch);
                 }
               }}
-              className="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-soft hover:shadow-card-hover hover:border-[#D99A35]/50 transition-all duration-300 flex flex-col group cursor-pointer"
+              className="bg-white rounded-2xl overflow-hidden border border-[#DCE7FA] shadow-soft hover:shadow-card-hover hover:border-[#0755F5]/40 hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer"
             >
               {/* City Photo */}
               <div className="relative h-28 w-full overflow-hidden bg-slate-100">
@@ -76,9 +76,9 @@ export const Branches: React.FC<Props> = ({ onOpenCounselling }) => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
                 {branch.isHeadquarter && (
-                  <span className="absolute top-2 left-2 bg-[#D99A35] text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-sm">
+                  <span className="absolute top-2 left-2 bg-[#0755F5] text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-sm">
                     HQ
                   </span>
                 )}
@@ -86,10 +86,10 @@ export const Branches: React.FC<Props> = ({ onOpenCounselling }) => {
 
               {/* City Info */}
               <div className="p-3.5 flex flex-col justify-between flex-1 text-center">
-                <h3 className="text-sm font-bold text-brand-navy group-hover:text-brand-coral transition-colors">
+                <h3 className="text-sm font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors">
                   {branch.city}
                 </h3>
-                <div className="mt-2 text-[11px] font-bold text-brand-coral flex items-center justify-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                <div className="mt-2 text-[11px] font-bold text-[#0755F5] flex items-center justify-center gap-1 group-hover:translate-x-0.5 transition-transform">
                   <span>Our Branch</span>
                   <ArrowRight className="w-3 h-3" />
                 </div>

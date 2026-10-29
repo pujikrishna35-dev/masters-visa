@@ -21,103 +21,78 @@ export const Services: React.FC<Props> = ({ onOpenCounselling, onSelectService }
     {
       id: 'admissions',
       title: 'University Admissions',
-      description: 'Get guidance on university selection, course applications, admission requirements, and offer letters.',
+      description: 'Get expert guidance on university selection, course applications, admission requirements, and offer letters.',
       icon: GraduationCap,
-      tileGradient: 'bg-gradient-to-br from-[#1E40AF] to-[#2563EB]',
-      tileShadow: 'shadow-blue-900/30',
     },
     {
       id: 'visa',
       title: 'Student Visa Assistance',
-      description: 'Get guidance on visa applications, required documents, financial evidence, and interview preparation.',
+      description: 'Step-by-step guidance on visa documentation, financial proofs, official submissions, and mock drills.',
       icon: FileText,
-      tileGradient: 'bg-gradient-to-br from-[#BE123C] to-[#E11D48]',
-      tileShadow: 'shadow-rose-900/30',
     },
     {
       id: 'document',
       title: 'Documentation & SOP Guidance',
-      description: 'Assistance with SOPs, LORs, CVs, document checklists, and application paperwork.',
+      description: 'Professional review for SOPs, LORs, academic CVs, document checklists, and application paperwork.',
       icon: FolderCheck,
-      tileGradient: 'bg-gradient-to-br from-[#047857] to-[#059669]',
-      tileShadow: 'shadow-emerald-900/30',
     },
     {
       id: 'counselling',
       title: 'Career & Course Counselling',
-      description: 'Find suitable courses and universities aligned with your academic background and career goals.',
+      description: 'Find tailored courses and universities aligned with your profile, academic score, and global career vision.',
       icon: BarChart2,
-      tileGradient: 'bg-gradient-to-br from-[#5B21B6] to-[#7C3AED]',
-      tileShadow: 'shadow-purple-900/30',
     },
     {
       id: 'predeparture',
       title: 'Pre-Departure Support',
-      description: 'Prepare for your international journey with travel checklists, accommodation guidance, and practical advice.',
+      description: 'Comprehensive travel checklists, currency exchange, cultural orientation, and arrival preparation.',
       icon: PlaneTakeoff,
-      tileGradient: 'bg-gradient-to-br from-[#0E7490] to-[#0284C7]',
-      tileShadow: 'shadow-cyan-900/30',
     },
     {
       id: 'pickup-accommodation',
       title: 'Airport Pickup & Accommodation',
-      description: 'Guaranteed safe airport reception, verified student housing, and complete relocation settlement.',
+      description: 'Guaranteed safe airport reception, luggage assistance, and verified student housing relocation.',
       icon: Car,
-      tileGradient: 'bg-gradient-to-br from-[#D97706] to-[#F59E0B]',
-      tileShadow: 'shadow-amber-900/30',
     },
     {
       id: 'corporate-internships',
       title: 'Corporate Internships & Co-op',
-      description: 'Vetted global corporate internships, CPT/co-op guidance, ATS resume optimization, portfolio improvement, and technical mock interviews.',
+      description: 'Vetted global corporate internships, CPT/co-op guidance, ATS resume optimization, and interview drills.',
       icon: Briefcase,
-      tileGradient: 'bg-gradient-to-br from-[#0D9488] to-[#14B8A6]',
-      tileShadow: 'shadow-teal-900/30',
     },
     {
       id: 'part-time-jobs',
-      title: 'Part-Time Jobs & Student Work Rights',
-      description: 'Student work authorization guidance, on-campus jobs, TA/RA opportunities, SSN/NIN/TFN setup guidance, and local job search strategies.',
+      title: 'Part-Time Jobs & Work Rights',
+      description: 'Official student work authorization rules, on-campus jobs, SSN/NIN setup, and job search strategies.',
       icon: Clock,
-      tileGradient: 'bg-gradient-to-br from-[#0284C7] to-[#38BDF8]',
-      tileShadow: 'shadow-sky-900/30',
     },
   ];
 
   return (
-    <section id="services" className="pt-14 pb-0 bg-[#10243F] relative overflow-hidden text-white">
-      {/* ── CINEMATIC MOUNTAIN LANDSCAPE BACKGROUND ── */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-screen"
-        style={{
-          backgroundImage: "url('/services-bg.jpg')",
-        }}
-      />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#10243F] via-[#10243F]/85 to-[#10243F] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-16 sm:pb-20">
+    <section id="services" className="py-16 sm:py-24 bg-[#EDF4FF]/60 relative overflow-hidden text-[#172344]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-md text-left">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-14 gap-6">
+          <div className="max-w-xl text-left">
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#D99A35]">
+              <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E]">
                 OUR SERVICES
               </span>
-              <span className="w-8 h-[2px] bg-[#D99A35] rounded-full inline-block" />
+              <span className="w-8 h-[2px] bg-[#0755F5] rounded-full inline-block" />
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-serif">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#101E49] tracking-tight">
               Complete Support<br />
-              at <span className="text-[#D99A35] font-serif italic">Every Step</span>
+              at <span className="text-gradient-blue bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent">Every Step</span>
             </h2>
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-left md:text-right">
-            <p className="text-xs sm:text-sm text-slate-300 max-w-xs leading-relaxed">
-              From choosing the right university to settling abroad, we are with you throughout your journey.
+            <p className="text-xs sm:text-sm text-[#63718E] max-w-xs leading-relaxed">
+              From choosing the right university to landing and settling abroad, our mentors support you end-to-end.
             </p>
             <button
               onClick={() => onOpenCounselling('All Services')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-[#D99A35] bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition-all shadow-sm group self-start sm:self-center"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#DCE7FA] hover:border-[#0755F5] bg-white hover:bg-[#EDF4FF] text-[#101E49] hover:text-[#0755F5] text-xs sm:text-sm font-bold transition-all shadow-xs group self-start sm:self-center cursor-pointer"
             >
               <span>View All Services</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -125,8 +100,8 @@ export const Services: React.FC<Props> = ({ onOpenCounselling, onSelectService }
           </div>
         </div>
 
-        {/* Core & Comprehensive Glassmorphic Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+        {/* 8 Modern White Cards Grid with Electric Blue Accents */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {serviceCards.map((service) => {
             const Icon = service.icon;
             return (
@@ -145,24 +120,24 @@ export const Services: React.FC<Props> = ({ onOpenCounselling, onSelectService }
                     }
                   }
                 }}
-                className="group relative bg-[#142C4C]/75 hover:bg-[#18355B] backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:border-[#D99A35]/50 shadow-lg hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1.5 active:scale-[0.99] select-none min-h-[220px] text-left"
+                className="group relative bg-white rounded-2xl p-5 sm:p-6 border border-[#DCE7FA] hover:border-[#0755F5]/50 shadow-soft hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1.5 active:scale-[0.99] select-none min-h-[220px] text-left"
               >
                 <div>
                   {/* Top: Icon + Arrow */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className={`w-12 h-12 rounded-xl ${service.tileGradient} shadow-md ${service.tileShadow} flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform text-white`}>
-                      <Icon className="w-6 h-6" />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0755F5] to-[#0877FF] shadow-md shadow-[#0755F5]/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform text-white">
+                      <Icon className="w-6 h-6 stroke-[2.2]" />
                     </div>
-                    <div className="w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 group-hover:bg-[#D99A35] group-hover:text-white group-hover:border-[#D99A35] transition-all">
+                    <div className="w-8 h-8 rounded-full bg-[#EDF4FF] border border-[#DCE7FA] flex items-center justify-center text-[#0755F5] group-hover:bg-[#0755F5] group-hover:text-white group-hover:border-transparent transition-all">
                       <ArrowRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-[15px] font-bold text-white group-hover:text-[#D99A35] transition-colors mb-2">
+                  <h3 className="text-base font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-xs text-slate-300/90 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-[13px] text-[#63718E] leading-relaxed font-normal">
                     {service.description}
                   </p>
                 </div>
@@ -170,21 +145,6 @@ export const Services: React.FC<Props> = ({ onOpenCounselling, onSelectService }
             );
           })}
         </div>
-      </div>
-
-      {/* ── CURVED WAVE TRANSITION INTO WARM IVORY PROCESS SECTION ── */}
-      <div className="relative w-full overflow-hidden leading-none z-10 -mt-1 pointer-events-none">
-        <svg
-          viewBox="0 0 1440 90"
-          fill="none"
-          className="w-full h-12 sm:h-16 lg:h-20 block"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0 C380,80 1020,80 1440,10 L1440,90 L0,90 Z"
-            fill="#FAF7F1"
-          />
-        </svg>
       </div>
     </section>
   );
