@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M20 14H80V46C80 72 50 90 50 90C50 90 20 72 20 46V14Z" fill="#990000" />
+  <path d="M24 18H76V46C76 68 50 84 50 84C50 84 24 68 24 46V18Z" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.6" fill="none" />
+  <rect x="36" y="24" width="28" height="18" rx="2" fill="#FFFFFF"/><text x="50" y="37" text-anchor="middle" fill="#990000" font-size="12" font-weight="900" font-family="sans-serif">W</text>
+  <text x="50" y="74" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="900" font-family="system-ui, sans-serif" letter-spacing="0.5">WESTERN</text>
+  <text x="50" y="81" text-anchor="middle" fill="#FFFFFF" font-size="6" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.5">SYDNEY</text>
+</svg>

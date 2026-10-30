@@ -30,8 +30,7 @@ import {
   Stethoscope,
   Scale,
   Palette,
-  X,
-  RotateCw
+  X
 } from 'lucide-react';
 import { UsaEligibilityModal } from '../components/UsaEligibilityModal';
 import { UniversityLogo } from '../components/UniversityLogo';
@@ -47,6 +46,7 @@ interface UniversityItem {
   location: string;
   rankBadge: string;
   logoType: 'harvard' | 'stanford' | 'mit' | 'uc' | 'caltech';
+  logoUrl?: string;
   categories: string[];
   shortDesc: string;
   image: string;
@@ -77,9 +77,10 @@ const UNIVERSITIES_DATA: UniversityItem[] = [
     location: 'Cambridge, Massachusetts',
     rankBadge: '#1',
     logoType: 'harvard',
+    logoUrl: '/images/universities_logos/usa_0948_harvard_university.png',
     categories: ['all', 'business', 'medicine', 'law', 'arts', 'cs'],
     shortDesc: 'Established in 1636, celebrated worldwide for rigorous scholarship, faculty leadership, and global alumni networks.',
-    image: 'https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=1200&q=80',
+    image: '/previews/harvard_brick.jpg',
     tags: ['MBA & Finance', 'Public Policy', 'Medicine', 'Law'],
     programs: [
       { name: 'Master of Business Administration (MBA)', level: "Master's", duration: '2 Years', stem: false, tuition: '$76,000 / yr' },
@@ -93,9 +94,10 @@ const UNIVERSITIES_DATA: UniversityItem[] = [
     location: 'Stanford, California',
     rankBadge: '#2',
     logoType: 'stanford',
+    logoUrl: '/images/universities_logos/usa_2058_stanford_university.png',
     categories: ['all', 'engineering', 'cs', 'business', 'medicine', 'law'],
     shortDesc: 'Located in Silicon Valley, blending academic intensity with pioneering technological innovation and venture entrepreneurship.',
-    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
+    image: '/previews/stanford_quad.jpg',
     tags: ['Artificial Intelligence', 'Computer Science', 'Bio-Engineering'],
     programs: [
       { name: 'MS in Computer Science & AI', level: "Master's", duration: '1.5 – 2 Years', stem: true, tuition: '$58,000 / yr' },
@@ -109,9 +111,10 @@ const UNIVERSITIES_DATA: UniversityItem[] = [
     location: 'Cambridge, Massachusetts',
     rankBadge: '#3',
     logoType: 'mit',
+    logoUrl: '/images/universities_logos/usa_1283_massachusetts_institute_of_technology.png',
     categories: ['all', 'engineering', 'cs', 'arts', 'business'],
     shortDesc: 'World leader in science, robotics, and engineering education, addressing complex problems with measurable global impact.',
-    image: 'https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1200&q=80',
+    image: '/previews/mit_modern.jpg',
     tags: ['Robotics', 'Quantum Computing', 'Aeronautics', 'FinTech'],
     programs: [
       { name: 'Master of Engineering in EECS', level: "Master's", duration: '1 Year', stem: true, tuition: '$60,000 / yr' },
@@ -125,9 +128,10 @@ const UNIVERSITIES_DATA: UniversityItem[] = [
     location: 'Berkeley & Los Angeles, California',
     rankBadge: '#4',
     logoType: 'uc',
+    logoUrl: '/images/universities_logos/usa_2408_university_of_california_berkeley.png',
     categories: ['all', 'engineering', 'cs', 'medicine', 'law', 'arts', 'business'],
     shortDesc: 'Premier public research university system, recognized globally for groundbreaking scientific discoveries and Nobel laureates.',
-    image: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?auto=format&fit=crop&w=1200&q=80',
+    image: '/previews/berkeley_gate.jpg',
     tags: ['Data Science', 'Biotechnology', 'Environmental Science'],
     programs: [
       { name: 'MS in Data Science & Analytics', level: "Master's", duration: '1.5 Years', stem: true, tuition: '$44,000 / yr' },
@@ -141,9 +145,10 @@ const UNIVERSITIES_DATA: UniversityItem[] = [
     location: 'Pasadena, California',
     rankBadge: '#5',
     logoType: 'caltech',
+    logoUrl: '/images/universities_logos/usa_0345_california_institute_of_technology.png',
     categories: ['all', 'engineering', 'cs', 'medicine'],
     shortDesc: 'World-renowned science and engineering institute with intimate student-faculty collaboration and NASA JPL management.',
-    image: 'https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80',
+    image: '/previews/caltech_pasadena.jpg',
     tags: ['Astrophysics', 'Aerospace', 'Applied Mathematics'],
     programs: [
       { name: 'MS in Aeronautics (GALCIT)', level: "Master's", duration: '1 – 2 Years', stem: true, tuition: '$58,000 / yr' },
@@ -630,7 +635,7 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
       }
       return {
         transform: `translate(-50%, -50%) translateX(${diff * (isMobile ? 260 : 300)}px) scale(0.85)`,
-        opacity: Math.abs(diff) === 1 && !isMobile ? 0.75 : 0,
+        opacity: Math.abs(diff) === 1 && !isMobile ? 0.95 : 0,
         zIndex: 20 - Math.abs(diff) * 5,
         pointerEvents: (Math.abs(diff) === 1 && !isMobile ? 'auto' : 'none') as 'auto' | 'none',
       };
@@ -663,8 +668,8 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
     if (isTablet) {
       if (diff === -1) {
         return {
-          transform: 'translate(-50%, -50%) translate3d(-205px, 0px, -30px) rotateY(7deg) scale(0.82)',
-          opacity: 0.88,
+          transform: 'translate(-50%, -50%) translate3d(-205px, 0px, -30px) rotateY(4deg) scale(0.84)',
+          opacity: 0.95,
           zIndex: 20,
           boxShadow: '0 10px 25px -5px rgba(21, 94, 239, 0.08)',
           borderColor: '#E2E8F0',
@@ -673,8 +678,8 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
       }
       if (diff === 1) {
         return {
-          transform: 'translate(-50%, -50%) translate3d(205px, 0px, -30px) rotateY(-7deg) scale(0.82)',
-          opacity: 0.88,
+          transform: 'translate(-50%, -50%) translate3d(205px, 0px, -30px) rotateY(-4deg) scale(0.84)',
+          opacity: 0.95,
           zIndex: 20,
           boxShadow: '0 10px 25px -5px rgba(21, 94, 239, 0.08)',
           borderColor: '#E2E8F0',
@@ -694,8 +699,8 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
     if (isDesktop) {
       if (diff === -1) {
         return {
-          transform: 'translate(-50%, -50%) translate3d(-265px, 0px, -35px) rotateY(8deg) scale(0.86)',
-          opacity: 0.92,
+          transform: 'translate(-50%, -50%) translate3d(-265px, 0px, -35px) rotateY(5deg) scale(0.88)',
+          opacity: 0.98,
           zIndex: 20,
           boxShadow: '0 12px 30px -5px rgba(21, 94, 239, 0.1)',
           borderColor: '#E2E8F0',
@@ -704,8 +709,8 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
       }
       if (diff === 1) {
         return {
-          transform: 'translate(-50%, -50%) translate3d(265px, 0px, -35px) rotateY(-8deg) scale(0.86)',
-          opacity: 0.92,
+          transform: 'translate(-50%, -50%) translate3d(265px, 0px, -35px) rotateY(-5deg) scale(0.88)',
+          opacity: 0.98,
           zIndex: 20,
           boxShadow: '0 12px 30px -5px rgba(21, 94, 239, 0.1)',
           borderColor: '#E2E8F0',
@@ -724,7 +729,7 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
     // Full 5-card orbital depth
     if (diff === -1) {
       return {
-        transform: 'translate(-50%, -50%) translate3d(-315px, 0px, -35px) rotateY(10deg) scale(0.88)',
+        transform: 'translate(-50%, -50%) translate3d(-315px, 0px, -35px) rotateY(6deg) scale(0.88)',
         opacity: 0.95,
         zIndex: 20,
         boxShadow: '0 12px 30px -5px rgba(21, 94, 239, 0.1)',
@@ -734,7 +739,7 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
     }
     if (diff === 1) {
       return {
-        transform: 'translate(-50%, -50%) translate3d(315px, 0px, -35px) rotateY(-10deg) scale(0.88)',
+        transform: 'translate(-50%, -50%) translate3d(315px, 0px, -35px) rotateY(-6deg) scale(0.88)',
         opacity: 0.95,
         zIndex: 20,
         boxShadow: '0 12px 30px -5px rgba(21, 94, 239, 0.1)',
@@ -744,8 +749,8 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
     }
     if (diff === -2) {
       return {
-        transform: 'translate(-50%, -50%) translate3d(-520px, 0px, -90px) rotateY(16deg) scale(0.75)',
-        opacity: 0.6,
+        transform: 'translate(-50%, -50%) translate3d(-520px, 0px, -90px) rotateY(10deg) scale(0.78)',
+        opacity: 0.88,
         zIndex: 10,
         borderColor: '#E2E8F0',
         pointerEvents: 'auto' as const,
@@ -753,8 +758,8 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
     }
     if (diff === 2) {
       return {
-        transform: 'translate(-50%, -50%) translate3d(520px, 0px, -90px) rotateY(-16deg) scale(0.75)',
-        opacity: 0.6,
+        transform: 'translate(-50%, -50%) translate3d(520px, 0px, -90px) rotateY(-10deg) scale(0.78)',
+        opacity: 0.88,
         zIndex: 10,
         borderColor: '#E2E8F0',
         pointerEvents: 'auto' as const,
@@ -878,11 +883,6 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
 
             {/* Orbit Status Indicator & CTAs */}
             <div className="mt-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 w-full max-w-xs sm:max-w-2xl mx-auto px-2">
-              <div className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#E2E8F0] text-xs font-semibold text-[#64748B] shadow-sm whitespace-nowrap shrink-0">
-                <RotateCw className={`w-3.5 h-3.5 text-[#155EEF] ${!isHovered && !prefersReducedMotion ? 'animate-spin-slow' : ''}`} />
-                <span>3D Orbit Mode • Auto Rotating</span>
-              </div>
-
               <button
                 type="button"
                 onClick={() => setIsEligibilityOpen(true)}
@@ -980,6 +980,7 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
                         alt={uni.name}
                         loading="eager"
                         className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                       />
                       {/* Subtle top vignette only for white ranking badge contrast */}
                       <div className="absolute top-0 inset-x-0 h-12 bg-gradient-to-b from-black/25 to-transparent pointer-events-none" />
@@ -1004,7 +1005,7 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
 
                       {/* Authentic University Emblem Badge (Overlapping Bottom-Left) */}
                       <div className="absolute -bottom-2.5 left-4 sm:left-5 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white shadow-md border border-[#E2E8F0] p-1 flex items-center justify-center z-10 transition-transform hover:scale-105">
-                        <UniversityLogo type={uni.logoType} className="w-full h-full" />
+                        <UniversityLogo type={uni.logoType} logoUrl={uni.logoUrl} alt={uni.name} className="w-full h-full" />
                       </div>
                     </div>
 
@@ -1101,6 +1102,17 @@ export const StudyInUsaPage: React.FC<StudyInUsaPageProps> = ({ onOpenCounsellin
             >
               <ChevronRight className="w-4 h-4" />
             </button>
+          </div>
+
+          {/* View All Universities Button */}
+          <div className="mt-4 sm:mt-5 flex items-center justify-center">
+            <Link
+              to="/study-in-usa/universities"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#155EEF] hover:bg-[#104ECC] text-white text-xs sm:text-sm font-bold shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group"
+            >
+              <span>View All Universities</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
 
           {/* C. Animated Category Filters */}

@@ -1,0 +1,310 @@
+{
+  "startedAt": "2026-10-29T07:52:36.497Z",
+  "totalRecords": 2825,
+  "processedCount": 0,
+  "logosMatched": 0,
+  "campusPhotosMatched": 0,
+  "missingCampusPhotos": 0,
+  "batches": [
+    {
+      "timestamp": "2026-10-29T07:53:04.269Z",
+      "offset": 0,
+      "batchSize": 20,
+      "logosMatched": 20,
+      "campusPhotosMatched": 10,
+      "records": [
+        {
+          "directory_id": "0001",
+          "name": "A T Still University of Health Sciences",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Unknown authorUnknown author (Public domain)"
+        },
+        {
+          "directory_id": "0002",
+          "name": "Aaniiih Nakoda College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Wikimedia Commons (Fair use)"
+        },
+        {
+          "directory_id": "0003",
+          "name": "Abilene Christian University",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Michael Barera (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0004",
+          "name": "Abilene Christian University-Undergraduate Online",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Michael Barera (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0005",
+          "name": "Abraham Baldwin Agricultural College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Michael Rivera (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0006",
+          "name": "Abraham Lincoln University",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0007",
+          "name": "Academy College",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0008",
+          "name": "Academy for Five Element Acupuncture",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0009",
+          "name": "Academy for Jewish Religion",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0010",
+          "name": "Academy for Jewish Religion California",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Simon Cobb (CC0)"
+        },
+        {
+          "directory_id": "0011",
+          "name": "Academy of Art University",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "(User:Wgreaves) (CC BY-SA 3.0)"
+        },
+        {
+          "directory_id": "0012",
+          "name": "Academy of Chinese Culture and Health Sciences",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "N509FZ (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0013",
+          "name": "Acupuncture and Integrative Medicine College-Berkeley",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0014",
+          "name": "Adams State University",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0015",
+          "name": "Adelphi University",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Whoisjohngalt (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0016",
+          "name": "Adler Graduate School",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0017",
+          "name": "Adler University",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0018",
+          "name": "Adrian College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Dwight Burdette (CC BY 3.0)"
+        },
+        {
+          "directory_id": "0019",
+          "name": "AdventHealth University",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0020",
+          "name": "Agape College of Business and Science",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-29T08:01:34.717Z",
+      "offset": 20,
+      "batchSize": 20,
+      "logosMatched": 20,
+      "campusPhotosMatched": 14,
+      "records": [
+        {
+          "directory_id": "0021",
+          "name": "Agnes Scott College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Diliff (CC BY-SA 3.0)"
+        },
+        {
+          "directory_id": "0022",
+          "name": "Agora University",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0023",
+          "name": "Aims Community College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Jeffrey Beall (CC BY 4.0)"
+        },
+        {
+          "directory_id": "0024",
+          "name": "Air Force Institute of Technology-Graduate School of Engineering & Management",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0025",
+          "name": "Alabama A & M University Normal",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Dtg84 (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0026",
+          "name": "Alabama College of Osteopathic Medicine",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "DrEverettVScott (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0027",
+          "name": "Alabama State University",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Chris Pruitt (CC BY-SA 3.0)"
+        },
+        {
+          "directory_id": "0028",
+          "name": "Alamo Community College District Central Office",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0029",
+          "name": "Alaska Bible College",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0030",
+          "name": "Alaska Pacific University",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0031",
+          "name": "Albany College of Pharmacy and Health Sciences Albany",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "UpstateNYer (CC BY-SA 3.0)"
+        },
+        {
+          "directory_id": "0032",
+          "name": "Albany Law School Albany",
+          "hasLogo": true,
+          "hasCampusPhoto": false,
+          "attribution": null
+        },
+        {
+          "directory_id": "0033",
+          "name": "Albany Medical College Albany",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Jay Unnikrishnan (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0034",
+          "name": "Albany State University",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Liberallefty79 (CC0)"
+        },
+        {
+          "directory_id": "0035",
+          "name": "Albert Einstein College of Medicine",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "HAL333 (CC0)"
+        },
+        {
+          "directory_id": "0036",
+          "name": "Albertus Magnus College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Karl Thomas Moore (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0037",
+          "name": "Albion College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Unknown authorUnknown author (Public domain)"
+        },
+        {
+          "directory_id": "0038",
+          "name": "Albizu University-Miami",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "LittleT889 (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0039",
+          "name": "Albizu University-San Juan",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "LittleT889 (CC BY-SA 4.0)"
+        },
+        {
+          "directory_id": "0040",
+          "name": "Albright College",
+          "hasLogo": true,
+          "hasCampusPhoto": true,
+          "attribution": "Unknown authorUnknown author (Public domain)"
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "2026-10-29T08:01:34.716Z",
+  "lastOffset": 40
+}

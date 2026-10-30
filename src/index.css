@@ -31,6 +31,34 @@
   box-shadow: 0 10px 30px -5px rgba(7, 85, 245, 0.12), 0 4px 12px -2px rgba(16, 30, 73, 0.05);
 }
 
+/* ── THEME ENHANCEMENTS: ARTISTIC TRAVELER & DIVERSE CARD STYLES ── */
+.btn-explore-royal {
+  background: #3B82F6;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px -2px rgba(59, 130, 246, 0.42), 0 2px 8px -1px rgba(15, 23, 42, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-explore-royal:hover {
+  background: #2563EB;
+  box-shadow: 0 12px 30px -2px rgba(37, 99, 235, 0.52);
+  transform: translateY(-1.5px);
+}
+
+.coral-badge {
+  background: #FFF1F2;
+  color: #E11D48;
+  border: 1px solid #FFE4E6;
+}
+
+.geometric-candy-stripe {
+  background: repeating-linear-gradient(45deg, #FF6B6B, #FF6B6B 8px, #FFFFFF 8px, #FFFFFF 16px);
+}
+
+.dot-grid-pattern {
+  background-image: radial-gradient(#93C5FD 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
 .btn-electric-blue {
   background: linear-gradient(135deg, #0755F5 0%, #0877FF 100%);
   color: #FFFFFF;
@@ -366,6 +394,57 @@ select:focus-visible {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(220, 231, 250, 0.85);
+}
+
+/* ── CONTINUOUS MARQUEE HORIZONTAL SCROLL ── */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-scroll {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 60s linear infinite;
+  will-change: transform;
+}
+
+.carousel-marquee-wrapper:hover .animate-marquee-scroll,
+.carousel-marquee-wrapper:focus-within .animate-marquee-scroll {
+  animation-play-state: paused;
+}
+
+/* ── CONTINUOUS CIRCULAR COUNTRY CAROUSEL ── */
+@keyframes infiniteCountryScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.333333%, 0, 0);
+  }
+}
+
+.country-carousel-track {
+  display: flex;
+  width: max-content;
+  animation: infiniteCountryScroll 48s linear infinite;
+  will-change: transform;
+}
+
+.country-carousel-wrapper:hover .country-carousel-track,
+.country-carousel-wrapper:focus-within .country-carousel-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .country-carousel-track {
+    animation: none !important;
+    transform: none !important;
+  }
 }
 
 /* ── ACCESSIBILITY: REDUCED MOTION PREFERENCES ── */

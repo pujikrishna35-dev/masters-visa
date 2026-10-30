@@ -1,0 +1,3512 @@
+[
+  {
+    "directory_id": 1,
+    "institution_name": "accadis Hochschule Bad Homburg",
+    "location": "Bad Homburg · Hessen",
+    "country": "Germany",
+    "website_url": "https://accadis.com",
+    "website_domain": "accadis.com",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 2,
+    "institution_name": "AKAD Hochschule Stuttgart - staatlich anerkannt",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://akad.de",
+    "website_domain": "akad.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 3,
+    "institution_name": "Akademie der Bildenden Künste München",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://adbk.de",
+    "website_domain": "adbk.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 4,
+    "institution_name": "Akademie der Bildenden Künste Nürnberg",
+    "location": "Nürnberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://adbk-nuernberg.de",
+    "website_domain": "adbk-nuernberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 5,
+    "institution_name": "Akkon-Hochschule",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://akkon-hochschule.de",
+    "website_domain": "akkon-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 6,
+    "institution_name": "Alanus Hochschule für Kunst und Gesellschaft",
+    "location": "Alfter · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://alanus.edu",
+    "website_domain": "alanus.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 7,
+    "institution_name": "Albert-Ludwigs-Universität Freiburg im Breisgau",
+    "location": "Freiburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-freiburg.de",
+    "website_domain": "uni-freiburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 8,
+    "institution_name": "Alice Salomon Hochschule Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://ash-berlin.eu",
+    "website_domain": "ash-berlin.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 9,
+    "institution_name": "Allensbach Hochschule Konstanz, staatlich anerkannte Hochschule der European Education Group GmbH",
+    "location": "Konstanz · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://allensbach-hochschule.de",
+    "website_domain": "allensbach-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 10,
+    "institution_name": "APOLLON Hochschule der Gesundheitswirtschaft",
+    "location": "Bremen",
+    "country": "Germany",
+    "website_url": "https://apollon-hochschule.de",
+    "website_domain": "apollon-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 11,
+    "institution_name": "Augustana-Hochschule Neuendettelsau",
+    "location": "Neuendettelsau · Bayern",
+    "country": "Germany",
+    "website_url": "https://augustana.de",
+    "website_domain": "augustana.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 12,
+    "institution_name": "Bard College Berlin, A Liberal Arts University",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://berlin.bard.edu",
+    "website_domain": "berlin.bard.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 13,
+    "institution_name": "Bauhaus-Universität Weimar",
+    "location": "Weimar · Thüringen",
+    "country": "Germany",
+    "website_url": "https://uni-weimar.de",
+    "website_domain": "uni-weimar.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 14,
+    "institution_name": "bbw Hochschule",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://bbw-hochschule.de",
+    "website_domain": "bbw-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 15,
+    "institution_name": "Bergische Universität Wuppertal",
+    "location": "Wuppertal · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-wuppertal.de",
+    "website_domain": "uni-wuppertal.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 16,
+    "institution_name": "Berliner Hochschule für Technik",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://bht-berlin.de",
+    "website_domain": "bht-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 17,
+    "institution_name": "Berufliche Hochschule Hamburg (BHH)",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://bhh.de",
+    "website_domain": "bhh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 18,
+    "institution_name": "Brand University of Applied Sciences",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://brand-university.de",
+    "website_domain": "brand-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 19,
+    "institution_name": "Brandenburgische Technische Universität Cottbus-Senftenberg",
+    "location": "Cottbus · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://b-tu.de",
+    "website_domain": "b-tu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 20,
+    "institution_name": "BSP Business and Law School - Hochschule für Management und Recht",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://businessschool-berlin.de",
+    "website_domain": "businessschool-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 21,
+    "institution_name": "Bucerius Law School, Hochschule für Rechtswissenschaft",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://law-school.de",
+    "website_domain": "law-school.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 22,
+    "institution_name": "Burg Giebichenstein Kunsthochschule Halle",
+    "location": "Halle · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://burg-halle.de",
+    "website_domain": "burg-halle.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 23,
+    "institution_name": "Carl von Ossietzky Universität Oldenburg",
+    "location": "Oldenburg · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://uol.de",
+    "website_domain": "uol.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 24,
+    "institution_name": "CBS University of Applied Sciences",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://cbs.de",
+    "website_domain": "cbs.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 25,
+    "institution_name": "Charlotte Fresenius Hochschule",
+    "location": "Wiesbaden · Hessen",
+    "country": "Germany",
+    "website_url": "https://charlotte-fresenius-uni.de",
+    "website_domain": "charlotte-fresenius-uni.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 26,
+    "institution_name": "Christian-Albrechts-Univers ität zu Kiel",
+    "location": "Kiel · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://uni-kiel.de",
+    "website_domain": "uni-kiel.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 27,
+    "institution_name": "CODE University of Applied Sciences",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://code.berlin",
+    "website_domain": "code.berlin",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 28,
+    "institution_name": "Constructor University",
+    "location": "Bremen",
+    "country": "Germany",
+    "website_url": "https://constructor.university",
+    "website_domain": "constructor.university",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 29,
+    "institution_name": "Deutsche Hochschule für Angewandte Wissenschaften - German University of Applied Sciences",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://deutschehochschule.de",
+    "website_domain": "deutschehochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 30,
+    "institution_name": "Deutsche Hochschule für Prävention und Gesundheitsmanagement GmbH",
+    "location": "Saarbrücken · Saarland",
+    "country": "Germany",
+    "website_url": "https://dhfpg.de",
+    "website_domain": "dhfpg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 31,
+    "institution_name": "Deutsche Sporthochschule Köln",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://dshs-koeln.de",
+    "website_domain": "dshs-koeln.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 32,
+    "institution_name": "Deutsche Universität für Ve rwaltungswissenschaften Speyer",
+    "location": "Speyer · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://uni-speyer.de",
+    "website_domain": "uni-speyer.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 33,
+    "institution_name": "DHGS Deutsche Hochschule für Gesundheit und Sport",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://dhgs-hochschule.de",
+    "website_domain": "dhgs-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 34,
+    "institution_name": "Digital Business University of Applied Sciences",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://dbuas.de",
+    "website_domain": "dbuas.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 35,
+    "institution_name": "DIPLOMA Hochschule - Private Fachhochschule Nordhessen",
+    "location": "Bad Sooden-Allendorf · Hessen",
+    "country": "Germany",
+    "website_url": "https://diploma.de",
+    "website_domain": "diploma.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 36,
+    "institution_name": "DIU - Dresden International University GmbH",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://di-uni.de",
+    "website_domain": "di-uni.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 37,
+    "institution_name": "Duale Hochschule Baden-Württemberg",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://dhbw.de",
+    "website_domain": "dhbw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 38,
+    "institution_name": "Duale Hochschule Gera-Eisenach",
+    "location": "Gera · Thüringen",
+    "country": "Germany",
+    "website_url": "https://dhge.de",
+    "website_domain": "dhge.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 39,
+    "institution_name": "Duale Hochschule Sachsen",
+    "location": "Glauchau · Sachsen",
+    "country": "Germany",
+    "website_url": "https://dhsn.de",
+    "website_domain": "dhsn.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 40,
+    "institution_name": "Duale Hochschule Schleswig-Holstein - staatlich anerkannte Hochschule für angewandte Wissenschaften in Trägerschaft der Wirtschaftsakademie Schleswig-Holstein",
+    "location": "Kiel · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://dhsh.de",
+    "website_domain": "dhsh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 41,
+    "institution_name": "Eberhard Karls Universität Tübingen",
+    "location": "Tübingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-tuebingen.de",
+    "website_domain": "uni-tuebingen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 42,
+    "institution_name": "EBS Universität für Wirtschaft und Recht",
+    "location": "Oestrich-Winkel · Hessen",
+    "country": "Germany",
+    "website_url": "https://ebs.edu",
+    "website_domain": "ebs.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 43,
+    "institution_name": "EHIP - Europäische Hochschule für Innovation und Perspektive",
+    "location": "Backnang · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ehip.eu",
+    "website_domain": "ehip.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 44,
+    "institution_name": "Ernst-Abbe-Hochschule Jena",
+    "location": "Jena · Thüringen",
+    "country": "Germany",
+    "website_url": "https://eah-jena.de",
+    "website_domain": "eah-jena.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 45,
+    "institution_name": "ESCP Europe Wirtschaftshochschule Berlin e.V.",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://escp.eu",
+    "website_domain": "escp.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 46,
+    "institution_name": "ESMT European School of Management and Technology",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://esmt.org",
+    "website_domain": "esmt.org",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 47,
+    "institution_name": "Europa-Universität Flensburg",
+    "location": "Flensburg · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://uni-flensburg.de",
+    "website_domain": "uni-flensburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 48,
+    "institution_name": "Europa-Universität Viadrina Frankfurt (Oder)",
+    "location": "Frankfurt (Oder) · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://europa-uni.de",
+    "website_domain": "europa-uni.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 49,
+    "institution_name": "Europäische Fernhochschule Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://euro-fh.de",
+    "website_domain": "euro-fh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 50,
+    "institution_name": "Evangelische Hochschule Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://eh-berlin.de",
+    "website_domain": "eh-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 51,
+    "institution_name": "Evangelische Hochschule Dresden",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://ehs-dresden.de",
+    "website_domain": "ehs-dresden.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 52,
+    "institution_name": "Evangelische Hochschule Freiburg, staatlich anerkannte Hochschule der Evangelischen Landeskirche in Baden",
+    "location": "Freiburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://eh-freiburg.de",
+    "website_domain": "eh-freiburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 53,
+    "institution_name": "Evangelische Hochschule für angewandte Wissenschaften - Evangelische Fachhochschule Nürnberg",
+    "location": "Nürnberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://evhn.de",
+    "website_domain": "evhn.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 54,
+    "institution_name": "Evangelische Hochschule für Kirchenmusik",
+    "location": "Halle · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://ehk-halle.de",
+    "website_domain": "ehk-halle.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 55,
+    "institution_name": "Evangelische Hochschule für Soziale Arbeit & Diakonie",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://ev-hochschule-hh.de",
+    "website_domain": "ev-hochschule-hh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 56,
+    "institution_name": "Evangelische Hochschule Hessen",
+    "location": "Darmstadt · Hessen",
+    "country": "Germany",
+    "website_url": "https://eh-darmstadt.de",
+    "website_domain": "eh-darmstadt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 57,
+    "institution_name": "Evangelische Hochschule Ludwigsburg - staatlich anerkannte Hochschule für Angewandte Wissenschaften der Evangelischen Landeskirche Württemberg",
+    "location": "Ludwigsburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://eh-ludwigsburg.de",
+    "website_domain": "eh-ludwigsburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 58,
+    "institution_name": "Evangelische Hochschule Rheinland-Westfalen-Lippe",
+    "location": "Bochum · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://EvH-Bochum.de",
+    "website_domain": "EvH-Bochum.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 59,
+    "institution_name": "Evangelische Hochschule Tabor",
+    "location": "Marburg · Hessen",
+    "country": "Germany",
+    "website_url": "https://eh-tabor.de",
+    "website_domain": "eh-tabor.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 60,
+    "institution_name": "Fachhochschule Aachen",
+    "location": "Aachen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fh-aachen.de",
+    "website_domain": "fh-aachen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 61,
+    "institution_name": "Fachhochschule der Diakonie - Diaconia - University of Applied Sciences",
+    "location": "Bielefeld · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hochschule-diakonie.de",
+    "website_domain": "hochschule-diakonie.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 62,
+    "institution_name": "Fachhochschule der Wirtschaft",
+    "location": "Paderborn · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fhdw.de",
+    "website_domain": "fhdw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 63,
+    "institution_name": "Fachhochschule des Mittelstands (FHM)",
+    "location": "Bielefeld · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fh-mittelstand.de",
+    "website_domain": "fh-mittelstand.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 64,
+    "institution_name": "Fachhochschule Dortmund",
+    "location": "Dortmund · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fh-dortmund.de",
+    "website_domain": "fh-dortmund.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 65,
+    "institution_name": "Fachhochschule Dresden",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://fh-dresden.eu",
+    "website_domain": "fh-dresden.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 66,
+    "institution_name": "Fachhochschule Erfurt",
+    "location": "Erfurt · Thüringen",
+    "country": "Germany",
+    "website_url": "https://fh-erfurt.de",
+    "website_domain": "fh-erfurt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 67,
+    "institution_name": "Fachhochschule für die Wirtschaft Hannover",
+    "location": "Hannover · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://fhdw-hannover.de",
+    "website_domain": "fhdw-hannover.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 68,
+    "institution_name": "Fachhochschule für Finanzen Brandenburg",
+    "location": "Königs Wusterhausen · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://fhf.brandenburg.de",
+    "website_domain": "fhf.brandenburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 69,
+    "institution_name": "Fachhochschule für Sport und Management Potsdam",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://fhsmp.de",
+    "website_domain": "fhsmp.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 70,
+    "institution_name": "unavailable Fachhochschule für öffentliche Verwaltung, Polizei und Rechtspflege des Landes Mecklenburg-Vorpommern",
+    "location": "Güstrow · Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "website_url": "https://fh-guestrow.de",
+    "website_domain": "fh-guestrow.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 71,
+    "institution_name": "Fachhochschule Potsdam",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://fh-potsdam.de",
+    "website_domain": "fh-potsdam.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 72,
+    "institution_name": "Fachhochschule Südwestfalen",
+    "location": "Iserlohn · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fh-swf.de",
+    "website_domain": "fh-swf.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 73,
+    "institution_name": "Fachhochschule Wedel",
+    "location": "Wedel · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://fh-wedel.de",
+    "website_domain": "fh-wedel.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 74,
+    "institution_name": "Fachhochschule Westküste, Hochschule für Wirtschaft und Technik",
+    "location": "Heide · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://fh-westkueste.de",
+    "website_domain": "fh-westkueste.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 75,
+    "institution_name": "FernUniversität in Hagen",
+    "location": "Hagen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fernuni-hagen.de",
+    "website_domain": "fernuni-hagen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 76,
+    "institution_name": "FH Münster - University of Applied Sciences",
+    "location": "Münster · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fhms.eu",
+    "website_domain": "fhms.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 77,
+    "institution_name": "Filmuniversität Babelsberg Konrad Wolf",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://filmuniversitaet.de",
+    "website_domain": "filmuniversitaet.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 78,
+    "institution_name": "Fliedner Fachhochschule Düsseldorf",
+    "location": "Düsseldorf · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fliedner-fachhochschule.de",
+    "website_domain": "fliedner-fachhochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 79,
+    "institution_name": "Folkwang Universität der Künste",
+    "location": "Essen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://folkwang-uni.de",
+    "website_domain": "folkwang-uni.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 80,
+    "institution_name": "FOM Hochschule für Oekonomie & Management - University of Applied Sciences",
+    "location": "Essen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://fom.de",
+    "website_domain": "fom.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 81,
+    "institution_name": "Frankfurt School of Finance & Management",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://frankfurt-school.de",
+    "website_domain": "frankfurt-school.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 82,
+    "institution_name": "Frankfurt University of Applied Sciences",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://frankfurt-university.de",
+    "website_domain": "frankfurt-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 83,
+    "institution_name": "Freie Universität Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://fu-berlin.de",
+    "website_domain": "fu-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 84,
+    "institution_name": "Friedrich-Alexander-Univer sität Erlangen-Nürnberg",
+    "location": "Erlangen · Bayern",
+    "country": "Germany",
+    "website_url": "https://fau.de",
+    "website_domain": "fau.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 85,
+    "institution_name": "Friedrich-Schiller-Universit ät Jena",
+    "location": "Jena · Thüringen",
+    "country": "Germany",
+    "website_url": "https://uni-jena.de",
+    "website_domain": "uni-jena.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 86,
+    "institution_name": "Georg-August-Universität Göttingen",
+    "location": "Göttingen · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://uni-goettingen.de",
+    "website_domain": "uni-goettingen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 87,
+    "institution_name": "German International University",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://giu-berlin.de",
+    "website_domain": "giu-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 88,
+    "institution_name": "Gisma University of Applied Sciences",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://gisma.com",
+    "website_domain": "gisma.com",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 89,
+    "institution_name": "Gottfried Wilhelm Leibniz Universität Hannover",
+    "location": "Hannover · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://uni-hannover.de",
+    "website_domain": "uni-hannover.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 90,
+    "institution_name": "HafenCity Universität Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://hcu-hamburg.de",
+    "website_domain": "hcu-hamburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 91,
+    "institution_name": "Hamburger Fern-Hochschule, gemeinnützige GmbH",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://hfh-fernstudium.de",
+    "website_domain": "hfh-fernstudium.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 92,
+    "institution_name": "HAWK Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holz minden/Göttingen",
+    "location": "Hildesheim · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hawk.de",
+    "website_domain": "hawk.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 93,
+    "institution_name": "Health Innovation University of Applied Sciences",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://hi-university.de",
+    "website_domain": "hi-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 94,
+    "institution_name": "Heinrich-Heine-Universität Düsseldorf",
+    "location": "Düsseldorf · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hhu.de",
+    "website_domain": "hhu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 95,
+    "institution_name": "Helmut-Schmidt-Universitä t/Universität der Bundeswehr Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://hsu-hh.de",
+    "website_domain": "hsu-hh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 96,
+    "institution_name": "Hertie School",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://hertie-school.org",
+    "website_domain": "hertie-school.org",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 97,
+    "institution_name": "Hessische Hochschule für öffentliches Management und Sicherheit",
+    "location": "Wiesbaden · Hessen",
+    "country": "Germany",
+    "website_url": "https://hoems.hessen.de",
+    "website_domain": "hoems.hessen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 98,
+    "institution_name": "HHL Leipzig Graduate School of Management",
+    "location": "Leipzig · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hhl.de",
+    "website_domain": "hhl.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 99,
+    "institution_name": "HMU Health and Medical University",
+    "location": "Erfurt · Thüringen",
+    "country": "Germany",
+    "website_url": "https://health-and-medical-university-erfurt.de",
+    "website_domain": "health-and-medical-university-erfurt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 100,
+    "institution_name": "HMU Health and Medical University Potsdam",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://health-and-medical-university.de",
+    "website_domain": "health-and-medical-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 101,
+    "institution_name": "hochschule 21",
+    "location": "Buxtehude · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hs21.de",
+    "website_domain": "hs21.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 102,
+    "institution_name": "Hochschule Aalen - Technik, Wirtschaft und Gesundheit",
+    "location": "Aalen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-aalen.de",
+    "website_domain": "hs-aalen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 103,
+    "institution_name": "Hochschule Albstadt-Sigmaringen",
+    "location": "Sigmaringen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-albsig.de",
+    "website_domain": "hs-albsig.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 104,
+    "institution_name": "Hochschule Anhalt - Anhalt University of Applied Sciences",
+    "location": "Köthen · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://hs-anhalt.de",
+    "website_domain": "hs-anhalt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 105,
+    "institution_name": "Hochschule Biberach - Architektur und Bauwesen, Betriebswirtschaft und Biotechnologie",
+    "location": "Biberach · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hochschule-biberach.de",
+    "website_domain": "hochschule-biberach.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 106,
+    "institution_name": "Hochschule Bielefeld - University of Applied Sciences and Arts (HSBI)",
+    "location": "Bielefeld · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hsbi.de",
+    "website_domain": "hsbi.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 107,
+    "institution_name": "Hochschule Bochum",
+    "location": "Bochum · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hochschule-bochum.de",
+    "website_domain": "hochschule-bochum.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 108,
+    "institution_name": "Hochschule Bonn-Rhein-Sieg, University of Applied Sciences",
+    "location": "Sankt Augustin · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://h-brs.de",
+    "website_domain": "h-brs.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 109,
+    "institution_name": "Hochschule Braunschweig/ Wolfenbüttel, Ostfalia Hochschule für angewandte Wissenschaften",
+    "location": "Wolfenbüttel · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://ostfalia.de",
+    "website_domain": "ostfalia.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 110,
+    "institution_name": "Hochschule Bremen",
+    "location": "Bremen",
+    "country": "Germany",
+    "website_url": "https://hs-bremen.de",
+    "website_domain": "hs-bremen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 111,
+    "institution_name": "Hochschule Bremerhaven",
+    "location": "Bremerhaven · Bremen",
+    "country": "Germany",
+    "website_url": "https://hs-bremerhaven.de",
+    "website_domain": "hs-bremerhaven.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 112,
+    "institution_name": "Hochschule Darmstadt",
+    "location": "Darmstadt · Hessen",
+    "country": "Germany",
+    "website_url": "https://h-da.de",
+    "website_domain": "h-da.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 113,
+    "institution_name": "Hochschule der Bayerischen Wirtschaft für angewandte Wissenschaften - HDBW",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://hdbw-hochschule.de",
+    "website_domain": "hdbw-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 114,
+    "institution_name": "Hochschule der bildenden Künste (HBK) Essen",
+    "location": "Essen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hbk-essen.de",
+    "website_domain": "hbk-essen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 115,
+    "institution_name": "Hochschule der Bildenden Künste Saar",
+    "location": "Saarbrücken · Saarland",
+    "country": "Germany",
+    "website_url": "https://hbksaar.de",
+    "website_domain": "hbksaar.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 116,
+    "institution_name": "Hochschule der Bundesagentur für Arbeit - Staatlich anerkannte Hochschule für angewandte Wissenschaft in Mannheim und Schwerin (University of Applied Labour Studies of the Federal Employment Agency)",
+    "location": "Mannheim · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hdba.de",
+    "website_domain": "hdba.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 117,
+    "institution_name": "Hochschule der Medien Stuttgart",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hdm-stuttgart.de",
+    "website_domain": "hdm-stuttgart.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 118,
+    "institution_name": "Hochschule der Wirtschaft für Management",
+    "location": "Mannheim · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hdwm.de",
+    "website_domain": "hdwm.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 119,
+    "institution_name": "Hochschule des Bundes für öffentliche Verwaltung",
+    "location": "Brühl · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hsbund.de",
+    "website_domain": "hsbund.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 120,
+    "institution_name": "Hochschule Düsseldorf",
+    "location": "Düsseldorf · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hs-duesseldorf.de",
+    "website_domain": "hs-duesseldorf.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 121,
+    "institution_name": "Hochschule Emden/Leer",
+    "location": "Emden · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hs-emden-leer.de",
+    "website_domain": "hs-emden-leer.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 122,
+    "institution_name": "Hochschule Esslingen",
+    "location": "Esslingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-esslingen.de",
+    "website_domain": "hs-esslingen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 123,
+    "institution_name": "Hochschule Flensburg",
+    "location": "Flensburg · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://hs-flensburg.de",
+    "website_domain": "hs-flensburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 124,
+    "institution_name": "Hochschule Fresenius",
+    "location": "Idstein · Hessen",
+    "country": "Germany",
+    "website_url": "https://hs-fresenius.de",
+    "website_domain": "hs-fresenius.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 125,
+    "institution_name": "Hochschule Fresenius Heidelberg \u0000 staatlich anerkannte Hochschule der Hochschule Fresenius für Internationales Management GmbH",
+    "location": "Heidelberg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-fresenius.de",
+    "website_domain": "hs-fresenius.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 126,
+    "institution_name": "Hochschule Fulda - University of Applied Sciences",
+    "location": "Fulda · Hessen",
+    "country": "Germany",
+    "website_url": "https://hs-fulda.de",
+    "website_domain": "hs-fulda.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 127,
+    "institution_name": "Hochschule Furtwangen - Informatik, Technik, Wirtschaft, Medien, Gesundheit",
+    "location": "Furtwangen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-furtwangen.de",
+    "website_domain": "hs-furtwangen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 128,
+    "institution_name": "Hochschule für angewandte Wissenschaften Ansbach",
+    "location": "Ansbach · Bayern",
+    "country": "Germany",
+    "website_url": "https://hs-ansbach.de",
+    "website_domain": "hs-ansbach.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 129,
+    "institution_name": "Hochschule für angewandte Wissenschaften Coburg",
+    "location": "Coburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://hs-coburg.de",
+    "website_domain": "hs-coburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 130,
+    "institution_name": "Hochschule für Angewandte Wissenschaften Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://haw-hamburg.de",
+    "website_domain": "haw-hamburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 131,
+    "institution_name": "Hochschule für angewandte Wissenschaften Hof",
+    "location": "Hof · Bayern",
+    "country": "Germany",
+    "website_url": "https://hof-university.de",
+    "website_domain": "hof-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 132,
+    "institution_name": "Hochschule für angewandte Wissenschaften Kempten",
+    "location": "Kempten · Bayern",
+    "country": "Germany",
+    "website_url": "https://hs-kempten.de",
+    "website_domain": "hs-kempten.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 133,
+    "institution_name": "Hochschule für Angewandte Wissenschaften Kiel",
+    "location": "Kiel · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://haw-kiel.de",
+    "website_domain": "haw-kiel.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 134,
+    "institution_name": "Hochschule für angewandte Wissenschaften München",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://hm.edu",
+    "website_domain": "hm.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 135,
+    "institution_name": "Hochschule für angewandte Wissenschaften Neu-Ulm",
+    "location": "Neu-Ulm · Bayern",
+    "country": "Germany",
+    "website_url": "https://hnu.de",
+    "website_domain": "hnu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 136,
+    "institution_name": "Hochschule für angewandte Wissenschaften Weihenstephan-Triesdorf",
+    "location": "Freising · Bayern",
+    "country": "Germany",
+    "website_url": "https://hswt.de",
+    "website_domain": "hswt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 137,
+    "institution_name": "Hochschule für angewandtes Management",
+    "location": "Teltow · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://fham.de",
+    "website_domain": "fham.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 138,
+    "institution_name": "Hochschule für Bildende Künste (Städelschule)",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://staedelschule.de",
+    "website_domain": "staedelschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 139,
+    "institution_name": "Hochschule für Bildende Künste Braunschweig",
+    "location": "Braunschweig · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hbk-bs.de",
+    "website_domain": "hbk-bs.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 140,
+    "institution_name": "Hochschule für Bildende Künste Dresden",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hfbk-dresden.de",
+    "website_domain": "hfbk-dresden.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 141,
+    "institution_name": "Hochschule für Bildende Künste Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://hfbk-hamburg.de",
+    "website_domain": "hfbk-hamburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 142,
+    "institution_name": "Hochschule für evangelische Kirchenmusik der Evangelisch-Lutherischen Kirche in Bayern",
+    "location": "Bayreuth · Bayern",
+    "country": "Germany",
+    "website_url": "https://hfk-bayreuth.de",
+    "website_domain": "hfk-bayreuth.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 143,
+    "institution_name": "Hochschule für Fernsehen und Film München",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://hff-muc.de",
+    "website_domain": "hff-muc.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 144,
+    "institution_name": "Hochschule für Finanzen NRW",
+    "location": "Nordkirchen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://finanzverwaltung.nrw.de",
+    "website_domain": "finanzverwaltung.nrw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 145,
+    "institution_name": "Hochschule für Finanzwirtschaft & Management",
+    "location": "Bonn · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://s-hochschule.de",
+    "website_domain": "s-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 146,
+    "institution_name": "Hochschule für Forstwirtschaft Rottenburg",
+    "location": "Rottenburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-rottenburg.net",
+    "website_domain": "hs-rottenburg.net",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 147,
+    "institution_name": "Hochschule für Gesellschaftsgestaltung",
+    "location": "Koblenz · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://hfgg.de",
+    "website_domain": "hfgg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 148,
+    "institution_name": "Hochschule für Gestaltung Offenbach",
+    "location": "Offenbach · Hessen",
+    "country": "Germany",
+    "website_url": "https://hfg-offenbach.de",
+    "website_domain": "hfg-offenbach.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 149,
+    "institution_name": "Hochschule für Gestaltung Schwäbisch Gmünd Schwäbisch Gmünd ·",
+    "location": "Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfg-gmuend.de",
+    "website_domain": "hfg-gmuend.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 150,
+    "institution_name": "Hochschule für Gesundheitsfachberufe Eberswalde",
+    "location": "Eberswalde · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://gesundheit-hochschule.de",
+    "website_domain": "gesundheit-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 151,
+    "institution_name": "Hochschule für Grafik und Buchkunst Leipzig",
+    "location": "Leipzig · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hgb-leipzig.de",
+    "website_domain": "hgb-leipzig.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 152,
+    "institution_name": "Hochschule für Jüdische Studien Heidelberg",
+    "location": "Heidelberg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfjs.eu",
+    "website_domain": "hfjs.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 153,
+    "institution_name": "Hochschule für Katholische Kirchenmusik und Musikpädagogik",
+    "location": "Regensburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://hfkm-regensburg.de",
+    "website_domain": "hfkm-regensburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 154,
+    "institution_name": "Hochschule für Kirchenmusik der Diözese Rottenburg-Stuttgart",
+    "location": "Rottenburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://kirchenmusik-hochschule.org",
+    "website_domain": "kirchenmusik-hochschule.org",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 155,
+    "institution_name": "Hochschule für Kirchenmusik der Evangelisch-Lutherischen Landeskirche Sachsens",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://kirchenmusik-dresden.de",
+    "website_domain": "kirchenmusik-dresden.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 156,
+    "institution_name": "Hochschule für Kirchenmusik der Evangelischen Kirche von Westfalen",
+    "location": "Witten · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hochschule-kirchenmusik.de",
+    "website_domain": "hochschule-kirchenmusik.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 157,
+    "institution_name": "Hochschule für Kirchenmusik der Evangelischen Landeskirche in Baden",
+    "location": "Heidelberg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfk-heidelberg.de",
+    "website_domain": "hfk-heidelberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 158,
+    "institution_name": "Hochschule für Kirchenmusik der Evangelischen Landeskirche in Württemberg",
+    "location": "Tübingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://kirchenmusikhochschule.de",
+    "website_domain": "kirchenmusikhochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 159,
+    "institution_name": "Hochschule für Künste Bremen",
+    "location": "Bremen",
+    "country": "Germany",
+    "website_url": "https://hfk-bremen.de",
+    "website_domain": "hfk-bremen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 160,
+    "institution_name": "Hochschule für Künste im Sozialen, Ottersberg",
+    "location": "Ottersberg · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hks-ottersberg.de",
+    "website_domain": "hks-ottersberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 161,
+    "institution_name": "Hochschule für Musik Carl Maria von Weber Dresden",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hfmdd.de",
+    "website_domain": "hfmdd.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 162,
+    "institution_name": "Hochschule für Musik Detmold",
+    "location": "Detmold · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hfm-detmold.de",
+    "website_domain": "hfm-detmold.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 163,
+    "institution_name": "Hochschule für Musik Franz Liszt Weimar",
+    "location": "Weimar · Thüringen",
+    "country": "Germany",
+    "website_url": "https://hfm-weimar.de",
+    "website_domain": "hfm-weimar.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 164,
+    "institution_name": "Hochschule für Musik Freiburg im Breisgau",
+    "location": "Freiburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://mh-freiburg.de",
+    "website_domain": "mh-freiburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 165,
+    "institution_name": "Hochschule für Musik Hanns Eisler Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://hfm-berlin.de",
+    "website_domain": "hfm-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 166,
+    "institution_name": "Hochschule für Musik Karlsruhe",
+    "location": "Karlsruhe · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfm-karlsruhe.de",
+    "website_domain": "hfm-karlsruhe.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 167,
+    "institution_name": "Hochschule für Musik Nürnberg",
+    "location": "Nürnberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://hfm-nuernberg.de",
+    "website_domain": "hfm-nuernberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 168,
+    "institution_name": "Hochschule für Musik Saar",
+    "location": "Saarbrücken · Saarland",
+    "country": "Germany",
+    "website_url": "https://hfmsaar.de",
+    "website_domain": "hfmsaar.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 169,
+    "institution_name": "Hochschule für Musik und Darstellende Kunst Frankfurt am Main",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://hfmdk-frankfurt.de",
+    "website_domain": "hfmdk-frankfurt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 170,
+    "institution_name": "Hochschule für Musik und Tanz Köln",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hfmt-koeln.de",
+    "website_domain": "hfmt-koeln.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 171,
+    "institution_name": "Hochschule für Musik und Theater Felix Mendelssohn Bartholdy Leipzig",
+    "location": "Leipzig · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hmt-leipzig.de",
+    "website_domain": "hmt-leipzig.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 172,
+    "institution_name": "Hochschule für Musik und Theater Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://hfmt-hamburg.de",
+    "website_domain": "hfmt-hamburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 173,
+    "institution_name": "Hochschule für Musik und Theater München",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://hmtm.de",
+    "website_domain": "hmtm.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 174,
+    "institution_name": "Hochschule für Musik und Theater Rostock",
+    "location": "Rostock · Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "website_url": "https://hmt-rostock.de",
+    "website_domain": "hmt-rostock.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 175,
+    "institution_name": "Hochschule für Musik Würzburg",
+    "location": "Würzburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://hfm-wuerzburg.de",
+    "website_domain": "hfm-wuerzburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 176,
+    "institution_name": "Hochschule für Musik, Theater und Medien Hannover",
+    "location": "Hannover · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hmtm-hannover.de",
+    "website_domain": "hmtm-hannover.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 177,
+    "institution_name": "Hochschule für nachhaltige Entwicklung Eberswalde",
+    "location": "Eberswalde · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://hnee.de",
+    "website_domain": "hnee.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 178,
+    "institution_name": "Hochschule für Philosophie",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://hfph.de",
+    "website_domain": "hfph.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 179,
+    "institution_name": "Hochschule für Polizei Baden-Württemberg Villingen-Schwenningen ·",
+    "location": "Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfpol-bw.de",
+    "website_domain": "hfpol-bw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 180,
+    "institution_name": "Hochschule für Polizei und öffentliche Verwaltung Nordrhein-Westfalen",
+    "location": "Gelsenkirchen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hspv.nrw.de",
+    "website_domain": "hspv.nrw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 181,
+    "institution_name": "Hochschule für Schauspielkunst Ernst Busch",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://hfs-berlin.de",
+    "website_domain": "hfs-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 182,
+    "institution_name": "Hochschule für Soziale Arbeit und Pädagogik (HSAP) gemeinnützige Betriebsgesellschaft mbH",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://hsap.de",
+    "website_domain": "hsap.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 183,
+    "institution_name": "Hochschule für Technik Stuttgart",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hft-stuttgart.de",
+    "website_domain": "hft-stuttgart.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 184,
+    "institution_name": "Hochschule für Technik und Wirtschaft Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://htw-berlin.de",
+    "website_domain": "htw-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 185,
+    "institution_name": "Hochschule für Technik und Wirtschaft des Saarlandes",
+    "location": "Saarbrücken · Saarland",
+    "country": "Germany",
+    "website_url": "https://htwsaar.de",
+    "website_domain": "htwsaar.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 186,
+    "institution_name": "Hochschule für Technik und Wirtschaft Dresden - University of Applied Sciences",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://htw-dresden.de",
+    "website_domain": "htw-dresden.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 187,
+    "institution_name": "Hochschule für Technik, Wirtschaft und Kultur Leipzig",
+    "location": "Leipzig · Sachsen",
+    "country": "Germany",
+    "website_url": "https://htwk-leipzig.de",
+    "website_domain": "htwk-leipzig.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 188,
+    "institution_name": "Hochschule für Technik, Wirtschaft und Medien Offenburg",
+    "location": "Offenburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-offenburg.de",
+    "website_domain": "hs-offenburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 189,
+    "institution_name": "Hochschule für Wirtschaft und Gesellschaft Ludwigshafen",
+    "location": "Ludwigshafen · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://hwg-lu.de",
+    "website_domain": "hwg-lu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 190,
+    "institution_name": "Hochschule für Wirtschaft und Recht Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://hwr-berlin.de",
+    "website_domain": "hwr-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 191,
+    "institution_name": "Hochschule für Wirtschaft und Umwelt Nürtingen-Geislingen",
+    "location": "Nürtingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfwu.de",
+    "website_domain": "hfwu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 192,
+    "institution_name": "Hochschule für Öffentliche Verwaltung Bremen",
+    "location": "Bremen",
+    "country": "Germany",
+    "website_url": "https://hfoev.bremen.de",
+    "website_domain": "hfoev.bremen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 193,
+    "institution_name": "Hochschule für öffentliche Verwaltung und Finanzen Ludwigsburg",
+    "location": "Ludwigsburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-ludwigsburg.de",
+    "website_domain": "hs-ludwigsburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 194,
+    "institution_name": "Hochschule für öffentliche Verwaltung und Rechtspflege (FH), Fortbildungszentrum des Freistaates Sachsen (HSF)",
+    "location": "Meißen · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hsf.sachsen.de",
+    "website_domain": "hsf.sachsen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 195,
+    "institution_name": "Hochschule Geisenheim",
+    "location": "Geisenheim · Hessen",
+    "country": "Germany",
+    "website_url": "https://hs-geisenheim.de",
+    "website_domain": "hs-geisenheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 196,
+    "institution_name": "Hochschule Hamm-Lippstadt",
+    "location": "Hamm · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hshl.de",
+    "website_domain": "hshl.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 197,
+    "institution_name": "Hochschule Hannover",
+    "location": "Hannover · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hs-hannover.de",
+    "website_domain": "hs-hannover.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 198,
+    "institution_name": "Hochschule Harz, Hochschule für angewandte Wissenschaften (FH)",
+    "location": "Wernigerode · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://hs-harz.de",
+    "website_domain": "hs-harz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 199,
+    "institution_name": "Hochschule Heilbronn, Technik, Wirtschaft, Informatik",
+    "location": "Heilbronn · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-heilbronn.de",
+    "website_domain": "hs-heilbronn.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 200,
+    "institution_name": "Hochschule Kaiserslautern (University of Applied Sciences)",
+    "location": "Kaiserslautern · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://hs-kl.de",
+    "website_domain": "hs-kl.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 201,
+    "institution_name": "Hochschule Karlsruhe - Technik und Wirtschaft",
+    "location": "Karlsruhe · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://h-ka.de",
+    "website_domain": "h-ka.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 202,
+    "institution_name": "Hochschule Koblenz",
+    "location": "Koblenz · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://hs-koblenz.de",
+    "website_domain": "hs-koblenz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 203,
+    "institution_name": "Hochschule Konstanz Technik, Wirtschaft und Gestaltung",
+    "location": "Konstanz · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://htwg-konstanz.de",
+    "website_domain": "htwg-konstanz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 204,
+    "institution_name": "Hochschule Landshut - Hochschule für angewandte Wissenschaften",
+    "location": "Landshut · Bayern",
+    "country": "Germany",
+    "website_url": "https://haw-landshut.de",
+    "website_domain": "haw-landshut.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 205,
+    "institution_name": "unavailable Hochschule Magdeburg-Stendal",
+    "location": "Magdeburg · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://h2.de",
+    "website_domain": "h2.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 206,
+    "institution_name": "Hochschule Mainz",
+    "location": "Mainz · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://hs-mainz.de",
+    "website_domain": "hs-mainz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 207,
+    "institution_name": "Hochschule Merseburg",
+    "location": "Merseburg · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://hs-merseburg.de",
+    "website_domain": "hs-merseburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 208,
+    "institution_name": "Hochschule Mittweida, University of Applied Sciences",
+    "location": "Mittweida · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hs-mittweida.de",
+    "website_domain": "hs-mittweida.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 209,
+    "institution_name": "Hochschule Neubrandenburg - University of Applied Sciences Neubrandenburg ·",
+    "location": "Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "website_url": "https://hs-nb.de",
+    "website_domain": "hs-nb.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 210,
+    "institution_name": "Hochschule Niederrhein",
+    "location": "Krefeld · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hs-niederrhein.de",
+    "website_domain": "hs-niederrhein.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 211,
+    "institution_name": "Hochschule Nordhausen",
+    "location": "Nordhausen · Thüringen",
+    "country": "Germany",
+    "website_url": "https://hs-nordhausen.de",
+    "website_domain": "hs-nordhausen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 212,
+    "institution_name": "Hochschule Osnabrück",
+    "location": "Osnabrück · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hs-osnabrueck.de",
+    "website_domain": "hs-osnabrueck.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 213,
+    "institution_name": "Hochschule Pforzheim - Gestaltung, Technik, Wirtschaft und Recht",
+    "location": "Pforzheim · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hs-pforzheim.de",
+    "website_domain": "hs-pforzheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 214,
+    "institution_name": "Hochschule Ravensburg-Weingarten",
+    "location": "Weingarten · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://rwu.de",
+    "website_domain": "rwu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 215,
+    "institution_name": "unavailable Hochschule Reutlingen, Hochschule für Technik- Wi rtschaft-Informatik-Design",
+    "location": "Reutlingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://reutlingen-university.de",
+    "website_domain": "reutlingen-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 216,
+    "institution_name": "Hochschule Rhein-Waal - University of Applied Sciences",
+    "location": "Kleve · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hochschule-rhein-waal.de",
+    "website_domain": "hochschule-rhein-waal.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 217,
+    "institution_name": "Hochschule RheinMain",
+    "location": "Wiesbaden · Hessen",
+    "country": "Germany",
+    "website_url": "https://hs-rm.de",
+    "website_domain": "hs-rm.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 218,
+    "institution_name": "Hochschule Ruhr West- University of Applied Sciences",
+    "location": "Mülheim · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://hochschule-ruhr-west.de",
+    "website_domain": "hochschule-ruhr-west.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 219,
+    "institution_name": "Hochschule Schmalkalden",
+    "location": "Schmalkalden · Thüringen",
+    "country": "Germany",
+    "website_url": "https://hs-schmalkalden.de",
+    "website_domain": "hs-schmalkalden.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 220,
+    "institution_name": "Hochschule Stralsund",
+    "location": "Stralsund · Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "website_url": "https://hochschule-stralsund.de",
+    "website_domain": "hochschule-stralsund.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 221,
+    "institution_name": "Hochschule Trier - Trier University of Applied Sciences",
+    "location": "Trier · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://hochschule-trier.de",
+    "website_domain": "hochschule-trier.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 222,
+    "institution_name": "Hochschule Weserbergland",
+    "location": "Hameln · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://hsw-hameln.de",
+    "website_domain": "hsw-hameln.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 223,
+    "institution_name": "Hochschule Wismar - University of Applied Sciences: Technology, Business and Design",
+    "location": "Wismar · Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "website_url": "https://hs-wismar.de",
+    "website_domain": "hs-wismar.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 224,
+    "institution_name": "Hochschule Worms, University of Applied Sciences",
+    "location": "Worms · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://hs-worms.de",
+    "website_domain": "hs-worms.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 225,
+    "institution_name": "Hochschule Zittau/Görlitz",
+    "location": "Zittau · Sachsen",
+    "country": "Germany",
+    "website_url": "https://hszg.de",
+    "website_domain": "hszg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 226,
+    "institution_name": "HSBA Hamburg School of Business Administration",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://hsba.de",
+    "website_domain": "hsba.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 227,
+    "institution_name": "HSD Hochschule Döpfer",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://hs-doepfer.de",
+    "website_domain": "hs-doepfer.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 228,
+    "institution_name": "Humboldt-Universität zu Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://hu-berlin.de",
+    "website_domain": "hu-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 229,
+    "institution_name": "International Psychoanalytic University Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://ipu-berlin.de",
+    "website_domain": "ipu-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 230,
+    "institution_name": "International School of Management",
+    "location": "Dortmund · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://ism.de",
+    "website_domain": "ism.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 231,
+    "institution_name": "Internationale Hochschule Liebenzell (IHL)",
+    "location": "Bad Liebenzell · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ihl.eu",
+    "website_domain": "ihl.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 232,
+    "institution_name": "Internationale Hochschule SDI München - Hochschule für angewandte Wissenschaften",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://sdi-muenchen.de",
+    "website_domain": "sdi-muenchen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 233,
+    "institution_name": "INU - Innovative University of Applied Sciences",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://inu.de",
+    "website_domain": "inu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 234,
+    "institution_name": "IST-Hochschule für Management",
+    "location": "Düsseldorf · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://ist-hochschule.de",
+    "website_domain": "ist-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 235,
+    "institution_name": "IU Internationale Hochschule",
+    "location": "Erfurt · Thüringen",
+    "country": "Germany",
+    "website_url": "https://iu.prf.hn",
+    "website_domain": "iu.prf.hn",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 236,
+    "institution_name": "Jade Hochschule - Wilhelms haven/Oldenburg/Elsfleth",
+    "location": "Wilhelmshaven · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://jade-hs.de",
+    "website_domain": "jade-hs.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 237,
+    "institution_name": "Johann Wolfgang Goethe-Universität, Frankfurt am Main",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://uni-frankfurt.de",
+    "website_domain": "uni-frankfurt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 238,
+    "institution_name": "Johannes Gutenberg-Universität Mainz",
+    "location": "Mainz · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://uni-mainz.de",
+    "website_domain": "uni-mainz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 239,
+    "institution_name": "Julius-Maximilians-Universi tät Würzburg",
+    "location": "Würzburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://uni-wuerzburg.de",
+    "website_domain": "uni-wuerzburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 240,
+    "institution_name": "Justus-Liebig-Universität Gießen",
+    "location": "Gießen · Hessen",
+    "country": "Germany",
+    "website_url": "https://uni-giessen.de",
+    "website_domain": "uni-giessen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 241,
+    "institution_name": "Karlshochschule International University - staatlich anerkannte Hochschule der Karlshochschule gemeinnützige GmbH Karlsruhe",
+    "location": "Karlsruhe · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://karlshochschule.de",
+    "website_domain": "karlshochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 242,
+    "institution_name": "Karlsruher Institut für Technologie",
+    "location": "Karlsruhe · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://kit.edu",
+    "website_domain": "kit.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 243,
+    "institution_name": "Katholische Stiftungshochschule für angewandte Wissenschaften München - Hochschule der Kirchlichen Stiftung des öffentlichen Rechts Katholische Bildungsstätten für Sozialberufe in Bayern",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://ksh-muenchen.de",
+    "website_domain": "ksh-muenchen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 244,
+    "institution_name": "Katholische Hochschule Freiburg, staatlich anerkannte Hochschule - Catholic University of Applied Sciences",
+    "location": "Freiburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://kh-freiburg.de",
+    "website_domain": "kh-freiburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 245,
+    "institution_name": "Katholische Hochschule für Sozialwesen Berlin (KHSB) - Staatlich anerkannte Fachhochschule für Sozialwesen",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://khsb-berlin.de",
+    "website_domain": "khsb-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 246,
+    "institution_name": "Katholische Hochschule Mainz Catholic University of Applied Sciences",
+    "location": "Mainz · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://kh-mz.de",
+    "website_domain": "kh-mz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 247,
+    "institution_name": "Katholische Hochschule Nordrhein-Westfalen - Catholic University of Applied Sciences",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://katho-nrw.de",
+    "website_domain": "katho-nrw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 248,
+    "institution_name": "Katholische Universität Eichstätt - Ingolstadt",
+    "location": "Eichstätt · Bayern",
+    "country": "Germany",
+    "website_url": "https://ku.de",
+    "website_domain": "ku.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 249,
+    "institution_name": "Kirchliche Hochschule Wuppertal",
+    "location": "Wuppertal · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://kiho-wuppertal.de",
+    "website_domain": "kiho-wuppertal.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 250,
+    "institution_name": "Kolping Hochschule",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://kolping-hochschule.de",
+    "website_domain": "kolping-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 251,
+    "institution_name": "Kunstakademie Düsseldorf",
+    "location": "Düsseldorf · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://kunstakademie-duesseldorf.de",
+    "website_domain": "kunstakademie-duesseldorf.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 252,
+    "institution_name": "Kunstakademie Münster, Hochschule für Bildende Künste",
+    "location": "Münster · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://kunstakademie-muenster.de",
+    "website_domain": "kunstakademie-muenster.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 253,
+    "institution_name": "Kunsthochschule für Medien Köln",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://khm.de",
+    "website_domain": "khm.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 254,
+    "institution_name": "Kölner Hochschule für Katholische Theologie (KHKT)",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://khkt.de",
+    "website_domain": "khkt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 255,
+    "institution_name": "Kühne Logistics University - Wissenschaftliche Hochschule für Logistik und Unternehmensführung",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://klu.org",
+    "website_domain": "klu.org",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 256,
+    "institution_name": "Leibniz-Fachhochschule",
+    "location": "Hannover · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://leibniz-fh.de",
+    "website_domain": "leibniz-fh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 257,
+    "institution_name": "Leuphana Universität Lüneburg",
+    "location": "Lüneburg · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://leuphana.de",
+    "website_domain": "leuphana.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 258,
+    "institution_name": "Ludwig-Maximilians-Univer sität München",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://lmu.de",
+    "website_domain": "lmu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 259,
+    "institution_name": "Lutherische Theologische Hochschule Oberursel",
+    "location": "Oberursel · Hessen",
+    "country": "Germany",
+    "website_url": "https://lthh-oberursel.de",
+    "website_domain": "lthh-oberursel.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 260,
+    "institution_name": "Macromedia University of Applied Sciences",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://macromedia-fachhochschule.de",
+    "website_domain": "macromedia-fachhochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 261,
+    "institution_name": "Martin-Luther-Universität Halle-Wittenberg",
+    "location": "Halle · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://uni-halle.de",
+    "website_domain": "uni-halle.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 262,
+    "institution_name": "Mediadesign Hochschule für Design und Informatik",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://mediadesign.de",
+    "website_domain": "mediadesign.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 263,
+    "institution_name": "Medical School Berlin - Hochschule für Gesundheit und Medizin (MSB)",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://medicalschool-berlin.de",
+    "website_domain": "medicalschool-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 264,
+    "institution_name": "Medizinische Hochschule Brandenburg Theodor Fontane",
+    "location": "Neuruppin · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://mhb-fontane.de",
+    "website_domain": "mhb-fontane.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 265,
+    "institution_name": "Medizinische Hochschule Hannover (MHH)",
+    "location": "Hannover · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://mh-hannover.de",
+    "website_domain": "mh-hannover.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 266,
+    "institution_name": "Medizinische Universität Lausitz - Carl Thiem",
+    "location": "Cottbus · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://mul-ct.de",
+    "website_domain": "mul-ct.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 267,
+    "institution_name": "Merz Akademie Hochschule für Gestaltung, Kunst und Medien, Stuttgart - Staatlich anerkannt",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://merz-akademie.de",
+    "website_domain": "merz-akademie.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 268,
+    "institution_name": "MSH Medical School Hamburg - University of Applied Sciences and Medical University",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://medicalschool-hamburg.de",
+    "website_domain": "medicalschool-hamburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 269,
+    "institution_name": "MU Media University of Applied Sciences",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://media-university.de",
+    "website_domain": "media-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 270,
+    "institution_name": "Munich Business School - Staatlich anerkannte private Fachhochschule",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://munich-business-school.de",
+    "website_domain": "munich-business-school.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 271,
+    "institution_name": "Munich University of Digital Technologies & Applied Sciences",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://uni-munich.de",
+    "website_domain": "uni-munich.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 272,
+    "institution_name": "Musikhochschule Lübeck",
+    "location": "Lübeck · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://mh-luebeck.de",
+    "website_domain": "mh-luebeck.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 273,
+    "institution_name": "Muthesius Kunsthochschule",
+    "location": "Kiel · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://muthesius-kunsthochschule.de",
+    "website_domain": "muthesius-kunsthochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 274,
+    "institution_name": "NBS Northern Business School \u0000 University of Applied Sciences",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://nbs.de",
+    "website_domain": "nbs.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 275,
+    "institution_name": "NORDAKADEMIE Hochschule der Wirtschaft",
+    "location": "Elmshorn · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://nordakademie.de",
+    "website_domain": "nordakademie.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 276,
+    "institution_name": "Ostbayerische Technische Hochschule Amberg-Weiden",
+    "location": "Amberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://oth-aw.de",
+    "website_domain": "oth-aw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 277,
+    "institution_name": "Ostbayerische Technische Hochschule Regensburg",
+    "location": "Regensburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://oth-regensburg.de",
+    "website_domain": "oth-regensburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 278,
+    "institution_name": "Otto-Friedrich-Universität Bamberg",
+    "location": "Bamberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://uni-bamberg.de",
+    "website_domain": "uni-bamberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 279,
+    "institution_name": "Otto-von-Guericke-Universi tät Magdeburg",
+    "location": "Magdeburg · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://ovgu.de",
+    "website_domain": "ovgu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 280,
+    "institution_name": "Palucca Hochschule für Tanz Dresden",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://palucca.eu",
+    "website_domain": "palucca.eu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 281,
+    "institution_name": "PFH - Private Hochschule Göttingen",
+    "location": "Göttingen · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://pfh.de",
+    "website_domain": "pfh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 282,
+    "institution_name": "Philipps-Universität Marburg",
+    "location": "Marburg · Hessen",
+    "country": "Germany",
+    "website_url": "https://uni-marburg.de",
+    "website_domain": "uni-marburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 283,
+    "institution_name": "Philosophisch-Theologische Hochschule Münster - Kirchlich und staatlich anerkannte Hochschule in Trägerschaft der PTH Philosophisch-Theologische Hochschule Münster gemeinnützige GmbH",
+    "location": "Münster · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://cts-hochschule.de",
+    "website_domain": "cts-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 284,
+    "institution_name": "unavailable Philosophisch-Theologische Hochschule Sankt Georgen Frankfurt am Main",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://sankt-georgen.de",
+    "website_domain": "sankt-georgen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 285,
+    "institution_name": "Private Hochschule für Wirtschaft und Technik Vechta/Diepholz",
+    "location": "Vechta · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://phwt.de",
+    "website_domain": "phwt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 286,
+    "institution_name": "Private Universität Witten/Herdecke gGmbH",
+    "location": "Witten · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-wh.de",
+    "website_domain": "uni-wh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 287,
+    "institution_name": "Psychologische Hochschule Berlin (PHB)",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://psychologische-hochschule.de",
+    "website_domain": "psychologische-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 288,
+    "institution_name": "Pädagogische Hochschule Freiburg",
+    "location": "Freiburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ph-freiburg.de",
+    "website_domain": "ph-freiburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 289,
+    "institution_name": "Pädagogische Hochschule Heidelberg",
+    "location": "Heidelberg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ph-heidelberg.de",
+    "website_domain": "ph-heidelberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 290,
+    "institution_name": "Pädagogische Hochschule Karlsruhe",
+    "location": "Karlsruhe · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ph-karlsruhe.de",
+    "website_domain": "ph-karlsruhe.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 291,
+    "institution_name": "Pädagogische Hochschule Ludwigsburg",
+    "location": "Ludwigsburg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ph-ludwigsburg.de",
+    "website_domain": "ph-ludwigsburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 292,
+    "institution_name": "Pädagogische Hochschule Schwäbisch Gmünd Schwäbisch Gmünd ·",
+    "location": "Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ph-gmuend.de",
+    "website_domain": "ph-gmuend.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 293,
+    "institution_name": "Pädagogische Hochschule Weingarten",
+    "location": "Weingarten · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://ph-weingarten.de",
+    "website_domain": "ph-weingarten.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 294,
+    "institution_name": "Rheinisch-Westfälische Technische Hochschule Aachen",
+    "location": "Aachen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://rwth-aachen.de",
+    "website_domain": "rwth-aachen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 295,
+    "institution_name": "Rheinische Friedrich-Wilhel ms-Universität Bonn",
+    "location": "Bonn · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-bonn.de",
+    "website_domain": "uni-bonn.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 296,
+    "institution_name": "Rheinische Hochschule Köln",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://rh-koeln.de",
+    "website_domain": "rh-koeln.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 297,
+    "institution_name": "Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau",
+    "location": "Kaiserslautern · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://rptu.de",
+    "website_domain": "rptu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 298,
+    "institution_name": "Robert Schumann Hochschule Düsseldorf",
+    "location": "Düsseldorf · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://rsh-duesseldorf.de",
+    "website_domain": "rsh-duesseldorf.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 299,
+    "institution_name": "Ruhr-Universität Bochum",
+    "location": "Bochum · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://ruhr-uni-bochum.de",
+    "website_domain": "ruhr-uni-bochum.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 300,
+    "institution_name": "Ruprecht-Karls-Universität Heidelberg",
+    "location": "Heidelberg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-heidelberg.de",
+    "website_domain": "uni-heidelberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 301,
+    "institution_name": "SRH Fernhochschule - The Mobile University",
+    "location": "Riedlingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://mobile-university.de",
+    "website_domain": "mobile-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 302,
+    "institution_name": "SRH University of Applied Sciences Heidelberg",
+    "location": "Heidelberg · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://srh-university.de",
+    "website_domain": "srh-university.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 303,
+    "institution_name": "Staatliche Akademie der Bildenden Künste Karlsruhe",
+    "location": "Karlsruhe · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://kunstakademie-karlsruhe.de",
+    "website_domain": "kunstakademie-karlsruhe.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 304,
+    "institution_name": "Staatliche Akademie der Bildenden Künste Stuttgart",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://abk-stuttgart.de",
+    "website_domain": "abk-stuttgart.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 305,
+    "institution_name": "Staatliche Hochschule für Gestaltung Karlsruhe",
+    "location": "Karlsruhe · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfg-karlsruhe.de",
+    "website_domain": "hfg-karlsruhe.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 306,
+    "institution_name": "Staatliche Hochschule für Musik Trossingen",
+    "location": "Trossingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hfm-trossingen.de",
+    "website_domain": "hfm-trossingen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 307,
+    "institution_name": "Staatliche Hochschule für Musik und Darstellende Kunst Mannheim",
+    "location": "Mannheim · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://muho-mannheim.de",
+    "website_domain": "muho-mannheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 308,
+    "institution_name": "Staatliche Hochschule für Musik und Darstellende Kunst Stuttgart",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://hmdk-stuttgart.de",
+    "website_domain": "hmdk-stuttgart.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 309,
+    "institution_name": "Steinbeis Hochschule",
+    "location": "Magdeburg · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://steinbeis-hochschule.de",
+    "website_domain": "steinbeis-hochschule.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 310,
+    "institution_name": "Stiftung Tierärztliche Hochschule Hannover",
+    "location": "Hannover · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://tiho-hannover.de",
+    "website_domain": "tiho-hannover.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 311,
+    "institution_name": "Technische Hochschule Aschaffenburg",
+    "location": "Aschaffenburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://th-ab.de",
+    "website_domain": "th-ab.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 312,
+    "institution_name": "Technische Hochschule Augsburg",
+    "location": "Augsburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://tha.de",
+    "website_domain": "tha.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 313,
+    "institution_name": "Technische Hochschule Bingen",
+    "location": "Bingen · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://th-bingen.de",
+    "website_domain": "th-bingen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 314,
+    "institution_name": "unavailable Technische Hochschule Brandenburg",
+    "location": "Brandenburg",
+    "country": "Germany",
+    "website_url": "https://th-brandenburg.de",
+    "website_domain": "th-brandenburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 315,
+    "institution_name": "Technische Hochschule Deggendorf",
+    "location": "Deggendorf · Bayern",
+    "country": "Germany",
+    "website_url": "https://th-deg.de",
+    "website_domain": "th-deg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 316,
+    "institution_name": "Technische Hochschule Georg Agricola",
+    "location": "Bochum · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://thga.de",
+    "website_domain": "thga.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 317,
+    "institution_name": "Technische Hochschule Ingolstadt",
+    "location": "Ingolstadt · Bayern",
+    "country": "Germany",
+    "website_url": "https://thi.de",
+    "website_domain": "thi.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 318,
+    "institution_name": "Technische Hochschule Köln",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://th-koeln.de",
+    "website_domain": "th-koeln.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 319,
+    "institution_name": "Technische Hochschule Lübeck",
+    "location": "Lübeck · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://th-luebeck.de",
+    "website_domain": "th-luebeck.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 320,
+    "institution_name": "Technische Hochschule Mannheim",
+    "location": "Mannheim · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://th-mannheim.de",
+    "website_domain": "th-mannheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 321,
+    "institution_name": "Technische Hochschule Mittelhessen - THM",
+    "location": "Gießen · Hessen",
+    "country": "Germany",
+    "website_url": "https://thm.de",
+    "website_domain": "thm.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 322,
+    "institution_name": "Technische Hochschule Nürnberg Georg Simon Ohm",
+    "location": "Nürnberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://studium.th-nuernberg.de",
+    "website_domain": "studium.th-nuernberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 323,
+    "institution_name": "Technische Hochschule Ostwestfalen-Lippe",
+    "location": "Lemgo · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://th-owl.de",
+    "website_domain": "th-owl.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 324,
+    "institution_name": "Technische Hochschule Rosenheim",
+    "location": "Rosenheim · Bayern",
+    "country": "Germany",
+    "website_url": "https://th-rosenheim.de",
+    "website_domain": "th-rosenheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 325,
+    "institution_name": "Technische Hochschule Ulm",
+    "location": "Ulm · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://thu.de",
+    "website_domain": "thu.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 326,
+    "institution_name": "Technische Hochschule Wildau",
+    "location": "Wildau · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://th-wildau.de",
+    "website_domain": "th-wildau.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 327,
+    "institution_name": "Technische Hochschule Würzburg-Schweinfurt",
+    "location": "Würzburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://thws.de",
+    "website_domain": "thws.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 328,
+    "institution_name": "Technische Universität Bergakademie Freiberg",
+    "location": "Freiberg · Sachsen",
+    "country": "Germany",
+    "website_url": "https://tu-freiberg.de",
+    "website_domain": "tu-freiberg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 329,
+    "institution_name": "Technische Universität Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://tu.berlin",
+    "website_domain": "tu.berlin",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 330,
+    "institution_name": "Technische Universität Braunschweig",
+    "location": "Braunschweig · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://tu-braunschweig.de",
+    "website_domain": "tu-braunschweig.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 331,
+    "institution_name": "Technische Universität Chemnitz",
+    "location": "Chemnitz · Sachsen",
+    "country": "Germany",
+    "website_url": "https://tu-chemnitz.de",
+    "website_domain": "tu-chemnitz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 332,
+    "institution_name": "Technische Universität Clausthal",
+    "location": "Clausthal-Zellerfeld · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://tu-clausthal.de",
+    "website_domain": "tu-clausthal.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 333,
+    "institution_name": "Technische Universität Darmstadt",
+    "location": "Darmstadt · Hessen",
+    "country": "Germany",
+    "website_url": "https://tu-darmstadt.de",
+    "website_domain": "tu-darmstadt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 334,
+    "institution_name": "Technische Universität Dortmund",
+    "location": "Dortmund · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://tu-dortmund.de",
+    "website_domain": "tu-dortmund.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 335,
+    "institution_name": "Technische Universität Dresden",
+    "location": "Dresden · Sachsen",
+    "country": "Germany",
+    "website_url": "https://tu-dresden.de",
+    "website_domain": "tu-dresden.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 336,
+    "institution_name": "Technische Universität Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://tuhh.de",
+    "website_domain": "tuhh.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 337,
+    "institution_name": "Technische Universität Ilmenau",
+    "location": "Ilmenau · Thüringen",
+    "country": "Germany",
+    "website_url": "https://tu-ilmenau.de",
+    "website_domain": "tu-ilmenau.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 338,
+    "institution_name": "Technische Universität München",
+    "location": "München · Bayern",
+    "country": "Germany",
+    "website_url": "https://tum.de",
+    "website_domain": "tum.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 339,
+    "institution_name": "Technische Universität Nürnberg",
+    "location": "Nürnberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://utn.de",
+    "website_domain": "utn.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 340,
+    "institution_name": "Theologische Fakultät Fulda",
+    "location": "Fulda · Hessen",
+    "country": "Germany",
+    "website_url": "https://thf-fulda.de",
+    "website_domain": "thf-fulda.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 341,
+    "institution_name": "Theologische Fakultät Paderborn",
+    "location": "Paderborn · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://thf-paderborn.de",
+    "website_domain": "thf-paderborn.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 342,
+    "institution_name": "Theologische Fakultät Trier",
+    "location": "Trier · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://theologie-trier.de",
+    "website_domain": "theologie-trier.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 343,
+    "institution_name": "Theologische Hochschule Elstal",
+    "location": "Wustermark · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://th-elstal.de",
+    "website_domain": "th-elstal.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 344,
+    "institution_name": "Theologische Hochschule Ewersbach",
+    "location": "Dietzhölztal · Hessen",
+    "country": "Germany",
+    "website_url": "https://th-ewersbach.de",
+    "website_domain": "th-ewersbach.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 345,
+    "institution_name": "Theologische Hochschule Friedensau",
+    "location": "Friedensau · Sachsen-Anhalt",
+    "country": "Germany",
+    "website_url": "https://thh-friedensau.de",
+    "website_domain": "thh-friedensau.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 346,
+    "institution_name": "Theologische Hochschule Reutlingen - staatlich anerkannte Fachhochschule der Evangelisch-methodistis chen Kirche",
+    "location": "Reutlingen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://th-reutlingen.de",
+    "website_domain": "th-reutlingen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 347,
+    "institution_name": "unavailable Tomorrow University of Applied Sciences",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://tomorrow-university",
+    "website_domain": "tomorrow-university",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 348,
+    "institution_name": "University of Europe for Applied Sciences",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://ue-germany.com",
+    "website_domain": "ue-germany.com",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 349,
+    "institution_name": "University of Labour",
+    "location": "Frankfurt am Main · Hessen",
+    "country": "Germany",
+    "website_url": "https://university-of-labour.de",
+    "website_domain": "university-of-labour.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 350,
+    "institution_name": "Universität Augsburg",
+    "location": "Augsburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://uni-augsburg.de",
+    "website_domain": "uni-augsburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 351,
+    "institution_name": "Universität Bayreuth",
+    "location": "Bayreuth · Bayern",
+    "country": "Germany",
+    "website_url": "https://uni-bayreuth.de",
+    "website_domain": "uni-bayreuth.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 352,
+    "institution_name": "Universität Bielefeld",
+    "location": "Bielefeld · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-bielefeld.de",
+    "website_domain": "uni-bielefeld.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 353,
+    "institution_name": "Universität Bremen",
+    "location": "Bremen",
+    "country": "Germany",
+    "website_url": "https://uni-bremen.de",
+    "website_domain": "uni-bremen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 354,
+    "institution_name": "Universität der Bundeswehr München",
+    "location": "Neubiberg · Bayern",
+    "country": "Germany",
+    "website_url": "https://unibw.de",
+    "website_domain": "unibw.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 355,
+    "institution_name": "Universität der Künste Berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://udk-berlin.de",
+    "website_domain": "udk-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 356,
+    "institution_name": "Universität des Saarlandes",
+    "location": "Saarbrücken · Saarland",
+    "country": "Germany",
+    "website_url": "https://uni-saarland.de",
+    "website_domain": "uni-saarland.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 357,
+    "institution_name": "Universität Duisburg-Essen",
+    "location": "Essen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-due.de",
+    "website_domain": "uni-due.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 358,
+    "institution_name": "Universität Erfurt",
+    "location": "Erfurt · Thüringen",
+    "country": "Germany",
+    "website_url": "https://uni-erfurt.de",
+    "website_domain": "uni-erfurt.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 359,
+    "institution_name": "Universität Greifswald",
+    "location": "Greifswald · Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "website_url": "https://uni-greifswald.de",
+    "website_domain": "uni-greifswald.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 360,
+    "institution_name": "Universität Hamburg",
+    "location": "Hamburg",
+    "country": "Germany",
+    "website_url": "https://uni-hamburg.de",
+    "website_domain": "uni-hamburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 361,
+    "institution_name": "Universität Hildesheim",
+    "location": "Hildesheim · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://uni-hildesheim.de",
+    "website_domain": "uni-hildesheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 362,
+    "institution_name": "Universität Hohenheim",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-hohenheim.de",
+    "website_domain": "uni-hohenheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 363,
+    "institution_name": "Universität Kassel",
+    "location": "Kassel · Hessen",
+    "country": "Germany",
+    "website_url": "https://uni-kassel.de",
+    "website_domain": "uni-kassel.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 364,
+    "institution_name": "Universität Koblenz",
+    "location": "Koblenz · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://uni-koblenz.de",
+    "website_domain": "uni-koblenz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 365,
+    "institution_name": "Universität Konstanz",
+    "location": "Konstanz · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-konstanz.de",
+    "website_domain": "uni-konstanz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 366,
+    "institution_name": "Universität Leipzig",
+    "location": "Leipzig · Sachsen",
+    "country": "Germany",
+    "website_url": "https://uni-leipzig.de",
+    "website_domain": "uni-leipzig.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 367,
+    "institution_name": "Universität Mannheim",
+    "location": "Mannheim · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-mannheim.de",
+    "website_domain": "uni-mannheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 368,
+    "institution_name": "Universität Münster",
+    "location": "Münster · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-muenster.de",
+    "website_domain": "uni-muenster.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 369,
+    "institution_name": "Universität Osnabrück",
+    "location": "Osnabrück · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://uni-osnabrueck.de",
+    "website_domain": "uni-osnabrueck.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 370,
+    "institution_name": "Universität Paderborn",
+    "location": "Paderborn · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://meine.uni-paderborn.de",
+    "website_domain": "meine.uni-paderborn.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 371,
+    "institution_name": "Universität Passau",
+    "location": "Passau · Bayern",
+    "country": "Germany",
+    "website_url": "https://uni-passau.de",
+    "website_domain": "uni-passau.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 372,
+    "institution_name": "Universität Potsdam",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://uni-potsdam.de",
+    "website_domain": "uni-potsdam.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 373,
+    "institution_name": "Universität Regensburg",
+    "location": "Regensburg · Bayern",
+    "country": "Germany",
+    "website_url": "https://uni-regensburg.de",
+    "website_domain": "uni-regensburg.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 374,
+    "institution_name": "Universität Rostock",
+    "location": "Rostock · Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "website_url": "https://uni-rostock.de",
+    "website_domain": "uni-rostock.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 375,
+    "institution_name": "Universität Siegen",
+    "location": "Siegen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-siegen.de",
+    "website_domain": "uni-siegen.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 376,
+    "institution_name": "Universität Stuttgart",
+    "location": "Stuttgart · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-stuttgart.de",
+    "website_domain": "uni-stuttgart.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 377,
+    "institution_name": "Universität Trier",
+    "location": "Trier · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://uni-trier.de",
+    "website_domain": "uni-trier.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 378,
+    "institution_name": "Universität Ulm",
+    "location": "Ulm · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://uni-ulm.de",
+    "website_domain": "uni-ulm.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 379,
+    "institution_name": "Universität Vechta",
+    "location": "Vechta · Niedersachsen",
+    "country": "Germany",
+    "website_url": "https://uni-vechta.de",
+    "website_domain": "uni-vechta.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 380,
+    "institution_name": "Universität zu Köln",
+    "location": "Köln · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://uni-koeln.de",
+    "website_domain": "uni-koeln.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 381,
+    "institution_name": "Universität zu Lübeck",
+    "location": "Lübeck · Schleswig-Holstein",
+    "country": "Germany",
+    "website_url": "https://uni-luebeck.de",
+    "website_domain": "uni-luebeck.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 382,
+    "institution_name": "Vinzenz Pallotti University - kirchlich und staatlich anerkannte wissenschaftliche Hochschule in freier Trägerschaft",
+    "location": "Vallendar · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://vp-uni.de",
+    "website_domain": "vp-uni.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 383,
+    "institution_name": "weißensee kunsthochschule berlin",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://kh-berlin.de",
+    "website_domain": "kh-berlin.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 384,
+    "institution_name": "Westfälische Hochschule Gelsenkirchen, Bocholt, Recklinghausen",
+    "location": "Gelsenkirchen · Nordrhein-Westfalen",
+    "country": "Germany",
+    "website_url": "https://w-hs.de",
+    "website_domain": "w-hs.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 385,
+    "institution_name": "Westsächsische Hochschule Zwickau",
+    "location": "Zwickau · Sachsen",
+    "country": "Germany",
+    "website_url": "https://whz.de",
+    "website_domain": "whz.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 386,
+    "institution_name": "Whitecliffe University of Applied Sciences",
+    "location": "Berlin",
+    "country": "Germany",
+    "website_url": "https://whitecliffe.de",
+    "website_domain": "whitecliffe.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 387,
+    "institution_name": "WHU - Otto Beisheim School of Management",
+    "location": "Vallendar · Rheinland-Pfalz",
+    "country": "Germany",
+    "website_url": "https://whu.edu",
+    "website_domain": "whu.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 388,
+    "institution_name": "Wilhelm Büchner Hochschule",
+    "location": "Darmstadt · Hessen",
+    "country": "Germany",
+    "website_url": "https://wb-fernstudium.de",
+    "website_domain": "wb-fernstudium.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 389,
+    "institution_name": "XU Exponential University of Applied Sciences",
+    "location": "Potsdam · Brandenburg",
+    "country": "Germany",
+    "website_url": "https://xu-university.com",
+    "website_domain": "xu-university.com",
+    "logo_reference": null
+  },
+  {
+    "directory_id": 390,
+    "institution_name": "Zeppelin Universität - Hochschule zwischen Wirtschaft, Kultur und Politik",
+    "location": "Friedrichshafen · Baden-Württemberg",
+    "country": "Germany",
+    "website_url": "https://zu.de",
+    "website_domain": "zu.de",
+    "logo_reference": null
+  }
+]
