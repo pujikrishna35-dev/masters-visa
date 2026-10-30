@@ -14,24 +14,36 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
     email: '',
     phone: '',
     countryCode: '+91',
-    destination: defaultDestination || 'USA',
+    destination: 'USA',
     program: 'Master\'s Degree (MS / MSc / MA)',
-    intake: 'Fall 2026',
+    intake: 'Fall (Aug/Sep)',
     notes: ''
   });
 
   useEffect(() => {
     if (defaultDestination) {
-      let mapped = defaultDestination;
       const lower = defaultDestination.toLowerCase().trim();
-      if (['corporate-internships', 'corporate internships & co-op', 'internships', 'internship', 'co-op', 'coop', 'corporate'].includes(lower)) {
-        mapped = 'Corporate Internships & Co-op';
-      } else if (['part-time-jobs', 'part-time jobs & student work rights', 'part-time', 'parttime', 'campus-jobs', 'campus-job', 'student-work-rights', 'work-rights'].includes(lower)) {
-        mapped = 'Part-Time Jobs & Student Work Rights';
-      } else if (lower === 'internship & part-time jobs' || lower === 'internship-parttime') {
-        mapped = 'Corporate Internships & Co-op';
+      if (['usa', 'united states', 'america'].includes(lower)) {
+        setFormData(prev => ({ ...prev, destination: 'USA' }));
+      } else if (['uk', 'united kingdom', 'britain', 'england'].includes(lower)) {
+        setFormData(prev => ({ ...prev, destination: 'UK' }));
+      } else if (lower === 'canada') {
+        setFormData(prev => ({ ...prev, destination: 'Canada' }));
+      } else if (lower === 'australia') {
+        setFormData(prev => ({ ...prev, destination: 'Australia' }));
+      } else if (lower === 'germany') {
+        setFormData(prev => ({ ...prev, destination: 'Germany' }));
+      } else if (lower === 'france') {
+        setFormData(prev => ({ ...prev, destination: 'France' }));
+      } else if (['new zealand', 'newzealand', 'nz'].includes(lower)) {
+        setFormData(prev => ({ ...prev, destination: 'New Zealand' }));
+      } else if (lower === 'ireland') {
+        setFormData(prev => ({ ...prev, destination: 'Ireland' }));
+      } else if (lower === 'europe') {
+        setFormData(prev => ({ ...prev, destination: 'Europe' }));
+      } else if (lower === 'other') {
+        setFormData(prev => ({ ...prev, destination: 'Other' }));
       }
-      setFormData(prev => ({ ...prev, destination: mapped }));
     }
   }, [defaultDestination]);
 
@@ -233,17 +245,8 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
                     <option value="France">🇫🇷 France</option>
                     <option value="New Zealand">🇳🇿 New Zealand</option>
                     <option value="Ireland">🇮🇪 Ireland</option>
-                    <option value="Airport Pickup & Accommodation">✈️ Airport Pickup & Accommodation</option>
-                    <option value="Corporate Internships & Co-op">💼 Corporate Internships & Co-op</option>
-                    <option value="Part-Time Jobs & Student Work Rights">🕒 Part-Time Jobs & Student Work Rights</option>
-                    {formData.destination && ![
-                      'USA', 'UK', 'Canada', 'Australia', 'Germany', 'France', 'New Zealand', 'Ireland',
-                      'Airport Pickup & Accommodation',
-                      'Corporate Internships & Co-op',
-                      'Part-Time Jobs & Student Work Rights'
-                    ].includes(formData.destination) && (
-                      <option value={formData.destination}>{formData.destination}</option>
-                    )}
+                    <option value="Europe">🇪🇺 Europe</option>
+                    <option value="Other">🌐 Other</option>
                   </select>
                 </div>
               </div>
@@ -259,10 +262,9 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
                     onChange={(e) => setFormData({ ...formData, intake: e.target.value })}
                     className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-[#DCE7FA] rounded-xl text-sm text-[#172344] focus:bg-white focus:border-[#0755F5] outline-none cursor-pointer"
                   >
-                    <option value="Fall 2026">Fall 2026 (Aug/Sep)</option>
-                    <option value="Spring 2027">Spring 2027 (Jan/Feb)</option>
-                    <option value="Summer 2027">Summer 2027 (May)</option>
-                    <option value="Fall 2027">Fall 2027</option>
+                    <option value="Fall (Aug/Sep)">Fall (Aug/Sep)</option>
+                    <option value="Spring (Jan/Feb)">Spring (Jan/Feb)</option>
+                    <option value="Summer (May)">Summer (May)</option>
                   </select>
                 </div>
               </div>
@@ -280,12 +282,15 @@ export const CounsellingModal: React.FC<Props> = ({ isOpen, onClose, defaultDest
                   onChange={(e) => setFormData({ ...formData, program: e.target.value })}
                   className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-[#DCE7FA] rounded-xl text-sm text-[#172344] focus:bg-white focus:border-[#0755F5] outline-none cursor-pointer"
                 >
+                  <option value="Foundation / Pathway Programmes">Foundation / Pathway Programmes</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Undergraduate / Bachelor's Degree">Undergraduate / Bachelor's Degree</option>
+                  <option value="Postgraduate Certificate / Diploma">Postgraduate Certificate / Diploma</option>
                   <option value="Master's Degree (MS / MSc / MA)">Master's Degree (MS / MSc / MA)</option>
                   <option value="MBA / Business Management">MBA / Business Management</option>
-                  <option value="Data Science / AI / Computing">Data Science / AI / Computing</option>
-                  <option value="Engineering / Tech">Engineering / Technology</option>
-                  <option value="Undergraduate / Bachelor's">Undergraduate / Bachelor's</option>
+                  <option value="Research Degree">Research Degree</option>
                   <option value="Doctoral / PhD">Doctoral / PhD</option>
+                  <option value="Other / Not Sure Yet">Other / Not Sure Yet</option>
                 </select>
               </div>
             </div>
