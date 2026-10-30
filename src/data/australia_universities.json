@@ -1,0 +1,422 @@
+[
+  {
+    "directory_id": "001",
+    "institution_name": "Adelaide University",
+    "location": "Adelaide, Mount Gambier, Whyalla",
+    "country": "Australia",
+    "website_url": "https://adelaideuni.edu.au",
+    "website_domain": "adelaideuni.edu.au",
+    "logo_reference": "australia_0001_adelaide_university.svg",
+    "logo_url": "/images/universities_logos/australia_0001_adelaide_university.svg"
+  },
+  {
+    "directory_id": "002",
+    "institution_name": "Australian Catholic University",
+    "location": "Canberra, Sydney, Brisbane",
+    "country": "Australia",
+    "website_url": "https://acu.edu.au",
+    "website_domain": "acu.edu.au",
+    "logo_reference": "australia_0002_australian_catholic_university.png",
+    "logo_url": "/images/universities_logos/australia_0002_australian_catholic_university.png"
+  },
+  {
+    "directory_id": "003",
+    "institution_name": "Australian National University",
+    "location": "Canberra",
+    "country": "Australia",
+    "website_url": "https://anu.edu.au",
+    "website_domain": "anu.edu.au",
+    "logo_reference": "australia_0003_australian_national_university.svg",
+    "logo_url": "/images/universities_logos/australia_0003_australian_national_university.svg"
+  },
+  {
+    "directory_id": "004",
+    "institution_name": "Australian University of Theology",
+    "location": "Sydney",
+    "country": "Australia",
+    "website_url": "https://aut.edu.au",
+    "website_domain": "aut.edu.au",
+    "logo_reference": "australia_0004_australian_university_of_theology.svg",
+    "logo_url": "/images/universities_logos/australia_0004_australian_university_of_theology.svg"
+  },
+  {
+    "directory_id": "005",
+    "institution_name": "Avondale University",
+    "location": "Lake Macquarie / Sydney",
+    "country": "Australia",
+    "website_url": "https://avondale.edu.au",
+    "website_domain": "avondale.edu.au",
+    "logo_reference": "australia_0005_avondale_university.svg",
+    "logo_url": "/images/universities_logos/australia_0005_avondale_university.svg"
+  },
+  {
+    "directory_id": "006",
+    "institution_name": "Bond University",
+    "location": "Brisbane, Gold Coast",
+    "country": "Australia",
+    "website_url": "https://bond.edu.au",
+    "website_domain": "bond.edu.au",
+    "logo_reference": "australia_0006_bond_university.svg",
+    "logo_url": "/images/universities_logos/australia_0006_bond_university.svg"
+  },
+  {
+    "directory_id": "007",
+    "institution_name": "Charles Darwin University",
+    "location": "Sydney, Alice Springs, Darwin",
+    "country": "Australia",
+    "website_url": "https://cdu.edu.au",
+    "website_domain": "cdu.edu.au",
+    "logo_reference": "australia_0007_charles_darwin_university.svg",
+    "logo_url": "/images/universities_logos/australia_0007_charles_darwin_university.svg"
+  },
+  {
+    "directory_id": "008",
+    "institution_name": "Charles Sturt University",
+    "location": "Canberra, Albury, Bathurst",
+    "country": "Australia",
+    "website_url": "https://study.csu.edu.au",
+    "website_domain": "study.csu.edu.au",
+    "logo_reference": "australia_0008_charles_sturt_university.svg",
+    "logo_url": "/images/universities_logos/australia_0008_charles_sturt_university.svg"
+  },
+  {
+    "directory_id": "009",
+    "institution_name": "CQUniversity Australia",
+    "location": "Sydney, Brisbane, Bundaberg",
+    "country": "Australia",
+    "website_url": "https://cqu.edu.au",
+    "website_domain": "cqu.edu.au",
+    "logo_reference": "australia_0009_cquniversity_australia.svg",
+    "logo_url": "/images/universities_logos/australia_0009_cquniversity_australia.svg"
+  },
+  {
+    "directory_id": "010",
+    "institution_name": "Curtin University",
+    "location": "Kalgoorlie, Perth",
+    "country": "Australia",
+    "website_url": "https://international.curtin.edu.au",
+    "website_domain": "international.curtin.edu.au",
+    "logo_reference": "australia_0010_curtin_university.svg",
+    "logo_url": "/images/universities_logos/australia_0010_curtin_university.svg"
+  },
+  {
+    "directory_id": "011",
+    "institution_name": "Deakin University",
+    "location": "Geelong, Melbourne, Warnambool",
+    "country": "Australia",
+    "website_url": "https://deakin.edu.au",
+    "website_domain": "deakin.edu.au",
+    "logo_reference": "australia_0011_deakin_university.svg",
+    "logo_url": "/images/universities_logos/australia_0011_deakin_university.svg"
+  },
+  {
+    "directory_id": "012",
+    "institution_name": "Edith Cowan University",
+    "location": "Bunbury, Perth",
+    "country": "Australia",
+    "website_url": "https://ecu.edu.au",
+    "website_domain": "ecu.edu.au",
+    "logo_reference": "australia_0012_edith_cowan_university.svg",
+    "logo_url": "/images/universities_logos/australia_0012_edith_cowan_university.svg"
+  },
+  {
+    "directory_id": "013",
+    "institution_name": "Federation University",
+    "location": "Ballarat, Churchill, Horsham",
+    "country": "Australia",
+    "website_url": "https://federation.edu.au",
+    "website_domain": "federation.edu.au",
+    "logo_reference": "australia_0013_federation_university.svg",
+    "logo_url": "/images/universities_logos/australia_0013_federation_university.svg"
+  },
+  {
+    "directory_id": "014",
+    "institution_name": "Flinders University",
+    "location": "Alice Springs, Darwin, Katherine",
+    "country": "Australia",
+    "website_url": "https://flinders.edu.au",
+    "website_domain": "flinders.edu.au",
+    "logo_reference": "australia_0014_flinders_university.svg",
+    "logo_url": "/images/universities_logos/australia_0014_flinders_university.svg"
+  },
+  {
+    "directory_id": "015",
+    "institution_name": "Griffith University",
+    "location": "Brisbane, Gold Coast",
+    "country": "Australia",
+    "website_url": "https://griffith.edu.au",
+    "website_domain": "griffith.edu.au",
+    "logo_reference": "australia_0015_griffith_university.svg",
+    "logo_url": "/images/universities_logos/australia_0015_griffith_university.svg"
+  },
+  {
+    "directory_id": "016",
+    "institution_name": "James Cook University",
+    "location": "Brisbane, Cairns, Mackay",
+    "country": "Australia",
+    "website_url": "https://jcu.edu.au",
+    "website_domain": "jcu.edu.au",
+    "logo_reference": "australia_0016_james_cook_university.svg",
+    "logo_url": "/images/universities_logos/australia_0016_james_cook_university.svg"
+  },
+  {
+    "directory_id": "017",
+    "institution_name": "La Trobe University",
+    "location": "Sydney, Bendigo, Melbourne",
+    "country": "Australia",
+    "website_url": "https://latrobe.edu.au",
+    "website_domain": "latrobe.edu.au",
+    "logo_reference": "australia_0017_la_trobe_university.svg",
+    "logo_url": "/images/universities_logos/australia_0017_la_trobe_university.svg"
+  },
+  {
+    "directory_id": "018",
+    "institution_name": "Macquarie University",
+    "location": "Sydney",
+    "country": "Australia",
+    "website_url": "https://mq.edu.au",
+    "website_domain": "mq.edu.au",
+    "logo_reference": "australia_0018_macquarie_university.svg",
+    "logo_url": "/images/universities_logos/australia_0018_macquarie_university.svg"
+  },
+  {
+    "directory_id": "019",
+    "institution_name": "Monash University",
+    "location": "Frankston, Melbourne",
+    "country": "Australia",
+    "website_url": "https://monash.edu",
+    "website_domain": "monash.edu",
+    "logo_reference": "australia_0019_monash_university.svg",
+    "logo_url": "/images/universities_logos/australia_0019_monash_university.svg"
+  },
+  {
+    "directory_id": "020",
+    "institution_name": "Murdoch University",
+    "location": "Mandurah, Perth",
+    "country": "Australia",
+    "website_url": "https://murdoch.edu.au",
+    "website_domain": "murdoch.edu.au",
+    "logo_reference": "australia_0020_murdoch_university.svg",
+    "logo_url": "/images/universities_logos/australia_0020_murdoch_university.svg"
+  },
+  {
+    "directory_id": "021",
+    "institution_name": "Queensland University of Technology",
+    "location": "Brisbane",
+    "country": "Australia",
+    "website_url": "https://qut.edu.au",
+    "website_domain": "qut.edu.au",
+    "logo_reference": "australia_0021_queensland_university_of_technology.svg",
+    "logo_url": "/images/universities_logos/australia_0021_queensland_university_of_technology.svg"
+  },
+  {
+    "directory_id": "022",
+    "institution_name": "RMIT University",
+    "location": "Bendigo, Hamilton, Melbourne",
+    "country": "Australia",
+    "website_url": "https://rmit.edu.au",
+    "website_domain": "rmit.edu.au",
+    "logo_reference": "australia_0022_rmit_university.svg",
+    "logo_url": "/images/universities_logos/australia_0022_rmit_university.svg"
+  },
+  {
+    "directory_id": "023",
+    "institution_name": "Southern Cross University",
+    "location": "Coffs Harbour, Lismore, Gold Coast",
+    "country": "Australia",
+    "website_url": "https://scu.edu.au",
+    "website_domain": "scu.edu.au",
+    "logo_reference": "australia_0023_southern_cross_university.svg",
+    "logo_url": "/images/universities_logos/australia_0023_southern_cross_university.svg"
+  },
+  {
+    "directory_id": "024",
+    "institution_name": "Swinburne University of Technology",
+    "location": "Melbourne",
+    "country": "Australia",
+    "website_url": "https://swinburne.edu.au",
+    "website_domain": "swinburne.edu.au",
+    "logo_reference": "australia_0024_swinburne_university_of_technology.svg",
+    "logo_url": "/images/universities_logos/australia_0024_swinburne_university_of_technology.svg"
+  },
+  {
+    "directory_id": "025",
+    "institution_name": "Torrens University",
+    "location": "Leura, Sydney, Brisbane",
+    "country": "Australia",
+    "website_url": "https://torrens.edu.au",
+    "website_domain": "torrens.edu.au",
+    "logo_reference": "australia_0025_torrens_university.svg",
+    "logo_url": "/images/universities_logos/australia_0025_torrens_university.svg"
+  },
+  {
+    "directory_id": "026",
+    "institution_name": "University of Canberra",
+    "location": "Canberra",
+    "country": "Australia",
+    "website_url": "https://canberra.edu.au",
+    "website_domain": "canberra.edu.au",
+    "logo_reference": "australia_0026_university_of_canberra.svg",
+    "logo_url": "/images/universities_logos/australia_0026_university_of_canberra.svg"
+  },
+  {
+    "directory_id": "027",
+    "institution_name": "University of Divinity",
+    "location": "Melbourne",
+    "country": "Australia",
+    "website_url": "https://divinity.edu.au",
+    "website_domain": "divinity.edu.au",
+    "logo_reference": "australia_0027_university_of_divinity.svg",
+    "logo_url": "/images/universities_logos/australia_0027_university_of_divinity.svg"
+  },
+  {
+    "directory_id": "028",
+    "institution_name": "University of Melbourne",
+    "location": "Melbourne (Parkville, Southbank, Burnley and Werribee), Creswick, Dookie",
+    "country": "Australia",
+    "website_url": "https://study.unimelb.edu.au",
+    "website_domain": "study.unimelb.edu.au",
+    "logo_reference": "australia_0028_university_of_melbourne.svg",
+    "logo_url": "/images/universities_logos/australia_0028_university_of_melbourne.svg"
+  },
+  {
+    "directory_id": "029",
+    "institution_name": "University of New England",
+    "location": "Armidale, Sydney, Tamworth",
+    "country": "Australia",
+    "website_url": "https://une.edu.au",
+    "website_domain": "une.edu.au",
+    "logo_reference": "australia_0029_university_of_new_england.svg",
+    "logo_url": "/images/universities_logos/australia_0029_university_of_new_england.svg"
+  },
+  {
+    "directory_id": "030",
+    "institution_name": "University of New South Wales",
+    "location": "Sydney, Canberra",
+    "country": "Australia",
+    "website_url": "https://international.unsw.edu.au",
+    "website_domain": "international.unsw.edu.au",
+    "logo_reference": "australia_0030_university_of_new_south_wales.svg",
+    "logo_url": "/images/universities_logos/australia_0030_university_of_new_south_wales.svg"
+  },
+  {
+    "directory_id": "031",
+    "institution_name": "University of Newcastle",
+    "location": "Central Coast, Newcastle, Port Macquarie",
+    "country": "Australia",
+    "website_url": "https://newcastle.edu.au",
+    "website_domain": "newcastle.edu.au",
+    "logo_reference": "australia_0031_university_of_newcastle.svg",
+    "logo_url": "/images/universities_logos/australia_0031_university_of_newcastle.svg"
+  },
+  {
+    "directory_id": "032",
+    "institution_name": "University of Notre Dame Australia",
+    "location": "Sydney, Broome, Fremantle",
+    "country": "Australia",
+    "website_url": "https://notredame.edu.au",
+    "website_domain": "notredame.edu.au",
+    "logo_reference": "australia_0032_university_of_notre_dame_australia.svg",
+    "logo_url": "/images/universities_logos/australia_0032_university_of_notre_dame_australia.svg"
+  },
+  {
+    "directory_id": "033",
+    "institution_name": "University of Queensland",
+    "location": "Brisbane, Gatton",
+    "country": "Australia",
+    "website_url": "https://future-students.uq.edu.au",
+    "website_domain": "future-students.uq.edu.au",
+    "logo_reference": "australia_0033_university_of_queensland.svg",
+    "logo_url": "/images/universities_logos/australia_0033_university_of_queensland.svg"
+  },
+  {
+    "directory_id": "034",
+    "institution_name": "University of Southern Queensland",
+    "location": "Springfield, Stanthorpe, Toowoomba",
+    "country": "Australia",
+    "website_url": "https://usq.edu.au",
+    "website_domain": "usq.edu.au",
+    "logo_reference": "australia_0034_university_of_southern_queensland.svg",
+    "logo_url": "/images/universities_logos/australia_0034_university_of_southern_queensland.svg"
+  },
+  {
+    "directory_id": "035",
+    "institution_name": "University of Sydney",
+    "location": "Sydney",
+    "country": "Australia",
+    "website_url": "https://sydney.edu.au",
+    "website_domain": "sydney.edu.au",
+    "logo_reference": "australia_0035_university_of_sydney.svg",
+    "logo_url": "/images/universities_logos/australia_0035_university_of_sydney.svg"
+  },
+  {
+    "directory_id": "036",
+    "institution_name": "University of Tasmania",
+    "location": "Sydney, Burnie, Hobart",
+    "country": "Australia",
+    "website_url": "https://utas.edu.au",
+    "website_domain": "utas.edu.au",
+    "logo_reference": "australia_0036_university_of_tasmania.svg",
+    "logo_url": "/images/universities_logos/australia_0036_university_of_tasmania.svg"
+  },
+  {
+    "directory_id": "037",
+    "institution_name": "University of Technology Sydney",
+    "location": "Sydney",
+    "country": "Australia",
+    "website_url": "https://uts.edu.au",
+    "website_domain": "uts.edu.au",
+    "logo_reference": "australia_0037_university_of_technology_sydney.svg",
+    "logo_url": "/images/universities_logos/australia_0037_university_of_technology_sydney.svg"
+  },
+  {
+    "directory_id": "038",
+    "institution_name": "University of the Sunshine Coast",
+    "location": "Fraser Coast, Moreton Bay, Sunshine Coast",
+    "country": "Australia",
+    "website_url": "https://usc.edu.au",
+    "website_domain": "usc.edu.au",
+    "logo_reference": "australia_0038_university_of_the_sunshine_coast.svg",
+    "logo_url": "/images/universities_logos/australia_0038_university_of_the_sunshine_coast.svg"
+  },
+  {
+    "directory_id": "039",
+    "institution_name": "University of Western Australia",
+    "location": "Perth, Albany",
+    "country": "Australia",
+    "website_url": "https://international.uwa.edu.au",
+    "website_domain": "international.uwa.edu.au",
+    "logo_reference": "australia_0039_university_of_western_australia.svg",
+    "logo_url": "/images/universities_logos/australia_0039_university_of_western_australia.svg"
+  },
+  {
+    "directory_id": "040",
+    "institution_name": "University of Wollongong",
+    "location": "Liverpool, Sydney, Wollongong",
+    "country": "Australia",
+    "website_url": "https://uow.edu.au",
+    "website_domain": "uow.edu.au",
+    "logo_reference": "australia_0040_university_of_wollongong.svg",
+    "logo_url": "/images/universities_logos/australia_0040_university_of_wollongong.svg"
+  },
+  {
+    "directory_id": "041",
+    "institution_name": "Victoria University",
+    "location": "Sydney, Brisbane, Melbourne",
+    "country": "Australia",
+    "website_url": "https://vu.edu.au",
+    "website_domain": "vu.edu.au",
+    "logo_reference": "australia_0041_victoria_university.svg",
+    "logo_url": "/images/universities_logos/australia_0041_victoria_university.svg"
+  },
+  {
+    "directory_id": "042",
+    "institution_name": "Western Sydney University",
+    "location": "Hawkesbury, Penrith, Sydney",
+    "country": "Australia",
+    "website_url": "https://westernsydney.edu.au",
+    "website_domain": "westernsydney.edu.au",
+    "logo_reference": "australia_0042_western_sydney_university.svg",
+    "logo_url": "/images/universities_logos/australia_0042_western_sydney_university.svg"
+  }
+]

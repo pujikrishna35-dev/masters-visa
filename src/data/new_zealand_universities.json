@@ -1,0 +1,90 @@
+[
+  {
+    "directory_id": "001",
+    "institution_name": "Auckland University of Technology",
+    "location": "Auckland",
+    "country": "New Zealand",
+    "website_url": "https://aut.ac.nz",
+    "website_domain": "aut.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0001_auckland_university_of_technology.png",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "002",
+    "institution_name": "Lincoln University, New Zealand",
+    "location": "Lincoln · Canterbury",
+    "country": "New Zealand",
+    "website_url": "https://lincoln.ac.nz",
+    "website_domain": "lincoln.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0002_lincoln_university_new_zealand.png",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "003",
+    "institution_name": "Massey University",
+    "location": "Palmerston North · Manawatu-Wanganui",
+    "country": "New Zealand",
+    "website_url": "https://massey.ac.nz",
+    "website_domain": "massey.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0003_massey_university.png",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "004",
+    "institution_name": "University of Auckland",
+    "location": "Auckland",
+    "country": "New Zealand",
+    "website_url": "https://auckland.ac.nz",
+    "website_domain": "auckland.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0004_university_of_auckland.png",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "005",
+    "institution_name": "University of Canterbury",
+    "location": "Christchurch · Canterbury",
+    "country": "New Zealand",
+    "website_url": "https://canterbury.ac.nz",
+    "website_domain": "canterbury.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0005_university_of_canterbury.png",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "006",
+    "institution_name": "University of Otago",
+    "location": "Dunedin · Otago",
+    "country": "New Zealand",
+    "website_url": "https://otago.ac.nz",
+    "website_domain": "otago.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0006_university_of_otago.png",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "007",
+    "institution_name": "University of Waikato",
+    "location": "Hamilton · Waikato",
+    "country": "New Zealand",
+    "website_url": "https://waikato.ac.nz",
+    "website_domain": "waikato.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0007_university_of_waikato.png",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "008",
+    "institution_name": "Victoria University of Wellington",
+    "location": "Wellington",
+    "country": "New Zealand",
+    "website_url": "https://wgtn.ac.nz",
+    "website_domain": "wgtn.ac.nz",
+    "category": "University",
+    "logo_url": "/images/universities_logos/new_zealand_0008_victoria_university_of_wellington.png",
+    "logo_reference": null
+  }
+]

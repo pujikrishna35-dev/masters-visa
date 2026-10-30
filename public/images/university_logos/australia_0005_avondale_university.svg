@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M20 14H80V46C80 72 50 90 50 90C50 90 20 72 20 46V14Z" fill="#004B87" />
+  <path d="M24 18H76V46C76 68 50 84 50 84C50 84 24 68 24 46V18Z" stroke="#F5A800" stroke-width="1.5" stroke-opacity="0.6" fill="none" />
+  <circle cx="50" cy="32" r="9" fill="#F5A800"/><path d="M45 42L50 22L55 42Z" fill="#FFFFFF"/>
+  <text x="50" y="74" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="900" font-family="system-ui, sans-serif" letter-spacing="0.5">AVONDALE</text>
+  <text x="50" y="81" text-anchor="middle" fill="#F5A800" font-size="6" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.5">EST. 1897</text>
+</svg>

@@ -1,0 +1,1512 @@
+[
+  {
+    "directory_id": "001",
+    "institution_name": "Adler University",
+    "location": "Vancouver · British Columbia",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://adler.edu",
+    "website_domain": "adler.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "002",
+    "institution_name": "Campbellsville University",
+    "location": "Campbellsville, KY 42718 · USA (headquarters)",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://campbellsville.edu",
+    "website_domain": "campbellsville.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "003",
+    "institution_name": "Central Michigan University",
+    "location": "Mt Pleasant · USA (headquarters)",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://cmich.edu",
+    "website_domain": "cmich.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "004",
+    "institution_name": "City University of Seattle",
+    "location": "Calgary / Vancouver · Alberta / British Columbia",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://cityuniversity.ca",
+    "website_domain": "cityuniversity.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "005",
+    "institution_name": "Cornell University",
+    "location": "Ithaca · USA (headquarters)",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://smith.queensu.ca",
+    "website_domain": "smith.queensu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "006",
+    "institution_name": "Fairleigh Dickinson University",
+    "location": "Vancouver · British Columbia",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://fdu.edu",
+    "website_domain": "fdu.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "007",
+    "institution_name": "Gonzaga University",
+    "location": "Spokane · USA (headquarters)",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://gonzaga.edu",
+    "website_domain": "gonzaga.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "008",
+    "institution_name": "Lawrence Technological University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://ltu.edu",
+    "website_domain": "ltu.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "009",
+    "institution_name": "Niagara University in Ontario",
+    "location": "Vaughan · Ontario",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://niagarau.ca",
+    "website_domain": "niagarau.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "010",
+    "institution_name": "Northeastern University, Toronto",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://toronto.northeastern.edu",
+    "website_domain": "toronto.northeastern.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "011",
+    "institution_name": "Northeastern University, Vancouver",
+    "location": "Vancouver · British Columbia",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://vancouver.northeastern.edu",
+    "website_domain": "vancouver.northeastern.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "012",
+    "institution_name": "University of Mannheim",
+    "location": "Mannheim · Germany (headquarters)",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://uni-mannheim.de",
+    "website_domain": "uni-mannheim.de",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "013",
+    "institution_name": "University of Portland",
+    "location": "Edmonton · Alberta",
+    "country": "Canada",
+    "category": "International providers with Canadian authorisation",
+    "website_url": "https://up.edu",
+    "website_domain": "up.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "014",
+    "institution_name": "Acadia University",
+    "location": "Wolfville · Nova Scotia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://acadiau.ca",
+    "website_domain": "acadiau.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "015",
+    "institution_name": "Alberta University of the Arts",
+    "location": "Calgary · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://auarts.ca",
+    "website_domain": "auarts.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "016",
+    "institution_name": "Algoma University",
+    "location": "Sault Ste. Marie · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://algomau.ca",
+    "website_domain": "algomau.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "017",
+    "institution_name": "Ambrose University",
+    "location": "Calgary · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ambrose.edu",
+    "website_domain": "ambrose.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "018",
+    "institution_name": "Assumption University",
+    "location": "Windsor · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://assumptionu.ca",
+    "website_domain": "assumptionu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "019",
+    "institution_name": "Athabasca University",
+    "location": "Athabasca · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://athabascau.ca",
+    "website_domain": "athabascau.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "020",
+    "institution_name": "Beal University Canada",
+    "location": "Sackville · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://bealuniversity.ca",
+    "website_domain": "bealuniversity.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "021",
+    "institution_name": "Bishop's University",
+    "location": "Sherbrooke · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ubishops.ca",
+    "website_domain": "ubishops.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "022",
+    "institution_name": "Brandon University",
+    "location": "Brandon · Manitoba",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://brandonu.ca",
+    "website_domain": "brandonu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "023",
+    "institution_name": "Brock University",
+    "location": "St. Catharines · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://brocku.ca",
+    "website_domain": "brocku.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "024",
+    "institution_name": "Burman University",
+    "location": "Lacombe · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://burmanu.ca",
+    "website_domain": "burmanu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "025",
+    "institution_name": "Canadian Mennonite University",
+    "location": "Winnipeg · Manitoba",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://cmu.ca",
+    "website_domain": "cmu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "026",
+    "institution_name": "Cape Breton University",
+    "location": "Sydney · Nova Scotia / Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://cbu.ca",
+    "website_domain": "cbu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "027",
+    "institution_name": "Capilano University",
+    "location": "North Vancouver · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://capilanou.ca",
+    "website_domain": "capilanou.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "028",
+    "institution_name": "Carleton University",
+    "location": "Ottawa · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://carleton.ca",
+    "website_domain": "carleton.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "029",
+    "institution_name": "Concordia University",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://concordia.ca",
+    "website_domain": "concordia.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "030",
+    "institution_name": "Concordia University of Edmonton",
+    "location": "Edmonton · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://concordia.ab.ca",
+    "website_domain": "concordia.ab.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "031",
+    "institution_name": "Crandall University",
+    "location": "Moncton · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://crandallu.ca",
+    "website_domain": "crandallu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "032",
+    "institution_name": "Dalhousie University",
+    "location": "Halifax · Nova Scotia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://dal.ca",
+    "website_domain": "dal.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "033",
+    "institution_name": "Emily Carr University of Art and Design",
+    "location": "Vancouver · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ecuad.ca",
+    "website_domain": "ecuad.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "034",
+    "institution_name": "First Nations University of Canada",
+    "location": "Regina · Saskatchewan",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://fnuniv.ca",
+    "website_domain": "fnuniv.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "035",
+    "institution_name": "Huntington University",
+    "location": "Sudbury · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://huntingtonu.ca",
+    "website_domain": "huntingtonu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "036",
+    "institution_name": "International Business University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ibu.ca",
+    "website_domain": "ibu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "037",
+    "institution_name": "Kingswood University",
+    "location": "Sussex · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://kingswood.edu",
+    "website_domain": "kingswood.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "038",
+    "institution_name": "Kwantlen Polytechnic University",
+    "location": "Surrey · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://kpu.ca",
+    "website_domain": "kpu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "039",
+    "institution_name": "Lakehead University",
+    "location": "Thunder Bay · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://lakeheadu.ca",
+    "website_domain": "lakeheadu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "040",
+    "institution_name": "Laurentian University",
+    "location": "Sudbury · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://laurentian.ca",
+    "website_domain": "laurentian.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "041",
+    "institution_name": "MacEwan University",
+    "location": "Edmonton · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://macewan.ca",
+    "website_domain": "macewan.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "042",
+    "institution_name": "McGill University",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://mcgill.ca",
+    "website_domain": "mcgill.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "043",
+    "institution_name": "McMaster University",
+    "location": "Hamilton · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://mcmaster.ca",
+    "website_domain": "mcmaster.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "044",
+    "institution_name": "Memorial University of Newfoundland",
+    "location": "St John’s · Newfoundland and Labrador",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://mun.ca",
+    "website_domain": "mun.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "045",
+    "institution_name": "Mount Allison University",
+    "location": "Sackville · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://mta.ca",
+    "website_domain": "mta.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "046",
+    "institution_name": "Mount Royal University",
+    "location": "Calgary · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://mtroyal.ca",
+    "website_domain": "mtroyal.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "047",
+    "institution_name": "Mount Saint Vincent University",
+    "location": "Halifax · Nova Scotia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://msvu.ca",
+    "website_domain": "msvu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "048",
+    "institution_name": "Nipissing University",
+    "location": "North Bay · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://nipissingu.ca",
+    "website_domain": "nipissingu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "049",
+    "institution_name": "Northern Ontario School of Medicine University",
+    "location": "Thunder Bay · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://nosm.ca",
+    "website_domain": "nosm.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "050",
+    "institution_name": "NSCAD University",
+    "location": "Halifax · Nova Scotia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://nscad.ca",
+    "website_domain": "nscad.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "051",
+    "institution_name": "OCAD University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ocadu.ca",
+    "website_domain": "ocadu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "052",
+    "institution_name": "Ontario Tech University",
+    "location": "Oshawa · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ontariotechu.ca",
+    "website_domain": "ontariotechu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "053",
+    "institution_name": "Pacific Coast University for Workplace Health Sciences",
+    "location": "Port Alberni · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://pcu-whs.ca",
+    "website_domain": "pcu-whs.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "054",
+    "institution_name": "Queen's University",
+    "location": "Kingston · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://queensu.ca",
+    "website_domain": "queensu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "055",
+    "institution_name": "Redeemer University",
+    "location": "Ancaster · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://redeemer.ca",
+    "website_domain": "redeemer.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "056",
+    "institution_name": "Royal Roads University",
+    "location": "Victoria · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://royalroads.ca",
+    "website_domain": "royalroads.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "057",
+    "institution_name": "Saint Mary's University",
+    "location": "Halifax · Nova Scotia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://smu.ca",
+    "website_domain": "smu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "058",
+    "institution_name": "Saint Paul University",
+    "location": "Ottawa · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ustpaul.ca",
+    "website_domain": "ustpaul.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "059",
+    "institution_name": "Simon Fraser University",
+    "location": "Burnaby · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://sfu.ca",
+    "website_domain": "sfu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "060",
+    "institution_name": "St. Francis Xavier University",
+    "location": "Antigonish · Nova Scotia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://stfx.ca",
+    "website_domain": "stfx.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "061",
+    "institution_name": "St. Jerome's University",
+    "location": "Waterloo · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://sju.ca",
+    "website_domain": "sju.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "062",
+    "institution_name": "St. Mary's University",
+    "location": "Calgary · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://stmu.ca",
+    "website_domain": "stmu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "063",
+    "institution_name": "St. Stephen's University",
+    "location": "St. Stephen · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ssu.ca",
+    "website_domain": "ssu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "064",
+    "institution_name": "St. Thomas University",
+    "location": "Fredericton · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://stu.ca",
+    "website_domain": "stu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "065",
+    "institution_name": "The King's University",
+    "location": "Edmonton · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://kingsu.ca",
+    "website_domain": "kingsu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "066",
+    "institution_name": "The University of Winnipeg",
+    "location": "Winnipeg · Manitoba",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uwinnipeg.ca",
+    "website_domain": "uwinnipeg.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "067",
+    "institution_name": "Thompson Rivers University",
+    "location": "Kamloops · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://tru.ca",
+    "website_domain": "tru.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "068",
+    "institution_name": "Thorneloe University",
+    "location": "Sudbury · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://thorneloe.ca",
+    "website_domain": "thorneloe.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "069",
+    "institution_name": "Toronto Metropolitan University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://torontomu.ca",
+    "website_domain": "torontomu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "070",
+    "institution_name": "Trent University",
+    "location": "Peterborough · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://trentu.ca",
+    "website_domain": "trentu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "071",
+    "institution_name": "Trinity Western University",
+    "location": "Langley · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://twu.ca",
+    "website_domain": "twu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "072",
+    "institution_name": "Tyndale University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://tyndale.ca",
+    "website_domain": "tyndale.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "073",
+    "institution_name": "TÉLUQ University (Télé-université)",
+    "location": "Québec · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://teluq.ca",
+    "website_domain": "teluq.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "074",
+    "institution_name": "University Canada West",
+    "location": "Vancouver · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ucanwest.ca",
+    "website_domain": "ucanwest.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "075",
+    "institution_name": "University of Alberta",
+    "location": "Edmonton · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ualberta.ca",
+    "website_domain": "ualberta.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "076",
+    "institution_name": "University of British Columbia",
+    "location": "Vancouver · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ubc.ca",
+    "website_domain": "ubc.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "077",
+    "institution_name": "University of Calgary",
+    "location": "Calgary · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ucalgary.ca",
+    "website_domain": "ucalgary.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "078",
+    "institution_name": "University of Fredericton",
+    "location": "Fredericton · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ufred.ca",
+    "website_domain": "ufred.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "079",
+    "institution_name": "University of Guelph",
+    "location": "Guelph · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uoguelph.ca",
+    "website_domain": "uoguelph.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "080",
+    "institution_name": "University of Lethbridge",
+    "location": "Lethbridge · Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ulethbridge.ca",
+    "website_domain": "ulethbridge.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "081",
+    "institution_name": "University of Manitoba",
+    "location": "Winnipeg · Manitoba",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://umanitoba.ca",
+    "website_domain": "umanitoba.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "082",
+    "institution_name": "University of New Brunswick",
+    "location": "Fredericton / Toronto · New Brunswick / Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://unb.ca",
+    "website_domain": "unb.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "083",
+    "institution_name": "University of Niagara Falls Canada",
+    "location": "Niagara Falls · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://unfc.ca",
+    "website_domain": "unfc.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "084",
+    "institution_name": "University of Northern British Columbia",
+    "location": "Prince George / Grande Prairie · British Columbia / Alberta",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://unbc.ca",
+    "website_domain": "unbc.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "085",
+    "institution_name": "University of Ottawa",
+    "location": "Ottawa · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uottawa.ca",
+    "website_domain": "uottawa.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "086",
+    "institution_name": "University of Prince Edward Island",
+    "location": "Charlottetown · Prince Edward Island",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://upei.ca",
+    "website_domain": "upei.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "087",
+    "institution_name": "University of Regina",
+    "location": "Regina · Saskatchewan",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uregina.ca",
+    "website_domain": "uregina.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "088",
+    "institution_name": "University of Saskatchewan",
+    "location": "Saskatoon · Saskatchewan",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://usask.ca",
+    "website_domain": "usask.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "089",
+    "institution_name": "University of Sudbury",
+    "location": "Sudbury · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://usudbury.ca",
+    "website_domain": "usudbury.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "090",
+    "institution_name": "University of the Fraser Valley",
+    "location": "Abbotsford · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ufv.ca",
+    "website_domain": "ufv.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "091",
+    "institution_name": "University of Toronto",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://utoronto.ca",
+    "website_domain": "utoronto.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "092",
+    "institution_name": "University of Victoria",
+    "location": "Victoria · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uvic.ca",
+    "website_domain": "uvic.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "093",
+    "institution_name": "University of Waterloo",
+    "location": "Waterloo · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uwaterloo.ca",
+    "website_domain": "uwaterloo.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "094",
+    "institution_name": "University of Windsor",
+    "location": "Windsor · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uwindsor.ca",
+    "website_domain": "uwindsor.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "095",
+    "institution_name": "Université de Hearst",
+    "location": "Hearst · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uhearst.ca",
+    "website_domain": "uhearst.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "096",
+    "institution_name": "Université de l'Ontario Français",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uontario.ca",
+    "website_domain": "uontario.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "097",
+    "institution_name": "Université de Moncton",
+    "location": "Moncton · New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://umoncton.ca",
+    "website_domain": "umoncton.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "098",
+    "institution_name": "Université de Montréal",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://umontreal.ca",
+    "website_domain": "umontreal.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "099",
+    "institution_name": "Université de Saint-Boniface",
+    "location": "Winnipeg · Manitoba",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ustboniface.ca",
+    "website_domain": "ustboniface.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "100",
+    "institution_name": "Université de Sherbrooke",
+    "location": "Sherbrooke · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://usherbrooke.ca",
+    "website_domain": "usherbrooke.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "101",
+    "institution_name": "Université du Québec",
+    "location": "Quebec City",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uquebec.ca",
+    "website_domain": "uquebec.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "102",
+    "institution_name": "Université du Québec en Abitibi-Témiscamingue",
+    "location": "Rouyn-Noranda · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uqat.ca",
+    "website_domain": "uqat.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "103",
+    "institution_name": "Université du Québec en Outaouais",
+    "location": "Gatineau · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uqo.ca",
+    "website_domain": "uqo.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "104",
+    "institution_name": "Université du Québec à Chicoutimi",
+    "location": "Chicoutimi · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uqac.ca",
+    "website_domain": "uqac.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "105",
+    "institution_name": "Université du Québec à Montréal",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uqam.ca",
+    "website_domain": "uqam.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "106",
+    "institution_name": "Université du Québec à Rimouski",
+    "location": "Rimouski · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uqar.ca",
+    "website_domain": "uqar.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "107",
+    "institution_name": "Université du Québec à Trois-Rivières",
+    "location": "Trois-Rivières · Quebec",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uqtr.ca",
+    "website_domain": "uqtr.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "108",
+    "institution_name": "Université Laval",
+    "location": "Quebec City",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://ulaval.ca",
+    "website_domain": "ulaval.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "109",
+    "institution_name": "Université Sainte-Anne",
+    "location": "Pointe de l'Église · Nova Scotia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://usainteanne.ca",
+    "website_domain": "usainteanne.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "110",
+    "institution_name": "Vancouver Island University",
+    "location": "Nanaimo · British Columbia",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://viu.ca",
+    "website_domain": "viu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "111",
+    "institution_name": "Victoria University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://vicu.utoronto.ca",
+    "website_domain": "vicu.utoronto.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "112",
+    "institution_name": "Western University",
+    "location": "London · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://uwo.ca",
+    "website_domain": "uwo.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "113",
+    "institution_name": "Wilfrid Laurier University",
+    "location": "Waterloo · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://wlu.ca",
+    "website_domain": "wlu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "114",
+    "institution_name": "York University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://yorku.ca",
+    "website_domain": "yorku.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "115",
+    "institution_name": "Yorkville University",
+    "location": "New Westminster / Fredericton / Concord · British Columbia / New Brunswick",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://yorkvilleu.ca",
+    "website_domain": "yorkvilleu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "116",
+    "institution_name": "Yukon University",
+    "location": "Whitehorse · Yukon",
+    "country": "Canada",
+    "category": "Universities",
+    "website_url": "https://yukonu.ca",
+    "website_domain": "yukonu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "117",
+    "institution_name": "Adler Graduate Professional School Inc.",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://adler.ca",
+    "website_domain": "adler.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "118",
+    "institution_name": "Atlantic School of Theology",
+    "location": "Halifax · Nova Scotia",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://astheology.ns.ca",
+    "website_domain": "astheology.ns.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "119",
+    "institution_name": "Booth University College",
+    "location": "Winnipeg · Manitoba",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://boothuc.ca",
+    "website_domain": "boothuc.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "120",
+    "institution_name": "Campion College",
+    "location": "Regina · Saskatchewan",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://campioncollege.ca",
+    "website_domain": "campioncollege.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "121",
+    "institution_name": "Conrad Grebel University College",
+    "location": "Waterloo · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://uwaterloo.ca",
+    "website_domain": "uwaterloo.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "122",
+    "institution_name": "Emmanuel College of Victoria University",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://utoronto.ca",
+    "website_domain": "utoronto.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "123",
+    "institution_name": "Gabriel Dumont Institute of Native Studies and Applied Research",
+    "location": "Saskatoon · Saskatchewan",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://uregina.ca",
+    "website_domain": "uregina.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "124",
+    "institution_name": "Grenfell Campus, Memorial University of Newfoundland",
+    "location": "Corner Brook · Newfoundland and Labrador",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://mun.ca",
+    "website_domain": "mun.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "125",
+    "institution_name": "Huron University College",
+    "location": "London · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://huronuc.on.ca",
+    "website_domain": "huronuc.on.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "126",
+    "institution_name": "Institut national de la recherche scientifique",
+    "location": "Québec · Quebec",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://inrs.ca",
+    "website_domain": "inrs.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "127",
+    "institution_name": "King's University College",
+    "location": "London · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://kings.uwo.ca",
+    "website_domain": "kings.uwo.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "128",
+    "institution_name": "La Cité universitaire francophone",
+    "location": "Regina · Saskatchewan",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://lacite.uregina.ca",
+    "website_domain": "lacite.uregina.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "129",
+    "institution_name": "Labrador Campus, Memorial University of Newfoundland",
+    "location": "Happy Valley-Goose Bay · Newfoundland and Labrador",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://mun.ca",
+    "website_domain": "mun.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "130",
+    "institution_name": "Luther College",
+    "location": "Regina · Saskatchewan",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://luthercollege.edu",
+    "website_domain": "luthercollege.edu",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "131",
+    "institution_name": "Marine Institute, Memorial University of Newfoundland",
+    "location": "St. John’s · Newfoundland and Labrador",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://mi.mun.ca",
+    "website_domain": "mi.mun.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "132",
+    "institution_name": "Maritime Christian College",
+    "location": "Charlottetown · Prince Edward Island",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://mccpei.com",
+    "website_domain": "mccpei.com",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "133",
+    "institution_name": "Martin Luther University College",
+    "location": "Waterloo · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://luther.wlu.ca",
+    "website_domain": "luther.wlu.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "134",
+    "institution_name": "Providence University College and Theological Seminary",
+    "location": "Otterburne · Manitoba",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://prov.ca",
+    "website_domain": "prov.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "135",
+    "institution_name": "Renison University College",
+    "location": "Waterloo · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://uwaterloo.ca",
+    "website_domain": "uwaterloo.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "136",
+    "institution_name": "Royal Military College of Canada",
+    "location": "Kingston · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://rmc-cmr.ca",
+    "website_domain": "rmc-cmr.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "137",
+    "institution_name": "St. Andrew's College",
+    "location": "Winnipeg · Manitoba",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://umanitoba.ca",
+    "website_domain": "umanitoba.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "138",
+    "institution_name": "St. Peter's College",
+    "location": "Muenster · Saskatchewan",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://usask.ca",
+    "website_domain": "usask.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "139",
+    "institution_name": "St. Thomas More College",
+    "location": "Saskatoon · Saskatchewan",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://stmcollege.ca",
+    "website_domain": "stmcollege.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "140",
+    "institution_name": "Thomas More Institute",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://thomasmore.qc.ca",
+    "website_domain": "thomasmore.qc.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "141",
+    "institution_name": "Toronto School of Theology",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://utoronto.ca",
+    "website_domain": "utoronto.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "142",
+    "institution_name": "United College",
+    "location": "Waterloo · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://uwaterloo.ca",
+    "website_domain": "uwaterloo.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "143",
+    "institution_name": "University College of the North",
+    "location": "Thompson · Manitoba",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://ucn.ca",
+    "website_domain": "ucn.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "144",
+    "institution_name": "University of King's College",
+    "location": "Halifax · Nova Scotia",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://ukings.ca",
+    "website_domain": "ukings.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "145",
+    "institution_name": "University of St. Michael's College",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://utoronto.ca",
+    "website_domain": "utoronto.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "146",
+    "institution_name": "University of Trinity College",
+    "location": "Toronto · Ontario",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://trinity.utoronto.ca",
+    "website_domain": "trinity.utoronto.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "147",
+    "institution_name": "Yellowquill University College",
+    "location": "Winnipeg · Manitoba",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://yellowquill.org",
+    "website_domain": "yellowquill.org",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "148",
+    "institution_name": "École de technologie supérieure",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://etsmtl.ca",
+    "website_domain": "etsmtl.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "149",
+    "institution_name": "École des Hautes Études Commerciales de Montréal",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://hec.ca",
+    "website_domain": "hec.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "150",
+    "institution_name": "École nationale d'administration publique",
+    "location": "Quebec City",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://enap.ca",
+    "website_domain": "enap.ca",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "151",
+    "institution_name": "École Polytechnique de Montréal",
+    "location": "Montréal · Quebec",
+    "country": "Canada",
+    "category": "Affiliated colleges & other university-level institutions",
+    "website_url": "https://polymtl.ca",
+    "website_domain": "polymtl.ca",
+    "logo_reference": null
+  }
+]

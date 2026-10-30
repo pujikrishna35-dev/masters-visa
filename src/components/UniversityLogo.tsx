@@ -1,11 +1,39 @@
 import React from 'react';
 
 interface Props {
-  type: 'oxford' | 'cambridge' | 'toronto' | 'melbourne' | 'stanford' | 'auckland' | 'harvard' | 'mit' | 'uc' | 'caltech' | 'imperial' | 'lse' | 'ucl' | 'ubc' | 'mcgill' | 'alberta' | 'waterloo' | 'sydney' | 'unsw' | 'anu' | 'monash' | 'uq' | 'tum' | 'sorbonne' | 'tudelft' | 'trinity' | 'kth' | 'polimi' | 'otago' | 'victoria_wgtn' | 'canterbury' | 'aut' | 'massey' | 'polytechnique' | 'hec' | 'sciencespo' | 'ens' | 'insead' | 'ucd' | 'galway' | 'ucc' | 'dcu' | 'ul';
+  type: 'oxford' | 'cambridge' | 'toronto' | 'melbourne' | 'stanford' | 'auckland' | 'harvard' | 'mit' | 'uc' | 'caltech' | 'imperial' | 'lse' | 'ucl' | 'ubc' | 'mcgill' | 'alberta' | 'waterloo' | 'sydney' | 'unsw' | 'anu' | 'monash' | 'uq' | 'tum' | 'sorbonne' | 'tudelft' | 'trinity' | 'kth' | 'polimi' | 'otago' | 'victoria_wgtn' | 'canterbury' | 'aut' | 'massey' | 'polytechnique' | 'hec' | 'sciencespo' | 'ens' | 'insead' | 'ucd' | 'galway' | 'ucc' | 'dcu' | 'ul' | 'heidelberg' | 'rwth' | 'tuberlin' | 'kit' | 'lmu' | (string & {});
+  logoUrl?: string;
+  alt?: string;
   className?: string;
 }
 
-export const UniversityLogo: React.FC<Props> = ({ type, className = "w-12 h-12" }) => {
+export const UniversityLogo: React.FC<Props> = ({ type, logoUrl, alt, className = "w-12 h-12" }) => {
+  const [imgError, setImgError] = React.useState(false);
+
+  const candidateUrl =
+    logoUrl ||
+    (typeof type === 'string' &&
+    (type.startsWith('/') ||
+      type.endsWith('.png') ||
+      type.endsWith('.svg') ||
+      type.endsWith('.jpg') ||
+      type.endsWith('.webp'))
+      ? type
+      : undefined);
+
+  if (candidateUrl && !imgError) {
+    return (
+      <img
+        src={candidateUrl}
+        alt={alt || `${type} logo`}
+        loading="lazy"
+        decoding="async"
+        onError={() => setImgError(true)}
+        className={`${className} object-contain`}
+      />
+    );
+  }
+
   switch (type) {
     case 'ubc':
       return (
@@ -628,6 +656,70 @@ export const UniversityLogo: React.FC<Props> = ({ type, className = "w-12 h-12" 
           {/* UL Monogram in chief */}
           <text x="50" y="36" textAnchor="middle" fill="#FFFFFF" fontSize="13" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">UL</text>
           <text x="50" y="78" textAnchor="middle" fill="#FDB913" fontSize="8" fontWeight="bold" fontFamily="sans-serif" letterSpacing="1">LIMERICK</text>
+        </svg>
+      );
+    case 'heidelberg':
+      return (
+        <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Heidelberg University Historic Burgundy and Gold Seal */}
+          <rect width="100" height="100" rx="18" fill="#7A0026" />
+          <circle cx="50" cy="50" r="38" stroke="#D4AF37" strokeWidth="2" strokeDasharray="3 3" />
+          <path d="M50 20L62 36H38L50 20Z" fill="#D4AF37" />
+          <rect x="42" y="38" width="16" height="24" rx="2" fill="#FFFFFF" />
+          <path d="M50 38V62" stroke="#7A0026" strokeWidth="1.5" />
+          <text x="50" y="78" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">HEIDELBERG</text>
+        </svg>
+      );
+    case 'rwth':
+      return (
+        <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* RWTH Aachen Tech Blue Shield */}
+          <rect width="100" height="100" rx="18" fill="#00549F" />
+          <path d="M22 28H78V40H22V28Z" fill="#FFFFFF" />
+          <path d="M22 46H50V58H22V46Z" fill="#8EBAE5" />
+          <path d="M22 64H68V76H22V64Z" fill="#FFFFFF" />
+          <text x="75" y="72" textAnchor="end" fill="#FFFFFF" fontSize="12" fontWeight="900" fontFamily="sans-serif">RWTH</text>
+        </svg>
+      );
+    case 'tuberlin':
+      return (
+        <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* TU Berlin Red Emblem */}
+          <rect width="100" height="100" rx="18" fill="#C50E1F" />
+          <path d="M26 28H44V36H38V72H32V36H26V28Z" fill="#FFFFFF" />
+          <path d="M48 28H56V62C56 68 60 72 66 72C72 72 76 68 76 62V28H84V62C84 74 76 80 66 80C56 80 48 74 48 62V28Z" fill="#FFFFFF" />
+          <text x="50" y="88" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold" fontFamily="sans-serif" letterSpacing="0.5">BERLIN</text>
+        </svg>
+      );
+    case 'kit':
+      return (
+        <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* KIT Green Tech Hexagon */}
+          <rect width="100" height="100" rx="18" fill="#009682" />
+          <circle cx="50" cy="42" r="18" stroke="#FFFFFF" strokeWidth="4" fill="none" />
+          <path d="M50 28L58 42L50 56L42 42L50 28Z" fill="#FFFFFF" />
+          <text x="50" y="78" textAnchor="middle" fill="#FFFFFF" fontSize="16" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">KIT</text>
+        </svg>
+      );
+    case 'lmu':
+      return (
+        <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* LMU Munich Forest Green and Gold Shield */}
+          <rect width="100" height="100" rx="18" fill="#006633" />
+          <path d="M22 22H78V48C78 68 50 82 50 82C50 82 22 68 22 48V22Z" stroke="#FFCC00" strokeWidth="2" fill="none" />
+          <text x="50" y="52" textAnchor="middle" fill="#FFFFFF" fontSize="18" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">LMU</text>
+          <text x="50" y="70" textAnchor="middle" fill="#FFCC00" fontSize="8" fontWeight="bold" fontFamily="sans-serif">MÜNCHEN</text>
+        </svg>
+      );
+    default:
+      return (
+        <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Universal Academic Crest */}
+          <rect width="100" height="100" rx="18" fill="#0F172A" />
+          <path d="M22 20H78V50C78 72 50 86 50 86C50 86 22 72 22 50V20Z" fill="#1E293B" stroke="#38BDF8" strokeWidth="2" />
+          <polygon points="50,30 68,40 50,50 32,40" fill="#38BDF8" />
+          <path d="M40 46V58C40 64 50 67 50 67C50 67 60 64 60 58V46" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+          <circle cx="68" cy="40" r="3" fill="#F59E0B" />
         </svg>
       );
   }

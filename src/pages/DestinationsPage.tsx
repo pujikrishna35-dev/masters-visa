@@ -70,6 +70,9 @@ export const DestinationsPage: React.FC<DestinationsPageProps> = ({
         title="Explore Top Study Destinations Worldwide"
         highlightWord="Study Destinations"
         description="Compare premier universities, post-study work opportunities, tuition costs, and verified visa approval rates across the world's most sought-after study destinations."
+        hideBottomBorder
+        sideImage="/images/destinations-travel-illustration.png"
+        sideImageAlt="Explore Top Study Destinations Worldwide"
       />
 
       {/* 2. Interactive Navigation Bar */}
@@ -247,70 +250,7 @@ export const DestinationsPage: React.FC<DestinationsPageProps> = ({
         </div>
       </section>
 
-      {/* 4. Side-by-Side Country Comparison Matrix */}
-      <section className="py-16 sm:py-20 bg-white border-y border-[#DCE7FA]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E] block mb-2">
-              QUICK COMPARISON TABLE
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#101E49] tracking-tight">
-              Compare All 8 Destinations <span className="bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent font-extrabold">Side by Side</span>
-            </h2>
-            <p className="text-sm sm:text-base text-[#63718E] mt-3">
-              Review tuition fees, post-study work permits, and visa approval success rates at a glance.
-            </p>
-          </div>
-
-          <div className="overflow-x-auto rounded-3xl border border-[#DCE7FA] shadow-soft">
-            <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-[#EDF4FF] border-b border-[#DCE7FA] text-[#101E49] uppercase font-bold text-[11px] tracking-wider">
-                <tr>
-                  <th className="py-4 px-6">Destination</th>
-                  <th className="py-4 px-6">Avg Annual Tuition</th>
-                  <th className="py-4 px-6">Visa Success Rate</th>
-                  <th className="py-4 px-6">Post-Study Work Permit</th>
-                  <th className="py-4 px-6">Top Specializations</th>
-                  <th className="py-4 px-6 text-right">Action</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 bg-white">
-                {DESTINATIONS.map((dest) => (
-                  <tr key={dest.id} className="hover:bg-[#EDF4FF]/40 transition-colors">
-                    <td className="py-4 px-6 font-bold text-[#101E49]">
-                      <div className="flex items-center gap-2.5">
-                        <FlagIcon country={dest.name} className="w-5 h-3.5 rounded-2xs" />
-                        <span>{dest.name}</span>
-                      </div>
-                    </td>
-                    <td className="py-4 px-6 text-slate-700 font-medium">{dest.avgTuition}</td>
-                    <td className="py-4 px-6">
-                      <span className="inline-flex items-center gap-1 font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
-                        {dest.visaSuccessRate}
-                      </span>
-                    </td>
-                    <td className="py-4 px-6 text-slate-700">{dest.workPermit}</td>
-                    <td className="py-4 px-6 text-slate-600 max-w-xs truncate">
-                      {dest.topCourses.slice(0, 2).join(', ')}
-                    </td>
-                    <td className="py-4 px-6 text-right">
-                      <Link
-                        to={getCountryRoute(dest.id)}
-                        className="text-xs font-bold text-[#0755F5] hover:text-[#0877FF] transition-colors cursor-pointer inline-flex items-center gap-1"
-                      >
-                        <span>Explore</span>
-                        <span>&rarr;</span>
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Top Universities Around The World */}
+      {/* 4. Top Universities Around The World */}
       <Universities onOpenCounselling={() => onOpenCounselling()} />
 
       {/* 6. Sunset Consultation CTA */}
