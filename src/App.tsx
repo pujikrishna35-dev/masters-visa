@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Routes, Route, useSearchParams } from 'react-router-dom';
+import { Routes, Route, useSearchParams, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -15,6 +15,8 @@ import { AboutPage } from './pages/AboutPage';
 import { DestinationsPage } from './pages/DestinationsPage';
 import { DestinationDetailPage } from './pages/DestinationDetailPage';
 import { StudyInUsaPage } from './pages/StudyInUsaPage';
+import { AllUsaUniversitiesPage } from './pages/AllUsaUniversitiesPage';
+import { CountryUniversitiesPage } from './pages/CountryUniversitiesPage';
 import { StudyInUkPage } from './pages/StudyInUkPage';
 import { StudyInCanadaPage } from './pages/StudyInCanadaPage';
 import { StudyInAustraliaPage } from './pages/StudyInAustraliaPage';
@@ -22,6 +24,7 @@ import { StudyInEuropePage } from './pages/StudyInEuropePage';
 import { StudyInNewZealandPage } from './pages/StudyInNewZealandPage';
 import { StudyInFrancePage } from './pages/StudyInFrancePage';
 import { StudyInIrelandPage } from './pages/StudyInIrelandPage';
+import StudyInGermanyPage from './pages/StudyInGermanyPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { VisaInfoPage } from './pages/VisaInfoPage';
 import { ProcessPage } from './pages/ProcessPage';
@@ -228,6 +231,14 @@ export function App() {
             element={<StudyInUsaPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
+            path="/study-in-usa/universities"
+            element={<AllUsaUniversitiesPage onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/usa/universities"
+            element={<AllUsaUniversitiesPage onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
             path="/destinations/united-kingdom"
             element={<StudyInUkPage onOpenCounselling={handleOpenCounselling} />}
           />
@@ -244,12 +255,36 @@ export function App() {
             element={<StudyInUkPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
+            path="/study-in-uk/universities"
+            element={<CountryUniversitiesPage countryId="uk" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/study-in-united-kingdom/universities"
+            element={<CountryUniversitiesPage countryId="uk" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/uk/universities"
+            element={<CountryUniversitiesPage countryId="uk" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/united-kingdom/universities"
+            element={<CountryUniversitiesPage countryId="uk" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
             path="/destinations/canada"
             element={<StudyInCanadaPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
             path="/study-in-canada"
             element={<StudyInCanadaPage onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/study-in-canada/universities"
+            element={<CountryUniversitiesPage countryId="canada" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/canada/universities"
+            element={<CountryUniversitiesPage countryId="canada" onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
             path="/destinations/australia"
@@ -260,12 +295,28 @@ export function App() {
             element={<StudyInAustraliaPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
+            path="/study-in-australia/universities"
+            element={<CountryUniversitiesPage countryId="australia" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/australia/universities"
+            element={<CountryUniversitiesPage countryId="australia" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
             path="/destinations/europe"
             element={<StudyInEuropePage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
             path="/study-in-europe"
             element={<StudyInEuropePage onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/study-in-europe/universities"
+            element={<CountryUniversitiesPage countryId="europe" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/europe/universities"
+            element={<CountryUniversitiesPage countryId="europe" onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
             path="/destinations/new-zealand"
@@ -276,12 +327,28 @@ export function App() {
             element={<StudyInNewZealandPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
+            path="/study-in-new-zealand/universities"
+            element={<CountryUniversitiesPage countryId="new-zealand" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/new-zealand/universities"
+            element={<CountryUniversitiesPage countryId="new-zealand" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
             path="/destinations/france"
             element={<StudyInFrancePage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
             path="/study-in-france"
             element={<StudyInFrancePage onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/study-in-france/universities"
+            element={<Navigate to="/study-in-europe/universities" replace />}
+          />
+          <Route
+            path="/destinations/france/universities"
+            element={<Navigate to="/study-in-europe/universities" replace />}
           />
           <Route
             path="/destinations/ireland"
@@ -292,12 +359,36 @@ export function App() {
             element={<StudyInIrelandPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
+            path="/study-in-ireland/universities"
+            element={<CountryUniversitiesPage countryId="ireland" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/ireland/universities"
+            element={<CountryUniversitiesPage countryId="ireland" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
             path="/destinations/germany"
-            element={<DestinationDetailPage countryId="germany" onOpenCounselling={handleOpenCounselling} />}
+            element={<StudyInGermanyPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
             path="/study-in-germany"
-            element={<DestinationDetailPage countryId="germany" onOpenCounselling={handleOpenCounselling} />}
+            element={<StudyInGermanyPage onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/study-in-germany/universities"
+            element={<CountryUniversitiesPage countryId="germany" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/germany/universities"
+            element={<CountryUniversitiesPage countryId="germany" onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/study-in-:countryId/universities"
+            element={<CountryUniversitiesPage onOpenCounselling={handleOpenCounselling} />}
+          />
+          <Route
+            path="/destinations/:countryId/universities"
+            element={<CountryUniversitiesPage onOpenCounselling={handleOpenCounselling} />}
           />
           <Route
             path="/destinations/:countryId"

@@ -62,18 +62,6 @@ export const DESTINATIONS: Destination[] = [
     topCourses: ['Automotive Engineering', 'Mechanical Systems', 'Renewable Energy', 'Embedded Systems']
   },
   {
-    id: 'france',
-    name: 'France',
-    flag: 'France',
-    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80',
-    shortDesc: 'Quality education with rich culture and innovation',
-    popularUniversities: ['HEC Paris', 'Sorbonne University', 'INSEAD', 'École Polytechnique'],
-    avgTuition: '€4,000 - €18,000 / year',
-    visaSuccessRate: '95%',
-    workPermit: '2 Years APS Visa',
-    topCourses: ['Luxury Brand Management', 'Culinary Arts', 'Aeronautical Eng', 'Finance']
-  },
-  {
     id: 'new-zealand',
     name: 'New Zealand',
     flag: 'New Zealand',
@@ -432,13 +420,47 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const UNIVERSITIES: UniversityItem[] = [
+  // ─── 1. USA (Top 3) ──────────────────────────────────────────
+  {
+    id: 'harvard',
+    name: 'Harvard University',
+    country: 'USA',
+    flag: 'USA',
+    logoType: 'harvard',
+    logoUrl: '/images/universities_logos/usa_0948_harvard_university.png',
+    qsRank: '#1 US News • Top 4 World',
+    established: '1636'
+  },
+  {
+    id: 'stanford',
+    name: 'Stanford University',
+    country: 'USA',
+    flag: 'USA',
+    logoType: 'stanford',
+    logoUrl: '/images/universities_logos/usa_2058_stanford_university.png',
+    qsRank: '#2 US News • Top 5 World',
+    established: '1885'
+  },
+  {
+    id: 'mit',
+    name: 'Massachusetts Institute of Technology (MIT)',
+    country: 'USA',
+    flag: 'USA',
+    logoType: 'mit',
+    logoUrl: '/images/universities_logos/usa_1283_massachusetts_institute_of_technology.png',
+    qsRank: 'QS #1 World',
+    established: '1861'
+  },
+
+  // ─── 2. United Kingdom (Top 3) ─────────────────────────────────
   {
     id: 'oxford',
     name: 'University of Oxford',
     country: 'UK',
     flag: 'UK',
     logoType: 'oxford',
-    qsRank: 'Top 3 World',
+    logoUrl: '/images/universities_logos/europe_2654_university_of_oxford.png',
+    qsRank: 'QS #3 World • #1 UK',
     established: '1096'
   },
   {
@@ -447,44 +469,211 @@ export const UNIVERSITIES: UniversityItem[] = [
     country: 'UK',
     flag: 'UK',
     logoType: 'cambridge',
-    qsRank: 'Top 5 World',
+    logoUrl: '/images/universities_logos/uk_0088_university_of_cambridge.png',
+    qsRank: 'QS #5 World • #2 UK',
     established: '1209'
   },
+  {
+    id: 'imperial',
+    name: 'Imperial College London',
+    country: 'UK',
+    flag: 'UK',
+    logoType: 'imperial',
+    logoUrl: '/images/universities_logos/uk_0035_imperial_college_london.png',
+    qsRank: 'QS #2 World • #3 UK',
+    established: '1907'
+  },
+
+  // ─── 3. Canada (Top 3) ─────────────────────────────────────────
   {
     id: 'toronto',
     name: 'University of Toronto',
     country: 'Canada',
     flag: 'Canada',
     logoType: 'toronto',
-    qsRank: '#1 in Canada',
+    logoUrl: '/images/universities_logos/canada_0091_university_of_toronto.png',
+    qsRank: 'QS #25 World • #1 Canada',
     established: '1827'
   },
   {
+    id: 'mcgill',
+    name: 'McGill University',
+    country: 'Canada',
+    flag: 'Canada',
+    logoType: 'mcgill',
+    logoUrl: '/images/universities_logos/canada_0042_mcgill_university.png',
+    qsRank: 'QS #29 World • #2 Canada',
+    established: '1821'
+  },
+  {
+    id: 'ubc',
+    name: 'University of British Columbia (UBC)',
+    country: 'Canada',
+    flag: 'Canada',
+    logoType: 'ubc',
+    logoUrl: '/images/universities_logos/canada_0076_university_of_british_columbia.png',
+    qsRank: 'QS #38 World • #3 Canada',
+    established: '1908'
+  },
+
+  // ─── 4. Australia (Top 3) ──────────────────────────────────────
+  {
     id: 'melbourne',
-    name: 'University of Melbourne',
+    name: 'The University of Melbourne',
     country: 'Australia',
     flag: 'Australia',
     logoType: 'melbourne',
-    qsRank: '#1 in Australia',
+    logoUrl: '/images/universities_logos/australia_0028_university_of_melbourne.svg',
+    qsRank: 'QS #13 World • #1 Australia',
     established: '1853'
   },
   {
-    id: 'stanford',
-    name: 'Stanford University',
-    country: 'USA',
-    flag: 'USA',
-    logoType: 'stanford',
-    qsRank: 'Top 5 World',
-    established: '1885'
+    id: 'sydney',
+    name: 'The University of Sydney',
+    country: 'Australia',
+    flag: 'Australia',
+    logoType: 'sydney',
+    logoUrl: '/images/universities_logos/australia_0035_university_of_sydney.svg',
+    qsRank: 'QS #18 World • #2 Australia',
+    established: '1850'
   },
   {
+    id: 'unsw',
+    name: 'UNSW Sydney',
+    country: 'Australia',
+    flag: 'Australia',
+    logoType: 'unsw',
+    logoUrl: '/images/universities_logos/australia_0030_university_of_new_south_wales.svg',
+    qsRank: 'QS #19 World • #3 Australia',
+    established: '1949'
+  },
+
+  // ─── 5. New Zealand (Top 3) ────────────────────────────────────
+  {
     id: 'auckland',
-    name: 'University of Auckland',
+    name: 'The University of Auckland',
     country: 'New Zealand',
     flag: 'New Zealand',
     logoType: 'auckland',
-    qsRank: '#1 in New Zealand',
+    logoUrl: '/images/universities_logos/new_zealand_0004_university_of_auckland.png',
+    qsRank: 'QS #65 World • #1 NZ',
     established: '1883'
+  },
+  {
+    id: 'otago',
+    name: 'University of Otago',
+    country: 'New Zealand',
+    flag: 'New Zealand',
+    logoType: 'otago',
+    logoUrl: '/images/universities_logos/new_zealand_0006_university_of_otago.png',
+    qsRank: 'QS #214 World • #2 NZ',
+    established: '1869'
+  },
+  {
+    id: 'victoria_wgtn',
+    name: 'Victoria University of Wellington',
+    country: 'New Zealand',
+    flag: 'New Zealand',
+    logoType: 'victoria_wgtn',
+    logoUrl: '/images/universities_logos/new_zealand_0008_victoria_university_of_wellington.png',
+    qsRank: 'QS #244 World • #3 NZ',
+    established: '1897'
+  },
+
+  // ─── 6. Ireland (Top 3) ────────────────────────────────────────
+  {
+    id: 'trinity',
+    name: 'Trinity College Dublin (TCD)',
+    country: 'Ireland',
+    flag: 'Ireland',
+    logoType: 'trinity',
+    logoUrl: '/images/universities_logos/ireland_0011_trinity_college_dublin_university_of_dublin.png',
+    qsRank: 'QS #87 World • #1 Ireland',
+    established: '1592'
+  },
+  {
+    id: 'ucd',
+    name: 'University College Dublin (UCD)',
+    country: 'Ireland',
+    flag: 'Ireland',
+    logoType: 'ucd',
+    logoUrl: '/images/universities_logos/ireland_0013_university_college_dublin.png',
+    qsRank: 'QS #126 World • #2 Ireland',
+    established: '1854'
+  },
+  {
+    id: 'galway',
+    name: 'University of Galway',
+    country: 'Ireland',
+    flag: 'Ireland',
+    logoType: 'galway',
+    logoUrl: '/images/universities_logos/ireland_0014_university_of_galway.png',
+    qsRank: 'QS #273 World • #3 Ireland',
+    established: '1845'
+  },
+
+  // ─── 7. Germany (Top 3) ────────────────────────────────────────
+  {
+    id: 'tum',
+    name: 'Technical University of Munich (TUM)',
+    country: 'Germany',
+    flag: 'Germany',
+    logoType: 'tum',
+    logoUrl: '/images/universities_logos/germany_0338_technische_universit_t_m_nchen.png',
+    qsRank: 'QS #28 World • #1 Germany',
+    established: '1868'
+  },
+  {
+    id: 'lmu',
+    name: 'Ludwig Maximilian University of Munich (LMU)',
+    country: 'Germany',
+    flag: 'Germany',
+    logoType: 'lmu',
+    logoUrl: '/images/universities_logos/germany_0258_ludwig_maximilians_univer_sit_t_m_nchen.png',
+    qsRank: 'QS #54 World • #2 Germany',
+    established: '1472'
+  },
+  {
+    id: 'heidelberg',
+    name: 'Heidelberg University',
+    country: 'Germany',
+    flag: 'Germany',
+    logoType: 'heidelberg',
+    logoUrl: '/images/universities_logos/germany_0300_ruprecht_karls_universit_t_heidelberg.png',
+    qsRank: 'QS #87 World • #3 Germany',
+    established: '1386'
+  },
+
+  // ─── 8. France (Top 3) ─────────────────────────────────────────
+  {
+    id: 'polytechnique',
+    name: 'École Polytechnique (IP Paris)',
+    country: 'France',
+    flag: 'France',
+    logoType: 'polytechnique',
+    logoUrl: '/images/universities_logos/europe_0678_cole_polytechnique.png',
+    qsRank: 'QS #46 World • #1 Tech France',
+    established: '1794'
+  },
+  {
+    id: 'sorbonne',
+    name: 'Sorbonne University',
+    country: 'France',
+    flag: 'France',
+    logoType: 'sorbonne',
+    logoUrl: '/images/universities_logos/europe_0577_sorbonne_universit_facult_des_sciences_paris_vi.png',
+    qsRank: 'QS #63 World • #1 Comprehensive',
+    established: '1257'
+  },
+  {
+    id: 'hec',
+    name: 'HEC Paris',
+    country: 'France',
+    flag: 'France',
+    logoType: 'hec',
+    logoUrl: '/images/universities_logos/europe_0676_cole_des_hautes_tudes_commerciales_hec_business_school.png',
+    qsRank: 'FT #1 Europe Business',
+    established: '1881'
   }
 ];
 

@@ -116,7 +116,7 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination: _onSelectDe
             <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E]">
               EXPLORE THE WORLD
             </span>
-            <span className="w-8 h-[2px] bg-[#0755F5] rounded-full inline-block" />
+            <span className="w-8 h-[2px] bg-[#FF6B6B] rounded-full inline-block" />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#101E49] tracking-tight">
             Choose Your<br />
@@ -145,7 +145,7 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination: _onSelectDe
               <Link
                 key={dest.id}
                 to={getCountryRoute(dest.id)}
-                className="group bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card-hover border border-[#DCE7FA] hover:border-[#0755F5]/40 transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1.5 active:scale-[0.99] select-none text-left"
+                className="group bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_36px_rgba(37,99,235,0.14)] border border-slate-200/80 hover:border-[#3B82F6]/50 transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1.5 active:scale-[0.99] select-none text-left"
               >
                 {/* Card Photo */}
                 <div className="relative h-56 w-full overflow-hidden bg-slate-100">
@@ -163,7 +163,7 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination: _onSelectDe
                   <div className="flex items-center gap-3">
                     <FlagComponent />
                     <div>
-                      <h3 className="text-base font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors leading-tight">
+                      <h3 className="text-base font-bold text-[#0F172A] group-hover:text-[#2563EB] transition-colors leading-tight">
                         {dest.name}
                       </h3>
                       <p className="text-xs text-[#63718E] font-medium mt-0.5 leading-snug">
@@ -173,7 +173,7 @@ export const Destinations: React.FC<Props> = ({ onSelectDestination: _onSelectDe
                   </div>
 
                   {/* Circular Arrow Button */}
-                  <div className="w-8 h-8 rounded-full border border-[#DCE7FA] text-slate-500 flex items-center justify-center shrink-0 group-hover:bg-gradient-to-r group-hover:from-[#0755F5] group-hover:to-[#0877FF] group-hover:text-white group-hover:border-transparent group-hover:scale-105 transition-all">
+                  <div className="w-9 h-9 rounded-full border border-slate-200 text-slate-500 flex items-center justify-center shrink-0 group-hover:btn-explore-royal group-hover:text-white group-hover:border-transparent group-hover:scale-105 transition-all">
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
                 </div>

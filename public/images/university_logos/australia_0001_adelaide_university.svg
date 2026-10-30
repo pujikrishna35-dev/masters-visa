@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M20 14H80V46C80 72 50 90 50 90C50 90 20 72 20 46V14Z" fill="#0A1C3C" />
+  <path d="M24 18H76V46C76 68 50 84 50 84C50 84 24 68 24 46V18Z" stroke="#D4AF37" stroke-width="1.5" stroke-opacity="0.6" fill="none" />
+  <circle cx="50" cy="34" r="10" fill="#D4AF37" /><polygon points="50,26 52,31 57,32 53,35 55,40 50,37 45,40 47,35 43,32 48,31" fill="#0A1C3C" />
+  <text x="50" y="74" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="900" font-family="system-ui, sans-serif" letter-spacing="0.5">ADELAIDE</text>
+  <text x="50" y="81" text-anchor="middle" fill="#D4AF37" font-size="6" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.5">AUSTRALIA</text>
+</svg>

@@ -1,0 +1,232 @@
+[
+  {
+    "directory_id": "001",
+    "institution_name": "Atlantic Technological University",
+    "location": "Letterkenny · County Donegal",
+    "country": "Ireland",
+    "website_url": "https://atu.ie",
+    "website_domain": "atu.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "002",
+    "institution_name": "Dublin City University",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://dcu.ie",
+    "website_domain": "dcu.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "003",
+    "institution_name": "Maynooth University",
+    "location": "Maynooth · County Kildare",
+    "country": "Ireland",
+    "website_url": "https://maynoothuniversity.ie",
+    "website_domain": "maynoothuniversity.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "004",
+    "institution_name": "Munster Technological University",
+    "location": "Bishopstown · County Cork",
+    "country": "Ireland",
+    "website_url": "https://mtu.ie",
+    "website_domain": "mtu.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "005",
+    "institution_name": "National University of Ireland, System",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://nui.ie",
+    "website_domain": "nui.ie",
+    "category": "University system / awarding body",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "006",
+    "institution_name": "RCSI University of Medicine and Health Sciences",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://rcsi.com",
+    "website_domain": "rcsi.com",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "007",
+    "institution_name": "South East Technological University",
+    "location": "Waterford · County Waterford",
+    "country": "Ireland",
+    "website_url": "https://setu.ie",
+    "website_domain": "setu.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "008",
+    "institution_name": "St Patrick's Pontifical University",
+    "location": "Maynooth · County Kildare",
+    "country": "Ireland",
+    "website_url": "https://sppu.ie",
+    "website_domain": "sppu.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "009",
+    "institution_name": "Technological University Dublin",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://tudublin.ie",
+    "website_domain": "tudublin.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "010",
+    "institution_name": "Technological University of the Shannon",
+    "location": "Athlone · County Westmeath",
+    "country": "Ireland",
+    "website_url": "https://tus.ie",
+    "website_domain": "tus.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "011",
+    "institution_name": "Trinity College Dublin, University of Dublin",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://tcd.ie",
+    "website_domain": "tcd.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "012",
+    "institution_name": "University College Cork",
+    "location": "Cork · County Cork",
+    "country": "Ireland",
+    "website_url": "https://ucc.ie",
+    "website_domain": "ucc.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "013",
+    "institution_name": "University College Dublin",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://ucd.ie",
+    "website_domain": "ucd.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "014",
+    "institution_name": "University of Galway",
+    "location": "Galway · County Galway",
+    "country": "Ireland",
+    "website_url": "https://universityofgalway.ie",
+    "website_domain": "universityofgalway.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "015",
+    "institution_name": "University of Limerick",
+    "location": "Limerick · County Limerick",
+    "country": "Ireland",
+    "website_url": "https://ul.ie",
+    "website_domain": "ul.ie",
+    "category": "University",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "016",
+    "institution_name": "Carlow College",
+    "location": "Carlow · County Carlow",
+    "country": "Ireland",
+    "website_url": "https://carlowcollege.ie",
+    "website_domain": "carlowcollege.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "017",
+    "institution_name": "Dundalk Institute of Technology",
+    "location": "Dundalk · County Louth",
+    "country": "Ireland",
+    "website_url": "https://dkit.ie",
+    "website_domain": "dkit.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "018",
+    "institution_name": "Dún Laoghaire Institute of Art, Design and Technology",
+    "location": "Dún Laoghaire · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://iadt.ie",
+    "website_domain": "iadt.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "019",
+    "institution_name": "Institute of Public Administration",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://ipa.ie",
+    "website_domain": "ipa.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "020",
+    "institution_name": "Marino Institute of Education",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://mie.ie",
+    "website_domain": "mie.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "021",
+    "institution_name": "National College of Art and Design",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://ncad.ie",
+    "website_domain": "ncad.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "022",
+    "institution_name": "National College of Ireland",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://ncirl.ie",
+    "website_domain": "ncirl.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  },
+  {
+    "directory_id": "023",
+    "institution_name": "Royal Irish Academy of Music",
+    "location": "Dublin · County Dublin",
+    "country": "Ireland",
+    "website_url": "https://riam.ie",
+    "website_domain": "riam.ie",
+    "category": "Additional specialist institution",
+    "logo_reference": null
+  }
+]

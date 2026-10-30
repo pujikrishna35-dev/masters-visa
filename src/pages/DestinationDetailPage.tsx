@@ -12,6 +12,7 @@ import { StudyInEuropePage } from './StudyInEuropePage';
 import { StudyInNewZealandPage } from './StudyInNewZealandPage';
 import { StudyInFrancePage } from './StudyInFrancePage';
 import { StudyInIrelandPage } from './StudyInIrelandPage';
+import { StudyInGermanyPage } from './StudyInGermanyPage';
 import { 
   GraduationCap, 
   DollarSign, 
@@ -819,6 +820,11 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({
     return <StudyInIrelandPage onOpenCounselling={onOpenCounselling} />;
   }
 
+  // Render the dedicated world-class Study in Germany experience for Germany
+  if (normalizedId === 'germany') {
+    return <StudyInGermanyPage onOpenCounselling={onOpenCounselling} />;
+  }
+
   const country = DESTINATION_PROFILES[normalizedId] || DESTINATION_PROFILES.usa;
 
   return (
@@ -834,6 +840,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({
         title={country.pageTitle}
         highlightWord={country.countryName}
         description={country.tagline}
+        hideBottomBorder
       />
 
       {/* 2. Destination Navigation Bar */}

@@ -46,7 +46,8 @@ export interface UniversityItem {
   name: string;
   country: string;
   flag: string;
-  logoType: 'oxford' | 'cambridge' | 'toronto' | 'melbourne' | 'stanford' | 'auckland';
+  logoType: string;
+  logoUrl?: string;
   established?: string;
   qsRank?: string;
 }
