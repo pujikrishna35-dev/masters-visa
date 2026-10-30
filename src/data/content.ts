@@ -96,19 +96,257 @@ export const DESTINATIONS: Destination[] = [
     visaSuccessRate: '98%',
     workPermit: '2 Years Stay Back Visa',
     topCourses: ['Data Analytics', 'Pharmaceutical Sciences', 'Cloud Computing', 'Financial Risk']
+  },
+  {
+    id: 'europe',
+    name: 'Europe',
+    flag: 'Europe',
+    image: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80',
+    shortDesc: 'World-class universities, Schengen mobility, and low/zero tuition',
+    popularUniversities: ['ETH Zurich', 'TU Munich', 'KU Leuven', 'TU Delft', 'Univ of Amsterdam'],
+    avgTuition: '€0 - €15,000 / year (Low/No Tuition Options)',
+    visaSuccessRate: '97%',
+    workPermit: '18 Months - 2 Years EU Blue Card / Job Seeking',
+    topCourses: ['Data Science & AI', 'Automotive Systems', 'Renewable Energy', 'International Business']
+  }
+];
+
+export const CORE_SERVICES: Service[] = [
+  {
+    id: 'career-counselling',
+    title: 'Career Counselling',
+    description: 'Personalized 1-on-1 counseling to discover ideal courses, universities, and career pathways tailored to your academic profile and aspirations.',
+    iconName: 'BarChart2',
+    badgeBg: 'bg-purple-50',
+    badgeColor: 'text-[#5B21B6]',
+    features: ['1-on-1 Profile Mapping', 'STEM vs. Non-STEM Evaluation', 'Career ROI & Salary Benchmarking'],
+    includes: [
+      'Personalized one-on-one session with senior international education counselors',
+      'In-demand STEM vs. Non-STEM course pathway evaluation and curriculum comparison',
+      'Global employment trend analysis, starting salary benchmarks, and ROI calculations',
+      'Post-study work permit (OPT, Graduate Route, PGWP) long-term planning'
+    ],
+    steps: [
+      { step: '01', title: 'Profile Discovery', desc: 'Understanding your academic background, passions, and career vision.' },
+      { step: '02', title: 'Industry Mapping', desc: 'Evaluating fast-growing global industries and employment sectors.' },
+      { step: '03', title: 'Course Specialization', desc: 'Selecting specific academic specializations with proven industry demand.' },
+      { step: '04', title: 'Career Roadmap', desc: 'Establishing actionable milestones for admission, internships, and graduation.' }
+    ]
+  },
+  {
+    id: 'test-preparation',
+    title: 'Test Preparation',
+    description: 'Expert coaching and diagnostic mock tests for IELTS, TOEFL, PTE, Duolingo, GRE, and GMAT with certified master trainers.',
+    iconName: 'BookOpen',
+    badgeBg: 'bg-emerald-50',
+    badgeColor: 'text-[#047857]',
+    features: ['Certified Master Faculty', 'Full-Length Diagnostic Mocks', 'Unlimited Doubt Clearing'],
+    includes: [
+      'Comprehensive study materials, official question banks, and simulated online test interfaces',
+      'Personalized scoring evaluation with target band & percentile roadmaps',
+      'Daily live sessions, recorded masterclasses, and weekend intensive review drills',
+      'Exam booking assistance, voucher discounts, and free diagnostic evaluations'
+    ],
+    steps: [
+      { step: '01', title: 'Diagnostic Assessment', desc: 'Free baseline diagnostic test to evaluate current score benchmarks and weaknesses.' },
+      { step: '02', title: 'Targeted Curriculum', desc: 'Structured module breakdown across Reading, Writing, Listening, Speaking, and Quant.' },
+      { step: '03', title: 'Full-Length Mock Drills', desc: 'Timed simulated exams recreating exact test-day pressure with instant analytics.' },
+      { step: '04', title: 'Score Guarantee', desc: 'Final review drills and test-taking tips to hit target 7.5+ IELTS or 320+ GRE.' }
+    ]
+  },
+  {
+    id: 'application-process',
+    title: 'Application Process',
+    description: 'End-to-end university application management, portal submissions, compelling SOP and LOR crafting, and expedited offer letters.',
+    iconName: 'GraduationCap',
+    badgeBg: 'bg-blue-50',
+    badgeColor: 'text-[#1E40AF]',
+    features: ['Direct University Applications', 'Offer Letter Expedited Follow-up', 'Application Fee Waivers'],
+    includes: [
+      'Comprehensive profile evaluation & strategic university shortlisting across Dream, Target, and Safe institutions',
+      'Statement of Purpose (SOP) narrative structuring, essay brainstorming, and expert proofreading',
+      'Letters of Recommendation (LOR) formatting, resume / CV polish, and transcript verification',
+      'Direct institutional portal submissions with university fee waiver representation and offer tracking'
+    ],
+    steps: [
+      { step: '01', title: 'Shortlisting', desc: 'Curating Dream, Target, and Safe institutions across top destinations.' },
+      { step: '02', title: 'Document Polish', desc: 'Drafting high-impact, plagiarism-free SOPs and academic LORs.' },
+      { step: '03', title: 'Portal Dispatch', desc: 'Preparing and dispatching verified applications with fee-waiver representation.' },
+      { step: '04', title: 'Offer Letter Acceptance', desc: 'Guiding through admission acceptance, tuition deposits, and I-20 / CAS issuance.' }
+    ]
+  },
+  {
+    id: 'loan-assistance',
+    title: 'Loan Assistance',
+    description: 'Hassle-free collateral and non-collateral education loan sanctions with top public and private national banks at lowest interest rates.',
+    iconName: 'BadgePercent',
+    badgeBg: 'bg-amber-50',
+    badgeColor: 'text-[#D99A35]',
+    features: ['Collateral & Non-Collateral Loans', 'Pre-Visa Loan Sanctions', 'Fast 48-Hour Approvals'],
+    includes: [
+      'Ties with top national banks, NBFCs, and international USD education loan lenders',
+      'Unsecured non-collateral loan sanctions up to ₹75 Lakhs / $100,000 for top global universities',
+      'Pre-visa disbursement letters and financial solvency certificates accepted by embassies',
+      'Tax deduction optimization under Section 80E with lowest available interest margins'
+    ],
+    steps: [
+      { step: '01', title: 'Eligibility Check', desc: 'Evaluating co-applicant income, CIBIL score, and university ranking for loan limits.' },
+      { step: '02', title: 'Lender Matching', desc: 'Comparing collateral vs. non-collateral lenders for lowest interest rates and zero processing fees.' },
+      { step: '03', title: 'Digital Documentation', desc: 'Rapid paperless document collection and doorstep financial verification.' },
+      { step: '04', title: 'Sanction & Disbursal', desc: 'Receiving formal sanction letter for visa filing and timely tuition fee wire transfer.' }
+    ]
+  },
+  {
+    id: 'mock-interviews',
+    title: 'Mock Interviews',
+    description: '1-on-1 intensive consular interview drills, university admission defense, and behavioral coaching for guaranteed visa confidence.',
+    iconName: 'UserCheck',
+    badgeBg: 'bg-indigo-50',
+    badgeColor: 'text-[#4338CA]',
+    features: ['Simulated Embassy Drills', 'Consular Behavioral Coaching', '1-on-1 Video Recordings & Feedback'],
+    includes: [
+      'Tailored question banks customized to your destination (US F-1 consular, UK credibility, Germany visa, France Campus)',
+      'Intensive non-immigrant intent alignment, home-tie justification, and career progression defense',
+      'Simulated counter-questioning on university selection, gap years, backlogs, and financial documentation',
+      'Live recorded video drill sessions with detailed performance analysis and body language guidance'
+    ],
+    steps: [
+      { step: '01', title: 'Profile Analysis', desc: 'Scrutinizing DS-160, I-20, or visa dossier to anticipate consular scrutiny points.' },
+      { step: '02', title: 'Question Bank Prep', desc: 'Drafting authentic, non-scripted answers for academics, finances, and post-study plans.' },
+      { step: '03', title: 'Simulated Consular Drills', desc: 'Realistic high-pressure mock interview simulations replicating embassy counters.' },
+      { step: '04', title: 'Confidence Polish', desc: 'Fine-tuning voice clarity, eye contact, and concise delivery for interview day.' }
+    ]
+  },
+  {
+    id: 'visa-guidance',
+    title: 'Visa Guidance',
+    description: 'Complete student visa guidance covering official forms, financial evidence audits, biometrics scheduling, and embassy compliance.',
+    iconName: 'FileText',
+    badgeBg: 'bg-rose-50',
+    badgeColor: 'text-[#BE123C]',
+    features: ['Complete Documentation Checklists', 'Financial Evidence Audits', 'Embassy Slot Booking Assistance'],
+    includes: [
+      'End-to-end guidance for US (F-1), UK, Canada (SDS), Australia (Subclass 500), and European student visas',
+      'Financial evidence structuring, sponsor affidavits, CA valuation reports & liquid proof of funds checklists',
+      'Official portal form assistance (DS-160, VFS, IRCC, ImmiAccount) and biometric slot scheduling',
+      'Comprehensive visa dossier review ensuring 100% compliance with current consular guidelines'
+    ],
+    steps: [
+      { step: '01', title: 'Document Checklist', desc: 'Receiving a tailored document checklist aligned with current embassy requirements.' },
+      { step: '02', title: 'Financial Audit', desc: 'Detailed review of bank statements, loan sanction letters, and sponsorship proof.' },
+      { step: '03', title: 'Filing & Biometrics', desc: 'Completing official visa application forms and booking consular appointment slots.' },
+      { step: '04', title: 'Embassy Submission', desc: 'Final dossier verification and guidance on biometric submission.' }
+    ]
+  },
+  {
+    id: 'pre-departure-orientation',
+    title: 'Pre-Departure Orientation',
+    description: 'Essential pre-flight briefing covering flight bookings, student forex cards, luggage packing, customs clearance, and campus life.',
+    iconName: 'PlaneTakeoff',
+    badgeBg: 'bg-cyan-50',
+    badgeColor: 'text-[#0E7490]',
+    features: ['Packing & Travel Checklists', 'Forex Cards & International Banking', 'Customs & Port-of-Entry Briefings'],
+    includes: [
+      'Comprehensive pre-departure orientation session on local culture, university life, climate, and laws',
+      'Discounted student airfares with extra baggage allowances (up to 46kg) via partner airlines',
+      'Multi-currency zero-markup student forex cards, wire transfers, and international bank account opening',
+      'Port-of-entry customs clearance checklists, immigration questioning tips, and emergency contacts'
+    ],
+    steps: [
+      { step: '01', title: 'Orientation Briefing', desc: 'Essential briefing covering local laws, culture, climate, and campus regulations.' },
+      { step: '02', title: 'Flight & Baggage Setup', desc: 'Booking student discounted flights with verified extra baggage allowances.' },
+      { step: '03', title: 'Forex & Banking', desc: 'Setting up zero-markup student forex cards and student travel discounts.' },
+      { step: '04', title: 'Port of Entry Kit', desc: 'Structuring your travel folder with immigration documents and immunization records.' }
+    ]
+  },
+  {
+    id: 'free-training',
+    title: 'Free Training',
+    description: 'Complimentary demo masterclasses, IELTS & GRE foundation bootcamps, spoken English accent polish, and free interview practice workshops.',
+    iconName: 'Sparkles',
+    badgeBg: 'bg-amber-50',
+    badgeColor: 'text-[#D99A35]',
+    features: ['100% Free Demo Masterclasses', 'Live Trainer Q&A Sessions', 'Free Practice Tests & Materials'],
+    includes: [
+      'Free IELTS & TOEFL foundation masterclasses covering all 4 modules with certified British Council / ETS trainers',
+      'GRE & GMAT quant shortcut workshops and verbal critical reasoning masterclasses',
+      'Complimentary spoken English coaching, pronunciation drills, and corporate communication polish',
+      'Free visa mock drill workshops and diagnostic profile scorecards for university admissions'
+    ],
+    steps: [
+      { step: '01', title: 'Free Registration', desc: 'Instant access to upcoming live masterclasses and recorded foundation sessions.' },
+      { step: '02', title: 'Diagnostic Test', desc: 'Complimentary full-length mock assessment with detailed score band breakdown.' },
+      { step: '03', title: 'Live Masterclasses', desc: 'Interactive strategy sessions with senior trainers covering proven test shortcuts.' },
+      { step: '04', title: '1-on-1 Feedback', desc: 'Individual doubt-clearing consultation and personalized study schedule.' }
+    ]
+  },
+  {
+    id: 'pickup-accommodation',
+    title: 'Airport Pickup & Accommodation',
+    description: 'Guaranteed safe airport reception, verified student housing, and hassle-free relocation settlement.',
+    iconName: 'Home',
+    badgeBg: 'bg-amber-50',
+    badgeColor: 'text-[#D99A35]',
+    features: ['Airport Meet & Greet', 'Verified Student Housing', 'Local Settlement Support'],
+    includes: [
+      'Dedicated on-ground airport reception and direct transfer to your booked student accommodation',
+      'Assistance securing verified on-campus dorms and vetted off-campus student apartments',
+      'Lease contract verification, tenancy deposit protection, and utility setup advice',
+      'Arrival essentials: International SIM card activation, transit pass, and student bank account opening'
+    ],
+    steps: [
+      { step: '01', title: 'Housing Matching', desc: 'Curating safe, budget-friendly accommodations with verified proximity to campus.' },
+      { step: '02', title: 'Lease & Booking', desc: 'Securing tenancy agreements with trusted student housing providers.' },
+      { step: '03', title: 'Flight & Pickup Sync', desc: 'Scheduling chauffeur/rep pickup synchronized with your flight landing time.' },
+      { step: '04', title: 'Settlement & Welcome', desc: 'Welcoming you upon arrival, keys handover, and neighborhood orientation.' }
+    ]
+  },
+  {
+    id: 'corporate-internships',
+    title: 'Corporate Internships & Co-op',
+    description: 'Vetted global corporate internships, CPT/co-op guidance, ATS resume optimization, portfolio improvement, and technical mock interviews.',
+    iconName: 'Briefcase',
+    badgeBg: 'bg-teal-50',
+    badgeColor: 'text-[#0D9488]',
+    features: ['Vetted Global Internships', 'CPT & Co-op Guidance', 'Technical Mock Interviews'],
+    includes: [
+      'Access to vetted global corporate internships, Fortune 500, and technology job listings',
+      'Curricular Practical Training (CPT) and university co-op work authorization guidance',
+      'ATS resume optimization, engineering/business portfolio improvement, and LinkedIn polish',
+      '1-on-1 technical mock interview drill sessions, behavioral coding drills, and offer negotiations'
+    ],
+    steps: [
+      { step: '01', title: 'Profile & Portfolio Audit', desc: 'Evaluating technical skills, projects, and target industry domains for corporate roles.' },
+      { step: '02', title: 'ATS Resume & Profile Polish', desc: 'Optimizing your CV for global ATS filters and showcasing GitHub / case studies.' },
+      { step: '03', title: 'CPT & Co-op Compliance', desc: 'Navigating university credit requirements, advisor approvals, and legal CPT authorization.' },
+      { step: '04', title: 'Technical Mock Drills', desc: 'Simulating multi-round technical and behavioral interviews with experienced industry mentors.' }
+    ]
+  },
+  {
+    id: 'part-time-jobs',
+    title: 'Part-Time Jobs & Student Work Rights',
+    description: 'Student work authorization guidance, on-campus jobs, TA/RA opportunities, SSN/NIN/TFN setup guidance, and local job search strategies.',
+    iconName: 'Clock',
+    badgeBg: 'bg-sky-50',
+    badgeColor: 'text-[#0284C7]',
+    features: ['Student Work Rights Guidance', 'On-Campus TA / RA Opportunities', 'SSN / NIN / TFN Setup'],
+    includes: [
+      'Official student visa work authorization guidelines (20-24 hrs/week term-time, full-time during vacations)',
+      'Strategic guidance for securing high-demand on-campus positions (Teaching Assistant, Research Assistant, campus library & admin)',
+      'Step-by-step national tax identifier registration guidance (SSN in US, NIN in UK, TFN in Australia)',
+      'Local student job search strategies, hourly wage optimization, and workplace compliance'
+    ],
+    steps: [
+      { step: '01', title: 'Work Rights Briefing', desc: 'Reviewing host-country visa regulations, weekly hour ceilings, and legal employment boundaries.' },
+      { step: '02', title: 'TA / RA & Campus Search', desc: 'Connecting with university job boards, faculty departments, and assistantship openings.' },
+      { step: '03', title: 'SSN / NIN / TFN Registration', desc: 'Structuring required documentation and appointment bookings for legal tax identifier setup.' },
+      { step: '04', title: 'Local Job Search Strategy', desc: 'Targeting verified flexible student employers, hourly rate benchmarking, and interview prep.' }
+    ]
   }
 ];
 
 export const SERVICES: Service[] = [
-  {
-    id: 'career-counselling',
-    title: 'Career Counselling',
-    description: 'Expert guidance to choose the right course and university.',
-    iconName: 'GraduationCap',
-    badgeBg: 'bg-rose-50',
-    badgeColor: 'text-rose-500',
-    features: ['1-on-1 Profile Mapping', 'Aptitude & Career Alignment', 'Long-term ROI Analysis']
-  },
+  ...CORE_SERVICES,
   {
     id: 'test-prep',
     title: 'Test Preparation',
@@ -119,15 +357,6 @@ export const SERVICES: Service[] = [
     features: ['Certified Master Trainers', 'Mock Diagnostic Exams', 'Personalized Doubt Clearing']
   },
   {
-    id: 'application-process',
-    title: 'Application Process',
-    description: 'University selection, applications & documentation.',
-    iconName: 'FileCheck',
-    badgeBg: 'bg-blue-50',
-    badgeColor: 'text-blue-500',
-    features: ['SOP & LOR Polishing', 'Application Fee Waivers', 'Timely Portal Submissions']
-  },
-  {
     id: 'loan-assistance',
     title: 'Loan Assistance',
     description: 'Education loan guidance and financial support.',
@@ -135,42 +364,6 @@ export const SERVICES: Service[] = [
     badgeBg: 'bg-amber-50',
     badgeColor: 'text-amber-500',
     features: ['Collateral & Non-Collateral', 'Lowest Interest Rate Ties', 'Fast-Track Sanctions']
-  },
-  {
-    id: 'mock-interviews',
-    title: 'Mock Interviews',
-    description: 'Preparation for university and visa interviews.',
-    iconName: 'Users',
-    badgeBg: 'bg-red-50',
-    badgeColor: 'text-red-500',
-    features: ['Consular Style Mock Drills', 'University Committee Prep', 'Confidence & Body Language']
-  },
-  {
-    id: 'visa-guidance',
-    title: 'Visa Guidance',
-    description: 'Complete documentation and interview guidance.',
-    iconName: 'Stamp',
-    badgeBg: 'bg-cyan-50',
-    badgeColor: 'text-cyan-500',
-    features: ['Proof of Funds Structuring', 'DS-160 & CAS Checklist', '95%+ Success Rate Track Record']
-  },
-  {
-    id: 'pre-departure',
-    title: 'Pre-Departure Orientation',
-    description: 'Insights about travel, living and studying abroad.',
-    iconName: 'Compass',
-    badgeBg: 'bg-teal-50',
-    badgeColor: 'text-teal-500',
-    features: ['Accommodation Booking', 'SIM Card & Forex Cards', 'Airport Pickup Assistance']
-  },
-  {
-    id: 'part-time-job',
-    title: 'Part-Time Job Assistance',
-    description: 'Support for part-time employment opportunities.',
-    iconName: 'Briefcase',
-    badgeBg: 'bg-indigo-50',
-    badgeColor: 'text-indigo-500',
-    features: ['Local Resume Templates', 'Campus Job Fair Prep', 'Legal Hourly Regulations Guide']
   }
 ];
 
@@ -183,6 +376,9 @@ export const WHY_CHOOSE_ITEMS = [
   'Experienced Counsellors',
   'Application & Documentation',
   'Pre-Departure Guidance',
+  'Airport Pickup & Accommodation',
+  'Corporate Internships & Co-op',
+  'Part-Time Jobs & Student Work Rights',
   'Post-Landing Support',
   'End-to-End Assistance'
 ];

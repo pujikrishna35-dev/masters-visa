@@ -1,6 +1,5 @@
-import React from 'react';
-import { Star, ArrowRight, Quote } from 'lucide-react';
-import { TESTIMONIALS } from '../data/content';
+import React, { useState } from 'react';
+import { ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 import { FlagIcon } from './FlagIcon';
 
 interface Props {
@@ -8,83 +7,155 @@ interface Props {
 }
 
 export const Testimonials: React.FC<Props> = ({ onOpenCounselling }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const testimonials = [
+    {
+      id: '1',
+      name: 'Sneha R.',
+      country: 'Canada',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+      quote: 'Master Visa made my dream of studying in Canada a reality. Their support was amazing throughout the process.',
+    },
+    {
+      id: '2',
+      name: 'Karthik M.',
+      country: 'UK',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+      quote: 'Very professional and genuine guidance. My visa was approved without any hassle. Highly recommended!',
+    },
+    {
+      id: '3',
+      name: 'Priya S.',
+      country: 'Australia',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
+      quote: 'Clear process, quick responses and constant support. Master Visa is the best choice for study abroad.',
+    },
+  ];
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <section className="py-16 bg-brand-bg-subtle/50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-          <div>
-            <div className="inline-block text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">
-              STUDENT SUCCESS STORIES
+    <section id="testimonials" className="py-16 sm:py-24 bg-[#EDF4FF]/30 relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          
+          {/* Left Header */}
+          <div className="lg:col-span-4 text-left">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E]">
+                REAL STUDENT STORIES
+              </span>
+              <span className="w-8 h-[2px] bg-[#0755F5] rounded-full inline-block" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-              Real Students.{' '}
-              <span className="text-brand-coral font-serif italic">Global Futures.</span>
+
+            <h2 className="text-3xl sm:text-4xl font-black text-[#101E49] tracking-tight leading-tight">
+              Dreams Turned<br />
+              <span className="text-gradient-blue bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent">
+                Into Global Journeys
+              </span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 mt-2">
-              Hear from our students about their life-changing experiences.
+
+            <p className="text-sm text-[#63718E] mt-3 leading-relaxed max-w-sm">
+              Hear from our students who are now studying and building successful careers around the world.
             </p>
+
+            {/* Slider Navigation Buttons + Dots */}
+            <div className="flex items-center gap-4 mt-8">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handlePrev}
+                  aria-label="Previous testimonial"
+                  className="w-10 h-10 rounded-full bg-white border border-[#DCE7FA] hover:border-[#0755F5] hover:text-[#0755F5] hover:bg-[#EDF4FF] active:scale-95 text-[#172344] flex items-center justify-center transition-all shadow-xs cursor-pointer"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  aria-label="Next testimonial"
+                  className="w-10 h-10 rounded-full bg-white border border-[#DCE7FA] hover:border-[#0755F5] hover:text-[#0755F5] hover:bg-[#EDF4FF] active:scale-95 text-[#172344] flex items-center justify-center transition-all shadow-xs cursor-pointer"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Dots */}
+              <div className="flex items-center gap-1.5 ml-2">
+                {testimonials.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setCurrentIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    className={`rounded-full transition-all cursor-pointer ${
+                      currentIndex === idx ? 'w-4 h-2 bg-[#0755F5] rounded-full' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
-          <button
-            onClick={onOpenCounselling}
-            className="text-sm font-bold text-brand-navy hover:text-brand-coral flex items-center gap-1.5 transition-colors group self-start md:self-auto"
-          >
-            <span>View All Reviews</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
+          {/* Right 3 Testimonial Cards */}
+          <div className="lg:col-span-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              {testimonials.map((item) => (
+                <div
+                  key={item.id}
+                  role="button"
+                  tabIndex={0}
+                  onClick={onOpenCounselling}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      onOpenCounselling();
+                    }
+                  }}
+                  className="bg-white rounded-3xl p-5 border border-[#DCE7FA] shadow-soft hover:shadow-card-hover hover:border-[#0755F5]/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left select-none"
+                >
+                  <div>
+                    {/* Student Photo */}
+                    <div className="w-full h-44 rounded-2xl overflow-hidden mb-4 bg-slate-100">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
 
-        {/* 3 Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-100 shadow-soft hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative group"
-            >
-              <div>
-                {/* Header with Photo & Country Flag */}
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="relative">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md"
-                    />
-                    <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-1 shadow-sm border border-slate-100 flex items-center justify-center">
-                      <FlagIcon country={item.country} className="w-4 h-3 rounded-xs" />
+                    {/* Quote mark in blue */}
+                    <div className="text-[#0755F5] mb-2">
+                      <Quote className="w-5 h-5 fill-[#0755F5]" />
+                    </div>
+
+                    {/* Quote Text */}
+                    <p className="text-xs sm:text-[13px] text-[#63718E] leading-relaxed font-normal mb-4">
+                      "{item.quote}"
+                    </p>
+                  </div>
+
+                  {/* Student Name & Country Flag */}
+                  <div className="pt-3 border-t border-slate-100 flex flex-col gap-1">
+                    <h3 className="text-sm font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors">
+                      {item.name}
+                    </h3>
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#63718E]">
+                      <FlagIcon country={item.country} className="w-3.5 h-2.5 rounded-xs" />
+                      <span>{item.country}</span>
                     </div>
                   </div>
-
-                  <div>
-                    <h3 className="text-base font-bold text-brand-navy">{item.name}</h3>
-                    <p className="text-xs font-semibold text-brand-coral">{item.university}</p>
-                    <p className="text-[11px] text-slate-400">{item.country} • {item.course}</p>
-                  </div>
                 </div>
-
-                {/* Quote */}
-                <div className="relative mb-5">
-                  <Quote className="w-6 h-6 text-slate-200 absolute -top-2 -left-1 opacity-50" />
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed italic relative z-10 pl-3">
-                    "{item.quote}"
-                  </p>
-                </div>
-              </div>
-
-              {/* 5-Star Rating */}
-              <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
-                <div className="flex items-center gap-1 text-amber-400">
-                  {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <span className="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
-                  Verified Admit
-                </span>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
         </div>
       </div>
     </section>

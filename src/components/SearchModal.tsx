@@ -1,174 +1,622 @@
-import React, { useState } from 'react';
-import { Search, X, ArrowRight, Globe, Building2, BookOpen, Newspaper } from 'lucide-react';
-import { DESTINATIONS, SERVICES, UNIVERSITIES, NEWS_ITEMS } from '../data/content';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { 
+  Search, 
+  X, 
+  ArrowRight, 
+  Globe, 
+  Newspaper, 
+  FileText, 
+  Compass, 
+  Sparkles,
+  SearchX,
+  GraduationCap
+} from 'lucide-react';
+import { DESTINATIONS, CORE_SERVICES, UNIVERSITIES, NEWS_ITEMS } from '../data/content';
+import { getCountryRoute } from './DestinationNavBar';
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
   onSelectDestination: (destId: string) => void;
+  onSelectService?: (serviceId: string) => void;
 }
 
-export const SearchModal: React.FC<Props> = ({ isOpen, onClose, onSelectDestination }) => {
+type SearchCategory = 'Destination' | 'Service' | 'University' | 'Page' | 'Blog';
+
+interface SearchResultItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  category: SearchCategory;
+  targetSection: string;
+  destId?: string;
+  serviceId?: string;
+  iconType: 'destination' | 'service' | 'university' | 'page' | 'blog';
+  keywords?: string[];
+}
+
+const SITE_PAGES: SearchResultItem[] = [
+  {
+    id: 'page-home',
+    title: 'Home',
+    subtitle: 'Welcome to MasterVisa global education consultancy',
+    category: 'Page',
+    targetSection: 'home',
+    iconType: 'page',
+    keywords: ['homepage', 'start', 'main', 'intro', 'welcome']
+  },
+  {
+    id: 'page-about',
+    title: 'About MasterVisa',
+    subtitle: 'Why Choose Us, our counsellors & global experience',
+    category: 'Page',
+    targetSection: 'about',
+    iconType: 'page',
+    keywords: ['about us', 'why choose us', 'why-us', 'experience', 'who we are']
+  },
+  {
+    id: 'page-destinations',
+    title: 'Study Destinations',
+    subtitle: 'Explore USA, UK, Canada, Australia, Germany & Europe',
+    category: 'Page',
+    targetSection: 'destinations',
+    iconType: 'page',
+    keywords: ['countries', 'study abroad', 'destinations', 'options']
+  },
+  {
+    id: 'page-services',
+    title: 'Our Services',
+    subtitle: 'Admissions, visas, documentation & pre-departure support',
+    category: 'Page',
+    targetSection: 'services',
+    iconType: 'page',
+    keywords: ['services', 'support', 'assistance', 'features']
+  },
+  {
+    id: 'page-process',
+    title: '4-Step Journey Process',
+    subtitle: 'Step-by-step roadmap from profile review to flying abroad',
+    category: 'Page',
+    targetSection: 'process',
+    iconType: 'page',
+    keywords: ['process', 'journey', 'steps', 'timeline', 'how it works', 'roadmap']
+  },
+  {
+    id: 'page-testimonials',
+    title: 'Student Success Stories',
+    subtitle: 'Real student reviews, success rates, and visa approvals',
+    category: 'Page',
+    targetSection: 'testimonials',
+    iconType: 'page',
+    keywords: ['testimonials', 'reviews', 'success stories', 'ratings', 'alumni']
+  },
+  {
+    id: 'page-universities',
+    title: 'Partner Universities',
+    subtitle: 'Top ranked global universities and institutions',
+    category: 'Page',
+    targetSection: 'universities',
+    iconType: 'page',
+    keywords: ['universities', 'colleges', 'institutions', 'rankings', 'qs rank']
+  },
+  {
+    id: 'page-blog',
+    title: 'News & Insights (Blog)',
+    subtitle: 'Latest visa policy updates, deadlines & scholarship articles',
+    category: 'Blog',
+    targetSection: 'blog',
+    iconType: 'blog',
+    keywords: ['news', 'blog', 'insights', 'articles', 'updates']
+  },
+  {
+    id: 'page-faq',
+    title: 'FAQs & Enquiries',
+    subtitle: 'Frequently asked questions & book consultation form',
+    category: 'Page',
+    targetSection: 'faq',
+    iconType: 'page',
+    keywords: ['faq', 'questions', 'enquiry', 'help', 'answers']
+  },
+  {
+    id: 'page-contact',
+    title: 'Contact Us & Branches',
+    subtitle: 'Offices in Nellore HQ, Hyderabad, Vijayawada, Bangalore, Chennai, Tirupati',
+    category: 'Page',
+    targetSection: 'contact',
+    iconType: 'page',
+    keywords: ['contact', 'branches', 'offices', 'phone', 'address', 'locations', 'email']
+  }
+];
+
+const DESTINATION_RESULTS: SearchResultItem[] = DESTINATIONS.map(d => ({
+  id: `dest-${d.id}`,
+  title: `Study in ${d.name}`,
+  subtitle: `${d.shortDesc} • ${d.visaSuccessRate} visa success`,
+  category: 'Destination',
+  targetSection: 'destinations',
+  destId: d.id,
+  iconType: 'destination',
+  keywords: [d.name, 'visa', d.avgTuition, d.workPermit, ...d.topCourses, ...d.popularUniversities]
+}));
+
+const SERVICE_RESULTS: SearchResultItem[] = CORE_SERVICES.map(s => {
+  const extraKeywords: string[] = [];
+  if (s.id === 'corporate-internships') {
+    extraKeywords.push(
+      'internship', 'internships', 'corporate', 'co-op', 'coop', 'cpt',
+      'ats resume', 'fortune 500', 'tech jobs', 'portfolio', 'mock interview',
+      'technical mock', 'mock interviews'
+    );
+  } else if (s.id === 'part-time-jobs') {
+    extraKeywords.push(
+      'part-time', 'part time', 'parttime', 'campus jobs', 'campus job',
+      'student work rights', 'work rights', 'work authorization', 'ta', 'ra',
+      'teaching assistant', 'research assistant', 'ssn', 'nin', 'tfn', 'hourly wage'
+    );
+  }
+  return {
+    id: `svc-${s.id}`,
+    title: s.title,
+    subtitle: s.description,
+    category: 'Service',
+    targetSection: 'services',
+    serviceId: s.id,
+    iconType: 'service',
+    keywords: [s.title, s.description, ...(s.features || []), ...(s.includes || []), ...extraKeywords]
+  };
+});
+
+const UNIVERSITY_RESULTS: SearchResultItem[] = UNIVERSITIES.map(u => ({
+  id: `uni-${u.id}`,
+  title: u.name,
+  subtitle: `${u.country}${u.qsRank ? ` • ${u.qsRank}` : ''}`,
+  category: 'University',
+  targetSection: 'universities',
+  iconType: 'university',
+  keywords: [u.name, u.country, u.qsRank || '', 'university', 'college'].filter(Boolean)
+}));
+
+const BLOG_RESULTS: SearchResultItem[] = NEWS_ITEMS.map(n => ({
+  id: `blog-${n.id}`,
+  title: n.title,
+  subtitle: n.summary,
+  category: 'Blog',
+  targetSection: 'blog',
+  iconType: 'blog',
+  keywords: [n.title, n.summary, n.category, 'article', 'blog', 'news']
+}));
+
+const ALL_SEARCH_ITEMS: SearchResultItem[] = [
+  ...DESTINATION_RESULTS,
+  ...SERVICE_RESULTS,
+  ...SITE_PAGES,
+  ...UNIVERSITY_RESULTS,
+  ...BLOG_RESULTS
+];
+
+const POPULAR_SEARCHES = [
+  { label: 'Study in USA', query: 'USA' },
+  { label: 'Corporate Internships', query: 'Internships' },
+  { label: 'Part-Time Jobs', query: 'Part-Time' },
+  { label: 'Student Visa', query: 'Student Visa' },
+  { label: 'Universities', query: 'Universities' },
+  { label: 'Documentation & SOP', query: 'SOP' }
+];
+
+export const SearchModal: React.FC<Props> = ({ 
+  isOpen, 
+  onClose, 
+  onSelectDestination: _onSelectDestination, 
+  onSelectService 
+}) => {
+  const navigate = useNavigate();
   const [query, setQuery] = useState('');
+  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
+  // Focus input and reset state on open/close
+  useEffect(() => {
+    if (isOpen) {
+      const timer = window.setTimeout(() => {
+        inputRef.current?.focus();
+      }, 50);
+      return () => window.clearTimeout(timer);
+    } else {
+      setQuery('');
+      setSelectedIndex(-1);
+    }
+  }, [isOpen]);
+
+  // Filter items matching query
+  const trimmedQuery = query.trim().toLowerCase();
+
+  const results = useMemo(() => {
+    if (!trimmedQuery) return [];
+
+    return ALL_SEARCH_ITEMS.filter(item => {
+      const matchTitle = item.title.toLowerCase().includes(trimmedQuery);
+      const matchSubtitle = item.subtitle.toLowerCase().includes(trimmedQuery);
+      const matchCategory = item.category.toLowerCase().includes(trimmedQuery);
+      const matchKeywords = item.keywords?.some(k => k.toLowerCase().includes(trimmedQuery));
+      return matchTitle || matchSubtitle || matchCategory || matchKeywords;
+    });
+  }, [trimmedQuery]);
+
+  // Reset selected index when query changes
+  useEffect(() => {
+    setSelectedIndex(-1);
+  }, [trimmedQuery]);
+
+  // Scroll active item into view
+  useEffect(() => {
+    if (selectedIndex >= 0 && listRef.current) {
+      const activeEl = listRef.current.querySelector(`[data-index="${selectedIndex}"]`);
+      if (activeEl) {
+        activeEl.scrollIntoView({ block: 'nearest' });
+      }
+    }
+  }, [selectedIndex]);
 
   if (!isOpen) return null;
 
-  const filteredDestinations = DESTINATIONS.filter(d => 
-    d.name.toLowerCase().includes(query.toLowerCase()) || 
-    d.shortDesc.toLowerCase().includes(query.toLowerCase()) ||
-    d.topCourses.some(c => c.toLowerCase().includes(query.toLowerCase()))
-  );
+  const handleSelectResult = (item: SearchResultItem) => {
+    onClose();
 
-  const filteredUniversities = UNIVERSITIES.filter(u =>
-    u.name.toLowerCase().includes(query.toLowerCase()) ||
-    u.country.toLowerCase().includes(query.toLowerCase())
-  );
+    // If destination item, navigate directly to dedicated country page
+    if (item.destId) {
+      navigate(getCountryRoute(item.destId));
+      return;
+    }
 
-  const filteredServices = SERVICES.filter(s =>
-    s.title.toLowerCase().includes(query.toLowerCase()) ||
-    s.description.toLowerCase().includes(query.toLowerCase())
-  );
+    // If service item, navigate to /services and open its modal
+    if (item.serviceId) {
+      navigate(`/services?service=${item.serviceId}`);
+      if (onSelectService) {
+        onSelectService(item.serviceId);
+      }
+      return;
+    }
 
-  const filteredNews = NEWS_ITEMS.filter(n =>
-    n.title.toLowerCase().includes(query.toLowerCase()) ||
-    n.category.toLowerCase().includes(query.toLowerCase())
-  );
+    // Navigate to respective page
+    switch (item.targetSection) {
+      case 'home':
+        navigate('/');
+        break;
+      case 'about':
+        navigate('/about');
+        break;
+      case 'destinations':
+        navigate('/destinations');
+        break;
+      case 'services':
+        navigate('/services');
+        break;
+      case 'process':
+        navigate('/process');
+        break;
+      case 'testimonials':
+        navigate('/testimonials');
+        break;
+      case 'blog':
+        navigate('/blog');
+        break;
+      case 'contact':
+        navigate('/contact');
+        break;
+      case 'faq':
+        navigate('/contact#faq');
+        break;
+      case 'universities':
+        navigate('/destinations');
+        break;
+      default:
+        navigate(`/${item.targetSection}`);
+        break;
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      onClose();
+      return;
+    }
+
+    if (results.length === 0) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setSelectedIndex(prev => (prev < results.length - 1 ? prev + 1 : 0));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setSelectedIndex(prev => (prev > 0 ? prev - 1 : results.length - 1));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (selectedIndex >= 0 && selectedIndex < results.length) {
+        handleSelectResult(results[selectedIndex]);
+      } else if (results.length > 0) {
+        handleSelectResult(results[0]);
+      }
+    }
+  };
+
+  const renderCategoryBadge = (category: SearchCategory) => {
+    switch (category) {
+      case 'Destination':
+        return (
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#1769AA] border border-blue-100 flex-shrink-0">
+            Destination
+          </span>
+        );
+      case 'Service':
+        return (
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EDF4FF] text-[#0755F5] border border-[#DCE7FA] flex-shrink-0">
+            Service
+          </span>
+        );
+      case 'University':
+        return (
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#0755F5] border border-blue-100 flex-shrink-0">
+            University
+          </span>
+        );
+      case 'Blog':
+        return (
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-[#0755F5] border border-sky-100 flex-shrink-0">
+            Blog
+          </span>
+        );
+      case 'Page':
+      default:
+        return (
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-[#172344] border border-slate-200 flex-shrink-0">
+            Page
+          </span>
+        );
+    }
+  };
+
+  const renderItemIcon = (iconType: SearchResultItem['iconType']) => {
+    switch (iconType) {
+      case 'destination':
+        return <Globe className="w-4 h-4 text-[#0755F5]" />;
+      case 'service':
+        return <FileText className="w-4 h-4 text-[#0755F5]" />;
+      case 'university':
+        return <GraduationCap className="w-4 h-4 text-[#0755F5]" />;
+      case 'blog':
+        return <Newspaper className="w-4 h-4 text-[#0755F5]" />;
+      case 'page':
+      default:
+        return <Compass className="w-4 h-4 text-slate-500" />;
+    }
+  };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-brand-navy/60 backdrop-blur-sm">
+    <div
+      className="fixed inset-0 z-50 flex items-start justify-center pt-20 sm:pt-24 px-3 sm:px-4 bg-[#10243F]/40 backdrop-blur-sm animate-fadeIn"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search MasterVisa"
+    >
       <div 
-        className="w-full max-w-2xl bg-white rounded-3xl shadow-floating border border-slate-100 overflow-hidden"
+        className="w-full max-w-2xl bg-white rounded-2xl shadow-floating border border-slate-200/90 overflow-hidden animate-search-in flex flex-col max-h-[82vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input Bar */}
-        <div className="relative border-b border-slate-100 px-6 py-4 flex items-center">
-          <Search className="w-5 h-5 text-slate-400 mr-3 shrink-0" />
-          <input
-            type="text"
-            autoFocus
-            placeholder="Search countries, universities, courses, or services..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="w-full text-base text-brand-navy placeholder-slate-400 bg-transparent outline-none"
-          />
+        <div className="border-b border-slate-100 px-4 sm:px-6 py-3.5 sm:py-4 flex items-center gap-2.5 sm:gap-3 bg-white">
+          {/* Rounded Search Input Container */}
+          <div className="relative flex-1 flex items-center bg-white rounded-xl border border-[#DCE7FA] shadow-2xs transition-all duration-200 hover:border-blue-300 focus-within:border-[#0755F5] focus-within:ring-2 focus-within:ring-[#0755F5]/20">
+            <Search className="w-4.5 h-4.5 text-[#63718E] ml-3.5 shrink-0 transition-colors pointer-events-none" />
+            <input
+              ref={inputRef}
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Search destinations, visas, universities..."
+              className="w-full py-2.5 sm:py-3 pl-3 pr-9 text-sm sm:text-base text-[#101E49] placeholder-[#63718E] bg-transparent outline-none border-none font-medium focus:outline-none focus:ring-0"
+              aria-label="Search destinations, visas, universities"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => {
+                  setQuery('');
+                  inputRef.current?.focus();
+                }}
+                aria-label="Clear search input"
+                className="absolute right-2.5 p-1 rounded-full text-slate-400 hover:text-[#101E49] hover:bg-slate-100 transition-colors cursor-pointer"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+
+          {/* Close Modal Button */}
           <button
+            type="button"
             onClick={onClose}
-            className="p-1 rounded-full text-slate-400 hover:text-brand-navy hover:bg-slate-100 transition-colors ml-2"
+            aria-label="Close search overlay"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-[#63718E] hover:text-[#101E49] hover:bg-[#EDF4FF] border border-[#DCE7FA] transition-all cursor-pointer flex-shrink-0 active:scale-95"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Results Container */}
-        <div className="max-h-[60vh] overflow-y-auto p-6 space-y-6">
-          {/* Quick suggestions when empty */}
-          {!query && (
-            <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Popular Searches</p>
-              <div className="flex flex-wrap gap-2">
-                {['Study in UK', 'Germany Free Tuition', 'USA STEM OPT', 'Canada Post-Grad Work', 'IELTS Prep', 'Scholarships 2026'].map((term) => (
+        <div ref={listRef} className="overflow-y-auto px-3 sm:px-5 py-3 flex-1">
+          {/* Popular searches when query is empty */}
+          {!trimmedQuery && (
+            <div className="py-2">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#63718E]">
+                <Sparkles className="w-3.5 h-3.5 text-[#0755F5]" />
+                <span>Popular Searches</span>
+              </div>
+              <div className="flex flex-wrap gap-2 px-3 pt-1 pb-3">
+                {POPULAR_SEARCHES.map(item => (
                   <button
-                    key={term}
-                    onClick={() => setQuery(term.split(' ')[term.split(' ').length - 1])}
-                    className="px-3 py-1.5 bg-slate-100 hover:bg-brand-coral-light hover:text-brand-coral text-xs font-medium text-slate-600 rounded-full transition-colors"
+                    key={item.label}
+                    type="button"
+                    onClick={() => {
+                      setQuery(item.query);
+                      inputRef.current?.focus();
+                    }}
+                    className="px-3 py-1.5 bg-[#EDF4FF] hover:bg-[#0755F5] hover:text-white text-xs font-semibold text-[#101E49] rounded-full border border-[#DCE7FA] transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs"
                   >
-                    {term}
+                    <span>{item.label}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Quick Navigation Links */}
+              <div className="mt-3 pt-3 border-t border-[#DCE7FA]">
+                <p className="px-3 pb-2 text-[11px] font-bold uppercase tracking-wider text-[#63718E]">
+                  Quick Navigation
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 px-1">
+                  {SITE_PAGES.slice(1, 7).map(p => (
+                    <button
+                      key={p.id}
+                      type="button"
+                      onClick={() => handleSelectResult(p)}
+                      className="text-left px-3 py-2 rounded-xl hover:bg-[#EDF4FF] transition-colors flex items-center justify-between group cursor-pointer"
+                    >
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <div className="w-7 h-7 rounded-lg bg-[#EDF4FF] flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
+                          {renderItemIcon(p.iconType)}
+                        </div>
+                        <div className="truncate">
+                          <p className="text-xs font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors truncate">
+                            {p.title}
+                          </p>
+                          <p className="text-[10px] text-[#63718E] truncate">
+                            {p.subtitle}
+                          </p>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#0755F5] group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-2" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Search results list */}
+          {trimmedQuery && results.length > 0 && (
+            <div className="py-2 space-y-1">
+              <div className="px-3 py-1 flex items-center justify-between text-[11px] font-semibold text-[#63718E]">
+                <span>Found {results.length} result{results.length > 1 ? 's' : ''}</span>
+                <span>Click to view</span>
+              </div>
+              {results.map((item, idx) => {
+                const isSelected = idx === selectedIndex;
+                return (
+                  <div
+                    key={item.id}
+                    data-index={idx}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => handleSelectResult(item)}
+                    onMouseEnter={() => setSelectedIndex(idx)}
+                    className={`px-3 py-2.5 rounded-xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                      isSelected 
+                        ? 'bg-[#EDF4FF] border-[#0755F5]/40 shadow-2xs' 
+                        : 'bg-white hover:bg-[#EDF4FF]/60 border-transparent hover:border-[#DCE7FA]'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 min-w-0 flex-1">
+                      <div className="w-8 h-8 rounded-lg bg-[#EDF4FF] flex items-center justify-center flex-shrink-0">
+                        {renderItemIcon(item.iconType)}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          <h4 className="text-xs sm:text-sm font-bold text-[#101E49] truncate">
+                            {item.title}
+                          </h4>
+                          {renderCategoryBadge(item.category)}
+                        </div>
+                        <p className="text-[11px] text-[#63718E] truncate mt-0.5">
+                          {item.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                    <ArrowRight className={`w-4 h-4 text-slate-300 transition-all flex-shrink-0 ${
+                      isSelected ? 'text-[#0755F5] translate-x-0.5' : ''
+                    }`} />
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Empty state when no matches found */}
+          {trimmedQuery && results.length === 0 && (
+            <div className="py-12 px-6 text-center">
+              <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-3 text-slate-400">
+                <SearchX className="w-6 h-6" />
+              </div>
+              <p className="text-sm font-bold text-[#10243F]">
+                No results found for "{query}"
+              </p>
+              <p className="text-xs text-[#64748B] mt-1 max-w-sm mx-auto">
+                Try searching for destinations like <span className="font-semibold text-[#10243F]">USA</span> or <span className="font-semibold text-[#10243F]">UK</span>, services like <span className="font-semibold text-[#10243F]">Visa</span> or <span className="font-semibold text-[#10243F]">SOP</span>, or partner universities.
+              </p>
+              <div className="mt-5 flex flex-wrap justify-center gap-1.5">
+                {POPULAR_SEARCHES.map(item => (
+                  <button
+                    key={item.label}
+                    type="button"
+                    onClick={() => {
+                      setQuery(item.query);
+                      inputRef.current?.focus();
+                    }}
+                    className="px-2.5 py-1 bg-white hover:bg-[#EDF4FF] hover:text-[#0755F5] hover:border-[#0755F5]/30 text-[11px] font-semibold text-[#101E49] rounded-full border border-[#DCE7FA] transition-colors shadow-2xs cursor-pointer"
+                  >
+                    {item.label}
                   </button>
                 ))}
               </div>
             </div>
           )}
+        </div>
 
-          {/* Destinations */}
-          {filteredDestinations.length > 0 && (
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                <Globe className="w-4 h-4 text-brand-coral" /> Study Destinations
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {filteredDestinations.slice(0, 4).map(d => (
-                  <div
-                    key={d.id}
-                    onClick={() => {
-                      onClose();
-                      onSelectDestination(d.id);
-                    }}
-                    className="p-3 bg-slate-50 hover:bg-brand-bg-subtle rounded-2xl border border-slate-100 cursor-pointer flex items-center justify-between group transition-all"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">{d.flag}</span>
-                      <div>
-                        <h4 className="text-sm font-bold text-brand-navy group-hover:text-brand-coral transition-colors">{d.name}</h4>
-                        <p className="text-xs text-slate-500 line-clamp-1">{d.shortDesc}</p>
-                      </div>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-brand-coral group-hover:translate-x-1 transition-all" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Universities */}
-          {filteredUniversities.length > 0 && (
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                <Building2 className="w-4 h-4 text-blue-500" /> Partner Universities
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {filteredUniversities.map(u => (
-                  <div key={u.id} className="p-3 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-3">
-                    <span className="text-lg">{u.flag}</span>
-                    <div>
-                      <h4 className="text-sm font-semibold text-brand-navy">{u.name}</h4>
-                      <p className="text-xs text-slate-500">{u.country} • {u.qsRank}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Services */}
-          {filteredServices.length > 0 && (
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                <BookOpen className="w-4 h-4 text-emerald-500" /> Services
-              </div>
-              <div className="space-y-1.5">
-                {filteredServices.slice(0, 3).map(s => (
-                  <div key={s.id} className="p-2.5 bg-slate-50 rounded-xl flex items-center justify-between text-xs">
-                    <span className="font-semibold text-brand-navy">{s.title}</span>
-                    <span className="text-slate-500">{s.description}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* News */}
-          {filteredNews.length > 0 && (
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                <Newspaper className="w-4 h-4 text-amber-500" /> News & Insights
-              </div>
-              <div className="space-y-2">
-                {filteredNews.slice(0, 2).map(n => (
-                  <div key={n.id} className="p-3 bg-slate-50 rounded-2xl border border-slate-100">
-                    <span className="text-[10px] font-bold text-brand-coral uppercase tracking-wider">{n.category}</span>
-                    <h5 className="text-xs font-semibold text-brand-navy mt-0.5">{n.title}</h5>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {query && filteredDestinations.length === 0 && filteredUniversities.length === 0 && filteredServices.length === 0 && (
-            <div className="text-center py-8 text-slate-400">
-              <p>No results found for "{query}".</p>
-              <p className="text-xs mt-1">Try searching for USA, UK, IELTS, or Visa guidance.</p>
-            </div>
-          )}
+        {/* Keyboard hints footer */}
+        <div className="border-t border-slate-100 px-5 py-2.5 bg-slate-50/70 flex items-center justify-between text-[11px] text-[#64748B]">
+          <div className="flex items-center gap-3 hidden sm:flex">
+            <span>
+              <kbd className="font-mono bg-white border border-slate-200 px-1 py-0.5 rounded text-[10px] shadow-2xs">↑</kbd>{' '}
+              <kbd className="font-mono bg-white border border-slate-200 px-1 py-0.5 rounded text-[10px] shadow-2xs">↓</kbd>{' '}
+              Navigate
+            </span>
+            <span>
+              <kbd className="font-mono bg-white border border-slate-200 px-1 py-0.5 rounded text-[10px] shadow-2xs">↵</kbd>{' '}
+              Select
+            </span>
+            <span>
+              <kbd className="font-mono bg-white border border-slate-200 px-1 py-0.5 rounded text-[10px] shadow-2xs">Esc</kbd>{' '}
+              Close
+            </span>
+          </div>
+          <div className="sm:hidden text-[10px]">
+            Tap any result to navigate
+          </div>
+          <span className="text-[10px] text-slate-400">MasterVisa Global Search</span>
         </div>
       </div>
     </div>

@@ -42,15 +42,26 @@ export const HeroServiceHighlights: React.FC<Props> = ({ onSelectFeature }) => {
   return (
     <div className="relative z-20 -mt-6 sm:-mt-8 lg:-mt-10 max-w-6xl mx-auto px-4 sm:px-6 mb-10">
       <div className="bg-white rounded-2xl sm:rounded-full shadow-lg shadow-slate-200/50 border border-slate-100 py-3 px-4 sm:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-slate-100">
-          {features.map((item) => {
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-0 md:divide-x md:divide-slate-100">
+          {features.map((item, idx) => {
             const Icon = item.icon;
             const fullTitle = `${item.line1} ${item.line2}`;
+            const isLastOdd = idx === 4;
             return (
               <div
                 key={item.id}
+                role="button"
+                tabIndex={0}
                 onClick={() => onSelectFeature && onSelectFeature(fullTitle)}
-                className="group flex items-center justify-start md:justify-center gap-3.5 px-3 py-2.5 sm:py-2 hover:bg-orange-50/40 rounded-xl md:rounded-full transition-all duration-200 cursor-pointer select-none"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    onSelectFeature && onSelectFeature(fullTitle);
+                  }
+                }}
+                className={`group flex items-center justify-start md:justify-center gap-3.5 px-3 py-2.5 sm:py-2 hover:bg-orange-50/40 rounded-xl md:rounded-full transition-all duration-200 cursor-pointer select-none ${
+                  isLastOdd ? 'col-span-2 md:col-span-1 max-w-xs mx-auto md:max-w-none md:mx-0 w-full' : ''
+                }`}
               >
                 {/* Circular Orange Icon */}
                 <div className="w-11 h-11 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center flex-shrink-0 text-brand-coral group-hover:scale-105 group-hover:bg-brand-coral group-hover:text-white transition-all duration-200">

@@ -112,5 +112,27 @@ export const FlagIcon: React.FC<Props> = ({ country, className = "w-5 h-3.5" }) 
     );
   }
 
+  if (c === 'EUROPE' || c === 'EU') {
+    return (
+      <svg className={`rounded-sm shadow-xs inline-block shrink-0 ${className}`} viewBox="0 0 640 480">
+        <path fill="#003399" d="M0 0h640v480H0z"/>
+        <g fill="#ffcc00">
+          <circle cx="320" cy="110" r="14"/>
+          <circle cx="385" cy="127" r="14"/>
+          <circle cx="435" cy="177" r="14"/>
+          <circle cx="450" cy="240" r="14"/>
+          <circle cx="435" cy="303" r="14"/>
+          <circle cx="385" cy="353" r="14"/>
+          <circle cx="320" cy="370" r="14"/>
+          <circle cx="255" cy="353" r="14"/>
+          <circle cx="205" cy="303" r="14"/>
+          <circle cx="190" cy="240" r="14"/>
+          <circle cx="205" cy="177" r="14"/>
+          <circle cx="255" cy="127" r="14"/>
+        </g>
+      </svg>
+    );
+  }
+
   return <span className="text-base">🌐</span>;
 };

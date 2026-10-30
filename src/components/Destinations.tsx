@@ -1,125 +1,185 @@
-import React, { useRef } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { DESTINATIONS } from '../data/content';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { getCountryRoute } from './DestinationNavBar';
 import type { Destination } from '../types';
-import { FlagIcon } from './FlagIcon';
 
 interface Props {
-  onSelectDestination: (dest: Destination) => void;
+  onSelectDestination?: (dest: Destination) => void;
+  hideBottomWave?: boolean;
 }
 
-export const Destinations: React.FC<Props> = ({ onSelectDestination }) => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+// Crisp circular vector flags matching reference screenshot badges
+const FlagUSA = () => (
+  <svg viewBox="0 0 32 32" className="w-6 h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
+    <clipPath id="dest-usa-clip"><circle cx="16" cy="16" r="16" /></clipPath>
+    <g clipPath="url(#dest-usa-clip)">
+      <rect width="32" height="32" fill="#B22234" />
+      <path d="M0 2.46h32M0 7.38h32M0 12.3h32M0 17.23h32M0 22.15h32M0 27.07h32" stroke="#FFFFFF" strokeWidth="2.46" />
+      <rect width="14" height="17.23" fill="#3C3B6E" />
+      <circle cx="3.5" cy="4" r="0.9" fill="#FFF" />
+      <circle cx="7" cy="4" r="0.9" fill="#FFF" />
+      <circle cx="10.5" cy="4" r="0.9" fill="#FFF" />
+      <circle cx="5.25" cy="8.5" r="0.9" fill="#FFF" />
+      <circle cx="8.75" cy="8.5" r="0.9" fill="#FFF" />
+      <circle cx="3.5" cy="13" r="0.9" fill="#FFF" />
+      <circle cx="7" cy="13" r="0.9" fill="#FFF" />
+      <circle cx="10.5" cy="13" r="0.9" fill="#FFF" />
+    </g>
+  </svg>
+);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 320;
-      scrollContainerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  };
+const FlagUK = () => (
+  <svg viewBox="0 0 32 32" className="w-6 h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
+    <clipPath id="dest-uk-clip"><circle cx="16" cy="16" r="16" /></clipPath>
+    <g clipPath="url(#dest-uk-clip)">
+      <rect width="32" height="32" fill="#012169" />
+      <path d="M0 0 L32 32 M32 0 L0 32" stroke="#FFF" strokeWidth="5.5" />
+      <path d="M0 0 L32 32 M32 0 L0 32" stroke="#C8102E" strokeWidth="2" />
+      <path d="M16 0 V32 M0 16 H32" stroke="#FFF" strokeWidth="8" />
+      <path d="M16 0 V32 M0 16 H32" stroke="#C8102E" strokeWidth="4.8" />
+    </g>
+  </svg>
+);
+
+const FlagCanada = () => (
+  <svg viewBox="0 0 32 32" className="w-6 h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
+    <clipPath id="dest-can-clip"><circle cx="16" cy="16" r="16" /></clipPath>
+    <g clipPath="url(#dest-can-clip)">
+      <rect width="32" height="32" fill="#FF0000" />
+      <rect x="8" width="16" height="32" fill="#FFFFFF" />
+      <path d="M16 8l1.5 3.5 2.5-.8-1.2 3.2 2.8 1.4-2.8 1.4.6 3.5-3.4-1.8V23h-1v-4.6L11.6 20.2l.6-3.5-2.8-1.4 2.8-1.4-1.2-3.2 2.5.8z" fill="#FF0000" />
+    </g>
+  </svg>
+);
+
+const FlagAustralia = () => (
+  <svg viewBox="0 0 32 32" className="w-6 h-6 rounded-full shrink-0 shadow-sm" aria-hidden="true">
+    <clipPath id="dest-aus-clip"><circle cx="16" cy="16" r="16" /></clipPath>
+    <g clipPath="url(#dest-aus-clip)">
+      <rect width="32" height="32" fill="#00008B" />
+      <g transform="scale(0.5)">
+        <rect width="32" height="32" fill="#012169" />
+        <path d="M0 0 L32 32 M32 0 L0 32" stroke="#FFF" strokeWidth="5" />
+        <path d="M0 0 L32 32 M32 0 L0 32" stroke="#C8102E" strokeWidth="2" />
+        <path d="M16 0 V32 M0 16 H32" stroke="#FFF" strokeWidth="7" />
+        <path d="M16 0 V32 M0 16 H32" stroke="#C8102E" strokeWidth="4.5" />
+      </g>
+      <circle cx="8" cy="22" r="2.5" fill="#FFF" />
+      <circle cx="24" cy="9" r="1" fill="#FFF" />
+      <circle cx="21" cy="14" r="1" fill="#FFF" />
+      <circle cx="26" cy="17" r="1" fill="#FFF" />
+      <circle cx="23" cy="24" r="1" fill="#FFF" />
+      <circle cx="27" cy="21" r="0.7" fill="#FFF" />
+    </g>
+  </svg>
+);
+
+export const Destinations: React.FC<Props> = ({ onSelectDestination: _onSelectDestination }) => {
+  const cardsData = [
+    {
+      id: 'usa',
+      name: 'USA',
+      Flag: FlagUSA,
+      subtitle: 'Land of Opportunities',
+      image: 'https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'uk',
+      name: 'UK',
+      Flag: FlagUK,
+      subtitle: 'Globally Renowned Universities',
+      image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'canada',
+      name: 'Canada',
+      Flag: FlagCanada,
+      subtitle: 'Quality Education & Bright Future',
+      image: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'australia',
+      name: 'Australia',
+      Flag: FlagAustralia,
+      subtitle: 'Vibrant Culture & Career Growth',
+      image: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80',
+    },
+  ];
 
   return (
-    <section id="destinations" className="py-12 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="destinations" className="pt-8 sm:pt-12 pb-0 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-12 sm:pb-16">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-          <div>
-            <div className="inline-block text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">
-              STUDY ABROAD
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-              Choose Your{' '}
-              <span className="text-brand-coral font-serif italic">
-                Study Destination
-              </span>
-            </h2>
-            <p className="text-sm sm:text-base text-slate-500 mt-2 max-w-xl">
-              Explore top countries, world-class universities and life-changing opportunities.
-            </p>
+        <div className="max-w-2xl mb-10 text-left">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#63718E]">
+              EXPLORE THE WORLD
+            </span>
+            <span className="w-8 h-[2px] bg-[#0755F5] rounded-full inline-block" />
           </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#101E49] tracking-tight">
+            Choose Your<br />
+            <span className="text-gradient-blue bg-gradient-to-r from-[#0755F5] to-[#0877FF] bg-clip-text text-transparent">
+              Dream Destination
+            </span>
+          </h2>
+          <p className="text-sm sm:text-base text-[#63718E] mt-3 leading-relaxed max-w-lg">
+            Discover world-class education, diverse cultures and limitless opportunities.
+          </p>
 
-          {/* Action Links & Slider Controls */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => onSelectDestination(DESTINATIONS[0])}
-              className="text-sm font-bold text-brand-navy hover:text-brand-coral flex items-center gap-1.5 transition-colors group mr-2"
-            >
-              <span>View All Destinations</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            <div className="flex items-center gap-1.5">
-              <button
-                onClick={() => scroll('left')}
-                aria-label="Previous destination"
-                className="w-9 h-9 rounded-full border border-slate-200 hover:border-brand-coral hover:text-brand-coral flex items-center justify-center transition-colors text-slate-600 bg-white"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => scroll('right')}
-                aria-label="Next destination"
-                className="w-9 h-9 rounded-full border border-slate-200 hover:border-brand-coral hover:text-brand-coral flex items-center justify-center transition-colors text-slate-600 bg-white"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
+          <Link
+            to="/destinations"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#DCE7FA] hover:border-[#0755F5] bg-white hover:bg-[#EDF4FF] text-[#101E49] hover:text-[#0755F5] text-xs sm:text-sm font-bold transition-all shadow-xs group mt-4 active:scale-95 cursor-pointer"
+          >
+            <span>View All Countries</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
-        {/* Horizontal Cards Scrollable Container */}
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-5 overflow-x-auto pb-6 pt-2 no-scrollbar scroll-smooth snap-x snap-mandatory"
-        >
-          {DESTINATIONS.map((dest) => (
-            <div
-              key={dest.id}
-              className="min-w-[240px] sm:min-w-[260px] md:min-w-[270px] bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-soft hover:shadow-card-hover transition-all duration-300 flex flex-col group snap-start"
-            >
-              {/* Card Image */}
-              <div className="relative h-44 w-full overflow-hidden bg-slate-100">
-                <img
-                  src={dest.image}
-                  alt={dest.name}
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
-              </div>
+        {/* 4 Destination Photographic Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cardsData.map((dest) => {
+            const FlagComponent = dest.Flag;
+            return (
+              <Link
+                key={dest.id}
+                to={getCountryRoute(dest.id)}
+                className="group bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card-hover border border-[#DCE7FA] hover:border-[#0755F5]/40 transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1.5 active:scale-[0.99] select-none text-left"
+              >
+                {/* Card Photo */}
+                <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60" />
+                </div>
 
-              {/* Card Content */}
-              <div className="p-5 flex-1 flex flex-col justify-between text-left">
-                <div>
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <FlagIcon country={dest.name} className="w-5 h-3.5 shadow-xs" />
-                    <h3 className="text-lg font-bold text-brand-navy group-hover:text-brand-coral transition-colors">
-                      {dest.name}
-                    </h3>
+                {/* Card Bottom Meta */}
+                <div className="p-4 sm:p-5 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <FlagComponent />
+                    <div>
+                      <h3 className="text-base font-bold text-[#101E49] group-hover:text-[#0755F5] transition-colors leading-tight">
+                        {dest.name}
+                      </h3>
+                      <p className="text-xs text-[#63718E] font-medium mt-0.5 leading-snug">
+                        {dest.subtitle}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
-                    {dest.shortDesc}
-                  </p>
-                </div>
 
-                <div className="pt-4 mt-2 border-t border-slate-50 flex items-center justify-between">
-                  <span className="text-[11px] font-semibold text-slate-400">
-                    Visa: <strong className="text-brand-navy">{dest.visaSuccessRate}</strong>
-                  </span>
-                  <button
-                    onClick={() => onSelectDestination(dest)}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-brand-coral group-hover:translate-x-0.5 transition-transform"
-                  >
-                    <span>Explore</span>
+                  {/* Circular Arrow Button */}
+                  <div className="w-8 h-8 rounded-full border border-[#DCE7FA] text-slate-500 flex items-center justify-center shrink-0 group-hover:bg-gradient-to-r group-hover:from-[#0755F5] group-hover:to-[#0877FF] group-hover:text-white group-hover:border-transparent group-hover:scale-105 transition-all">
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
