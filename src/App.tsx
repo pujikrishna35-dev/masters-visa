@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-import { Routes, Route, useSearchParams } from 'react-router-dom';
+import { Routes, Route, useSearchParams, Navigate } from 'react-router-dom';
 
 import { Header } from './components/Header';
 
@@ -45,6 +45,7 @@ import { StudyInNewZealandPage } from './pages/StudyInNewZealandPage';
 import { StudyInFrancePage } from './pages/StudyInFrancePage';
 
 import { StudyInIrelandPage } from './pages/StudyInIrelandPage';
+import StudyInGermanyPage from './pages/StudyInGermanyPage';
 
 import { CoursesPage } from './pages/CoursesPage';
 
